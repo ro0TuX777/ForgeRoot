@@ -1,0 +1,5 @@
+Run pytest -q
+FAILED tests/test_case_001.py::test_case_001 - AssertionError: expected success, got failure
+FAILED tests/test_case_002.py::test_case_002 - AssertionError: expected success, got failure
+FAILED tests/test_case_003.py::test_case_003 - AssertionError: expected success, got failure
+3 failed, 0 passed

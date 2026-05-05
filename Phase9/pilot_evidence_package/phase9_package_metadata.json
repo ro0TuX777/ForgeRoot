@@ -1,0 +1,8 @@
+{
+  "chain_valid": true,
+  "claim_boundary": "ForgeLedger provides evidence support only. It does not certify compliance. Formal compliance determinations require qualified review against the applicable framework, deployment environment, and organizational controls.",
+  "encrypted": true,
+  "event_count": 6,
+  "fixture_origin": "representative_hand_authored",
+  "raw_sensitive_prompt_present_in_ledger_jsonl": false
+}

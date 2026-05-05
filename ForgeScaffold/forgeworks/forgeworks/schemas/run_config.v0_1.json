@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/run_config.v0_1.json",
+  "title": "ForgeWorks Run Config",
+  "type": "object",
+  "required": ["schema_version", "domain", "mode", "seed", "intent_bundle_path"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "domain": {"type": "string"},
+    "mode": {"type": "string", "enum": ["shadow", "supervised", "ramped"]},
+    "seed": {"type": "integer"},
+    "intent_bundle_path": {"type": "string"},
+    "preflight": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "docker_containers": {"type": "array", "items": {"type": "string"}},
+        "check_ollama": {"type": "boolean"},
+        "check_generate": {"type": "boolean"},
+        "generate_timeout_seconds": {"type": "integer", "minimum": 1},
+        "ollama_models": {"type": "array", "items": {"type": "string"}},
+        "ping_model": {"type": "string"}
+      }
+    },
+    "approval_policy": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "require_for_allow": {"type": "boolean"},
+        "require_for_allow_with_mods": {"type": "boolean"},
+        "ramped_auto_allow_risk_tiers": {"type": "array", "items": {"type": "string"}},
+        "ramped_auto_allow_side_effects": {"type": "array", "items": {"type": "string"}},
+        "auto_reject_actions": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "additionalProperties": true
+}

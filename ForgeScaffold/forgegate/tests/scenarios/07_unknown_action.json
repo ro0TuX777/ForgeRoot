@@ -1,0 +1,19 @@
+{
+  "name": "unknown action",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1",
+    "actions": ["allowed_action"]
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "unknown_action",
+    "actor_id": "agent-6",
+    "params": {}
+  },
+  "signals": {"schema_version": "0.1", "values": {}},
+  "expected": {
+    "decision": "DENY",
+    "must_include": ["reasons.triggered_rules"]
+  }
+}

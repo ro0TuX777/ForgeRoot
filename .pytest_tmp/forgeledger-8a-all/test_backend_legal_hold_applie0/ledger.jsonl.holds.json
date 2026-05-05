@@ -1,0 +1,12 @@
+{
+  "3c5932bb-d76d-4d90-afe7-3ca1cd7c664e": {
+    "hold_id": "3c5932bb-d76d-4d90-afe7-3ca1cd7c664e",
+    "tenant_id": "tenant-001",
+    "reason": "test_hold",
+    "event_ids": [
+      "evt-hold-001"
+    ],
+    "applied_at": "2026-04-29T21:28:16.389749+00:00",
+    "released": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "fixture_provenance": "representative_hand_authored",
+  "subsystem": "CONCORD",
+  "agent_id": "agent.untrusted.worker",
+  "admitted": false,
+  "reason": "agent trust tier does not allow requested capability",
+  "risk_level": "high",
+  "tenant_id": "tenant-001",
+  "customer_boundary": "customer-a",
+  "data_residency": "NZ",
+  "policy_id": "concord-admission-v1",
+  "policy_hash": "sha256:concord-deny-policy",
+  "frameworks": ["NZISM"],
+  "evidence_refs": ["concord://admission/deny-001"],
+  "agent_class": "untrusted_worker",
+  "trust_tier": "tier_0",
+  "capabilities_checked": ["write_production_config"],
+  "environment": "local",
+  "deployment_id": "runtime-fixture"
+}

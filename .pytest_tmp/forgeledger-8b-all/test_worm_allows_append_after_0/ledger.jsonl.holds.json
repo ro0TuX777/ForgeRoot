@@ -1,0 +1,13 @@
+{
+  "2936c32b-6ab2-4665-bb3f-c2606cc7e17d": {
+    "hold_id": "2936c32b-6ab2-4665-bb3f-c2606cc7e17d",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:01:49.491865+00:00",
+    "released": false
+  }
+}

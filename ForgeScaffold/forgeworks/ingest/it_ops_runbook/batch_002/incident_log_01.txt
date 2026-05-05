@@ -1,0 +1,2 @@
+2026-02-27 11:10:02Z ALERT: service unavailable in multiple regions
+2026-02-27 11:12:40Z INFO: error rate 35%

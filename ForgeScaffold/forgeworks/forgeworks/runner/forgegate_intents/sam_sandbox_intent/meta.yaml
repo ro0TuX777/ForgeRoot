@@ -1,0 +1,5 @@
+name: sam_sandbox_intent
+version: 1.0.0
+description: "Governs the Phase 4 Judge sandbox execution constraints to prevent untrusted code from breaking out."
+author: SAM_v2_Relay
+schema_version: 0.4.0

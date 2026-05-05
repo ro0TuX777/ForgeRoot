@@ -1,0 +1,11 @@
+pipelineId: "forgescaffold_apply_v2_hunks"
+links:
+  - id: ingest.project_bundle
+  - id: forgescaffold.system_catalog
+  - id: forgescaffold.map_dataflow
+  - id: forgescaffold.obs_define_schema
+  - id: forgescaffold.obs_instrument_patchset
+  - id: forgescaffold.test_matrix
+  - id: forgescaffold.apply_patchset
+  - id: forgescaffold.verify_post_apply
+  - id: forgescaffold.package_evidence

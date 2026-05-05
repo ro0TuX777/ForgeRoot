@@ -1,0 +1,340 @@
+{
+  "communities": {
+    "0": [
+      "warden_daemon_rationale_1",
+      "warden_daemon_rationale_1122",
+      "warden_daemon_rationale_737",
+      "warden_llm_gateway_gatewayerror",
+      "warden_llm_gateway_llmgateway",
+      "warden_llm_gateway_llmgateway_build_reasoning_steps",
+      "warden_llm_gateway_llmgateway_call_anthropic",
+      "warden_llm_gateway_llmgateway_call_frontier",
+      "warden_llm_gateway_llmgateway_call_frontier_embeddings",
+      "warden_llm_gateway_llmgateway_call_ollama",
+      "warden_llm_gateway_llmgateway_call_ollama_embed",
+      "warden_llm_gateway_llmgateway_call_ollama_ocr",
+      "warden_llm_gateway_llmgateway_call_openai_compatible",
+      "warden_llm_gateway_llmgateway_call_openai_compatible_embeddings",
+      "warden_llm_gateway_llmgateway_check_frontier",
+      "warden_llm_gateway_llmgateway_check_ollama",
+      "warden_llm_gateway_llmgateway_check_vllm",
+      "warden_llm_gateway_llmgateway_complete",
+      "warden_llm_gateway_llmgateway_embed_texts",
+      "warden_llm_gateway_llmgateway_extract_embeddings",
+      "warden_llm_gateway_llmgateway_extract_text",
+      "warden_llm_gateway_llmgateway_health",
+      "warden_llm_gateway_llmgateway_ocr_image",
+      "warden_llm_gateway_llmgateway_ollama_model_for_tier",
+      "warden_llm_gateway_llmgateway_provider_order",
+      "warden_llm_gateway_llmgateway_request_json",
+      "warden_llm_gateway_llmgateway_select_ollama_fallback_model",
+      "warden_llm_gateway_llmgateway_write_raw_trace",
+      "warden_llm_gateway_rationale_18",
+      "warden_llm_gateway_rationale_200",
+      "warden_llm_gateway_rationale_206",
+      "warden_llm_gateway_rationale_223",
+      "warden_llm_gateway_rationale_356",
+      "warden_llm_gateway_rationale_415"
+    ],
+    "1": [
+      "warden_daemon_federationwarden",
+      "warden_daemon_federationwarden_append_event",
+      "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "warden_daemon_federationwarden_collect_file_state",
+      "warden_daemon_federationwarden_enqueue_remediation_for_human_review",
+      "warden_daemon_federationwarden_initialize_snapshot_baseline",
+      "warden_daemon_federationwarden_is_text_candidate",
+      "warden_daemon_federationwarden_load_active_unit_ids",
+      "warden_daemon_federationwarden_load_latest_ticket",
+      "warden_daemon_federationwarden_load_risk_units",
+      "warden_daemon_federationwarden_load_ticket_by_id",
+      "warden_daemon_federationwarden_remove_pid",
+      "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "warden_daemon_federationwarden_run_azul_verify",
+      "warden_daemon_federationwarden_run_cycle",
+      "warden_daemon_federationwarden_run_forever",
+      "warden_daemon_federationwarden_run_remediation_loop",
+      "warden_daemon_federationwarden_run_script",
+      "warden_daemon_federationwarden_snapshot_workspace",
+      "warden_daemon_federationwarden_stage_dawn_inputs",
+      "warden_daemon_federationwarden_sync_snapshot_files",
+      "warden_daemon_federationwarden_update_status",
+      "warden_daemon_federationwarden_write_pid",
+      "warden_daemon_load_json",
+      "warden_daemon_now_iso"
+    ],
+    "2": [
+      "remediation_agent_py",
+      "runtimeerror",
+      "tests_test_remediation_agent_fakegateway",
+      "tests_test_remediation_agent_fakegateway_complete",
+      "tests_test_remediation_agent_fakegateway_init",
+      "tests_test_remediation_agent_py",
+      "tests_test_remediation_agent_test_generate_draft_uses_planner_then_worker",
+      "tests_test_remediation_agent_test_reject_loop_attempts_fix_until_pass",
+      "tests_test_remediation_agent_test_reject_loop_can_start_from_known_reject_without_duplicate_verify",
+      "warden_daemon_federationwarden_init",
+      "warden_llm_gateway_gatewayresponse",
+      "warden_llm_gateway_rationale_34",
+      "warden_remediation_agent_draftartifact",
+      "warden_remediation_agent_extract_patch_block",
+      "warden_remediation_agent_json_preview",
+      "warden_remediation_agent_rationale_1",
+      "warden_remediation_agent_rationale_24",
+      "warden_remediation_agent_remediationagent",
+      "warden_remediation_agent_remediationagent_build_impact_map",
+      "warden_remediation_agent_remediationagent_build_patch",
+      "warden_remediation_agent_remediationagent_build_plan",
+      "warden_remediation_agent_remediationagent_generate_draft",
+      "warden_remediation_agent_remediationagent_init",
+      "warden_remediation_agent_remediationagent_remediate_reject_loop",
+      "warden_remediation_agent_trace_meta"
+    ],
+    "3": [
+      "daemon_py",
+      "warden_daemon_active_dir",
+      "warden_daemon_danger_map_path",
+      "warden_daemon_detect_changes",
+      "warden_daemon_events_path",
+      "warden_daemon_extract_ticket_id",
+      "warden_daemon_log_path",
+      "warden_daemon_pid_path",
+      "warden_daemon_read_text_file",
+      "warden_daemon_scripts_dir",
+      "warden_daemon_state_dir",
+      "warden_daemon_status_path",
+      "warden_daemon_stubs_dir",
+      "warden_daemon_system_catalog_path",
+      "warden_daemon_verify_inputs_dir"
+    ],
+    "4": [
+      "tests_test_daemon_remediation_build_daemon",
+      "tests_test_daemon_remediation_py",
+      "tests_test_daemon_remediation_test_changed_file_patch_generation_uses_snapshot_baseline",
+      "tests_test_daemon_remediation_test_enqueue_remediation_creates_human_review_record_without_apply",
+      "tests_test_daemon_remediation_test_remediation_status_and_review_flow",
+      "tests_test_daemon_remediation_test_startup_requeue_for_stuck_azul_tickets",
+      "tests_test_gateway_and_daemon_py",
+      "tests_test_gateway_and_daemon_test_daemon_yaml_helpers",
+      "tests_test_gateway_and_daemon_test_gateway_provider_order",
+      "warden_daemon_wardenconfig",
+      "warden_llm_gateway_gatewayconfig",
+      "warden_llm_gateway_rationale_43"
+    ],
+    "5": [
+      "llm_gateway_py",
+      "warden_llm_gateway_classify_intent",
+      "warden_llm_gateway_dedupe",
+      "warden_llm_gateway_from_env",
+      "warden_llm_gateway_llmgateway_complete_by_intent",
+      "warden_llm_gateway_llmgateway_init",
+      "warden_llm_gateway_rationale_1",
+      "warden_llm_gateway_rationale_23",
+      "warden_llm_gateway_rationale_327",
+      "warden_llm_gateway_reasoningtrace"
+    ],
+    "6": [
+      "warden_daemon_build_parser",
+      "warden_daemon_default_forge_root",
+      "warden_daemon_from_args",
+      "warden_daemon_load_runtime_status",
+      "warden_daemon_main",
+      "warden_daemon_pid_is_running",
+      "warden_daemon_print_json",
+      "warden_daemon_start_daemon_process",
+      "warden_daemon_stop_daemon_process"
+    ],
+    "7": [
+      "warden_daemon_default_project_id",
+      "warden_daemon_extract_yaml_block",
+      "warden_daemon_federationwarden_build_stub",
+      "warden_daemon_federationwarden_deterministic_stub",
+      "warden_daemon_federationwarden_generate_stubs",
+      "warden_daemon_is_stub_valid",
+      "warden_daemon_slug"
+    ],
+    "8": [
+      "warden_daemon_azul_data_dir",
+      "warden_daemon_list_remediation_queue",
+      "warden_daemon_remediation_desk_patches_dir",
+      "warden_daemon_remediation_desk_pending_dir",
+      "warden_daemon_remediation_desk_reviewed_dir",
+      "warden_daemon_review_remediation_item"
+    ],
+    "9": [
+      "tests_test_approval_gold_labels_py",
+      "tests_test_approval_gold_labels_test_approve_stub_records_gold_label_and_baseline",
+      "warden_daemon_approve_stub_file",
+      "warden_daemon_contract_baseline_path",
+      "warden_daemon_snapshot_contract_baseline"
+    ],
+    "10": [
+      "init_py",
+      "warden_init_rationale_1"
+    ],
+    "11": [
+      "warden_llm_gateway_rationale_290"
+    ]
+  },
+  "cohesion": {
+    "0": 0.14,
+    "1": 0.2,
+    "2": 0.15,
+    "3": 0.13,
+    "4": 0.24,
+    "5": 0.2,
+    "6": 0.33,
+    "7": 0.29,
+    "8": 0.33,
+    "9": 0.4,
+    "10": 1.0,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "warden_llm_gateway_llmgateway",
+      "label": "LLMGateway",
+      "degree": 40
+    },
+    {
+      "id": "warden_daemon_federationwarden",
+      "label": "FederationWarden",
+      "degree": 34
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent",
+      "label": "RemediationAgent",
+      "degree": 21
+    },
+    {
+      "id": "warden_llm_gateway_gatewayerror",
+      "label": "GatewayError",
+      "degree": 19
+    },
+    {
+      "id": "warden_daemon_main",
+      "label": "main()",
+      "degree": 13
+    },
+    {
+      "id": "warden_daemon_azul_data_dir",
+      "label": "_azul_data_dir()",
+      "degree": 11
+    },
+    {
+      "id": "warden_daemon_now_iso",
+      "label": "_now_iso()",
+      "degree": 10
+    },
+    {
+      "id": "warden_llm_gateway_gatewayresponse",
+      "label": "GatewayResponse",
+      "degree": 10
+    },
+    {
+      "id": "tests_test_daemon_remediation_build_daemon",
+      "label": "_build_daemon()",
+      "degree": 9
+    },
+    {
+      "id": "tests_test_remediation_agent_fakegateway",
+      "label": "FakeGateway",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "WardenConfig",
+      "target": "GatewayError",
+      "source_files": [
+        "daemon.py",
+        "llm_gateway.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "WardenConfig",
+      "target": "LLMGateway",
+      "source_files": [
+        "daemon.py",
+        "llm_gateway.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "WardenConfig",
+      "target": "RemediationAgent",
+      "source_files": [
+        "daemon.py",
+        "remediation_agent.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "FederationWarden",
+      "target": "GatewayError",
+      "source_files": [
+        "daemon.py",
+        "llm_gateway.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "FederationWarden",
+      "target": "LLMGateway",
+      "source_files": [
+        "daemon.py",
+        "llm_gateway.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `FederationWarden` connect `Community 1` to `Community 0`, `Community 2`, `Community 3`, `Community 4`, `Community 6`, `Community 7`?",
+      "why": "High betweenness centrality (0.337) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `LLMGateway` connect `Community 0` to `Community 1`, `Community 2`, `Community 4`, `Community 5`?",
+      "why": "High betweenness centrality (0.325) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `RemediationAgent` connect `Community 2` to `Community 0`, `Community 1`, `Community 4`?",
+      "why": "High betweenness centrality (0.151) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 13 inferred relationships involving `LLMGateway` (e.g. with `WardenConfig` and `FederationWarden`) actually correct?",
+      "why": "`LLMGateway` has 13 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 5 inferred relationships involving `FederationWarden` (e.g. with `GatewayError` and `LLMGateway`) actually correct?",
+      "why": "`FederationWarden` has 5 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 13 inferred relationships involving `RemediationAgent` (e.g. with `WardenConfig` and `FederationWarden`) actually correct?",
+      "why": "`RemediationAgent` has 13 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 9 inferred relationships involving `GatewayError` (e.g. with `WardenConfig` and `FederationWarden`) actually correct?",
+      "why": "`GatewayError` has 9 INFERRED edges - model-reasoned connections that need verification."
+    }
+  ]
+}

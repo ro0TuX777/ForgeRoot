@@ -1,0 +1,49 @@
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_002_gov
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_002_gov_fix/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_002_gov_fix/approval_records.jsonl
+workcell_hash: 4b07bc9ee8f8eb11477f55a09f603f74a7ef0f008a84193959c2140cde328808
+
+Score: OK
+Results: results/ops_batch_002_gov_fix
+Oracle: packs/it_ops_runbook/test_batch_002_gov/oracle/expectations.jsonl
+Scoring config: packs/it_ops_runbook/test_batch_002_gov/scoring/scoring.json
+Total score: 99.5
+Pass: true
+score.json: results/ops_batch_002_gov_fix/score.json
+
+Report: OK
+Results: results/ops_batch_002_gov_fix
+Markdown report: results/ops_batch_002_gov_fix/report.md
+
+expected_vs_actual + penalty summary generated
+
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_002_gov
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_002_gov_fix_repeat/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_002_gov_fix_repeat/approval_records.jsonl
+workcell_hash: 4b07bc9ee8f8eb11477f55a09f603f74a7ef0f008a84193959c2140cde328808
+
+3e256a10cebe1d2669bdde79f7cbe4e927131584afc521157a718e1a48c68bf5  results/ops_batch_002_gov_fix/decision_ledger.jsonl
+632aa3f6b139154390999934996d6bbc7777c62a72b6f4db4a4b23aabb55c603  results/ops_batch_002_gov_fix/approval_records.jsonl
+3b464b102d18b10fcdf2f7296cdde523a503020d7728499cb2c5aa45286f1b4e  results/ops_batch_002_gov_fix/score.json
+3e256a10cebe1d2669bdde79f7cbe4e927131584afc521157a718e1a48c68bf5  results/ops_batch_002_gov_fix_repeat/decision_ledger.jsonl
+632aa3f6b139154390999934996d6bbc7777c62a72b6f4db4a4b23aabb55c603  results/ops_batch_002_gov_fix_repeat/approval_records.jsonl
+
+{"checked":3,"failed":0,"manifest_path":"regression/manifest.json","results":[{"computed":{"approvals_sha256":"054f9c7fa9b288a2f46b0ffa7f6303e0b40420c0a2400b3a03a3cc5ae0d10151","ledger_sha256":"88f1e7af4a1f17629d44b768e18d1b9056dfa52a0231f64b85eab11dc326262d","score_total":90.5,"workcell_hash":"8b461670d65f0ec3e63b9abe897959e0ffbd5acd5c6d21b4c6354f7f971fe75d"},"error_codes":[],"expected":{"approvals_sha256":"054f9c7fa9b288a2f46b0ffa7f6303e0b40420c0a2400b3a03a3cc5ae0d10151","ledger_sha256":"88f1e7af4a1f17629d44b768e18d1b9056dfa52a0231f64b85eab11dc326262d","score_min":90.5,"workcell_hash":"8b461670d65f0ec3e63b9abe897959e0ffbd5acd5c6d21b4c6354f7f971fe75d"},"name":"ci_change_control_test_batch_001","results_path":"results/test_batch_001_live","status":"ok","workcell_path":"packs/ci_change_control/test_batch_001"},{"computed":{"approvals_sha256":"65ff05d225f75b09e669c4c0daa70a599de3ad4ba15b384beaa7917681cf822c","ledger_sha256":"d4c4a424776910662d7ac434be6b7781711dcbee50b8faf80140216a40433bad","score_total":99.5,"workcell_hash":"608e29a83af4aa1617a33832becb9823a74e60fc7afa4d95a918178b0c1c23fc"},"error_codes":[],"expected":{"approvals_sha256":"65ff05d225f75b09e669c4c0daa70a599de3ad4ba15b384beaa7917681cf822c","ledger_sha256":"d4c4a424776910662d7ac434be6b7781711dcbee50b8faf80140216a40433bad","score_min":99.5,"workcell_hash":"608e29a83af4aa1617a33832becb9823a74e60fc7afa4d95a918178b0c1c23fc"},"name":"ci_change_control_test_batch_005","results_path":"results/test_batch_005_live","status":"ok","workcell_path":"packs/ci_change_control/test_batch_005"},{"computed":{"approvals_sha256":"c131c18110d86f679f9529f20717084a8d9702f8f7500ff6aa6c880a7172ea88","ledger_sha256":"f2d566a7d3ea0339cc5268092b14f5f207b59df331498c57008a72099685fccd","score_total":81.5,"workcell_hash":"7d37e76799609527e5c3168e1d7b93ac82b63ee629f80087d251b4f1bec0ac35"},"error_codes":[],"expected":{"approvals_sha256":"c131c18110d86f679f9529f20717084a8d9702f8f7500ff6aa6c880a7172ea88","ledger_sha256":"f2d566a7d3ea0339cc5268092b14f5f207b59df331498c57008a72099685fccd","score_min":81.5,"workcell_hash":"7d37e76799609527e5c3168e1d7b93ac82b63ee629f80087d251b4f1bec0ac35"},"name":"ci_change_control_test_batch_006","results_path":"results/test_batch_006_live","status":"ok","workcell_path":"packs/ci_change_control/test_batch_006"}],"schema_version":"0.1","status":"ok"}
+
+Score: OK
+Results: results/ops_batch_001_happy2
+Oracle: packs/it_ops_runbook/test_batch_001_happy/oracle/expectations.jsonl
+Scoring config: packs/it_ops_runbook/test_batch_001_happy/scoring/scoring.json
+Total score: 99.5
+Pass: true
+score.json: results/ops_batch_001_happy2/score.json

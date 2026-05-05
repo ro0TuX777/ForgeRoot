@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/oracle.v0_1.json",
+  "title": "ForgeWorks Oracle Record",
+  "type": "object",
+  "required": ["schema_version", "ticket_id", "expected"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "ticket_id": {"type": "string"},
+    "expected": {
+      "type": "object",
+      "properties": {
+        "should_escalate": {"type": "boolean"},
+        "allowed_action_classes": {"type": "array", "items": {"type": "string"}},
+        "forbidden_actions": {"type": "array", "items": {"type": "string"}},
+        "must_keep_tests_passing": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

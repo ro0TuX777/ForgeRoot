@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# scripts/warden-daemon <start|stop|status|once|run|remediation-status|remediation-review> [args]
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/setup_env.sh"
+
+CMD="${1:-status}"
+shift || true
+
+PROJECT_ROOT="${PROJECT_ROOT:-$FORGE_ROOT}"
+DEFAULT_PROJECT_BASE="$(basename "$PROJECT_ROOT" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/_/g; s/^_+//; s/_+$//')"
+PROJECT_ID="${PROJECT_ID:-${DEFAULT_PROJECT_BASE}_watch}"
+
+cd "$FORGE_ROOT"
+if [[ "${FORGE_OLLAMA_WARMUP_ON_START:-true}" == "true" ]]; then
+  if [[ "$CMD" == "start" || "$CMD" == "run" || "$CMD" == "once" ]]; then
+    if ! "$SCRIPT_DIR/warmup-local-models" "${OLLAMA_WARMUP_MODEL:-}" ; then
+      echo "Warning: local model warmup failed; continuing warden command."
+    fi
+  fi
+fi
+
+if [[ "$CMD" == "status" || "$CMD" == "stop" || "$CMD" == "remediation-status" || "$CMD" == "remediation-review" ]]; then
+  "$FORGE_PYTHON" -m warden.daemon "$CMD" --forge-root "$FORGE_ROOT" "$@"
+elif [[ "$CMD" == "approve" ]]; then
+  "$FORGE_PYTHON" -m warden.daemon "$CMD" "$@"
+else
+  "$FORGE_PYTHON" -m warden.daemon "$CMD" \
+    --forge-root "$FORGE_ROOT" \
+    --project-root "$PROJECT_ROOT" \
+    --project-id "$PROJECT_ID" \
+    "$@"
+fi

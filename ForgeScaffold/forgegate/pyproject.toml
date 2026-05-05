@@ -1,0 +1,31 @@
+[project]
+name = "forgegate"
+version = "0.4.0"
+description = "ForgeGate v0.4 deterministic action governance gate"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{name = "ForgeScaffold"}]
+dependencies = [
+  "jsonschema>=4.21.0",
+  "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+crypto = ["cryptography>=42.0.0,<46", "cffi>=1.15.1,<2"]
+
+[project.scripts]
+forgegate = "forgegate.cli.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools.packages.find]
+include = ["forgegate*"]
+exclude = ["adapters", "intent_examples", "intent_bundle_example", "tests", "docs", "examples"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

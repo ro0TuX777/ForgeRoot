@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# scripts/forge-scan <project_id>
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/setup_env.sh"
+
+PROJECT_ID="${1:-}"
+if [[ -z "$PROJECT_ID" ]]; then
+  echo "Usage: ./scripts/forge-scan <project_id>"
+  exit 1
+fi
+
+PIPELINE_PATH="${FORGE_SCAN_PIPELINE:-$FORGE_ROOT/DAWN/dawn/pipelines/forgescaffold_blueprint_v2.yaml}"
+if [[ ! -f "$PIPELINE_PATH" ]]; then
+  echo "Error: pipeline not found at $PIPELINE_PATH"
+  exit 1
+fi
+
+echo "Starting ForgeScaffold scan for project: $PROJECT_ID"
+cd "$FORGE_ROOT/DAWN"
+"$FORGE_PYTHON" -m dawn.runtime.main -p "$PROJECT_ID" -l "$PIPELINE_PATH"
+
+echo "Scan complete."
+echo "System catalog path: $FORGE_ROOT/DAWN/projects/$PROJECT_ID/artifacts/forgescaffold.system_catalog/system_catalog.json"

@@ -1,0 +1,52 @@
+{
+  "title": "ForgeScaffold Dataflow Map",
+  "type": "object",
+  "required": ["project_id", "nodes", "edges"],
+  "properties": {
+    "project_id": {"type": "string"},
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"type": "string"},
+          "path": {"type": "string"},
+          "language": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "type", "evidence"],
+        "properties": {
+          "from": {"type": "string"},
+          "to": {"type": "string"},
+          "type": {
+            "type": "string",
+            "enum": ["calls", "imports", "http", "grpc", "event", "reads", "writes", "spawns", "retrieves"]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "file": {"type": "string"},
+                "line": {"type": ["integer", "null"]},
+                "note": {"type": "string"}
+              },
+              "required": ["file", "note"],
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

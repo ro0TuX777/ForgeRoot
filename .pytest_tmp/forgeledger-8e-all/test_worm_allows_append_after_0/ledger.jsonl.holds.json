@@ -1,0 +1,13 @@
+{
+  "79b7269a-3d0a-4aa0-a1ff-463d0f089bf8": {
+    "hold_id": "79b7269a-3d0a-4aa0-a1ff-463d0f089bf8",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:19:04.200813+00:00",
+    "released": false
+  }
+}

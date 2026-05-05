@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# scripts/forge-cockpit
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/setup_env.sh"
+
+PORT="${FORGE_COCKPIT_PORT:-8504}"
+
+if [[ "${FORGE_OLLAMA_WARMUP_ON_START:-true}" == "true" ]]; then
+  if ! "$SCRIPT_DIR/warmup-local-models" "${OLLAMA_WARMUP_MODEL:-}" ; then
+    echo "Warning: local model warmup failed; continuing startup."
+  fi
+fi
+
+cd "$FORGE_ROOT"
+"$FORGE_PYTHON" -m streamlit run cockpit/streamlit_app.py \
+  --server.port "$PORT" \
+  --server.headless true \
+  --browser.gatherUsageStats false

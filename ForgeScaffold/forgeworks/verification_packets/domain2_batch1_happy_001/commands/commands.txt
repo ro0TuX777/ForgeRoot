@@ -1,0 +1,5 @@
+python3 -m forgeworks.cli validate --workcell packs/it_ops_runbook/test_batch_001
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_001 --mode supervised --out results/ops_batch_001_happy --drift-plan packs/it_ops_runbook/test_batch_001/drift/drift_plan.json
+python3 -m forgeworks.cli score --results results/ops_batch_001_happy --oracle packs/it_ops_runbook/test_batch_001/oracle/expectations.jsonl --scoring packs/it_ops_runbook/test_batch_001/scoring/scoring.json
+python3 -m forgeworks.cli report --results results/ops_batch_001_happy --score results/ops_batch_001_happy/score.json --out results/ops_batch_001_happy/report.md
+python3 -m forgeworks.cli normalize --domain it_ops_runbook --raw ingest/it_ops_runbook/batch_001_bad --out /tmp/fw_bad_ops (expected failure)

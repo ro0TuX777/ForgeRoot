@@ -1,0 +1,66 @@
+version: "0.1"
+default_class: operational_30d
+
+retention_classes:
+  ephemeral:
+    retain_for_days: 0
+    preserve_metadata_only: true  # keep event_id + event_type + event_hash for chain integrity only
+    deletion_allowed: true
+
+  operational_30d:
+    retain_for_days: 30
+    deletion_allowed: true
+
+  support_1y:
+    retain_for_days: 365
+    deletion_allowed: true
+
+  audit_7y:
+    retain_for_days: 2555
+    deletion_allowed: true
+    basis: "NZ/AU financial audit standard — RBNZ, FMA"
+
+  health_10y:
+    retain_for_days: 3650
+    deletion_allowed: true
+    basis: "HIPC 2020 / Health Act NZ: 10 years from last patient encounter"
+
+  legal_hold:
+    retain_until: manual_release
+    deletion_allowed: false
+    requires_release_reason: true
+
+  customer_defined:
+    retain_for_days: null  # resolved at runtime from tenant config
+    deletion_allowed: true
+
+# Default retention class per event type
+event_type_defaults:
+  "concord.admission_decision":    audit_7y
+  "forgegate.decision_record":     audit_7y
+  "forgegate.policy_evaluation":   audit_7y
+  "azul.verdict_summary":          audit_7y
+  "warden.llm_call_metadata":      support_1y
+  "agent.tool_call":               operational_30d
+  "agent.human_review_required":   audit_7y
+  "human.approval_decision":       audit_7y
+  "retention.legal_hold_applied":  audit_7y
+  "ledger.redaction_applied":      audit_7y
+  "ledger.checkpoint_created":     audit_7y
+  "ledger.anchor_published":       audit_7y
+  "ledger.evidence_package_exported": audit_7y
+  "ledger.read_access":            audit_7y
+  "ledger.retention_scan_completed": audit_7y
+  "ledger.retention_action_applied": audit_7y
+
+# Data sensitivity overrides — take precedence over event_type_defaults
+sensitivity_overrides:
+  health_identifiable:
+    retention_class: health_10y
+    prompt_retention: metadata_only
+    cross_border_export: restricted
+  finance_outsourcing:
+    retention_class: audit_7y
+  llm_prompt_pii_suspected:
+    retention_class: support_1y
+    prompt_retention: hashed

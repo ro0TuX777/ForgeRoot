@@ -1,0 +1,32 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "frameworks": {
+    "NZISM": {
+      "coverage_percent": 60.0,
+      "covered": 3,
+      "gaps": 1,
+      "open_controls": [
+        {
+          "control_id": "NZISM.LOGGING.EVENT_CAPTURE",
+          "missing_event_types": [
+            "warden.llm_call_metadata"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        },
+        {
+          "control_id": "NZISM.CHANGE.HUMAN_APPROVAL",
+          "missing_event_types": [
+            "agent.human_review_required",
+            "human.approval_decision"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        }
+      ],
+      "partial": 1
+    }
+  },
+  "generated_at": "2026-04-28T10:00:00Z",
+  "total_open_gaps": 2
+}

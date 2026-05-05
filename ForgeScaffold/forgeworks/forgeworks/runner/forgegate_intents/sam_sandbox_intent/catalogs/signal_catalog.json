@@ -1,0 +1,15 @@
+{
+    "schema_version": "0.1",
+    "signals": [
+        {
+            "signal_id": "sandbox_directory",
+            "type": "string",
+            "description": "The absolute or relative path to the executing directory."
+        },
+        {
+            "signal_id": "entrypoint_script",
+            "type": "string",
+            "description": "The name of the python script to run."
+        }
+    ]
+}

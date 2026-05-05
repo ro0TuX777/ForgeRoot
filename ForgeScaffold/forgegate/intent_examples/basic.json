@@ -1,0 +1,17 @@
+{
+  "intent_id": "basic",
+  "intent_version": "1",
+  "constraints": [
+    {"id": "block_prod", "when": {"op": "eq", "left": {"var": "signals.env"}, "right": "prod"}, "effect": "require_approval"}
+  ],
+  "boundaries": [
+    {"id": "deploy_autonomy", "action": "deploy", "autonomy": 1}
+  ],
+  "budgets": [
+    {"id": "cost", "kind": "usd", "limit": 100, "window": "day"}
+  ],
+  "tradeoffs": [
+    {"id": "prefer_reliability", "when": {"op": "gt", "left": {"var": "signals.risk"}, "right": 0.7}}
+  ],
+  "escalation": {"channels": ["ops"], "required_payload_fields": ["justification"]}
+}

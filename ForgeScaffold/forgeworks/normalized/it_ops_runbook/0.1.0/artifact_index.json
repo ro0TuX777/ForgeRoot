@@ -1,0 +1,1 @@
+{"artifacts":[{"artifact_id":"ART-RUNBOOK","kind":"text","path":"artifacts/runbook_service_down.md"},{"artifact_id":"ART-INCIDENT","kind":"text","path":"artifacts/incident_log_01.txt"},{"artifact_id":"ART-METRICS","kind":"text","path":"artifacts/metrics_snapshot.json"}],"schema_version":"0.1"}

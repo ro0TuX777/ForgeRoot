@@ -1,0 +1,27 @@
+{
+  "intent_id": "bundle_demo",
+  "intent_version": "1",
+  "constraints": [
+    {"id": "deny_prod_write", "when": {"op": "and", "args": [
+      {"op": "eq", "left": {"var": "signals.env"}, "right": "prod"},
+      {"op": "eq", "left": {"var": "proposed_action.action_id"}, "right": "write"}
+    ]}, "effect": "deny"}
+  ],
+  "boundaries": [
+    {"id": "deploy_autonomy", "action": "deploy", "autonomy": 1}
+  ],
+  "budgets": [
+    {"id": "cost", "kind": "usd", "limit": 100, "window": "day"}
+  ],
+  "tradeoffs": [
+    {"id": "prefer_cost", "when": {"op": "gt", "left": {"var": "signals.cost"}, "right": 50}}
+  ],
+  "shaping": [
+    {
+      "id": "cap_tokens",
+      "when": {"op": "gt", "left": {"var": "signals.cost"}, "right": 80},
+      "mods": {"caps": {"max_tokens": 1000}}
+    }
+  ],
+  "escalation": {"channels": ["ops"], "required_payload_fields": ["justification"]}
+}

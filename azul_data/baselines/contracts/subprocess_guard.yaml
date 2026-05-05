@@ -1,0 +1,10 @@
+domain: "system_operations"
+unit_id: "external.subprocess"
+actions:
+  - id: "check_call"
+    description: "Execute a system command"
+    guard_predicates:
+      - "args[0] in ['ls', 'git status', 'whoami']"
+      - "kwargs.get('shell') == False"
+    risk_tier: 3
+    consistency_profile: "atomic"

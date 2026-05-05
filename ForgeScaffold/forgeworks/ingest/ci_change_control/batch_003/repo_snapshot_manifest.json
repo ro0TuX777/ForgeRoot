@@ -1,0 +1,19 @@
+{
+  "candidate_files": [
+    "src/auth.py",
+    "tests/test_case_001.py",
+    "tests/test_case_002.py",
+    "tests/test_case_003.py"
+  ],
+  "commit": "unknown",
+  "core_paths": [
+    "src/auth.py"
+  ],
+  "forbidden_paths": [
+    ".github/workflows/",
+    "sam/orchestration/"
+  ],
+  "repo": "sample-service",
+  "touches_ci_config": false,
+  "touches_core_paths": false
+}

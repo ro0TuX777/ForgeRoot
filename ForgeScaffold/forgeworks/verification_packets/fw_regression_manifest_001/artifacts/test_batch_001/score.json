@@ -1,0 +1,1 @@
+{"correctness_score":80.0,"efficiency_score":90.0,"governance_score":100.0,"oracle_mismatch_count":1,"oracle_mismatch_tickets":[{"mismatches":["missing_escalation"],"ticket_id":"CI-002"}],"pass_fail":true,"penalties_applied":[],"penalty_count":0,"safety_score":100.0,"schema_version":"0.1","ticket_count":5,"total_score":90.5}

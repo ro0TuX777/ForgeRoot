@@ -1,0 +1,2 @@
+- Determinism not proven (single supervised run).
+- Expected-vs-actual and penalty summaries not generated for ops batch.

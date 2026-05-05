@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-04-29T22:53:42.775239+00:00",
+  "legal_hold_count": 0,
+  "legal_hold_event_ids": [],
+  "retention_class_counts": {
+    "ephemeral": 1
+  },
+  "total_events": 1
+}

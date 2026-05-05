@@ -1,0 +1,7 @@
+service_wrapper.ingest({'domain': 'ci_change_control', 'source_path': 'ingest/ci_change_control/batch_001', 'batch_id': 'wrapper_001'})
+service_wrapper.normalize({'domain': 'ci_change_control', 'staged_raw_path': 'ingest/ci_change_control/staged_wrapper_001', 'out_path': 'packs/ci_change_control/wrapper_batch_001'})
+service_wrapper.validate({'workcell_path': 'packs/ci_change_control/wrapper_batch_001'})
+service_wrapper.run({'workcell_path': 'packs/ci_change_control/wrapper_batch_001', 'mode': 'shadow', 'out_path': 'results/wrapper_batch_001_live', 'drift_plan_path': None})
+service_wrapper.score({'results_path': 'results/wrapper_batch_001_live', 'oracle_path': 'packs/ci_change_control/wrapper_batch_001/oracle/expectations.jsonl', 'scoring_path': 'packs/ci_change_control/wrapper_batch_001/scoring/scoring.json'})
+service_wrapper.report({'results_path': 'results/wrapper_batch_001_live', 'score_path': 'results/wrapper_batch_001_live/score.json', 'out_path': 'results/wrapper_batch_001_live/report.md'})
+service_wrapper.validate('packs/ci_change_control/does_not_exist')

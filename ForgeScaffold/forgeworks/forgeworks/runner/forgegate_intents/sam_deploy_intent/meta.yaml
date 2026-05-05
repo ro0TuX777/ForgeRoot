@@ -1,0 +1,5 @@
+name: sam_deploy_intent
+version: 1.0.0
+description: "Governs the Phase 5 deployment of verified Phase 3 sandbox code into the active SAM repository."
+author: SAM_v2_Relay
+schema_version: 0.4.0

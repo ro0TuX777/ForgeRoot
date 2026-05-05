@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/registry_manifest.v0_1.json",
+  "title": "ForgeGate Registry Manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "intents", "history"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "intents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["intent_id", "active_version", "versions"],
+        "properties": {
+          "intent_id": {"type": "string"},
+          "active_version": {"type": ["string", "null"]},
+          "versions": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "action", "intent_id", "version"],
+        "properties": {
+          "id": {"type": "integer", "minimum": 1},
+          "action": {"type": "string", "enum": ["promote", "rollback"]},
+          "intent_id": {"type": "string"},
+          "version": {"type": "string"}
+        }
+      }
+    }
+  }
+}

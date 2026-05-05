@@ -1,0 +1,13 @@
+{
+  "217d0b67-773b-42b3-b93c-eacfb2f3d048": {
+    "hold_id": "217d0b67-773b-42b3-b93c-eacfb2f3d048",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:14:41.220773+00:00",
+    "released": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "9d6345fb-294d-494a-bcf6-35536ae26ca5": {
+    "hold_id": "9d6345fb-294d-494a-bcf6-35536ae26ca5",
+    "tenant_id": "t-001",
+    "reason": "regulatory_investigation",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:53:41.745233+00:00",
+    "released": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticket_id": "CI-002",
+  "ticket_intent": "Fix CI failure: tests/test_workflow_edit.py::test_edit_ci_yaml",
+  "hypothesis_path": "results/test_batch_005_live/work/CI-002/CI-002_hypothesis.json",
+  "spec_contract_path": "results/test_batch_005_live/work/CI-002/CI-002_spec_contract.yaml",
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 5,
+  "retry_count": 0,
+  "max_retries": 3,
+  "last_error_log": null,
+  "sandbox_directory": "results/test_batch_005_live/work/CI-002/workspace/CI-002_sandbox",
+  "phase_timing": {
+    "Scout": 88.944,
+    "Legislator": 134.463,
+    "Builder": 135.073,
+    "Deployer": 0.001
+  },
+  "phase_tokens": {}
+}

@@ -1,0 +1,8 @@
+python3 -m forgeworks.cli validate --workcell packs/it_ops_runbook/test_batch_002_gov
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_002_gov --mode supervised --out results/ops_batch_002_gov --drift-plan packs/it_ops_runbook/test_batch_002_gov/drift/drift_plan.json
+python3 -m forgeworks.cli score --results results/ops_batch_002_gov --oracle packs/it_ops_runbook/test_batch_002_gov/oracle/expectations.jsonl --scoring packs/it_ops_runbook/test_batch_002_gov/scoring/scoring.json
+python3 -m forgeworks.cli report --results results/ops_batch_002_gov --score results/ops_batch_002_gov/score.json --out results/ops_batch_002_gov/report.md
+python3 -m forgeworks.cli normalize --domain it_ops_runbook --raw ingest/it_ops_runbook/batch_002_gov_bad --out /tmp/fw_bad_ops_gov (expected failure)
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_002_gov --mode supervised --out results/ops_batch_002_gov_repeat --drift-plan packs/it_ops_runbook/test_batch_002_gov/drift/drift_plan.json
+python3 (generate expected_vs_actual + penalty summary)
+shasum -a 256 results/ops_batch_002_gov/decision_ledger.jsonl results/ops_batch_002_gov/approval_records.jsonl results/ops_batch_002_gov_repeat/decision_ledger.jsonl results/ops_batch_002_gov_repeat/approval_records.jsonl

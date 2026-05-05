@@ -1,0 +1,13 @@
+{
+  "76c794db-6064-4af2-9054-2b8d1875d01e": {
+    "hold_id": "76c794db-6064-4af2-9054-2b8d1875d01e",
+    "tenant_id": "t-001",
+    "reason": "regulatory_investigation",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:35:09.523853+00:00",
+    "released": false
+  }
+}

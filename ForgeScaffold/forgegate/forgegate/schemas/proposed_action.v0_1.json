@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/proposed_action.v0_1.json",
+  "title": "ForgeGate ProposedAction v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "action_id", "actor_id", "params"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "action_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "actor_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "actor_profile": {"type": "string", "minLength": 1, "maxLength": 256},
+    "action_type": {"type": "string", "minLength": 1, "maxLength": 128},
+    "params": {"type": "object", "additionalProperties": true},
+    "metadata": {"type": "object", "additionalProperties": true},
+    "nonce": {"type": "string", "minLength": 1, "maxLength": 128}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "c5de93ca-4b53-43ef-8477-8b81659d1955": {
+    "hold_id": "c5de93ca-4b53-43ef-8477-8b81659d1955",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000"
+    ],
+    "applied_at": "2026-04-29T22:19:04.217001+00:00",
+    "released": false
+  }
+}

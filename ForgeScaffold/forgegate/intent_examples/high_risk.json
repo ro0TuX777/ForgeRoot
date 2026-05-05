@@ -1,0 +1,11 @@
+{
+  "intent_id": "high_risk",
+  "intent_version": "1",
+  "constraints": [
+    {"id": "deny_prod_delete", "when": {"op": "and", "args": [
+      {"op": "eq", "left": {"var": "signals.env"}, "right": "prod"},
+      {"op": "eq", "left": {"var": "proposed_action.action_id"}, "right": "delete"}
+    ]}, "effect": "deny"}
+  ],
+  "escalation": {"channels": ["security"], "required_payload_fields": ["ticket", "owner"]}
+}

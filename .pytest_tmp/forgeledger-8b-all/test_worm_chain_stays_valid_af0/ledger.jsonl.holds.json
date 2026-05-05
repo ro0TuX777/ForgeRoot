@@ -1,0 +1,13 @@
+{
+  "3ea00a8a-42f3-42f4-888b-f5eb718e8cc7": {
+    "hold_id": "3ea00a8a-42f3-42f4-888b-f5eb718e8cc7",
+    "tenant_id": "t-001",
+    "reason": "regulatory_investigation",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:01:49.475453+00:00",
+    "released": false
+  }
+}

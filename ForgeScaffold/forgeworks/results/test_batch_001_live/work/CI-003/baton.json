@@ -1,0 +1,21 @@
+{
+  "ticket_id": "CI-003",
+  "ticket_intent": "Fix CI failure: tests/test_disable_checks.py::test_skip_tests",
+  "hypothesis_path": "results/test_batch_001_live/work/CI-003/CI-003_hypothesis.json",
+  "spec_contract_path": "results/test_batch_001_live/work/CI-003/CI-003_spec_contract.yaml",
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 5,
+  "retry_count": 0,
+  "max_retries": 3,
+  "last_error_log": null,
+  "sandbox_directory": "results/test_batch_001_live/work/CI-003/workspace/CI-003_sandbox",
+  "phase_timing": {
+    "Scout": 96.894,
+    "Legislator": 106.103,
+    "Builder": 150.636,
+    "Deployer": 0.001
+  },
+  "phase_tokens": {}
+}

@@ -1,0 +1,20 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.prune_evidence
+spec:
+  description: "Prune evidence packs based on retention policy"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.prune_report.json"
+      path: "prune_report.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

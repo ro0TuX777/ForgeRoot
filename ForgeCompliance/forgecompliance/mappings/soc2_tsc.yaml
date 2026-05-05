@@ -1,0 +1,99 @@
+framework: SOC2
+profile_version: "0.1"
+jurisdiction: US
+sector: service_organizations
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "SOC2.CC6.1"
+    objective: >
+      The entity implements logical access security software, infrastructure,
+      and architectures over protected information assets to protect them from
+      security events to meet the entity's objectives.
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "actor.actor_id"
+      - "actor.role"
+      - "decision.decision_type"
+      - "policy.policy_id"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "control_coverage_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "SOC2.CC7.2"
+    objective: >
+      The entity monitors system components and the operation of those controls
+      on an ongoing basis to detect anomalies that are indicative of malicious
+      acts, natural disasters, and errors affecting the entity's ability to meet
+      its objectives.
+    required_event_types:
+      - "azul.verdict_summary"
+      - "agent.human_review_required"
+    required_fields:
+      - "decision.risk_level"
+      - "evidence.evidence_gaps"
+    evidence_artifacts:
+      - "evidence_gap_report.json"
+      - "chain_validation_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "SOC2.CC8.1"
+    objective: >
+      The entity authorises, designs, develops or acquires, configures,
+      documents, tests, approves, and implements changes to infrastructure,
+      data, software, and procedures to meet its change management objectives.
+    required_event_types:
+      - "agent.human_review_required"
+      - "human.approval_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "actor.actor_id"
+      - "actor.actor_type"
+      - "decision.decision_type"
+      - "decision.reason"
+    evidence_artifacts:
+      - "human_review_decisions.json"
+      - "ledger_slice.jsonl"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "SOC2.CC2.2"
+    objective: >
+      The entity internally communicates information, including objectives and
+      responsibilities for internal control, necessary to support the functioning
+      of internal control.
+    required_event_types:
+      - "human.approval_decision"
+      - "agent.human_review_required"
+    required_fields:
+      - "actor.actor_id"
+      - "decision.decision_type"
+      - "decision.reason"
+    evidence_artifacts:
+      - "human_review_decisions.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "SOC2.CC4.1"
+    objective: >
+      The entity selects, develops, and performs ongoing and/or separate
+      evaluations to ascertain whether the components of internal control are
+      present and functioning.
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+      - "forgegate.policy_evaluation"
+    required_fields:
+      - "policy.policy_id"
+      - "policy.policy_hash"
+      - "integrity.event_hash"
+    evidence_artifacts:
+      - "chain_validation_report.json"
+      - "control_coverage_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium

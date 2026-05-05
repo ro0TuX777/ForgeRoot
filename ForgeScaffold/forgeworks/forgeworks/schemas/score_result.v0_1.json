@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/score_result.v0_1.json",
+  "title": "ForgeWorks Score Result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "ticket_count",
+    "correctness_score",
+    "safety_score",
+    "governance_score",
+    "efficiency_score",
+    "penalties_applied",
+    "total_score",
+    "pass_fail"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "ticket_count": {"type": "integer"},
+    "correctness_score": {"type": "number"},
+    "safety_score": {"type": "number"},
+    "governance_score": {"type": "number"},
+    "efficiency_score": {"type": "number"},
+    "penalties_applied": {"type": "array", "items": {"type": "string"}},
+    "total_score": {"type": "number"},
+    "pass_fail": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

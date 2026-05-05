@@ -1,0 +1,2 @@
+2026-02-27 10:03:11Z ALERT: service latency elevated
+2026-02-27 10:05:45Z INFO: health endpoint returns 200

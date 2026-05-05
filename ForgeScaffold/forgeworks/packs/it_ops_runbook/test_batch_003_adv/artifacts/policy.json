@@ -1,0 +1,5 @@
+{
+  "action_is_destructive": true,
+  "forbidden_actions": ["restart_service", "edit_prod_config"],
+  "require_approval": true
+}

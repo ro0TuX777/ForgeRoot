@@ -1,0 +1,20 @@
+allowed_imports:
+- os
+- json
+architecture_rules: Strictly adhere to SOLID principles.
+prohibited_actions:
+- Do not make actual network calls, use mocks.
+- Do not use threads
+verification_plan: '1. Write dummy test_script.py with sample test cases and dependencies
+
+  2. Implement parsing logic to identify test dependencies and conditions for skipping
+  tests
+
+  3. Simulate different scenarios (e.g., missing dependencies, certain environment
+  variables)
+
+  4. Verify that the correct tests are skipped based on specified conditions
+
+  5. Ensure that the script exits with code 0 when no errors occur
+
+  '

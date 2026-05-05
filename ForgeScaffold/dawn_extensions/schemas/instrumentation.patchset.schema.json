@@ -1,0 +1,488 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bluecloakforged.github.io/forgescaffold/schemas/instrumentation.patchset.schema.json",
+  "title": "ForgeScaffold Instrumentation Patchset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "patchset_id",
+    "generator",
+    "target",
+    "operations"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Version of the patchset schema.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "patchset_id": {
+      "type": "string",
+      "description": "Stable identifier for this patchset. Suggested: sha256 of normalized operations.",
+      "minLength": 8,
+      "maxLength": 128
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "RFC3339/ISO8601 patchset creation timestamp."
+    },
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "const": "forgescaffold.obs_instrument_patchset"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "project_id",
+        "bundle_content_sha256"
+      ],
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "bundle_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bundle_content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "root_dir": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "language_hints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "maxItems": 32
+        }
+      }
+    },
+    "intent": {
+      "type": "object",
+      "description": "High-level intent and boundaries for the patchset.",
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "observability_instrumentation"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "generate_only",
+            "apply_allowed"
+          ]
+        },
+        "constraints": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        }
+      }
+    },
+    "requires": {
+      "type": "object",
+      "description": "Artifacts/conditions required to interpret/apply this patchset.",
+      "additionalProperties": false,
+      "properties": {
+        "artifacts": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "description": "Artifact IDs, e.g., forgescaffold.system_catalog.json"
+          }
+        },
+        "policies": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          }
+        }
+      }
+    },
+    "operations": {
+      "type": "array",
+      "description": "Ordered list of file operations to implement instrumentation changes.",
+      "minItems": 1,
+      "maxItems": 2000,
+      "items": {
+        "$ref": "#/$defs/operation"
+      }
+    },
+    "checks": {
+      "type": "object",
+      "description": "Optional post-apply checks (commands and expected artifacts).",
+      "additionalProperties": false,
+      "properties": {
+        "commands": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/checkCommand"
+          }
+        }
+      }
+    },
+    "ext": {
+      "type": "object",
+      "description": "Extension bag for forward compatibility.",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "op",
+        "path"
+      ],
+      "properties": {
+        "op": {
+          "type": "string",
+          "enum": [
+            "add",
+            "modify",
+            "delete",
+            "rename"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "description": "Target path relative to repository root.",
+          "minLength": 1,
+          "maxLength": 1024,
+          "pattern": "^(?!/)(?!.*\\s)(?!.*\\.{2}/).+"
+        },
+        "old_path": {
+          "type": "string",
+          "description": "Required for rename operations.",
+          "minLength": 1,
+          "maxLength": 1024,
+          "pattern": "^(?!/)(?!.*\\s)(?!.*\\.{2}/).+"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Human-readable reason for this operation (brief).",
+          "maxLength": 1024
+        },
+        "unit_id": {
+          "type": "string",
+          "description": "Optional unit_id from system_catalog the change is associated with.",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "tags": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          }
+        },
+        "file_mode": {
+          "type": "string",
+          "description": "Optional POSIX-like mode string for new files.",
+          "pattern": "^[0-7]{3,4}$"
+        },
+        "content": {
+          "type": "string",
+          "description": "Full file content for add/replace operations. Prefer UTF-8 text.",
+          "maxLength": 2000000
+        },
+        "content_sha256": {
+          "type": "string",
+          "description": "Hash of full content (sha256 hex) for integrity checks.",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "patch": {
+          "type": "array",
+          "description": "Optional list of hunks for modify operations (when not replacing full file).",
+          "maxItems": 512,
+          "items": {
+            "$ref": "#/$defs/hunk"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "description": "Optional evidence references used to decide this operation.",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/evidenceRef"
+          }
+        },
+        "safety": {
+          "type": "object",
+          "description": "Safety metadata for the operation.",
+          "additionalProperties": false,
+          "properties": {
+            "risk": {
+              "type": "string",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "reversible": {
+              "type": "boolean"
+            },
+            "apply_guard": {
+              "type": "string",
+              "description": "Guard condition for apply link (e.g., 'profile=dev' or 'policy_allow_write=src').",
+              "maxLength": 256
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "add"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "content",
+              "content_sha256"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "modify"
+              }
+            }
+          },
+          "then": {
+            "oneOf": [
+              {
+                "required": [
+                  "content",
+                  "content_sha256"
+                ]
+              },
+              {
+                "required": [
+                  "patch"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "rename"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "old_path"
+            ]
+          }
+        }
+      ]
+    },
+    "hunk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor"
+      ],
+      "properties": {
+        "anchor": {
+          "type": "object",
+          "description": "Anchor describing where to apply the hunk.",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "value"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "regex",
+                "literal",
+                "line_range"
+              ]
+            },
+            "value": {
+              "type": "string",
+              "description": "Regex pattern, literal string, or line range descriptor.",
+              "maxLength": 8192
+            },
+            "occurrence": {
+              "type": "integer",
+              "description": "Which match occurrence to use if multiple matches exist (1-based).",
+              "minimum": 1,
+              "maximum": 1000
+            }
+          }
+        },
+        "action": {
+          "type": "string",
+          "description": "Edit action to apply at anchor.",
+          "enum": [
+            "insert_before",
+            "insert_after",
+            "replace",
+            "delete"
+          ]
+        },
+        "content": {
+          "type": "string",
+          "description": "Content to insert/replace.",
+          "maxLength": 2000000
+        },
+        "expected_before_sha256": {
+          "type": "string",
+          "description": "Optional integrity check hash of the target region before applying.",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "expected_after_sha256": {
+          "type": "string",
+          "description": "Optional integrity check hash of the target region after applying.",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "evidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "ref"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "system_catalog",
+            "dataflow_map",
+            "file",
+            "config",
+            "manual_note"
+          ]
+        },
+        "ref": {
+          "type": "string",
+          "description": "Reference string, e.g., artifact id, file path, or config key.",
+          "minLength": 1,
+          "maxLength": 1024
+        },
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "line_start": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "line_end": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "checkCommand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "command"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "command": {
+          "type": "string",
+          "description": "Shell command to run post-apply (no network).",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "cwd": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "timeout_sec": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3600
+        },
+        "expect_exit_code": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "expect_artifacts": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        }
+      }
+    }
+  }
+}

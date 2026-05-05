@@ -1,0 +1,11 @@
+risk_tier: 2
+guard_predicates:
+- args[0] in ['ls', 'git status', 'whoami', 'python --version']
+- kwargs.get('shell') == False
+_improvement_metadata:
+  run_id: apply-fbc3bee331b5
+  rationale: subprocess.check_call with 'python --version' was rejected 3 times last
+    month. Guard predicate is too restrictive for routine validation calls. Lowering
+    risk_tier from 3 to 2 and expanding allowlist.
+  generated_at: '2026-03-14T07:18:47.450351+00:00'
+  status: pending_approval

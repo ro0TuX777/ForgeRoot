@@ -1,0 +1,4 @@
+packs/it_ops_runbook/test_batch_003_adv/run_config.json
+packs/it_ops_runbook/test_batch_003_adv/scoring/scoring.json
+packs/it_ops_runbook/test_batch_003_adv/drift/drift_plan.json
+packs/it_ops_runbook/test_batch_003_adv/intent_bundle/intent/intent_spec.json

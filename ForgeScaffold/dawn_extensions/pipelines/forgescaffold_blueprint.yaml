@@ -1,0 +1,6 @@
+pipelineId: "forgescaffold_blueprint"
+links:
+  - id: ingest.project_bundle
+  - id: forgescaffold.system_catalog
+  - id: forgescaffold.map_dataflow
+  - id: forgescaffold.test_matrix

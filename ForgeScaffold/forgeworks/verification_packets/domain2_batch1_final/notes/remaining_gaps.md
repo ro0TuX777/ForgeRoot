@@ -1,0 +1,3 @@
+- Consolidated packet for Domain 2 batch 1.
+- Negative proof sourced from happy_002.
+- Determinism and expected/actual sourced from happy_003.

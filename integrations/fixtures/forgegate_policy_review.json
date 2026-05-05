@@ -1,0 +1,20 @@
+{
+  "fixture_provenance": "representative_hand_authored",
+  "subsystem": "ForgeGate",
+  "actor_id": "forgegate.policy_evaluator",
+  "decision_type": "review",
+  "reason": "blast radius requires human review before execution",
+  "risk_level": "medium",
+  "tenant_id": "tenant-001",
+  "customer_boundary": "customer-a",
+  "data_residency": "NZ",
+  "policy_id": "forgegate-policy-v1",
+  "policy_hash": "sha256:forgegate-review-policy",
+  "blast_radius_score": 0.74,
+  "evidence_refs": ["forgegate://evaluation/review-001"],
+  "evidence_gaps": ["human_approval_pending"],
+  "frameworks": ["NZISM", "SOC2"],
+  "action_type": "policy_evaluation",
+  "environment": "local",
+  "deployment_id": "runtime-fixture"
+}

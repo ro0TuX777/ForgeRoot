@@ -1,0 +1,115 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "framework_reports": {
+    "NZISM": {
+      "claim_boundary": "Evidence support only. Not a compliance certification.",
+      "controls": [
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "high",
+          "control_id": "NZISM.LOGGING.EVENT_CAPTURE",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "warden.llm_call_metadata"
+          ],
+          "missing_required_fields": [],
+          "objective": "Security-relevant events are captured in audit logs.",
+          "present_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "partial"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "high",
+          "control_id": "NZISM.LOGGING.TAMPER_PROTECTION",
+          "mapping_version": "0.1",
+          "missing_event_types": [],
+          "missing_required_fields": [],
+          "objective": "Audit logs are protected against unauthorised modification or deletion.",
+          "present_event_types": [
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "covered"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "high",
+          "control_id": "NZISM.LOGGING.RETENTION",
+          "mapping_version": "0.1",
+          "missing_event_types": [],
+          "missing_required_fields": [],
+          "objective": "Audit logs are retained for the required minimum period.",
+          "present_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "covered"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "NZISM.ACCESS.AUTHORISATION",
+          "mapping_version": "0.1",
+          "missing_event_types": [],
+          "missing_required_fields": [],
+          "objective": "Access to systems is authorised before being granted.",
+          "present_event_types": [
+            "concord.admission_decision"
+          ],
+          "source_reference": null,
+          "status": "covered"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "NZISM.CHANGE.HUMAN_APPROVAL",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "objective": "High-impact changes are approved by an authorised human before execution.",
+          "present_event_types": [
+            "human.approval_decision"
+          ],
+          "source_reference": null,
+          "status": "partial"
+        }
+      ],
+      "coverage_percent": 60.0,
+      "covered": 3,
+      "framework": "NZISM",
+      "gaps": 0,
+      "generated_at": "2026-04-28T10:00:00Z",
+      "partial": 2,
+      "profile_version": "0.1",
+      "total_controls": 5
+    }
+  },
+  "frameworks_analysed": [
+    "NZISM"
+  ],
+  "generated_at": "2026-04-28T10:00:00Z",
+  "mapping_governance": {
+    "approved_count": 5,
+    "deprecated_count": 0,
+    "draft_count": 0,
+    "generated_at": "2026-04-28T10:00:00Z",
+    "missing_approver": [],
+    "missing_claim_boundary": [],
+    "missing_reviewer": [],
+    "reviewed_count": 0,
+    "total_mappings": 5
+  },
+  "total_events_analysed": 3
+}

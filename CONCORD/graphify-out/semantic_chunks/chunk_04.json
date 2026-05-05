@@ -1,0 +1,935 @@
+{
+  "nodes": [
+    {
+      "id": "n_agent_class",
+      "label": "AgentClass",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_capability_set",
+      "label": "CapabilitySet",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_session",
+      "label": "Session",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_intent",
+      "label": "Intent",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_resource",
+      "label": "Resource",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_lease",
+      "label": "Lease",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_receipt",
+      "label": "Receipt",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_saga_run",
+      "label": "SagaRun",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_operation_context",
+      "label": "OperationContext",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_principle_intent_authoritative",
+      "label": "intent_admission_authoritative",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_consistency_strong",
+      "label": "STRONG",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_consistency_session_monotonic",
+      "label": "SESSION_MONOTONIC",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_consistency_ryw",
+      "label": "READ_YOUR_WRITES",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_consistency_eventual",
+      "label": "EVENTUAL",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_consistency_async_proj",
+      "label": "ASYNC_PROJECTION",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_budget_layers",
+      "label": "budget_gateway_vs_intent_layer",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_conflict_strategy",
+      "label": "conflict_resolution_strategy",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_catalog_metadata",
+      "label": "error_conflict_metadata_contract",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_stale_version",
+      "label": "STALE_VERSION",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_session_stale_view",
+      "label": "SESSION_STALE_VIEW",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_lease_held",
+      "label": "LEASE_HELD",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_budget_exceeded",
+      "label": "BUDGET_EXCEEDED",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_authoritative_recheck",
+      "label": "AUTHORITATIVE_RECHECK_REQUIRED",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_err_read_freshness",
+      "label": "READ_FRESHNESS_UNAVAILABLE",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_err_saga_timed_out",
+      "label": "SAGA_TIMED_OUT",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_err_saga_poisoned",
+      "label": "SAGA_POISONED",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_err_compensation_failed",
+      "label": "COMPENSATION_FAILED",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_min_error_json",
+      "label": "minimal_portable_error_json_shape",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_action_contract",
+      "label": "ActionContract",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_state_contract",
+      "label": "StateContract",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_budget_profile",
+      "label": "BudgetProfile",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_budget_ledger",
+      "label": "BudgetLedger",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_token",
+      "label": "Token",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_coordination_telemetry",
+      "label": "CoordinationTelemetry",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_ref_change_request",
+      "label": "worked_example_change_request",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_readiness_report",
+      "label": "ReadinessReport",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Scan_Output_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_danger_map",
+      "label": "DangerMap",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Scan_Output_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_resource_dep_graph",
+      "label": "ResourceDependencyGraph",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Scan_Output_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_patch_plan",
+      "label": "PatchPlan",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Scan_Output_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_scan_bundle",
+      "label": "scan_bundle_overview",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Scan_Output_Schemas.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_policy_blocked",
+      "label": "POLICY_BLOCKED",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_not_authorized",
+      "label": "NOT_AUTHORIZED_FOR_AGENT_CLASS",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_override_denied",
+      "label": "OVERRIDE_DENIED",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_queue_required",
+      "label": "QUEUE_REQUIRED",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "n_code_duplicate_intent",
+      "label": "DUPLICATE_INTENT",
+      "file_type": "paper",
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "n_principle_intent_authoritative",
+      "target": "n_intent",
+      "relation": "grounds",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_intent",
+      "target": "n_session",
+      "relation": "scoped_by",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_receipt",
+      "target": "n_intent",
+      "relation": "records_execution_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_saga_run",
+      "target": "n_intent",
+      "relation": "roots_at",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_operation_context",
+      "target": "n_resource",
+      "relation": "projects_view_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_consistency_strong",
+      "target": "n_code_stale_version",
+      "relation": "typical_rejection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_consistency_session_monotonic",
+      "target": "n_code_session_stale_view",
+      "relation": "typical_rejection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_consistency_ryw",
+      "target": "n_err_read_freshness",
+      "relation": "typical_rejection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_consistency_eventual",
+      "target": "n_code_authoritative_recheck",
+      "relation": "planning_requires",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_action_contract",
+      "target": "n_consistency_eventual",
+      "relation": "declares_profile",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_action_contract",
+      "target": "n_intent",
+      "relation": "admission_aligns_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_state_contract",
+      "target": "n_resource",
+      "relation": "models_business_state_of",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_budget_profile",
+      "target": "n_budget_layers",
+      "relation": "instantiates",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_budget_ledger",
+      "target": "n_session",
+      "relation": "tracks_consumption_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_budget_ledger",
+      "target": "n_code_budget_exceeded",
+      "relation": "feeds_signals_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_lease",
+      "target": "n_code_lease_held",
+      "relation": "denial_when_contested",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_token",
+      "target": "n_code_queue_required",
+      "relation": "often_gates_via",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_saga_run",
+      "target": "n_err_saga_timed_out",
+      "relation": "enters_state_emitting",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_saga_run",
+      "target": "n_err_saga_poisoned",
+      "relation": "terminates_as",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_err_compensation_failed",
+      "target": "n_err_saga_poisoned",
+      "relation": "upstream_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_catalog_metadata",
+      "target": "n_min_error_json",
+      "relation": "serialized_as",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_min_error_json",
+      "target": "n_operation_context",
+      "relation": "may_require_refresh_before",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_agent_class",
+      "target": "n_code_not_authorized",
+      "relation": "violations_map_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_capability_set",
+      "target": "n_code_override_denied",
+      "relation": "narrowing_can_trigger",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_intent",
+      "target": "n_code_duplicate_intent",
+      "relation": "idem_collision_surface",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_conflict_strategy",
+      "target": "n_code_policy_blocked",
+      "relation": "may_escalate_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_coordination_telemetry",
+      "target": "n_code_stale_version",
+      "relation": "stale_write_rejection_rate_observes",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_coordination_telemetry",
+      "target": "n_code_budget_exceeded",
+      "relation": "budget_throttle_rate_observes",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_readiness_report",
+      "target": "n_action_contract",
+      "relation": "scores_presence_and_quality_of",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_readiness_report",
+      "target": "n_coordination_telemetry",
+      "relation": "observability_dimension_aligns_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_danger_map",
+      "target": "n_consistency_eventual",
+      "relation": "flags_missing_recheck_under",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_danger_map",
+      "target": "n_saga_run",
+      "relation": "flags_saga_coverage_gaps_vs",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_resource_dep_graph",
+      "target": "n_state_contract",
+      "relation": "maps_cross_resource_effects_beyond",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_patch_plan",
+      "target": "n_danger_map",
+      "relation": "remediates_findings_from",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_ref_change_request",
+      "target": "n_operation_context",
+      "relation": "illustrates_sample_response_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_ref_change_request",
+      "target": "n_action_contract",
+      "relation": "aggregates_actions_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_scan_bundle",
+      "target": "n_readiness_report",
+      "relation": "includes_artifact",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "n_scan_bundle",
+      "target": "n_resource_dep_graph",
+      "relation": "includes_artifact",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "h_runtime_minimum",
+      "label": "minimum_runtime_core_contracts",
+      "nodes": [
+        "n_action_contract",
+        "n_state_contract",
+        "n_session",
+        "n_intent",
+        "n_resource",
+        "n_lease",
+        "n_operation_context",
+        "n_receipt",
+        "n_budget_profile",
+        "n_budget_ledger"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "CONCORD_v0_3_Runtime_Contract_Schemas.pdf"
+    },
+    {
+      "id": "h_consistency_profiles",
+      "label": "consistency_profile_family",
+      "nodes": [
+        "n_consistency_strong",
+        "n_consistency_session_monotonic",
+        "n_consistency_ryw",
+        "n_consistency_eventual",
+        "n_consistency_async_proj",
+        "n_action_contract"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "CONCORD_v0_3_Core_Specification.pdf"
+    },
+    {
+      "id": "h_saga_failure_chain",
+      "label": "saga_timeout_poison_compensation_chain",
+      "nodes": [
+        "n_saga_run",
+        "n_err_saga_timed_out",
+        "n_err_saga_poisoned",
+        "n_err_compensation_failed"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "CONCORD_v0_3_Error_and_Conflict_Code_Catalog.pdf"
+    }
+  ],
+  "input_tokens": 6120,
+  "output_tokens": 2840
+}

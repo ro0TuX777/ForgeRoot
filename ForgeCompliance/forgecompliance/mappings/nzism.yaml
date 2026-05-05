@@ -1,0 +1,81 @@
+framework: NZISM
+profile_version: "0.1"
+jurisdiction: NZ
+sector: government
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "NZISM.LOGGING.EVENT_CAPTURE"
+    objective: "Security-relevant events are captured in audit logs."
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+      - "warden.llm_call_metadata"
+    required_fields:
+      - "event_id"
+      - "event_time"
+      - "actor.actor_id"
+      - "decision.decision_type"
+      - "integrity.event_hash"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "chain_validation_report.json"
+      - "retention_policy_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: high
+
+  - control_id: "NZISM.LOGGING.TAMPER_PROTECTION"
+    objective: "Audit logs are protected against unauthorised modification or deletion."
+    required_event_types:
+      - "forgegate.decision_record"
+    required_fields:
+      - "integrity.event_hash"
+    evidence_artifacts:
+      - "chain_validation_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: high
+
+  - control_id: "NZISM.LOGGING.RETENTION"
+    objective: "Audit logs are retained for the required minimum period."
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "policy.retention_class"
+      - "policy.policy_id"
+    evidence_artifacts:
+      - "retention_policy_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: high
+
+  - control_id: "NZISM.ACCESS.AUTHORISATION"
+    objective: "Access to systems is authorised before being granted."
+    required_event_types:
+      - "concord.admission_decision"
+    required_fields:
+      - "actor.actor_id"
+      - "actor.role"
+      - "decision.decision_type"
+      - "policy.policy_id"
+      - "policy.policy_hash"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "control_coverage_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+    notes: "CONCORD admission maps to pre-action authorisation. Not a full IAM audit trail."
+
+  - control_id: "NZISM.CHANGE.HUMAN_APPROVAL"
+    objective: "High-impact changes are approved by an authorised human before execution."
+    required_event_types:
+      - "agent.human_review_required"
+      - "human.approval_decision"
+    required_fields:
+      - "actor.actor_id"
+      - "actor.actor_type"
+      - "decision.decision_type"
+      - "decision.reason"
+    evidence_artifacts:
+      - "human_review_decisions.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium

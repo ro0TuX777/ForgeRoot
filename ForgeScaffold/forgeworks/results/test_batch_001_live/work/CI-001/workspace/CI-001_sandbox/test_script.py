@@ -1,0 +1,1 @@
+def test_fail(): assert False, 'No tests parsed'

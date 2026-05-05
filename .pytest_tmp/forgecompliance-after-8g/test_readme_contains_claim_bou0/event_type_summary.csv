@@ -1,0 +1,4 @@
+event_type,count
+concord.admission_decision,1
+forgegate.decision_record,1
+human.approval_decision,1

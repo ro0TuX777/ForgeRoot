@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "events": [
+    {
+      "actor_id": "warden.llm_gateway",
+      "event_id": "6203b13b-3d65-4fa0-8b5a-71c4bad9645f",
+      "event_time": "2026-04-29T22:34:59.635502+00:00",
+      "model_provider": "local",
+      "prompt_class": "support_request",
+      "redaction_applied": true,
+      "response_class": "operational_guidance",
+      "retention_class": "support_1y",
+      "source_module": "Warden"
+    }
+  ],
+  "generated_at": "2026-04-29T22:34:59.640709+00:00",
+  "total_llm_boundary_events": 1
+}

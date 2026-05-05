@@ -1,0 +1,1 @@
+{"cause":"No prior CLI failure found","code":"EXPLAIN_NO_CONTEXT","command":"explain","created_at":"2026-02-23T08:56:40.597878Z","error_codes":["EXPLAIN_NO_CONTEXT"],"evidence":[],"mode":"runnable_only","next_steps":[],"pipeline_name":null,"primary_code":"EXPLAIN_NO_CONTEXT","profile":"normal","project":"T2T","schema_version":"1.0.0","status":"FAIL"}

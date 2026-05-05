@@ -1,0 +1,41 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.apply_patchset
+spec:
+  description: "Apply a ForgeScaffold patchset with drift/scope gates and rollback"
+  requires:
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "dawn.project.bundle"
+      path: "dawn.project.bundle.json"
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.apply_report.json"
+      path: "apply_report.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.rollback_patchset.json"
+      path: "rollback_patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.workspace_snapshot.json"
+      path: "workspace_snapshot.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 600
+    retries: 0
+    always_run: true
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

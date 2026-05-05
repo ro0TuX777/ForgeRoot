@@ -1,0 +1,14 @@
+allowed_imports:
+- os
+- json
+architecture_rules: Strictly adhere to SOLID principles.
+prohibited_actions:
+- Do not make actual network calls, use mocks.
+- Do not use threads
+verification_plan: '1. Write dummy test_script.py
+
+  2. Test the parsing logic
+
+  3. Ensure exit code 0
+
+  '

@@ -1,0 +1,8 @@
+{
+  "approach_summary": "Stubbed hypothesis for Service down: follow runbook to restore service safely",
+  "identified_components": [
+    "stub_component"
+  ],
+  "risk_assessment": "stub",
+  "confidence_score": 0.5
+}

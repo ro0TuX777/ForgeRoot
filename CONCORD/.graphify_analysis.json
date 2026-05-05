@@ -1,0 +1,685 @@
+{
+  "communities": {
+    "0": [
+      "action_contract",
+      "admission_pipeline_mandatory",
+      "agent_should_required",
+      "backend_coverage_endpoint_proposal",
+      "budget_status_endpoint",
+      "camp1_runtime_gaps",
+      "camp2_agent_instructions",
+      "capability_audit",
+      "compensation_saga_roadmap",
+      "concord_governed_execution",
+      "dynamic_operation_context",
+      "exception_mapping_executor",
+      "executor_layer",
+      "file_parameter_semantics",
+      "governance_test_isolation",
+      "guard_registry",
+      "health_check_failure_classes",
+      "impl_phase_five_coordination",
+      "impl_phase_nine_scanner",
+      "ingest_root_boundary",
+      "input_validation_stage",
+      "integration_guide_v051",
+      "integration_lessons_framework",
+      "intent_entity",
+      "invalid_parameters_error",
+      "json_schema_202012",
+      "json_schema_adoption_spec",
+      "model_layer_tool_reliability",
+      "normalizer_layer",
+      "normalizer_specification",
+      "onboarding_agent_template",
+      "operation_context",
+      "output_normalization_failed_error",
+      "output_normalization_stage",
+      "parallel_human_agent_surfaces",
+      "phased_capability_exposure",
+      "punch_blocked_reasons_pl05",
+      "reactive_vs_governed_flow",
+      "receipt_entity",
+      "receipt_minting_stage",
+      "receipt_validation_spec",
+      "sam_integration_analysis",
+      "sdk_receipt_first_class",
+      "session_entity",
+      "session_refresh_endpoint",
+      "sqlite_datetime_pitfall"
+    ],
+    "1": [
+      "action_contract_document_convert_format",
+      "action_contract_document_extract_text",
+      "action_contract_document_process_chain",
+      "action_contract_document_scan_pdf",
+      "action_contract_document_validate_schema",
+      "actions_register_actions",
+      "executors_execute_convert_format",
+      "executors_execute_extract_text",
+      "executors_execute_process_chain",
+      "executors_execute_scan_pdf",
+      "executors_execute_validate_schema",
+      "executors_register_executors",
+      "guards_file_accessible",
+      "guards_register_guards",
+      "guards_service_healthy",
+      "main_route_budget_estimate",
+      "main_route_get_session",
+      "main_route_list_actions",
+      "main_route_operation_context",
+      "main_route_submit_intent",
+      "models_execution_result",
+      "models_normalization_result",
+      "normalizers_normalize_convert_format",
+      "normalizers_normalize_extract_text",
+      "normalizers_normalize_process_chain",
+      "normalizers_normalize_scan_pdf",
+      "normalizers_normalize_validate_schema",
+      "normalizers_register_normalizers",
+      "package_app_init",
+      "pipeline_admission_pipeline_class",
+      "pipeline_method_get_budget_estimate",
+      "pipeline_method_get_operation_context",
+      "pipeline_stage_action_resolution",
+      "pipeline_stage_guard_evaluation",
+      "readme_documentation",
+      "registry_action_registry",
+      "registry_executor_registry",
+      "registry_fn_register_action",
+      "registry_fn_register_executor",
+      "registry_fn_register_guard",
+      "registry_fn_register_normalizer",
+      "registry_guard_registry",
+      "registry_normalizer_registry",
+      "singleton_admission_pipeline",
+      "tests_fastapi_test_client",
+      "tests_test_app_module"
+    ],
+    "2": [
+      "app_models_intent",
+      "app_models_intentrequest",
+      "app_models_receipt",
+      "app_pipeline_admissionpipeline",
+      "app_pipeline_admissionpipeline_get_budget_estimate",
+      "app_pipeline_admissionpipeline_get_budget_status",
+      "app_pipeline_admissionpipeline_get_operation_context",
+      "app_pipeline_admissionpipeline_get_receipt",
+      "app_pipeline_admissionpipeline_init",
+      "app_pipeline_admissionpipeline_process_intent",
+      "app_pipeline_admissionpipeline_refresh_session",
+      "app_pipeline_admissionpipeline_stage_action_resolution",
+      "app_pipeline_admissionpipeline_stage_budget_gate",
+      "app_pipeline_admissionpipeline_stage_guard_evaluation",
+      "app_pipeline_admissionpipeline_stage_idempotency_check",
+      "app_pipeline_admissionpipeline_stage_input_validation",
+      "app_pipeline_admissionpipeline_stage_intent_creation",
+      "app_pipeline_admissionpipeline_stage_receipt_minting",
+      "app_pipeline_admissionpipeline_stage_session_resolution",
+      "app_pipeline_admissionpipeline_stage_trust_gate",
+      "app_pipeline_format_validation_error",
+      "app_pipeline_inmemoryintentstore",
+      "app_pipeline_inmemoryintentstore_get",
+      "app_pipeline_inmemoryintentstore_init",
+      "app_pipeline_inmemoryintentstore_store",
+      "app_pipeline_inmemoryreceiptstore",
+      "app_pipeline_inmemoryreceiptstore_find_by_idempotency_key",
+      "app_pipeline_inmemoryreceiptstore_get",
+      "app_pipeline_inmemoryreceiptstore_init",
+      "app_pipeline_inmemoryreceiptstore_store",
+      "app_pipeline_inmemorysessionstore",
+      "app_pipeline_inmemorysessionstore_create_default_session",
+      "app_pipeline_inmemorysessionstore_get",
+      "app_pipeline_inmemorysessionstore_init",
+      "app_pipeline_inmemorysessionstore_update",
+      "app_pipeline_py",
+      "basemodel"
+    ],
+    "3": [
+      "app_models_session",
+      "app_models_session_is_expired",
+      "tests_test_app_fresh_session",
+      "tests_test_app_py",
+      "tests_test_app_test_budget_estimate_for_nonexistent_action_returns_error",
+      "tests_test_app_test_budget_estimate_returns_action_cost_and_budget_status",
+      "tests_test_app_test_budget_exhaustion_blocks_further_intents",
+      "tests_test_app_test_budget_is_deducted_after_intent_execution",
+      "tests_test_app_test_budget_status_for_invalid_session_returns_error",
+      "tests_test_app_test_budget_status_returns_remaining_budget",
+      "tests_test_app_test_chain_action_budget_deduction",
+      "tests_test_app_test_chain_action_with_invalid_file_fails_gracefully",
+      "tests_test_app_test_error_response_envelopes_are_stable_and_do_not_leak_tracebacks",
+      "tests_test_app_test_file_upload_saves_file_and_returns_path",
+      "tests_test_app_test_individual_actions_vs_chain_consistency",
+      "tests_test_app_test_intent_submit_invalid_parameters_returns_error",
+      "tests_test_app_test_intent_submit_missing_required_parameters_returns_error",
+      "tests_test_app_test_intent_submit_scan_pdf_returns_receipt",
+      "tests_test_app_test_intent_submit_with_executor_failure_returns_error",
+      "tests_test_app_test_intent_submit_with_expired_session_returns_error",
+      "tests_test_app_test_intent_submit_with_guard_failure_returns_error",
+      "tests_test_app_test_intent_submit_with_idempotency_conflict_returns_error",
+      "tests_test_app_test_intent_submit_with_insufficient_trust_returns_error",
+      "tests_test_app_test_intent_submit_with_invalid_action_returns_error",
+      "tests_test_app_test_intent_submit_with_missing_executor_returns_error",
+      "tests_test_app_test_intent_submit_with_missing_normalizer_returns_error",
+      "tests_test_app_test_intent_submit_with_normalizer_failure_returns_error",
+      "tests_test_app_test_list_actions_returns_action_registry",
+      "tests_test_app_test_operation_context_for_action",
+      "tests_test_app_test_operation_context_for_nonexistent_action_returns_error",
+      "tests_test_app_test_process_chain_action_executes_all_steps",
+      "tests_test_app_test_process_chain_preserves_file_artifacts",
+      "tests_test_app_test_receipt_query_for_nonexistent_receipt_returns_error",
+      "tests_test_app_test_session_refresh_beyond_max_lifetime_returns_error",
+      "tests_test_app_test_session_refresh_exceeding_max_extensions_returns_error",
+      "tests_test_app_test_session_refresh_extends_session",
+      "tests_test_app_test_successful_intent_records_intent_receipt_and_budget_side_effects"
+    ],
+    "4": [
+      "n_action_contract",
+      "n_budget_ledger",
+      "n_catalog_metadata",
+      "n_code_authoritative_recheck",
+      "n_code_budget_exceeded",
+      "n_code_duplicate_intent",
+      "n_code_stale_version",
+      "n_consistency_eventual",
+      "n_consistency_strong",
+      "n_coordination_telemetry",
+      "n_danger_map",
+      "n_err_compensation_failed",
+      "n_err_saga_poisoned",
+      "n_err_saga_timed_out",
+      "n_intent",
+      "n_min_error_json",
+      "n_operation_context",
+      "n_patch_plan",
+      "n_principle_intent_authoritative",
+      "n_readiness_report",
+      "n_receipt",
+      "n_ref_change_request",
+      "n_resource",
+      "n_resource_dep_graph",
+      "n_saga_run",
+      "n_scan_bundle",
+      "n_session",
+      "n_state_contract"
+    ],
+    "5": [
+      "lib_jsonschema_draft202012_validator",
+      "main_route_session_refresh",
+      "models_intent",
+      "models_intent_request",
+      "models_receipt",
+      "models_session",
+      "models_session_refresh_request",
+      "models_trust_tier",
+      "pipeline_in_memory_session_store",
+      "pipeline_method_process_intent",
+      "pipeline_method_refresh_session",
+      "pipeline_stage_budget_gate",
+      "pipeline_stage_idempotency_check",
+      "pipeline_stage_input_validation",
+      "pipeline_stage_intent_creation",
+      "pipeline_stage_receipt_minting",
+      "pipeline_stage_session_resolution",
+      "pipeline_stage_trust_gate",
+      "pipeline_static_format_validation_error",
+      "registry_action_contract",
+      "requirements_txt",
+      "tests_helper_fresh_session"
+    ],
+    "6": [
+      "app_actions_py",
+      "app_actions_register_actions",
+      "app_executors_execute_convert_format",
+      "app_executors_execute_extract_text",
+      "app_executors_execute_process_chain",
+      "app_executors_execute_scan_pdf",
+      "app_executors_execute_validate_schema",
+      "app_executors_py",
+      "app_executors_register_executors",
+      "app_guards_file_accessible",
+      "app_guards_py",
+      "app_guards_register_guards",
+      "app_guards_service_healthy",
+      "app_models_executionresult",
+      "app_normalizers_register_normalizers",
+      "app_registry_actioncontract",
+      "app_registry_py",
+      "app_registry_register_action",
+      "app_registry_register_executor",
+      "app_registry_register_guard",
+      "app_registry_register_normalizer"
+    ],
+    "7": [
+      "app_models_normalizationresult",
+      "app_models_py",
+      "app_models_remaining_budget",
+      "app_models_sessionrefreshrequest",
+      "app_models_trusttier",
+      "app_normalizers_normalize_convert_format",
+      "app_normalizers_normalize_extract_text",
+      "app_normalizers_normalize_process_chain",
+      "app_normalizers_normalize_scan_pdf",
+      "app_normalizers_normalize_validate_schema",
+      "app_normalizers_py",
+      "enum",
+      "int"
+    ],
+    "8": [
+      "app_main_get_budget_estimate",
+      "app_main_get_budget_status",
+      "app_main_get_operation_context",
+      "app_main_get_receipt",
+      "app_main_get_session",
+      "app_main_list_actions",
+      "app_main_py",
+      "app_main_refresh_session",
+      "app_main_submit_intent",
+      "app_main_upload_file"
+    ],
+    "9": [
+      "concord_v0_5_admission_pipeline_specification_normative_pipeline",
+      "concord_v0_5_integration_guide_governed_execution_pipeline",
+      "concord_v0_5_integration_guide_two_surfaces_one_logic",
+      "concordwhitepaper_eleven_stage_pipeline",
+      "doc_concord_v0_5_admission_pipeline_specification",
+      "doc_concord_v0_5_error_catalog_amendments",
+      "doc_concord_v0_5_integration_guide",
+      "doc_concord_v0_5_mcp_adapter_profile",
+      "doc_concord_v0_5_reviewbundle_and_operationcontext",
+      "doc_concord_v0_5_runtime_endpoint_contracts"
+    ],
+    "10": [
+      "action_discovery_proposal",
+      "context_scope_proposal",
+      "entry_point_adapter_proposal",
+      "execution_environment_proposal",
+      "review_bundle_lifecycle",
+      "stripe_minion_gap_analysis",
+      "task_fleet_dispatch_proposal"
+    ],
+    "11": [
+      "concord_v0_5_admission_pipeline_specification_phase_four_lifecycle",
+      "concord_v0_5_error_catalog_amendments_deploy_codes",
+      "concord_v0_5_integration_guide_connection_manifest",
+      "concord_v0_5_integration_guide_contract_clarity_patterns",
+      "concord_v0_5_mcp_adapter_profile_deploy_gate",
+      "concord_v0_5_runtime_endpoint_contracts_deploy_status"
+    ],
+    "12": [
+      "concord_v0_5_admission_pipeline_specification_entry_point_invariance",
+      "concord_v0_5_admission_pipeline_specification_idempotency_check",
+      "concord_v0_5_admission_pipeline_specification_intent_creation",
+      "concord_v0_5_mcp_adapter_profile_tools_call_pipeline",
+      "concordwhitepaper_intent"
+    ],
+    "13": [
+      "concord_v0_5_admission_pipeline_specification_receipt_minting",
+      "concord_v0_5_runtime_endpoint_contracts_receipt_retrieval",
+      "concord_v0_5_runtime_endpoint_contracts_sdk_client_contract",
+      "concordwhitepaper_receipt"
+    ],
+    "14": [
+      "concord_v0_5_admission_pipeline_specification_guard_registry",
+      "concord_v0_5_integration_guide_capability_audit",
+      "concord_v0_5_reviewbundle_and_operationcontext_guard_pre_eval",
+      "concordwhitepaper_action_contract"
+    ],
+    "15": [
+      "concord_v0_5_admission_pipeline_specification_budget_gate",
+      "concord_v0_5_reviewbundle_and_operationcontext_budget_snapshot",
+      "concord_v0_5_runtime_endpoint_contracts_budget_status"
+    ],
+    "16": [
+      "concord_v0_5_admission_pipeline_specification_output_normalization",
+      "concord_v0_5_error_catalog_amendments_review_codes",
+      "concord_v0_5_reviewbundle_and_operationcontext_reviewbundle_lifecycle"
+    ],
+    "17": [
+      "concord_v0_5_admission_pipeline_specification_guard_evaluation",
+      "concord_v0_5_reviewbundle_and_operationcontext_review_approved_guard",
+      "concord_v0_5_runtime_endpoint_contracts_budget_estimate"
+    ],
+    "18": [
+      "concord_v0_5_admission_pipeline_specification_executor_contract",
+      "concord_v0_5_error_catalog_amendments_exception_mapping",
+      "concord_v0_5_integration_guide_executor_registration_gate"
+    ],
+    "19": [
+      "concord_v0_5_mcp_adapter_profile_planning_resources",
+      "concord_v0_5_reviewbundle_and_operationcontext_dynamic_operationcontext",
+      "concord_v0_5_runtime_endpoint_contracts_planning_surface"
+    ],
+    "20": [
+      "app_sample_data_create_sample_documents",
+      "app_sample_data_py"
+    ],
+    "21": [
+      "concord_v0_5_admission_pipeline_specification_action_resolution",
+      "concord_v0_5_error_catalog_amendments_operational_state_codes"
+    ],
+    "22": [
+      "concord_v0_5_admission_pipeline_specification_input_validation",
+      "concord_v0_5_integration_guide_parameter_naming_conventions"
+    ],
+    "23": [
+      "concord_v0_5_admission_pipeline_specification_admission_boundary",
+      "concordwhitepaper_fail_fast_governance"
+    ],
+    "24": [
+      "concord_v0_5_admission_pipeline_specification_deployment_agent",
+      "concord_v0_5_integration_guide_deterministic_port_assignment"
+    ],
+    "25": [
+      "concord_v0_5_reviewbundle_and_operationcontext_session_constraints",
+      "concord_v0_5_runtime_endpoint_contracts_session_refresh"
+    ],
+    "26": [
+      "concord_v0_5_admission_pipeline_specification_session_resolution",
+      "concord_v0_5_error_catalog_amendments_admission_codes"
+    ],
+    "27": [
+      "concord_v0_5_mcp_adapter_profile_session_binding",
+      "concordwhitepaper_agent_class"
+    ],
+    "28": [
+      "concord_v0_5_error_catalog_amendments_agent_should_required",
+      "concord_v0_5_mcp_adapter_profile_structured_error_mapping"
+    ],
+    "29": [
+      "concordwhitepaper_concord_governance",
+      "doc_concordwhitepaper"
+    ],
+    "30": [
+      "impl_phase_zero_types",
+      "punch_error_metadata_pl01"
+    ],
+    "31": [
+      "main_fastapi_app",
+      "sample_data_create_sample_documents"
+    ],
+    "32": [
+      "main_route_budget_status",
+      "pipeline_method_get_budget_status"
+    ],
+    "33": [
+      "main_route_get_receipt",
+      "pipeline_method_get_receipt"
+    ],
+    "34": [
+      "n_code_lease_held",
+      "n_lease"
+    ],
+    "35": [
+      "n_code_policy_blocked",
+      "n_conflict_strategy"
+    ],
+    "36": [
+      "n_code_session_stale_view",
+      "n_consistency_session_monotonic"
+    ],
+    "37": [
+      "n_consistency_ryw",
+      "n_err_read_freshness"
+    ],
+    "38": [
+      "n_budget_layers",
+      "n_budget_profile"
+    ],
+    "39": [
+      "n_code_queue_required",
+      "n_token"
+    ],
+    "40": [
+      "n_agent_class",
+      "n_code_not_authorized"
+    ],
+    "41": [
+      "n_capability_set",
+      "n_code_override_denied"
+    ],
+    "42": [
+      "app_init_py"
+    ],
+    "43": [
+      "concordwhitepaper_budget_ledger"
+    ],
+    "44": [
+      "concord_v0_5_admission_pipeline_specification_trust_gate"
+    ],
+    "45": [
+      "concord_v0_5_admission_pipeline_specification_execution"
+    ],
+    "46": [
+      "concord_v0_5_integration_guide_deploy_health_and_build"
+    ],
+    "47": [
+      "concord_v0_5_mcp_adapter_profile_mcp_bridge"
+    ],
+    "48": [
+      "concord_v0_5_mcp_adapter_profile_readiness_tiers"
+    ],
+    "49": [
+      "feature_flag_machine_states"
+    ],
+    "50": [
+      "container_service_mesh_urls"
+    ],
+    "51": [
+      "main_route_upload"
+    ],
+    "52": [
+      "pipeline_in_memory_receipt_store"
+    ],
+    "53": [
+      "pipeline_in_memory_intent_store"
+    ],
+    "54": [
+      "n_consistency_async_proj"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06,
+    "1": 0.07,
+    "2": 0.12,
+    "3": 0.07,
+    "4": 0.08,
+    "5": 0.13,
+    "6": 0.14,
+    "7": 0.31,
+    "8": 0.2,
+    "9": 0.27,
+    "10": 0.29,
+    "11": 0.33,
+    "12": 0.4,
+    "13": 0.5,
+    "14": 0.5,
+    "15": 0.67,
+    "16": 0.67,
+    "17": 0.67,
+    "18": 0.67,
+    "19": 0.67,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_pipeline_admissionpipeline",
+      "label": "AdmissionPipeline",
+      "degree": 22
+    },
+    {
+      "id": "app_models_session",
+      "label": "Session",
+      "degree": 13
+    },
+    {
+      "id": "pipeline_method_process_intent",
+      "label": "AdmissionPipeline.process_intent",
+      "degree": 13
+    },
+    {
+      "id": "app_models_executionresult",
+      "label": "ExecutionResult",
+      "degree": 11
+    },
+    {
+      "id": "app_pipeline_inmemorysessionstore",
+      "label": "InMemorySessionStore",
+      "degree": 11
+    },
+    {
+      "id": "app_pipeline_inmemoryreceiptstore",
+      "label": "InMemoryReceiptStore",
+      "degree": 11
+    },
+    {
+      "id": "app_pipeline_inmemoryintentstore",
+      "label": "InMemoryIntentStore",
+      "degree": 10
+    },
+    {
+      "id": "tests_test_app_fresh_session",
+      "label": "_fresh_session()",
+      "degree": 9
+    },
+    {
+      "id": "camp1_runtime_gaps",
+      "label": "Camp 1 what CONCORD must provide",
+      "degree": 8
+    },
+    {
+      "id": "camp2_agent_instructions",
+      "label": "Camp 2 integration agent instructions",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Phase 9 scanner and readiness toolchain",
+      "target": "Capability audit before pipeline code",
+      "source_files": [
+        "graphify-out/converted/CONCORD_v0_3_Implementation_Plan_32048d69.md",
+        "integration-templates/CONCORD_INTEGRATION_GUIDE_v0.5.1.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link; peripheral node `Phase 9 scanner and readiness toolchain` unexpectedly reaches hub `Capability audit before pipeline code`"
+    },
+    {
+      "source": "Admission boundary stages 1-8 no host side effects",
+      "target": "Sequential fail-fast governance philosophy",
+      "source_files": [
+        "CONCORD_v0.5_Admission_Pipeline_Specification.md",
+        "CONCORDwhitepaper.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "BudgetSnapshot in OperationContext",
+      "target": "GET /budget/status introspection",
+      "source_files": [
+        "CONCORD_v0.5_ReviewBundle_and_OperationContext.md",
+        "CONCORD_v0.5_Runtime_Endpoint_Contracts.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Dynamic OperationContext planning oracle",
+      "target": "Planning surface pre-admission endpoints",
+      "source_files": [
+        "CONCORD_v0.5_ReviewBundle_and_OperationContext.md",
+        "CONCORD_v0.5_Runtime_Endpoint_Contracts.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "Health: sdk_unavailable vs unreachable vs not ready",
+      "target": "OperationContext planning endpoint",
+      "source_files": [
+        "CONCORD_SAM_Integration_Lessons.md",
+        "CONCORD_Integration_Lessons.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Session` connect `Community 3` to `Community 2`, `Community 7`?",
+      "why": "High betweenness centrality (0.035) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `AdmissionPipeline` connect `Community 2` to `Community 3`, `Community 6`?",
+      "why": "High betweenness centrality (0.023) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `AdmissionPipeline.process_intent` connect `Community 5` to `Community 1`?",
+      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 5 inferred relationships involving `AdmissionPipeline` (e.g. with `ExecutionResult` and `Intent`) actually correct?",
+      "why": "`AdmissionPipeline` has 5 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 10 inferred relationships involving `Session` (e.g. with `InMemorySessionStore` and `InMemoryReceiptStore`) actually correct?",
+      "why": "`Session` has 10 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 13 inferred relationships involving `AdmissionPipeline.process_intent` (e.g. with `submit_intent endpoint` and `_stage_session_resolution`) actually correct?",
+      "why": "`AdmissionPipeline.process_intent` has 13 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 9 inferred relationships involving `ExecutionResult` (e.g. with `InMemorySessionStore` and `InMemoryReceiptStore`) actually correct?",
+      "why": "`ExecutionResult` has 9 INFERRED edges - model-reasoned connections that need verification."
+    }
+  ]
+}

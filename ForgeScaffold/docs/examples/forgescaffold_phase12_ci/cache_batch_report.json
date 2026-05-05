@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "cache_meta": {
+        "built_at": "2026-02-20T22:42:21.105927Z",
+        "checkpoint_last_entry_hash": null,
+        "checkpoint_path": null,
+        "checkpoint_timestamp": null,
+        "policy_snapshot_hash": "d61499ed55e4bb4d24fc71120394211a6851f8f301942a8116f6a191a456e1c1",
+        "schema_version": "1.0.1",
+        "source_entry_count": 2,
+        "source_index_sha256": "4da64544d93acba257eb05402a08ebbcad22871203d0a0e6db37577ec30a9308",
+        "source_last_entry_hash": "71b2cdedd914429ed98a18ca5409c1867719b0524f2b7666beff0a61bb39ff25"
+      },
+      "cache_path": "/Users/vinsoncornejo/DAWN/projects/forgescaffold_phase12_a_ci/evidence/cache/evidence_index_cache.sqlite",
+      "project": "forgescaffold_phase12_a_ci",
+      "reason": "up_to_date",
+      "status": "SKIPPED"
+    },
+    {
+      "cache_meta": {
+        "built_at": "2026-02-20T22:42:22.427317Z",
+        "checkpoint_last_entry_hash": null,
+        "checkpoint_path": null,
+        "checkpoint_timestamp": null,
+        "policy_snapshot_hash": "d61499ed55e4bb4d24fc71120394211a6851f8f301942a8116f6a191a456e1c1",
+        "schema_version": "1.0.1",
+        "source_entry_count": 2,
+        "source_index_sha256": "94d646404a44dcf038fb0053ee998c9c684be8ec3f0ffbb0b8899bdfbca37d3a",
+        "source_last_entry_hash": "da9e71b0e63b87b7dbc7a291fd5665d0d52d1707254c83657d82d5adf27850e5"
+      },
+      "cache_path": "/Users/vinsoncornejo/DAWN/projects/forgescaffold_phase12_b_ci/evidence/cache/evidence_index_cache.sqlite",
+      "project": "forgescaffold_phase12_b_ci",
+      "reason": "up_to_date",
+      "status": "SKIPPED"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

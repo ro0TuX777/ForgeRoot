@@ -1,0 +1,32 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.verify_rollback
+spec:
+  description: "Apply rollback patchset and verify workspace hashes"
+  requires:
+    - artifactId: "forgescaffold.rollback_patchset.json"
+      path: "rollback_patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.workspace_snapshot.json"
+      path: "workspace_snapshot.json"
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.rollback_report.json"
+      path: "rollback_report.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 600
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

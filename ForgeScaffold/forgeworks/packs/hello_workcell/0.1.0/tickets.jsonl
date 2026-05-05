@@ -1,0 +1,1 @@
+{"schema_version":"0.1","ticket_id":"HELLO-001","domain":"hello","priority":"HIGH","type":"demo","inputs":{"artifact_refs":["ART-001"]},"expected_outcome_ref":"oracle://HELLO-001"}

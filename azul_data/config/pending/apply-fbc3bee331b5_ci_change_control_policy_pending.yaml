@@ -1,0 +1,18 @@
+domain: ci_change_control
+threshold_changes:
+  reject_threshold: 0.25
+  agreement_threshold: 0.75
+rationale: ci_change_control reject rate has stabilised at 0.18 (well below old threshold
+  of 0.30). Tightening threshold to 0.25 to catch emerging patterns earlier. Raising
+  agreement threshold from 0.70 to 0.75 to reflect improved human-AI alignment on
+  this domain.
+expected_impact: Improvement recommendations will trigger earlier on rising reject
+  rates. Agreement rate monitoring becomes stricter, surfacing minor divergences before
+  they compound.
+_improvement_metadata:
+  run_id: apply-fbc3bee331b5
+  generated_at: '2026-03-14T07:18:47.451851+00:00'
+  status: pending_approval
+  instruction: Review this adjustment. If approved, merge threshold_changes into the
+    active policy file for this domain in config/gate_policies/. ForgeGate does not
+    load files from this pending/ directory.

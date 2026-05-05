@@ -1,0 +1,4 @@
+owners:
+  - name: "Example Owner"
+    email: "owner@example.com"
+scope: "demo"

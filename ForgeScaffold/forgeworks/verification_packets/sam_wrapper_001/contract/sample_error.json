@@ -1,0 +1,1 @@
+{"error":{"code":"INVALID_WORKCELL","details":{"errors":[{"error":"missing required file: tickets.jsonl","file":"workcell"}]},"message":"validation failed","stage":"validate"},"status":"error"}

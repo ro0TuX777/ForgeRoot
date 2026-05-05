@@ -1,0 +1,11 @@
+{
+    "schema_version": "0.1",
+    "actions": [
+        {
+            "action_id": "deploy_verified_artifact",
+            "description": "Copies a verified Python script from a sandbox to a permanent location.",
+            "side_effect": "write",
+            "risk_tier": "high"
+        }
+    ]
+}

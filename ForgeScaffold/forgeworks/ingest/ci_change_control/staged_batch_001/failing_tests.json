@@ -1,0 +1,12 @@
+{
+  "ticket_seed_id": "CI-BATCH-001",
+  "failing_tests": [
+    "tests/test_alpha.py::test_safe_fix",
+    "tests/test_core_auth.py::test_token_refresh",
+    "tests/test_disable_checks.py::test_skip_tests",
+    "tests/test_workflow.py::test_ci_yaml",
+    "tests/test_drift_sensitive.py::test_under_load"
+  ],
+  "failure_class": "unit_test_failure",
+  "severity": "high"
+}

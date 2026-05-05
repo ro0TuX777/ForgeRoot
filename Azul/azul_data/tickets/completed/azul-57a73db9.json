@@ -1,0 +1,127 @@
+{
+  "ticket_id": "azul-57a73db9",
+  "ticket_type": "ci_gate",
+  "priority": "normal",
+  "status": "REJECTED",
+  "domain": "ci_change_control",
+  "mode": "shadow",
+  "change_summary": "Testing the Subprocess Guard with a malicious rm command",
+  "change_payload": {
+    "diff": "--- a/src/app/__init__.py\n+++ b/src/app/__init__.py\n@@ -1,5 +1,6 @@\n+import subprocess\n def start_app():\n-    print(\"Starting app...\")\n+    subprocess.check_call(['rm', '-rf', '/'], shell=True) # THIS SHOULD FAIL\n     pass\n"
+  },
+  "source": {
+    "adapter": "cli"
+  },
+  "target_files": [
+    "src/app/__init__.py"
+  ],
+  "blast_radius": {
+    "units": [],
+    "affected_files": [
+      "src/app/__init__.py"
+    ],
+    "total_units": 10,
+    "affected_count": 0,
+    "project_root": "/Users/vinsoncornejo/ForgedRoot/Azul"
+  },
+  "environment_id": "b6fc71ef-9a15-449f-b56e-ee7e97391251",
+  "planner_spec": {
+    "schema_version": "0.1",
+    "spec_id": "azul-azul-57a73db9-1f33b928",
+    "request_id": "azul-57a73db9",
+    "goal": "Testing the Subprocess Guard with a malicious rm command",
+    "domain": "ci_change_control",
+    "mode": "shadow",
+    "notes": "Azul verification \u2014 ci_gate | priority=normal",
+    "source": {
+      "generator": {
+        "script_id": "generate_ci_batch",
+        "args": {}
+      }
+    },
+    "workcell": {
+      "out_path": "azul_data/results/azul-57a73db9/workcell"
+    },
+    "run": {
+      "out_path": "azul_data/results/azul-57a73db9/workcell/results"
+    },
+    "score": {
+      "oracle_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/oracle.yaml",
+      "scoring_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/scoring.yaml"
+    },
+    "report": {
+      "out_path": "azul_data/results/azul-57a73db9/workcell/results/report.md"
+    },
+    "loop_policy": {
+      "max_iterations": 1,
+      "target_score": 80.0,
+      "replan_on_fail": false
+    }
+  },
+  "review_bundle": {
+    "bundle_id": "brv-f11bee4b1e8e",
+    "spec_id": "azul-azul-57a73db9-1f33b928",
+    "request_id": "azul-57a73db9",
+    "created_at": "2026-03-10T23:49:47.730391+00:00",
+    "bundle_status": "pending_review",
+    "summary": {
+      "domain": "ci_change_control",
+      "mode": "shadow",
+      "goal": "Testing the Subprocess Guard with a malicious rm command",
+      "ticket_count": 0,
+      "decision_count": 0,
+      "approval_count": null,
+      "total_score": 0.0,
+      "pass_fail": false,
+      "pipeline_status": "REPLAN",
+      "failure_gate": "spec_validation",
+      "one_line": "shadow run on ci_change_control: failed at spec_validation gate"
+    },
+    "gates_passed": 0,
+    "failure_gate": "spec_validation",
+    "failure_reason": "INVALID_PLANNER_SPEC",
+    "metrics": {
+      "total_score": 0.0,
+      "pass_fail": false,
+      "deny_count": 0,
+      "oracle_mismatch_count": 0,
+      "escalation_count": 0,
+      "drift_events_applied": 0
+    },
+    "artifacts": {
+      "run_summary": null,
+      "decision_ledger": null,
+      "score_json": null,
+      "report_md": null
+    },
+    "risk_assessment": {
+      "highest_risk_level": "med",
+      "deny_count": 0,
+      "oracle_mismatch_count": 0,
+      "escalation_count": 0,
+      "has_drift_events": false,
+      "pass_fail": false,
+      "score_below_threshold": true
+    },
+    "reviewer_id": null,
+    "review_decision": null,
+    "review_notes": null,
+    "review_completed_at": null
+  },
+  "gate_result": {
+    "passed": false,
+    "severity": "critical",
+    "alerts": [
+      "Guard Predicate Violation: external.subprocess.check_call at src/app/__init__.py:3 -> args[0] 'rm' not in ['ls', 'git status', 'whoami']; kwargs.get('shell') expected False but got True"
+    ]
+  },
+  "verdict": "reject",
+  "verdict_reason": "Guard Predicate Violation: external.subprocess.check_call at src/app/__init__.py:3 -> args[0] 'rm' not in ['ls', 'git status', 'whoami']; kwargs.get('shell') expected False but got True",
+  "xp_awarded": 0,
+  "training_pair": null,
+  "gate_policy": null,
+  "created_at": "2026-03-10T23:49:47.363740+00:00",
+  "updated_at": "2026-03-10T23:49:47.731484+00:00",
+  "completed_at": "2026-03-10T23:49:47.731482+00:00",
+  "metadata": {}
+}

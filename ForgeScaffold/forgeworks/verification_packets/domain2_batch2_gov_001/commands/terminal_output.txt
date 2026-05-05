@@ -1,0 +1,48 @@
+Validation: OK
+Workcell: packs/it_ops_runbook/test_batch_002_gov
+Schemas checked: ticket, artifact_index, signals, run_config
+workcell_hash: 4b07bc9ee8f8eb11477f55a09f603f74a7ef0f008a84193959c2140cde328808
+
+⚠️  VRAM PRE-FLIGHT: ['nomic-embed-text:latest'] are still loaded. Unloading...
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_002_gov
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_002_gov/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_002_gov/approval_records.jsonl
+workcell_hash: 4b07bc9ee8f8eb11477f55a09f603f74a7ef0f008a84193959c2140cde328808
+
+Score: OK
+Results: results/ops_batch_002_gov
+Oracle: packs/it_ops_runbook/test_batch_002_gov/oracle/expectations.jsonl
+Scoring config: packs/it_ops_runbook/test_batch_002_gov/scoring/scoring.json
+Total score: 90.5
+Pass: true
+score.json: results/ops_batch_002_gov/score.json
+
+Report: OK
+Results: results/ops_batch_002_gov
+Markdown report: results/ops_batch_002_gov/report.md
+
+Normalization: FAILED
+Domain: it_ops_runbook
+Error: missing required raw file: runbook_service_down.md
+
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_002_gov
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_002_gov_repeat/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_002_gov_repeat/approval_records.jsonl
+workcell_hash: 4b07bc9ee8f8eb11477f55a09f603f74a7ef0f008a84193959c2140cde328808
+
+expected_vs_actual + penalty summary generated
+
+d38b92dbc4a6571f5f84d0f947802034fa956e5a2597779ec47696c8980abcbd  results/ops_batch_002_gov/decision_ledger.jsonl
+7d56aed46c21e72eb7b7004a63bb25455f74c22cd2ddeaee92636632d4886c49  results/ops_batch_002_gov/approval_records.jsonl
+d38b92dbc4a6571f5f84d0f947802034fa956e5a2597779ec47696c8980abcbd  results/ops_batch_002_gov_repeat/decision_ledger.jsonl
+7d56aed46c21e72eb7b7004a63bb25455f74c22cd2ddeaee92636632d4886c49  results/ops_batch_002_gov_repeat/approval_records.jsonl

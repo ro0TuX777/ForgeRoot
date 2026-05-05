@@ -1,0 +1,2 @@
+- Determinism not proven (single run).
+- Expected-vs-actual and penalty summary not generated.

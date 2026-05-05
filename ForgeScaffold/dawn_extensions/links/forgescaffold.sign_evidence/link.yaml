@@ -1,0 +1,36 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.sign_evidence
+spec:
+  description: "Sign evidence manifest and approval receipt"
+  requires:
+    - artifactId: "forgescaffold.evidence_manifest.json"
+      path: "evidence_manifest.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.approval_receipt.json"
+      path: "approval_receipt.json"
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.evidence_signature.json"
+      path: "evidence_signature.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.evidence_receipt.json"
+      path: "evidence_receipt.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

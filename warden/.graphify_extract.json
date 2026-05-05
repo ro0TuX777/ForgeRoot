@@ -1,0 +1,4719 @@
+{
+  "nodes": [
+    {
+      "id": "daemon_py",
+      "label": "daemon.py",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "warden_daemon_now_iso",
+      "label": "_now_iso()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L83"
+    },
+    {
+      "id": "warden_daemon_slug",
+      "label": "_slug()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L87"
+    },
+    {
+      "id": "warden_daemon_azul_data_dir",
+      "label": "_azul_data_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L91"
+    },
+    {
+      "id": "warden_daemon_contract_baseline_path",
+      "label": "_contract_baseline_path()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L96"
+    },
+    {
+      "id": "warden_daemon_snapshot_contract_baseline",
+      "label": "_snapshot_contract_baseline()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "warden_daemon_default_forge_root",
+      "label": "default_forge_root()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L115"
+    },
+    {
+      "id": "warden_daemon_default_project_id",
+      "label": "default_project_id()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L119"
+    },
+    {
+      "id": "warden_daemon_wardenconfig",
+      "label": "WardenConfig",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L124"
+    },
+    {
+      "id": "warden_daemon_scripts_dir",
+      "label": "scripts_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "warden_daemon_state_dir",
+      "label": "state_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L137"
+    },
+    {
+      "id": "warden_daemon_status_path",
+      "label": "status_path()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L141"
+    },
+    {
+      "id": "warden_daemon_events_path",
+      "label": "events_path()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L145"
+    },
+    {
+      "id": "warden_daemon_pid_path",
+      "label": "pid_path()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L149"
+    },
+    {
+      "id": "warden_daemon_log_path",
+      "label": "log_path()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L153"
+    },
+    {
+      "id": "warden_daemon_stubs_dir",
+      "label": "stubs_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L157"
+    },
+    {
+      "id": "warden_daemon_active_dir",
+      "label": "active_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L161"
+    },
+    {
+      "id": "warden_daemon_system_catalog_path",
+      "label": "system_catalog_path()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L165"
+    },
+    {
+      "id": "warden_daemon_danger_map_path",
+      "label": "danger_map_path()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L177"
+    },
+    {
+      "id": "warden_daemon_verify_inputs_dir",
+      "label": "verify_inputs_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L189"
+    },
+    {
+      "id": "warden_daemon_remediation_desk_pending_dir",
+      "label": "remediation_desk_pending_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L193"
+    },
+    {
+      "id": "warden_daemon_remediation_desk_reviewed_dir",
+      "label": "remediation_desk_reviewed_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L197"
+    },
+    {
+      "id": "warden_daemon_remediation_desk_patches_dir",
+      "label": "remediation_desk_patches_dir()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L201"
+    },
+    {
+      "id": "warden_daemon_from_args",
+      "label": "from_args()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L205"
+    },
+    {
+      "id": "warden_daemon_federationwarden",
+      "label": "FederationWarden",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L219"
+    },
+    {
+      "id": "warden_daemon_federationwarden_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L222"
+    },
+    {
+      "id": "warden_daemon_federationwarden_run_forever",
+      "label": ".run_forever()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L241"
+    },
+    {
+      "id": "warden_daemon_federationwarden_run_cycle",
+      "label": ".run_cycle()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L290"
+    },
+    {
+      "id": "warden_daemon_federationwarden_generate_stubs",
+      "label": "._generate_stubs()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L376"
+    },
+    {
+      "id": "warden_daemon_federationwarden_build_stub",
+      "label": "._build_stub()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L408"
+    },
+    {
+      "id": "warden_daemon_federationwarden_deterministic_stub",
+      "label": "._deterministic_stub()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L447"
+    },
+    {
+      "id": "warden_daemon_extract_yaml_block",
+      "label": "_extract_yaml_block()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L473"
+    },
+    {
+      "id": "warden_daemon_is_stub_valid",
+      "label": "_is_stub_valid()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L488"
+    },
+    {
+      "id": "warden_daemon_federationwarden_load_risk_units",
+      "label": "._load_risk_units()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L500"
+    },
+    {
+      "id": "warden_daemon_federationwarden_load_active_unit_ids",
+      "label": "._load_active_unit_ids()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L519"
+    },
+    {
+      "id": "warden_daemon_federationwarden_run_script",
+      "label": "._run_script()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L532"
+    },
+    {
+      "id": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "label": "._run_auto_verify_and_remediate()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L556"
+    },
+    {
+      "id": "warden_daemon_federationwarden_run_remediation_loop",
+      "label": "._run_remediation_loop()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L660"
+    },
+    {
+      "id": "warden_daemon_federationwarden_run_azul_verify",
+      "label": "._run_azul_verify()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L692"
+    },
+    {
+      "id": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "label": "._requeue_stuck_tickets_on_startup()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L736"
+    },
+    {
+      "id": "warden_daemon_extract_ticket_id",
+      "label": "_extract_ticket_id()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L831"
+    },
+    {
+      "id": "warden_daemon_federationwarden_load_ticket_by_id",
+      "label": "._load_ticket_by_id()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L837"
+    },
+    {
+      "id": "warden_daemon_federationwarden_load_latest_ticket",
+      "label": "._load_latest_ticket()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L847"
+    },
+    {
+      "id": "warden_daemon_federationwarden_snapshot_workspace",
+      "label": "._snapshot_workspace()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L856"
+    },
+    {
+      "id": "warden_daemon_federationwarden_is_text_candidate",
+      "label": "._is_text_candidate()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L866"
+    },
+    {
+      "id": "warden_daemon_read_text_file",
+      "label": "_read_text_file()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L870"
+    },
+    {
+      "id": "warden_daemon_federationwarden_initialize_snapshot_baseline",
+      "label": "._initialize_snapshot_baseline()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L884"
+    },
+    {
+      "id": "warden_daemon_federationwarden_sync_snapshot_files",
+      "label": "._sync_snapshot_files()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L901"
+    },
+    {
+      "id": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "label": "._build_patch_from_changed_files()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L919"
+    },
+    {
+      "id": "warden_daemon_federationwarden_enqueue_remediation_for_human_review",
+      "label": "._enqueue_remediation_for_human_review()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1002"
+    },
+    {
+      "id": "warden_daemon_load_json",
+      "label": "_load_json()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1066"
+    },
+    {
+      "id": "warden_daemon_federationwarden_collect_file_state",
+      "label": "._collect_file_state()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1077"
+    },
+    {
+      "id": "warden_daemon_detect_changes",
+      "label": "_detect_changes()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1110"
+    },
+    {
+      "id": "warden_daemon_federationwarden_stage_dawn_inputs",
+      "label": "._stage_dawn_inputs()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1121"
+    },
+    {
+      "id": "warden_daemon_federationwarden_update_status",
+      "label": "._update_status()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1156"
+    },
+    {
+      "id": "warden_daemon_federationwarden_append_event",
+      "label": "._append_event()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1172"
+    },
+    {
+      "id": "warden_daemon_federationwarden_write_pid",
+      "label": "._write_pid()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1182"
+    },
+    {
+      "id": "warden_daemon_federationwarden_remove_pid",
+      "label": "._remove_pid()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1185"
+    },
+    {
+      "id": "warden_daemon_pid_is_running",
+      "label": "_pid_is_running()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1192"
+    },
+    {
+      "id": "warden_daemon_load_runtime_status",
+      "label": "load_runtime_status()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1200"
+    },
+    {
+      "id": "warden_daemon_start_daemon_process",
+      "label": "start_daemon_process()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1222"
+    },
+    {
+      "id": "warden_daemon_stop_daemon_process",
+      "label": "stop_daemon_process()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1275"
+    },
+    {
+      "id": "warden_daemon_print_json",
+      "label": "_print_json()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1301"
+    },
+    {
+      "id": "warden_daemon_build_parser",
+      "label": "_build_parser()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1305"
+    },
+    {
+      "id": "warden_daemon_approve_stub_file",
+      "label": "approve_stub_file()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1354"
+    },
+    {
+      "id": "warden_daemon_list_remediation_queue",
+      "label": "list_remediation_queue()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1393"
+    },
+    {
+      "id": "warden_daemon_review_remediation_item",
+      "label": "review_remediation_item()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1469"
+    },
+    {
+      "id": "warden_daemon_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "daemon.py",
+      "source_location": "L1499"
+    },
+    {
+      "id": "warden_daemon_rationale_1",
+      "label": "Federation Warden daemon: watch code, trigger scan/assess, draft contract stubs.",
+      "file_type": "rationale",
+      "source_file": "daemon.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "warden_daemon_rationale_737",
+      "label": "Requeue tickets stuck in PROVISIONING/EVALUATING from previous runs.         Thi",
+      "file_type": "rationale",
+      "source_file": "daemon.py",
+      "source_location": "L737"
+    },
+    {
+      "id": "warden_daemon_rationale_1122",
+      "label": "Ensure DAWN project inputs path exists and contains current watched files.",
+      "file_type": "rationale",
+      "source_file": "daemon.py",
+      "source_location": "L1122"
+    },
+    {
+      "id": "llm_gateway_py",
+      "label": "llm_gateway.py",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "warden_llm_gateway_gatewayerror",
+      "label": "GatewayError",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "runtimeerror",
+      "label": "RuntimeError",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "warden_llm_gateway_reasoningtrace",
+      "label": "ReasoningTrace",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "warden_llm_gateway_gatewayresponse",
+      "label": "GatewayResponse",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "warden_llm_gateway_gatewayconfig",
+      "label": "GatewayConfig",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "warden_llm_gateway_from_env",
+      "label": "from_env()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L83"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway",
+      "label": "LLMGateway",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L199"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L202"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_health",
+      "label": ".health()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L205"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_complete",
+      "label": ".complete()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L213"
+    },
+    {
+      "id": "warden_llm_gateway_classify_intent",
+      "label": "classify_intent()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L289"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_complete_by_intent",
+      "label": ".complete_by_intent()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L317"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_embed_texts",
+      "label": ".embed_texts()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L350"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_ocr_image",
+      "label": ".ocr_image()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L407"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_provider_order",
+      "label": "._provider_order()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L460"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_ollama_model_for_tier",
+      "label": "._ollama_model_for_tier()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L473"
+    },
+    {
+      "id": "warden_llm_gateway_dedupe",
+      "label": "_dedupe()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L487"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_frontier",
+      "label": "._call_frontier()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L494"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_openai_compatible",
+      "label": "._call_openai_compatible()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L514"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_anthropic",
+      "label": "._call_anthropic()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L541"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_ollama",
+      "label": "._call_ollama()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L565"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_ollama_embed",
+      "label": "._call_ollama_embed()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L615"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_ollama_ocr",
+      "label": "._call_ollama_ocr()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L656"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_openai_compatible_embeddings",
+      "label": "._call_openai_compatible_embeddings()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L688"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_call_frontier_embeddings",
+      "label": "._call_frontier_embeddings()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L706"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_extract_embeddings",
+      "label": "._extract_embeddings()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L716"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_select_ollama_fallback_model",
+      "label": "._select_ollama_fallback_model()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L734"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_request_json",
+      "label": "._request_json()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L762"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_extract_text",
+      "label": "._extract_text()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L785"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_write_raw_trace",
+      "label": "._write_raw_trace()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L804"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_build_reasoning_steps",
+      "label": "._build_reasoning_steps()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L823"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_check_vllm",
+      "label": "._check_vllm()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L837"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_check_ollama",
+      "label": "._check_ollama()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L847"
+    },
+    {
+      "id": "warden_llm_gateway_llmgateway_check_frontier",
+      "label": "._check_frontier()",
+      "file_type": "code",
+      "source_file": "llm_gateway.py",
+      "source_location": "L859"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_1",
+      "label": "Hybrid fuel LLM gateway with local/cloud routing and reasoning traces.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_18",
+      "label": "Raised when all provider attempts fail.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_23",
+      "label": "Trace metadata returned for every gateway request.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_34",
+      "label": "Model response plus audit trace.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_43",
+      "label": "Runtime config sourced from environment variables.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L43"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_200",
+      "label": "Routes requests by task tier with deterministic fallback ordering.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L200"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_206",
+      "label": "Return lightweight provider health for cockpit ignition checks.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L206"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_223",
+      "label": "Generate text with model routing by tier.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L223"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_290",
+      "label": "Map a natural language intent description to the best task tier.          Allows",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L290"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_327",
+      "label": "Generate text routed by intent description rather than explicit tier.          C",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L327"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_356",
+      "label": "Generate embeddings for ForgeAtlas indexing via configured providers.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L356"
+    },
+    {
+      "id": "warden_llm_gateway_rationale_415",
+      "label": "Extract architecture diagram text/structure using the OCR tier model.",
+      "file_type": "rationale",
+      "source_file": "llm_gateway.py",
+      "source_location": "L415"
+    },
+    {
+      "id": "remediation_agent_py",
+      "label": "remediation_agent.py",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "warden_remediation_agent_draftartifact",
+      "label": "DraftArtifact",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent",
+      "label": "RemediationAgent",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "warden_remediation_agent_json_preview",
+      "label": "_json_preview()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "warden_remediation_agent_extract_patch_block",
+      "label": "_extract_patch_block()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L46"
+    },
+    {
+      "id": "warden_remediation_agent_trace_meta",
+      "label": "_trace_meta()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L63"
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent_build_impact_map",
+      "label": "._build_impact_map()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L72"
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent_build_plan",
+      "label": ".build_plan()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L102"
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent_build_patch",
+      "label": ".build_patch()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L142"
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent_generate_draft",
+      "label": ".generate_draft()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L181"
+    },
+    {
+      "id": "warden_remediation_agent_remediationagent_remediate_reject_loop",
+      "label": ".remediate_reject_loop()",
+      "file_type": "code",
+      "source_file": "remediation_agent.py",
+      "source_location": "L211"
+    },
+    {
+      "id": "warden_remediation_agent_rationale_1",
+      "label": "Planner-Worker remediator for patch drafting and auto-remediation.",
+      "file_type": "rationale",
+      "source_file": "remediation_agent.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "warden_remediation_agent_rationale_24",
+      "label": "Generates plans/patches and iterates against Azul verdict feedback.",
+      "file_type": "rationale",
+      "source_file": "remediation_agent.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "warden_init_rationale_1",
+      "label": "Federation Warden package.",
+      "file_type": "rationale",
+      "source_file": "__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_approval_gold_labels_py",
+      "label": "test_approval_gold_labels.py",
+      "file_type": "code",
+      "source_file": "tests\\test_approval_gold_labels.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_approval_gold_labels_test_approve_stub_records_gold_label_and_baseline",
+      "label": "test_approve_stub_records_gold_label_and_baseline()",
+      "file_type": "code",
+      "source_file": "tests\\test_approval_gold_labels.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "tests_test_daemon_remediation_py",
+      "label": "test_daemon_remediation.py",
+      "file_type": "code",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_daemon_remediation_build_daemon",
+      "label": "_build_daemon()",
+      "file_type": "code",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "tests_test_daemon_remediation_test_changed_file_patch_generation_uses_snapshot_baseline",
+      "label": "test_changed_file_patch_generation_uses_snapshot_baseline()",
+      "file_type": "code",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "tests_test_daemon_remediation_test_enqueue_remediation_creates_human_review_record_without_apply",
+      "label": "test_enqueue_remediation_creates_human_review_record_without_apply()",
+      "file_type": "code",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L52"
+    },
+    {
+      "id": "tests_test_daemon_remediation_test_remediation_status_and_review_flow",
+      "label": "test_remediation_status_and_review_flow()",
+      "file_type": "code",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L83"
+    },
+    {
+      "id": "tests_test_daemon_remediation_test_startup_requeue_for_stuck_azul_tickets",
+      "label": "test_startup_requeue_for_stuck_azul_tickets()",
+      "file_type": "code",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L117"
+    },
+    {
+      "id": "tests_test_gateway_and_daemon_py",
+      "label": "test_gateway_and_daemon.py",
+      "file_type": "code",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_gateway_and_daemon_test_gateway_provider_order",
+      "label": "test_gateway_provider_order()",
+      "file_type": "code",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L10"
+    },
+    {
+      "id": "tests_test_gateway_and_daemon_test_daemon_yaml_helpers",
+      "label": "test_daemon_yaml_helpers()",
+      "file_type": "code",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "tests_test_remediation_agent_py",
+      "label": "test_remediation_agent.py",
+      "file_type": "code",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_remediation_agent_fakegateway",
+      "label": "FakeGateway",
+      "file_type": "code",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L10"
+    },
+    {
+      "id": "tests_test_remediation_agent_fakegateway_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "tests_test_remediation_agent_fakegateway_complete",
+      "label": ".complete()",
+      "file_type": "code",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "tests_test_remediation_agent_test_generate_draft_uses_planner_then_worker",
+      "label": "test_generate_draft_uses_planner_then_worker()",
+      "file_type": "code",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "tests_test_remediation_agent_test_reject_loop_attempts_fix_until_pass",
+      "label": "test_reject_loop_attempts_fix_until_pass()",
+      "file_type": "code",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L55"
+    },
+    {
+      "id": "tests_test_remediation_agent_test_reject_loop_can_start_from_known_reject_without_duplicate_verify",
+      "label": "test_reject_loop_can_start_from_known_reject_without_duplicate_verify()",
+      "file_type": "code",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L104"
+    }
+  ],
+  "edges": [
+    {
+      "source": "daemon_py",
+      "target": "argparse",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "difflib",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "hashlib",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "re",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "shutil",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "signal",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "subprocess",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "time",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "uuid",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "yaml",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "llm_gateway_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "remediation_agent_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_now_iso",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_slug",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_contract_baseline_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_snapshot_contract_baseline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_default_forge_root",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_default_project_id",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_wardenconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_scripts_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_state_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_status_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_events_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_pid_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_log_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_stubs_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_active_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_system_catalog_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_danger_map_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_verify_inputs_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L189",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_remediation_desk_pending_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_remediation_desk_reviewed_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_remediation_desk_patches_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_from_args",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_federationwarden",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_run_forever",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_run_cycle",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_generate_stubs",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L376",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_build_stub",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L408",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_deterministic_stub",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L447",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_extract_yaml_block",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L473",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_is_stub_valid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L488",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_load_risk_units",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L500",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_load_active_unit_ids",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L519",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_run_script",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L532",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L556",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_run_remediation_loop",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L660",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_run_azul_verify",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L692",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L736",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_extract_ticket_id",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L831",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_load_ticket_by_id",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L837",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_load_latest_ticket",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L847",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_snapshot_workspace",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L856",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_is_text_candidate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L866",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_read_text_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L870",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_initialize_snapshot_baseline",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L884",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_sync_snapshot_files",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L901",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L919",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_enqueue_remediation_for_human_review",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1002",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_load_json",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1066",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_collect_file_state",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1077",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_detect_changes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1110",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_stage_dawn_inputs",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1121",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_update_status",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1156",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_append_event",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1172",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_write_pid",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1182",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_daemon_federationwarden_remove_pid",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1185",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_pid_is_running",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1192",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_load_runtime_status",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1200",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_start_daemon_process",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1222",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_stop_daemon_process",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1275",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_print_json",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1301",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_build_parser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1305",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_approve_stub_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1354",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_list_remediation_queue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1393",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_review_remediation_item",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1469",
+      "weight": 1.0
+    },
+    {
+      "source": "daemon_py",
+      "target": "warden_daemon_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1499",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_contract_baseline_path",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_snapshot_contract_baseline",
+      "target": "warden_daemon_contract_baseline_path",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_default_project_id",
+      "target": "warden_daemon_slug",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_remediation_desk_pending_dir",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_remediation_desk_reviewed_dir",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L198",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_remediation_desk_patches_dir",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_from_args",
+      "target": "warden_daemon_default_forge_root",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_from_args",
+      "target": "warden_daemon_default_project_id",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_federationwarden_write_pid",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_federationwarden_update_status",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L255",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_federationwarden_append_event",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L260",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_federationwarden_collect_file_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L264",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_federationwarden_run_cycle",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L266",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_detect_changes",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L272",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_forever",
+      "target": "warden_daemon_federationwarden_remove_pid",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L287",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_update_status",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L292",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_append_event",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L299",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_stage_dawn_inputs",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L305",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_run_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L306",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_load_risk_units",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L337",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_load_active_unit_ids",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L338",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_generate_stubs",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L340",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_cycle",
+      "target": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L341",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_generate_stubs",
+      "target": "warden_daemon_slug",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L380",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_generate_stubs",
+      "target": "warden_daemon_federationwarden_build_stub",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L392",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_generate_stubs",
+      "target": "warden_daemon_snapshot_contract_baseline",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L394",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_stub",
+      "target": "warden_daemon_extract_yaml_block",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L435",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_stub",
+      "target": "warden_daemon_is_stub_valid",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L436",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_stub",
+      "target": "warden_daemon_federationwarden_append_event",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L439",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_stub",
+      "target": "warden_daemon_federationwarden_deterministic_stub",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L445",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "target": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L572",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "target": "warden_daemon_federationwarden_run_azul_verify",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L601",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "target": "warden_daemon_federationwarden_append_event",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L611",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "target": "warden_daemon_federationwarden_run_remediation_loop",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L620",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_auto_verify_and_remediate",
+      "target": "warden_daemon_federationwarden_enqueue_remediation_for_human_review",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L631",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_remediation_loop",
+      "target": "warden_daemon_load_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L668",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_azul_verify",
+      "target": "warden_daemon_extract_ticket_id",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L719",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_azul_verify",
+      "target": "warden_daemon_federationwarden_load_ticket_by_id",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L720",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_run_azul_verify",
+      "target": "warden_daemon_federationwarden_load_latest_ticket",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L722",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L741",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "target": "warden_daemon_load_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L750",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L770",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "target": "warden_daemon_federationwarden_run_azul_verify",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L788",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "target": "warden_daemon_federationwarden_append_event",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L822",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_load_ticket_by_id",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L840",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_load_ticket_by_id",
+      "target": "warden_daemon_load_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L844",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_load_latest_ticket",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L848",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_load_latest_ticket",
+      "target": "warden_daemon_load_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L854",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_snapshot_workspace",
+      "target": "warden_daemon_slug",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L857",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_initialize_snapshot_baseline",
+      "target": "warden_daemon_federationwarden_snapshot_workspace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L885",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_initialize_snapshot_baseline",
+      "target": "warden_daemon_federationwarden_collect_file_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L889",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_initialize_snapshot_baseline",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L899",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_sync_snapshot_files",
+      "target": "warden_daemon_federationwarden_snapshot_workspace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L902",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "target": "warden_daemon_federationwarden_initialize_snapshot_baseline",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L920",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "target": "warden_daemon_federationwarden_snapshot_workspace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L929",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "target": "warden_daemon_federationwarden_is_text_candidate",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L944",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "target": "warden_daemon_read_text_file",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L951",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_build_patch_from_changed_files",
+      "target": "warden_daemon_federationwarden_sync_snapshot_files",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L982",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_enqueue_remediation_for_human_review",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1022",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_collect_file_state",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1082",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_stage_dawn_inputs",
+      "target": "warden_daemon_federationwarden_collect_file_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1133",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_update_status",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1164",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_append_event",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1174",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_load_runtime_status",
+      "target": "warden_daemon_default_forge_root",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1201",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_load_runtime_status",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1214",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_load_runtime_status",
+      "target": "warden_daemon_pid_is_running",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1216",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_start_daemon_process",
+      "target": "warden_daemon_load_runtime_status",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1232",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_stop_daemon_process",
+      "target": "warden_daemon_pid_is_running",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1286",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_build_parser",
+      "target": "warden_daemon_default_forge_root",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1327",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_approve_stub_file",
+      "target": "warden_daemon_snapshot_contract_baseline",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1362",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_list_remediation_queue",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1399",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_review_remediation_item",
+      "target": "warden_daemon_azul_data_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1470",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_review_remediation_item",
+      "target": "warden_daemon_now_iso",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1491",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_build_parser",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1500",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_print_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1504",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_load_runtime_status",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1504",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_stop_daemon_process",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1508",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_list_remediation_queue",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1513",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_review_remediation_item",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1523",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_approve_stub_file",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1532",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_from_args",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1536",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_start_daemon_process",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1539",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_federationwarden",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1550",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_federationwarden_run_cycle",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1552",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_main",
+      "target": "warden_daemon_federationwarden_run_forever",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1555",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_rationale_1",
+      "target": "daemon_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_rationale_737",
+      "target": "warden_daemon_federationwarden_requeue_stuck_tickets_on_startup",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L737",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_rationale_1122",
+      "target": "warden_daemon_federationwarden_stage_dawn_inputs",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "daemon.py",
+      "source_location": "L1122",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "base64",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "re",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "time",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "uuid",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "urllib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_gatewayerror",
+      "target": "runtimeerror",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_reasoningtrace",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_gatewayconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_from_env",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L199",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_health",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_complete",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_classify_intent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L289",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_complete_by_intent",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L317",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_embed_texts",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_ocr_image",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L407",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_provider_order",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L460",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_ollama_model_for_tier",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L473",
+      "weight": 1.0
+    },
+    {
+      "source": "llm_gateway_py",
+      "target": "warden_llm_gateway_dedupe",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L487",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_frontier",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L494",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_openai_compatible",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L514",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_anthropic",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L541",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_ollama",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L565",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_ollama_embed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L615",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_ollama_ocr",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L656",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_openai_compatible_embeddings",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L688",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_call_frontier_embeddings",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L706",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_extract_embeddings",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L716",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_select_ollama_fallback_model",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L734",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L762",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_extract_text",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L785",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_write_raw_trace",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L804",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_build_reasoning_steps",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L823",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_check_vllm",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L837",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_check_ollama",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L847",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway",
+      "target": "warden_llm_gateway_llmgateway_check_frontier",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L859",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_init",
+      "target": "warden_llm_gateway_from_env",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_health",
+      "target": "warden_llm_gateway_llmgateway_check_vllm",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_health",
+      "target": "warden_llm_gateway_llmgateway_check_ollama",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L209",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_health",
+      "target": "warden_llm_gateway_llmgateway_check_frontier",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_provider_order",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_ollama_model_for_tier",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_call_openai_compatible",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_call_ollama",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_call_frontier",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_extract_text",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L260",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_write_raw_trace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_reasoningtrace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L267",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_llmgateway_build_reasoning_steps",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L270",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L280",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete_by_intent",
+      "target": "warden_llm_gateway_classify_intent",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L337",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_complete_by_intent",
+      "target": "warden_llm_gateway_llmgateway_complete",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L341",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L358",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_llmgateway_ollama_model_for_tier",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L360",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_llmgateway_provider_order",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L362",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_llmgateway_call_ollama_embed",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L365",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_llmgateway_call_openai_compatible_embeddings",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L372",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_llmgateway_call_frontier_embeddings",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L380",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_llmgateway_extract_embeddings",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L388",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_embed_texts",
+      "target": "warden_llm_gateway_llmgateway_write_raw_trace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L389",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L417",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_llmgateway_provider_order",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L420",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_llmgateway_ollama_model_for_tier",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L421",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_llmgateway_call_ollama_ocr",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L428",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_llmgateway_extract_text",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L436",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_llmgateway_write_raw_trace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L437",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_reasoningtrace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L443",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_llmgateway_build_reasoning_steps",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L446",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_ocr_image",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L454",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_provider_order",
+      "target": "warden_llm_gateway_dedupe",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L462",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_frontier",
+      "target": "warden_llm_gateway_llmgateway_call_anthropic",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L502",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_frontier",
+      "target": "warden_llm_gateway_llmgateway_call_openai_compatible",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L505",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_openai_compatible",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L539",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_anthropic",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L544",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_anthropic",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L558",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_ollama",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L586",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_ollama",
+      "target": "warden_llm_gateway_llmgateway_select_ollama_fallback_model",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L599",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_ollama_embed",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L628",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_ollama_ocr",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L679",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_openai_compatible_embeddings",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L704",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_frontier_embeddings",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L708",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_call_frontier_embeddings",
+      "target": "warden_llm_gateway_llmgateway_call_openai_compatible_embeddings",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L709",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_extract_embeddings",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L732",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_select_ollama_fallback_model",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L740",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_request_json",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L776",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_check_vllm",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L842",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_llmgateway_check_ollama",
+      "target": "warden_llm_gateway_llmgateway_request_json",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L849",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_1",
+      "target": "llm_gateway_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_18",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_23",
+      "target": "warden_llm_gateway_reasoningtrace",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_34",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_43",
+      "target": "warden_llm_gateway_gatewayconfig",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_200",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_206",
+      "target": "warden_llm_gateway_llmgateway_health",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_223",
+      "target": "warden_llm_gateway_llmgateway_complete",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_290",
+      "target": "warden_llm_gateway_llmgateway_classify_intent",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_327",
+      "target": "warden_llm_gateway_llmgateway_complete_by_intent",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L327",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_356",
+      "target": "warden_llm_gateway_llmgateway_embed_texts",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L356",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_llm_gateway_rationale_415",
+      "target": "warden_llm_gateway_llmgateway_ocr_image",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "llm_gateway.py",
+      "source_location": "L415",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "re",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "llm_gateway_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "warden_remediation_agent_draftartifact",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_remediation_agent_remediationagent_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "warden_remediation_agent_json_preview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "warden_remediation_agent_extract_patch_block",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "remediation_agent_py",
+      "target": "warden_remediation_agent_trace_meta",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_remediation_agent_remediationagent_build_impact_map",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_remediation_agent_remediationagent_build_plan",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_remediation_agent_remediationagent_build_patch",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_remediation_agent_remediationagent_generate_draft",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_remediation_agent_remediationagent_remediate_reject_loop",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_build_impact_map",
+      "target": "warden_remediation_agent_json_preview",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_build_impact_map",
+      "target": "warden_remediation_agent_trace_meta",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_build_plan",
+      "target": "warden_remediation_agent_remediationagent_build_impact_map",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_build_plan",
+      "target": "warden_remediation_agent_trace_meta",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_build_patch",
+      "target": "warden_remediation_agent_extract_patch_block",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_build_patch",
+      "target": "warden_remediation_agent_trace_meta",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_generate_draft",
+      "target": "warden_remediation_agent_remediationagent_build_plan",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L189",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_generate_draft",
+      "target": "warden_remediation_agent_remediationagent_build_patch",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_generate_draft",
+      "target": "warden_remediation_agent_draftartifact",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_remediate_reject_loop",
+      "target": "warden_remediation_agent_remediationagent_build_plan",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_remediate_reject_loop",
+      "target": "warden_remediation_agent_remediationagent_build_patch",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L240",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_rationale_1",
+      "target": "remediation_agent_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_rationale_24",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_init_rationale_1",
+      "target": "init_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_approval_gold_labels_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_approval_gold_labels.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_approval_gold_labels_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_approval_gold_labels.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_approval_gold_labels_py",
+      "target": "warden_daemon",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_approval_gold_labels.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_approval_gold_labels_py",
+      "target": "tests_test_approval_gold_labels_test_approve_stub_records_gold_label_and_baseline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_approval_gold_labels.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "tempfile",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "warden_daemon",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "warden_llm_gateway",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "tests_test_daemon_remediation_build_daemon",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "tests_test_daemon_remediation_test_changed_file_patch_generation_uses_snapshot_baseline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "tests_test_daemon_remediation_test_enqueue_remediation_creates_human_review_record_without_apply",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "tests_test_daemon_remediation_test_remediation_status_and_review_flow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_py",
+      "target": "tests_test_daemon_remediation_test_startup_requeue_for_stuck_azul_tickets",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_test_changed_file_patch_generation_uses_snapshot_baseline",
+      "target": "tests_test_daemon_remediation_build_daemon",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_test_enqueue_remediation_creates_human_review_record_without_apply",
+      "target": "tests_test_daemon_remediation_build_daemon",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_test_remediation_status_and_review_flow",
+      "target": "tests_test_daemon_remediation_build_daemon",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_test_startup_requeue_for_stuck_azul_tickets",
+      "target": "tests_test_daemon_remediation_build_daemon",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_py",
+      "target": "tempfile",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_py",
+      "target": "warden_daemon",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_py",
+      "target": "warden_llm_gateway",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_py",
+      "target": "tests_test_gateway_and_daemon_test_gateway_provider_order",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_py",
+      "target": "tests_test_gateway_and_daemon_test_daemon_yaml_helpers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "warden_llm_gateway",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "warden_remediation_agent",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "tests_test_remediation_agent_fakegateway",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway",
+      "target": "tests_test_remediation_agent_fakegateway_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway",
+      "target": "tests_test_remediation_agent_fakegateway_complete",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "tests_test_remediation_agent_test_generate_draft_uses_planner_then_worker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "tests_test_remediation_agent_test_reject_loop_attempts_fix_until_pass",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_py",
+      "target": "tests_test_remediation_agent_test_reject_loop_can_start_from_known_reject_without_duplicate_verify",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_test_generate_draft_uses_planner_then_worker",
+      "target": "tests_test_remediation_agent_fakegateway",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_test_reject_loop_attempts_fix_until_pass",
+      "target": "tests_test_remediation_agent_fakegateway",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_test_reject_loop_can_start_from_known_reject_without_duplicate_verify",
+      "target": "tests_test_remediation_agent_fakegateway",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_wardenconfig",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_1",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_737",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_1122",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_wardenconfig",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_1",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_737",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_1122",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L24",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_wardenconfig",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L25",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_federationwarden",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L25",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_1",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L25",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_737",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L25",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_rationale_1122",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "daemon.py",
+      "source_location": "L25",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_draftartifact",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_rationale_1",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_rationale_24",
+      "target": "warden_llm_gateway_gatewayerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_draftartifact",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_rationale_1",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_rationale_24",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_draftartifact",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_rationale_1",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_remediation_agent_rationale_24",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "remediation_agent.py",
+      "source_location": "L11",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L6",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway",
+      "target": "warden_llm_gateway_reasoningtrace",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L6",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L7",
+      "weight": 0.8
+    },
+    {
+      "source": "warden_daemon_federationwarden_init",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "daemon.py",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_daemon_federationwarden_init",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "daemon.py",
+      "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "warden_remediation_agent_remediationagent_init",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "remediation_agent.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_approval_gold_labels_test_approve_stub_records_gold_label_and_baseline",
+      "target": "warden_daemon_approve_stub_file",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_approval_gold_labels.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_build_daemon",
+      "target": "warden_daemon_wardenconfig",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_build_daemon",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_build_daemon",
+      "target": "warden_llm_gateway_gatewayconfig",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_build_daemon",
+      "target": "warden_daemon_federationwarden",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_test_remediation_status_and_review_flow",
+      "target": "warden_daemon_list_remediation_queue",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_daemon_remediation_test_remediation_status_and_review_flow",
+      "target": "warden_daemon_review_remediation_item",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_daemon_remediation.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_test_gateway_provider_order",
+      "target": "warden_llm_gateway_gatewayconfig",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_test_gateway_provider_order",
+      "target": "warden_llm_gateway_llmgateway",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_test_daemon_yaml_helpers",
+      "target": "warden_daemon_wardenconfig",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_gateway_and_daemon_test_daemon_yaml_helpers",
+      "target": "warden_daemon_federationwarden",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_gateway_and_daemon.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway_complete",
+      "target": "runtimeerror",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway_complete",
+      "target": "warden_llm_gateway_reasoningtrace",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_fakegateway_complete",
+      "target": "warden_llm_gateway_gatewayresponse",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_test_generate_draft_uses_planner_then_worker",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_test_reject_loop_attempts_fix_until_pass",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_remediation_agent_test_reject_loop_can_start_from_known_reject_without_duplicate_verify",
+      "target": "warden_remediation_agent_remediationagent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_remediation_agent.py",
+      "source_location": "L114",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

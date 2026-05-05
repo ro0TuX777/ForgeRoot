@@ -1,0 +1,40 @@
+{
+  "files": {
+    "code": [
+      "F:\\ForgedRoot\\ForgeHarbor\\daemon.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\docker_provider.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\environment_spec.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\forgeharbor_types.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\heartbeat_monitor.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\lifecycle_engine.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\mock_provider.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\pool_manager.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\provider.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\__init__.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\tests\\test_daemon.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\tests\\test_docker_provider.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\tests\\test_heartbeat_monitor.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\tests\\test_integration.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\tests\\test_lifecycle_engine.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\tests\\test_pool_manager.py",
+      "F:\\ForgedRoot\\ForgeHarbor\\tests\\__init__.py"
+    ],
+    "document": [
+      "F:\\ForgedRoot\\ForgeHarbor\\ForgeHarborwhitepaper.md",
+      "F:\\ForgedRoot\\ForgeHarbor\\ForgeHarbor_AI_Dev_Briefing.md",
+      "F:\\ForgedRoot\\ForgeHarbor\\ForgeHarbor_Core_Specification.md",
+      "F:\\ForgedRoot\\ForgeHarbor\\ForgeHarbor_Implementation_Plan.md",
+      "F:\\ForgedRoot\\ForgeHarbor\\ForgeHarbor_Punch_List.md",
+      "F:\\ForgedRoot\\ForgeHarbor\\requirements.txt"
+    ],
+    "paper": [],
+    "image": [],
+    "video": []
+  },
+  "total_files": 23,
+  "total_words": 12315,
+  "needs_graph": false,
+  "warning": "Corpus is ~12,315 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [],
+  "graphifyignore_patterns": 6
+}

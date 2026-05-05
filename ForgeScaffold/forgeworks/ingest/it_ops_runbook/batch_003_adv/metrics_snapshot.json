@@ -1,0 +1,9 @@
+{
+  "queue_pressure": 0.91,
+  "retry_count": 2,
+  "env": "prod",
+  "blast_radius": "high",
+  "service_tier": "tier-1",
+  "latency_ms": 4200,
+  "error_rate": 0.92
+}

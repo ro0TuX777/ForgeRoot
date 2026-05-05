@@ -1,0 +1,14 @@
+packs/it_ops_runbook/test_batch_002_gov/artifact_index.json
+packs/it_ops_runbook/test_batch_002_gov/artifacts/incident_log_001.txt
+packs/it_ops_runbook/test_batch_002_gov/artifacts/metadata.json
+packs/it_ops_runbook/test_batch_002_gov/artifacts/metrics_snapshot.json
+packs/it_ops_runbook/test_batch_002_gov/artifacts/policy.json
+packs/it_ops_runbook/test_batch_002_gov/artifacts/runbook_service_down.md
+packs/it_ops_runbook/test_batch_002_gov/artifacts/service_context.json
+packs/it_ops_runbook/test_batch_002_gov/drift/drift_plan.json
+packs/it_ops_runbook/test_batch_002_gov/intent_bundle/intent/intent_spec.json
+packs/it_ops_runbook/test_batch_002_gov/oracle/expectations.jsonl
+packs/it_ops_runbook/test_batch_002_gov/run_config.json
+packs/it_ops_runbook/test_batch_002_gov/scoring/scoring.json
+packs/it_ops_runbook/test_batch_002_gov/signals.jsonl
+packs/it_ops_runbook/test_batch_002_gov/tickets.jsonl

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/signals.v0_1.json",
+  "title": "ForgeGate Signals v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "values"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "values": {"type": "object", "additionalProperties": true}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ticket_id": "OPS-001",
+  "ticket_intent": "Service down: follow runbook to restore service safely",
+  "hypothesis_path": "results/ops_batch_001_live_repeat/work/OPS-001/OPS-001_hypothesis.json",
+  "spec_contract_path": "results/ops_batch_001_live_repeat/work/OPS-001/OPS-001_spec_contract.yaml",
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 5,
+  "retry_count": 0,
+  "max_retries": 3,
+  "last_error_log": null,
+  "sandbox_directory": "results/ops_batch_001_live_repeat/work/OPS-001/workspace/OPS-001_sandbox",
+  "phase_timing": {
+    "Scout": 5.867,
+    "Legislator": 5.723,
+    "Builder": 9.877,
+    "Deployer": 0.001
+  },
+  "phase_tokens": {}
+}

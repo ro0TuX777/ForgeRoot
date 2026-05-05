@@ -1,0 +1,4 @@
+python3 -m forgeworks.cli score --results results/test_batch_001_live --oracle packs/ci_change_control/test_batch_001/oracle/expectations.jsonl --scoring packs/ci_change_control/test_batch_001/scoring/scoring.json
+python3 -m forgeworks.cli score --results results/test_batch_005_live --oracle packs/ci_change_control/test_batch_005/oracle/expectations.jsonl --scoring packs/ci_change_control/test_batch_005/scoring/scoring.json
+python3 -m forgeworks.cli score --results results/test_batch_006_live --oracle packs/ci_change_control/test_batch_006/oracle/expectations.jsonl --scoring packs/ci_change_control/test_batch_006/scoring/scoring.json
+python3 -m forgeworks.cli regression-check --manifest regression/manifest.json

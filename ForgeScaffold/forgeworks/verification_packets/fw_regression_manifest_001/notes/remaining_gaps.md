@@ -1,0 +1,2 @@
+- Regression-check CLI uses current local results; needs CI wiring for automation.
+- Domain 2 batches not yet created (out of scope for this milestone).

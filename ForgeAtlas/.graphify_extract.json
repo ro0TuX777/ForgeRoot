@@ -1,0 +1,5177 @@
+{
+  "nodes": [
+    {
+      "id": "config_py",
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "action_discovery_service_config_rationale_1",
+      "label": "ForgeAtlas \u2014 environment variable configuration.  All settings have in-code defa",
+      "file_type": "rationale",
+      "source_file": "config.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "run_py",
+      "label": "run.py",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "action_discovery_service_run_ok",
+      "label": "_ok()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L158"
+    },
+    {
+      "id": "action_discovery_service_run_error",
+      "label": "_error()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L162"
+    },
+    {
+      "id": "action_discovery_service_run_resolve_capability_set",
+      "label": "_resolve_capability_set()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L182"
+    },
+    {
+      "id": "action_discovery_service_run_deserialise_capability_set",
+      "label": "_deserialise_capability_set()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L214"
+    },
+    {
+      "id": "action_discovery_service_run_deserialise_query",
+      "label": "_deserialise_query()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L226"
+    },
+    {
+      "id": "action_discovery_service_run_summary_to_dict",
+      "label": "_summary_to_dict()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L244"
+    },
+    {
+      "id": "action_discovery_service_run_collect_candidates",
+      "label": "_collect_candidates()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L255"
+    },
+    {
+      "id": "action_discovery_service_run_run_semantic",
+      "label": "_run_semantic()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L273"
+    },
+    {
+      "id": "action_discovery_service_run_run",
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L356"
+    },
+    {
+      "id": "action_discovery_service_run_health",
+      "label": "health()",
+      "file_type": "code",
+      "source_file": "run.py",
+      "source_location": "L457"
+    },
+    {
+      "id": "action_discovery_service_run_rationale_1",
+      "label": "ForgeAtlas \u2014 ActionDiscovery Service entry point.  Callable via the importlib pa",
+      "file_type": "rationale",
+      "source_file": "run.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "action_discovery_service_run_rationale_186",
+      "label": "Return (CapabilitySet, error_dict_or_None).",
+      "file_type": "rationale",
+      "source_file": "run.py",
+      "source_location": "L186"
+    },
+    {
+      "id": "action_discovery_service_run_rationale_256",
+      "label": "Return all ActionContracts from the registry, scoped by resource_type.",
+      "file_type": "rationale",
+      "source_file": "run.py",
+      "source_location": "L256"
+    },
+    {
+      "id": "action_discovery_service_run_rationale_278",
+      "label": "Handle a task_context query via semantic ranking + capability filter.      Order",
+      "file_type": "rationale",
+      "source_file": "run.py",
+      "source_location": "L278"
+    },
+    {
+      "id": "action_discovery_service_run_rationale_361",
+      "label": "Execute an ActionDiscovery query.      Args:         query:            Dict with",
+      "file_type": "rationale",
+      "source_file": "run.py",
+      "source_location": "L361"
+    },
+    {
+      "id": "action_discovery_service_run_rationale_458",
+      "label": "Return service health status.",
+      "file_type": "rationale",
+      "source_file": "run.py",
+      "source_location": "L458"
+    },
+    {
+      "id": "semantic_search_py",
+      "label": "semantic_search.py",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_semanticsearch",
+      "label": "SemanticSearch",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L43"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_semanticsearch_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L61"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_semanticsearch_load_model",
+      "label": ".load_model()",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L70"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_semanticsearch_embed_catalog",
+      "label": ".embed_catalog()",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L97"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_semanticsearch_rank_by_similarity",
+      "label": ".rank_by_similarity()",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_semanticsearch_similarity_score",
+      "label": ".similarity_score()",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L185"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_normalise",
+      "label": "_normalise()",
+      "file_type": "code",
+      "source_file": "semantic_search.py",
+      "source_location": "L207"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_rationale_1",
+      "label": "ForgeAtlas \u2014 Semantic search layer (Phase 3, P1-1 / P1-2).  Provides: - Semantic",
+      "file_type": "rationale",
+      "source_file": "semantic_search.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_rationale_44",
+      "label": "Embedding-based similarity ranker for ActionContract descriptions.      Lifecycl",
+      "file_type": "rationale",
+      "source_file": "semantic_search.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_rationale_71",
+      "label": "Attempt to load the embedding model.          Returns:             True if the m",
+      "file_type": "rationale",
+      "source_file": "semantic_search.py",
+      "source_location": "L71"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_rationale_98",
+      "label": "Pre-compute and cache unit-normalised embeddings for every action.          Call",
+      "file_type": "rationale",
+      "source_file": "semantic_search.py",
+      "source_location": "L98"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_rationale_133",
+      "label": "Rank *candidates* by cosine similarity to *task_context*.          Args:",
+      "file_type": "rationale",
+      "source_file": "semantic_search.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_rationale_186",
+      "label": "Return the cosine similarity between task_context and action description.",
+      "file_type": "rationale",
+      "source_file": "semantic_search.py",
+      "source_location": "L186"
+    },
+    {
+      "id": "action_discovery_service_semantic_search_rationale_208",
+      "label": "Return unit-length vector; return v unchanged if norm is zero.",
+      "file_type": "rationale",
+      "source_file": "semantic_search.py",
+      "source_location": "L208"
+    },
+    {
+      "id": "init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "main_py",
+      "label": "__main__.py",
+      "file_type": "code",
+      "source_file": "__main__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "action_discovery_service_main_rationale_1",
+      "label": "ForgeAtlas \u2014 Docker entrypoint (P1-7).  Validates service health at startup, log",
+      "file_type": "rationale",
+      "source_file": "__main__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_integration_py",
+      "label": "test_integration.py",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_integration_load_module",
+      "label": "_load_module()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "tests_test_integration_testimportlibpattern",
+      "label": "TestImportlibPattern",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L51"
+    },
+    {
+      "id": "tests_test_integration_testimportlibpattern_test_run_callable_via_importlib",
+      "label": ".test_run_callable_via_importlib()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L54"
+    },
+    {
+      "id": "tests_test_integration_testimportlibpattern_test_health_callable_via_importlib",
+      "label": ".test_health_callable_via_importlib()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L62"
+    },
+    {
+      "id": "tests_test_integration_testimportlibpattern_test_importlib_returns_dict_not_raises",
+      "label": ".test_importlib_returns_dict_not_raises()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L67"
+    },
+    {
+      "id": "tests_test_integration_testimportlibpattern_test_importlib_run_catalog_loaded",
+      "label": ".test_importlib_run_catalog_loaded()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L73"
+    },
+    {
+      "id": "tests_test_integration_testimportlibpattern_test_importlib_semantic_query",
+      "label": ".test_importlib_semantic_query()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L88"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape",
+      "label": "TestResponseShape",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L102"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_ok_payload",
+      "label": "._ok_payload()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L105"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_available_actions_present",
+      "label": ".test_available_actions_present()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L114"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_filtered_by_present",
+      "label": ".test_filtered_by_present()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L117"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_total_available_present",
+      "label": ".test_total_available_present()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L120"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_recommendation_key_present",
+      "label": ".test_recommendation_key_present()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_catalog_version_present",
+      "label": ".test_catalog_version_present()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_catalog_version_is_sha256",
+      "label": ".test_catalog_version_is_sha256()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L130"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_payload",
+      "label": ".test_no_authoritative_for_mutation_in_payload()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_actions",
+      "label": ".test_no_authoritative_for_mutation_in_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L137"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_available_actions_is_list",
+      "label": ".test_available_actions_is_list()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L143"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_total_available_is_int",
+      "label": ".test_total_available_is_int()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L146"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_action_shape_has_required_fields",
+      "label": ".test_action_shape_has_required_fields()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L149"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_filtered_by_has_session_id",
+      "label": ".test_filtered_by_has_session_id()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L157"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_filtered_by_has_capability_set_id",
+      "label": ".test_filtered_by_has_capability_set_id()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L160"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_semantic_response_shape",
+      "label": ".test_semantic_response_shape()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L163"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_semantic_filtered_by_has_semantic_flag",
+      "label": ".test_semantic_filtered_by_has_semantic_flag()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L177"
+    },
+    {
+      "id": "tests_test_integration_testresponseshape_test_error_envelope_shape",
+      "label": ".test_error_envelope_shape()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L189"
+    },
+    {
+      "id": "tests_test_integration_testendtoendcoverage",
+      "label": "TestEndToEndCoverage",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L200"
+    },
+    {
+      "id": "tests_test_integration_testendtoendcoverage_test_mutate_actions_reachable",
+      "label": ".test_mutate_actions_reachable()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L203"
+    },
+    {
+      "id": "tests_test_integration_testendtoendcoverage_test_approve_actions_reachable",
+      "label": ".test_approve_actions_reachable()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L212"
+    },
+    {
+      "id": "tests_test_integration_testendtoendcoverage_test_deploy_actions_reachable",
+      "label": ".test_deploy_actions_reachable()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L222"
+    },
+    {
+      "id": "tests_test_integration_testendtoendcoverage_test_total_catalog_size",
+      "label": ".test_total_catalog_size()",
+      "file_type": "code",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L232"
+    },
+    {
+      "id": "tests_test_integration_rationale_1",
+      "label": "ForgeAtlas \u2014 Integration tests (Phase 4, P2-5 + P2-6).  Covers: - P2-5: ForgeWor",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_integration_rationale_52",
+      "label": "ForgeWorks-style importlib import must work end-to-end (P2-5).",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L52"
+    },
+    {
+      "id": "tests_test_integration_rationale_74",
+      "label": "Catalog must be loaded \u2014 response must not be CATALOG_EMPTY.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L74"
+    },
+    {
+      "id": "tests_test_integration_rationale_89",
+      "label": "Semantic path (task_context) must work via importlib.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L89"
+    },
+    {
+      "id": "tests_test_integration_rationale_103",
+      "label": "Response must match CONCORD v0.4 ActionDiscoveryResponse contract (P2-6).",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L103"
+    },
+    {
+      "id": "tests_test_integration_rationale_164",
+      "label": "Semantic path response must also match the contract.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L164"
+    },
+    {
+      "id": "tests_test_integration_rationale_178",
+      "label": "filtered_by.semantic_search must be True on semantic path.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L178"
+    },
+    {
+      "id": "tests_test_integration_rationale_201",
+      "label": "Verify all action families reachable through the service.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L201"
+    },
+    {
+      "id": "tests_test_integration_rationale_233",
+      "label": "T4-unrestricted cap should see all 10 change_request actions.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L233"
+    },
+    {
+      "id": "tests_test_semantic_search_py",
+      "label": "test_semantic_search.py",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_semantic_search_loaded_semantic",
+      "label": "loaded_semantic()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L41"
+    },
+    {
+      "id": "tests_test_semantic_search_all_actions",
+      "label": "all_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L52"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "label": "TestSemanticSearchModelLoading",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L85"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading_test_enabled_false_before_load",
+      "label": ".test_enabled_false_before_load()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L86"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_true_on_success",
+      "label": ".test_load_model_returns_true_on_success()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L90"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_false_on_bad_model",
+      "label": ".test_load_model_returns_false_on_bad_model()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L96"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading_test_embed_catalog_is_noop_when_disabled",
+      "label": ".test_embed_catalog_is_noop_when_disabled()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L102"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading_test_embed_catalog_populates_embeddings",
+      "label": ".test_embed_catalog_populates_embeddings()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L110"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading_test_embedding_keys_are_resource_type_slash_name",
+      "label": ".test_embedding_keys_are_resource_type_slash_name()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L114"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity",
+      "label": "TestRankBySimilarity",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_returns_list",
+      "label": ".test_returns_list()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L124"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_empty_candidates_returns_empty",
+      "label": ".test_empty_candidates_returns_empty()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L129"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_threshold_zero_returns_all_candidates",
+      "label": ".test_threshold_zero_returns_all_candidates()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_threshold_one_returns_empty_or_one",
+      "label": ".test_threshold_one_returns_empty_or_one()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L138"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_ordering_most_similar_first",
+      "label": ".test_ordering_most_similar_first()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_deploy_query_ranks_deploy_high",
+      "label": ".test_deploy_query_ranks_deploy_high()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L152"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_review_query_ranks_approve_high",
+      "label": ".test_review_query_ranks_approve_high()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L158"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_empty_task_context_returns_candidates_unchanged",
+      "label": ".test_empty_task_context_returns_candidates_unchanged()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L166"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_disabled_ss_returns_candidates_in_original_order",
+      "label": ".test_disabled_ss_returns_candidates_in_original_order()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L171"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_similarity_score_returns_float_when_enabled",
+      "label": ".test_similarity_score_returns_float_when_enabled()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L177"
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity_test_similarity_score_returns_none_when_disabled",
+      "label": ".test_similarity_score_returns_none_when_disabled()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L184"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "label": "TestSemanticIntegrationInRun",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L196"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_task_context_triggers_semantic_path",
+      "label": ".test_task_context_triggers_semantic_path()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L197"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_results_non_empty_for_relevant_query",
+      "label": ".test_semantic_results_non_empty_for_relevant_query()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L205"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_approve_query_includes_approve_action",
+      "label": ".test_semantic_approve_query_includes_approve_action()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L212"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_path_includes_similarity_threshold_in_filtered_by",
+      "label": ".test_semantic_path_includes_similarity_threshold_in_filtered_by()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L220"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_resource_type_filter",
+      "label": ".test_semantic_plus_resource_type_filter()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L227"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_action_family_filter",
+      "label": ".test_semantic_plus_action_family_filter()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L239"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_no_task_context_uses_structured_path",
+      "label": ".test_no_task_context_uses_structured_path()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L251"
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun_test_catalog_version_present_in_semantic_response",
+      "label": ".test_catalog_version_present_in_semantic_response()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L260"
+    },
+    {
+      "id": "tests_test_semantic_search_testsecurityinvariant",
+      "label": "TestSecurityInvariant",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L271"
+    },
+    {
+      "id": "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_deploy_via_semantic",
+      "label": ".test_t2_agent_never_sees_deploy_via_semantic()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_approve_via_semantic",
+      "label": ".test_t2_agent_never_sees_approve_via_semantic()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L282"
+    },
+    {
+      "id": "tests_test_semantic_search_testsecurityinvariant_test_restricted_resource_type_excluded_even_with_semantic",
+      "label": ".test_restricted_resource_type_excluded_even_with_semantic()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L291"
+    },
+    {
+      "id": "tests_test_semantic_search_testsecurityinvariant_test_exclusion_respected_in_semantic_path",
+      "label": ".test_exclusion_respected_in_semantic_path()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L299"
+    },
+    {
+      "id": "tests_test_semantic_search_testgracefuldegradation",
+      "label": "TestGracefulDegradation",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L312"
+    },
+    {
+      "id": "tests_test_semantic_search_testgracefuldegradation_test_load_model_failure_leaves_enabled_false",
+      "label": ".test_load_model_failure_leaves_enabled_false()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L313"
+    },
+    {
+      "id": "tests_test_semantic_search_testgracefuldegradation_test_rank_by_similarity_with_disabled_ss_returns_all",
+      "label": ".test_rank_by_similarity_with_disabled_ss_returns_all()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L319"
+    },
+    {
+      "id": "tests_test_semantic_search_testgracefuldegradation_test_health_reports_semantic_enabled_correctly",
+      "label": ".test_health_reports_semantic_enabled_correctly()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L326"
+    },
+    {
+      "id": "tests_test_semantic_search_testgracefuldegradation_test_service_returns_ok_when_semantic_disabled",
+      "label": ".test_service_returns_ok_when_semantic_disabled()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L331"
+    },
+    {
+      "id": "tests_test_semantic_search_testgracefuldegradation_test_semantic_disabled_task_context_falls_back_to_keyword",
+      "label": ".test_semantic_disabled_task_context_falls_back_to_keyword()",
+      "file_type": "code",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L345"
+    },
+    {
+      "id": "tests_test_semantic_search_rationale_1",
+      "label": "Tests for semantic_search.py and semantic query path in run.py \u2014 Phase 3.  P1-1:",
+      "file_type": "rationale",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_semantic_search_rationale_42",
+      "label": "SemanticSearch with model loaded + real catalog embedded \u2014 shared across tests.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "tests_test_semantic_search_rationale_273",
+      "label": "Capability filter runs AFTER semantic ranking \u2014 high-similarity         actions",
+      "file_type": "rationale",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L273"
+    },
+    {
+      "id": "tests_test_semantic_search_rationale_332",
+      "label": "Simulate model not loaded: structured path must still work.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L332"
+    },
+    {
+      "id": "tests_test_semantic_search_rationale_346",
+      "label": "When semantic is disabled, task_context falls back to keyword ranking.",
+      "file_type": "rationale",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L346"
+    },
+    {
+      "id": "tests_test_service_wrapper_py",
+      "label": "test_service_wrapper.py",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath",
+      "label": "TestHappyPath",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_structured_query_returns_ok",
+      "label": ".test_structured_query_returns_ok()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L65"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_payload_has_available_actions",
+      "label": ".test_payload_has_available_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L72"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_payload_has_catalog_version",
+      "label": ".test_payload_has_catalog_version()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L79"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_payload_has_filtered_by",
+      "label": ".test_payload_has_filtered_by()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L87"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_payload_has_total_available",
+      "label": ".test_payload_has_total_available()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L94"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_max_results_respected",
+      "label": ".test_max_results_respected()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_action_summary_shape",
+      "label": ".test_action_summary_shape()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L108"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_no_authoritative_for_mutation_field",
+      "label": ".test_no_authoritative_for_mutation_field()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L118"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_recommendation_none_without_task_context",
+      "label": ".test_recommendation_none_without_task_context()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L126"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath_test_recommendation_present_with_task_context",
+      "label": ".test_recommendation_present_with_task_context()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering",
+      "label": "TestCapabilityFiltering",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L146"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_approve_actions",
+      "label": ".test_mutate_only_cap_excludes_approve_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L147"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_deploy_actions",
+      "label": ".test_mutate_only_cap_excludes_deploy_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L155"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t3_actions",
+      "label": ".test_t2_agent_cannot_see_t3_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L163"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t4_actions",
+      "label": ".test_t2_agent_cannot_see_t4_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L171"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_t3_agent_sees_approve_actions",
+      "label": ".test_t3_agent_sees_approve_actions()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L179"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_t4_agent_sees_deploy_action",
+      "label": ".test_t4_agent_sees_deploy_action()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L187"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_exclusions_hide_named_action",
+      "label": ".test_exclusions_hide_named_action()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L195"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering_test_restricted_resource_type_returns_no_results",
+      "label": ".test_restricted_resource_type_returns_no_results()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L204"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityresolution",
+      "label": "TestCapabilityResolution",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L216"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityresolution_test_missing_capability_set_and_context_returns_error",
+      "label": ".test_missing_capability_set_and_context_returns_error()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L217"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityresolution_test_error_envelope_has_stage",
+      "label": ".test_error_envelope_has_stage()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L222"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityresolution_test_agent_class_id_without_store_returns_error",
+      "label": ".test_agent_class_id_without_store_returns_error()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L226"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityresolution_test_capability_set_dict_accepted_directly",
+      "label": ".test_capability_set_dict_accepted_directly()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L235"
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityresolution_test_trust_tier_from_session_context",
+      "label": ".test_trust_tier_from_session_context()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L242"
+    },
+    {
+      "id": "tests_test_service_wrapper_testerrorcodes",
+      "label": "TestErrorCodes",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L257"
+    },
+    {
+      "id": "tests_test_service_wrapper_testerrorcodes_test_invalid_action_family_returns_invalid_query",
+      "label": ".test_invalid_action_family_returns_invalid_query()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L258"
+    },
+    {
+      "id": "tests_test_service_wrapper_testerrorcodes_test_run_never_raises",
+      "label": ".test_run_never_raises()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L266"
+    },
+    {
+      "id": "tests_test_service_wrapper_testerrorcodes_test_error_dict_has_required_keys",
+      "label": ".test_error_dict_has_required_keys()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L272"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth",
+      "label": "TestHealth",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L280"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_returns_dict",
+      "label": ".test_health_returns_dict()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L281"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_status_is_valid",
+      "label": ".test_health_status_is_valid()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L284"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_has_required_keys",
+      "label": ".test_health_has_required_keys()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L288"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_catalog_loaded",
+      "label": ".test_health_catalog_loaded()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L295"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_contracts_registered_positive",
+      "label": ".test_health_contracts_registered_positive()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L299"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_semantic_search_field_is_bool",
+      "label": ".test_health_semantic_search_field_is_bool()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L303"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_catalog_version_sha256",
+      "label": ".test_health_catalog_version_sha256()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L307"
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth_test_health_never_raises",
+      "label": ".test_health_never_raises()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L310"
+    },
+    {
+      "id": "tests_test_service_wrapper_testimportlibpattern",
+      "label": "TestImportlibPattern",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L318"
+    },
+    {
+      "id": "tests_test_service_wrapper_testimportlibpattern_test_importlib_callable",
+      "label": ".test_importlib_callable()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L319"
+    },
+    {
+      "id": "tests_test_service_wrapper_testimportlibpattern_test_importlib_health_callable",
+      "label": ".test_importlib_health_callable()",
+      "file_type": "code",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L332"
+    },
+    {
+      "id": "tests_test_service_wrapper_rationale_1",
+      "label": "Tests for action_discovery_service/run.py \u2014 Phase 2 (P0-5, P0-6, P1-5, P1-8).  C",
+      "file_type": "rationale",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_service_wrapper_rationale_320",
+      "label": "Service must be callable via importlib (ForgeWorks Pattern 1).",
+      "file_type": "rationale",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L320"
+    },
+    {
+      "id": "tests_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "tests\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "action_discovery_service_config_module",
+      "label": "ActionDiscovery Config Module",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "purpose": "Environment variable configuration with in-code defaults for local development and tests."
+      }
+    },
+    {
+      "id": "catalog_path_config",
+      "label": "Catalog Path Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_CATALOG_PATH",
+        "default": "<FORGE_ROOT>/action_catalogs"
+      }
+    },
+    {
+      "id": "default_session_id_config",
+      "label": "Default Session ID Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_DEFAULT_SESSION_ID",
+        "default": "forge-atlas-anonymous"
+      }
+    },
+    {
+      "id": "default_max_results_config",
+      "label": "Default Max Results Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_DEFAULT_MAX_RESULTS",
+        "default": 10
+      }
+    },
+    {
+      "id": "similarity_threshold_config",
+      "label": "Similarity Threshold Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "ACTION_DISCOVERY_SIMILARITY_THRESHOLD",
+        "default": 0.3
+      }
+    },
+    {
+      "id": "embedding_model_config",
+      "label": "Embedding Model Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_EMBEDDING_MODEL",
+        "default": "all-MiniLM-L6-v2"
+      }
+    },
+    {
+      "id": "action_discovery_service_run_module",
+      "label": "ActionDiscovery Service Run Module",
+      "type": "module",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "purpose": "Importlib-callable service entry point exposing run() and health().",
+        "security_invariant": "Every code path that returns actions passes through is_action_permitted."
+      }
+    },
+    {
+      "id": "catalog_loader_startup",
+      "label": "Catalog Loader Startup",
+      "type": "service",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "failure_mode": "FileNotFoundError leaves registry None and health reports unhealthy."
+      }
+    },
+    {
+      "id": "semantic_startup_embedding",
+      "label": "Semantic Startup Embedding",
+      "type": "service",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "failure_mode": "Embedding failures disable semantic search without crashing startup."
+      }
+    },
+    {
+      "id": "ok_envelope_function",
+      "label": "_ok Envelope Helper",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "returns": "status ok envelope"
+      }
+    },
+    {
+      "id": "error_envelope_function",
+      "label": "_error Envelope Helper",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "returns": "status error envelope with code, message, stage, details"
+      }
+    },
+    {
+      "id": "resolve_capability_set_function",
+      "label": "_resolve_capability_set",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "Accept caller capability_set directly or reject unresolved agent_class_id/session context."
+      }
+    },
+    {
+      "id": "deserialise_capability_set_function",
+      "label": "_deserialise_capability_set",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "produces": "CapabilitySet"
+      }
+    },
+    {
+      "id": "deserialise_query_function",
+      "label": "_deserialise_query",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "produces": "ActionDiscoveryQuery",
+        "error_path": "Unknown action_family raises ValueError."
+      }
+    },
+    {
+      "id": "summary_to_dict_function",
+      "label": "_summary_to_dict",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "Serializes lightweight action summary fields."
+      }
+    },
+    {
+      "id": "collect_candidates_function",
+      "label": "_collect_candidates",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "purpose": "Collect ActionContracts from registry, optionally scoped by resource_type.",
+        "error_path": "Missing actions during lookup are skipped."
+      }
+    },
+    {
+      "id": "run_semantic_function",
+      "label": "_run_semantic",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "ordering": "candidate collection, semantic rank, capability filter, action_family filter, truncate, response"
+      }
+    },
+    {
+      "id": "run_function",
+      "label": "run",
+      "type": "api",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "run(query, capability_set, session_context) returns _ok/_error dict and never raises."
+      }
+    },
+    {
+      "id": "health_function",
+      "label": "health",
+      "type": "api",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "Reports healthy, degraded, or unhealthy catalog state plus semantic flag and uptime."
+      }
+    },
+    {
+      "id": "semantic_search_module",
+      "label": "Semantic Search Module",
+      "type": "module",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "purpose": "Embedding model loader, in-memory vector store, and similarity ranking for ActionContract descriptions."
+      }
+    },
+    {
+      "id": "semantic_search_class",
+      "label": "SemanticSearch",
+      "type": "class",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "state": "model_name, enabled, _model, _embeddings",
+        "graceful_degradation": "Disabled search returns candidates unchanged."
+      }
+    },
+    {
+      "id": "semantic_load_model_function",
+      "label": "SemanticSearch.load_model",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "failure_mode": "Catches any exception, clears model, sets enabled false, logs warning."
+      }
+    },
+    {
+      "id": "semantic_embed_catalog_function",
+      "label": "SemanticSearch.embed_catalog",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "purpose": "Precompute unit-normalized embeddings keyed by resource_type/action_name."
+      }
+    },
+    {
+      "id": "semantic_rank_by_similarity_function",
+      "label": "SemanticSearch.rank_by_similarity",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "contract": "Sort candidates by descending cosine similarity and exclude candidates below threshold."
+      }
+    },
+    {
+      "id": "semantic_similarity_score_function",
+      "label": "SemanticSearch.similarity_score",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "purpose": "Return cosine similarity for task_context/action, or None if disabled or encoding fails."
+      }
+    },
+    {
+      "id": "normalise_function",
+      "label": "_normalise",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "contract": "Return unit-length vector, or unchanged vector when norm is zero."
+      }
+    },
+    {
+      "id": "main_module_entrypoint",
+      "label": "__main__ Docker Entrypoint",
+      "type": "module",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\__main__.py",
+      "attrs": {
+        "purpose": "Validate service health at startup, log summary, exit 1 when unhealthy."
+      }
+    },
+    {
+      "id": "action_discovery_core_spec_doc",
+      "label": "ActionDiscovery Core Specification",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "status": "Draft v0.1",
+        "framework": "CONCORD v0.4",
+        "rationale": "Prevents token explosion from loading full action catalogs while preserving governed, advisory discovery."
+      }
+    },
+    {
+      "id": "catalog_persistence_layer_concept",
+      "label": "Catalog Persistence Layer",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "rationale": "ContractRegistry is in-memory only; manifests on disk let catalogs survive restarts and be edited by humans."
+      }
+    },
+    {
+      "id": "semantic_search_layer_concept",
+      "label": "Semantic Search Layer",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "rationale": "Structured filters cannot answer natural-language task descriptions; embedding descriptions enables semantic matching."
+      }
+    },
+    {
+      "id": "service_wrapper_layer_concept",
+      "label": "Service Wrapper Layer",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "transport": "Python importlib Pattern 1",
+        "rationale": "Expose discovery without HTTP, gRPC, or subprocess piping."
+      }
+    },
+    {
+      "id": "governed_discovery_invariant",
+      "label": "Governed Discovery Invariant",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlaswhitepaper.md",
+      "attrs": {
+        "rule": "An agent MUST NOT discover actions it cannot admit.",
+        "rationale": "Prevents implicit privilege leakage and supports zero-trust multi-tenant capability masking."
+      }
+    },
+    {
+      "id": "advisory_discovery_contract",
+      "label": "Advisory Discovery Contract",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "rule": "Discovery of an action does not guarantee admission and response carries no authoritative_for_mutation field."
+      }
+    },
+    {
+      "id": "implementation_plan_doc",
+      "label": "ActionDiscovery Implementation Plan",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Implementation_Plan.md",
+      "attrs": {
+        "phases": 4,
+        "target": "Greenfield service build"
+      }
+    },
+    {
+      "id": "punch_list_doc",
+      "label": "ActionDiscovery Punch List",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Punch_List.md",
+      "attrs": {
+        "priority_scheme": "P0 blocks all downstream work, P1 blocks release, P2 should ship, P3 nice to have."
+      }
+    },
+    {
+      "id": "forgeatlas_whitepaper_doc",
+      "label": "ForgeAtlas Whitepaper",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlaswhitepaper.md",
+      "attrs": {
+        "rationale": "Transforms agent tooling from a hardcoded list into a dynamic, zero-trust App Store governed by cryptographic rules."
+      }
+    },
+    {
+      "id": "ai_developer_briefing_doc",
+      "label": "ForgeAtlas AI Developer Briefing",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlas_AI_Dev_Briefing.md",
+      "attrs": {
+        "audience": "New AI Developer assigned to build ForgeAtlas"
+      }
+    },
+    {
+      "id": "forge_family_architecture",
+      "label": "Forge Family Architecture",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlas_AI_Dev_Briefing.md",
+      "attrs": {
+        "frameworks": [
+          "CONCORD",
+          "ForgeGate",
+          "ForgeWorks",
+          "ForgeScaffold",
+          "DAWN",
+          "ForgeAtlas"
+        ]
+      }
+    },
+    {
+      "id": "requirements_file",
+      "label": "ForgeAtlas Requirements",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\requirements.txt",
+      "attrs": {
+        "purpose": "Pinned Python dependencies for reproducible Docker builds."
+      }
+    },
+    {
+      "id": "semantic_dependencies",
+      "label": "Semantic Search Dependencies",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\requirements.txt",
+      "attrs": {
+        "packages": [
+          "sentence-transformers==4.1.0",
+          "transformers==4.57.3",
+          "tokenizers==0.22.2",
+          "huggingface-hub==0.34.4",
+          "numpy==1.26.4",
+          "torch==2.7.1"
+        ]
+      }
+    },
+    {
+      "id": "test_service_wrapper_suite",
+      "label": "Service Wrapper Tests",
+      "type": "test",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_service_wrapper.py",
+      "attrs": {
+        "covers": "Happy path, capability filtering, trust tier filtering, missing capability context, invalid query, health, importlib callability."
+      }
+    },
+    {
+      "id": "test_semantic_search_suite",
+      "label": "Semantic Search Tests",
+      "type": "test",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_semantic_search.py",
+      "attrs": {
+        "covers": "Model loading, embed_catalog, similarity ranking, run() semantic integration, graceful degradation, security invariant."
+      }
+    },
+    {
+      "id": "test_integration_suite",
+      "label": "Integration Tests",
+      "type": "test",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_integration.py",
+      "attrs": {
+        "covers": "ForgeWorks importlib pattern, CONCORD v0.4 response shape, action family reachability."
+      }
+    },
+    {
+      "id": "action_discovery_response_contract",
+      "label": "ActionDiscoveryResponse Contract",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "fields": [
+          "available_actions",
+          "filtered_by",
+          "total_available",
+          "recommendation",
+          "catalog_version"
+        ]
+      }
+    },
+    {
+      "id": "forgeworks_importlib_pattern",
+      "label": "ForgeWorks Importlib Pattern",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlas_AI_Dev_Briefing.md",
+      "attrs": {
+        "pattern": "spec_from_file_location, module_from_spec, exec_module, direct run()/health() calls"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "config_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "config_py",
+      "target": "pathlib",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_config_rationale_1",
+      "target": "config_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "logging",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "time",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "dawn_concord_catalog_loader",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "dawn_concord_discovery_kernel",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "dawn_concord_types_contracts",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "dawn_concord_types_entities",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "dawn_concord_types_enums",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "init_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "importlib_util",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "semantic_search_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "importlib_util",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_ok",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_error",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_resolve_capability_set",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_deserialise_capability_set",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L214",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_deserialise_query",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_summary_to_dict",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L244",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_collect_candidates",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L255",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_run_semantic",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_run",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L356",
+      "weight": 1.0
+    },
+    {
+      "source": "run_py",
+      "target": "action_discovery_service_run_health",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L457",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_resolve_capability_set",
+      "target": "action_discovery_service_run_deserialise_capability_set",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L189",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_resolve_capability_set",
+      "target": "action_discovery_service_run_error",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run_semantic",
+      "target": "action_discovery_service_run_collect_candidates",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run_semantic",
+      "target": "action_discovery_service_run_summary_to_dict",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L344",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run_semantic",
+      "target": "action_discovery_service_run_ok",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run",
+      "target": "action_discovery_service_run_error",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L378",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run",
+      "target": "action_discovery_service_run_deserialise_query",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L400",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run",
+      "target": "action_discovery_service_run_resolve_capability_set",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L405",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run",
+      "target": "action_discovery_service_run_run_semantic",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L421",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run",
+      "target": "action_discovery_service_run_summary_to_dict",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L440",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_run",
+      "target": "action_discovery_service_run_ok",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L454",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_rationale_1",
+      "target": "run_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_rationale_186",
+      "target": "action_discovery_service_run_resolve_capability_set",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L186",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_rationale_256",
+      "target": "action_discovery_service_run_collect_candidates",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L256",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_rationale_278",
+      "target": "action_discovery_service_run_run_semantic",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L278",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_rationale_361",
+      "target": "action_discovery_service_run_run",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L361",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_rationale_458",
+      "target": "action_discovery_service_run_health",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "run.py",
+      "source_location": "L458",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic_search_py",
+      "target": "logging",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic_search_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic_search_py",
+      "target": "numpy",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic_search_py",
+      "target": "dawn_concord_contracts_kernel",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic_search_py",
+      "target": "dawn_concord_types_contracts",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic_search_py",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch",
+      "target": "action_discovery_service_semantic_search_semanticsearch_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch",
+      "target": "action_discovery_service_semantic_search_semanticsearch_load_model",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch",
+      "target": "action_discovery_service_semantic_search_semanticsearch_embed_catalog",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch",
+      "target": "action_discovery_service_semantic_search_semanticsearch_rank_by_similarity",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch",
+      "target": "action_discovery_service_semantic_search_semanticsearch_similarity_score",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "semantic_search_py",
+      "target": "action_discovery_service_semantic_search_normalise",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch_embed_catalog",
+      "target": "action_discovery_service_semantic_search_normalise",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch_rank_by_similarity",
+      "target": "action_discovery_service_semantic_search_normalise",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_semanticsearch_similarity_score",
+      "target": "action_discovery_service_semantic_search_normalise",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_rationale_1",
+      "target": "semantic_search_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_rationale_44",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_rationale_71",
+      "target": "action_discovery_service_semantic_search_semanticsearch_load_model",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_rationale_98",
+      "target": "action_discovery_service_semantic_search_semanticsearch_embed_catalog",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_rationale_133",
+      "target": "action_discovery_service_semantic_search_semanticsearch_rank_by_similarity",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_rationale_186",
+      "target": "action_discovery_service_semantic_search_semanticsearch_similarity_score",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L186",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_semantic_search_rationale_208",
+      "target": "action_discovery_service_semantic_search_normalise",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "semantic_search.py",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "logging",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "__main__.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "__main__.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "action_discovery_service_run",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "__main__.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_main_rationale_1",
+      "target": "main_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "__main__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "importlib_util",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "pathlib",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "pytest",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "tests_test_integration_load_module",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "tests_test_integration_testimportlibpattern",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern",
+      "target": "tests_test_integration_testimportlibpattern_test_run_callable_via_importlib",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern",
+      "target": "tests_test_integration_testimportlibpattern_test_health_callable_via_importlib",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern",
+      "target": "tests_test_integration_testimportlibpattern_test_importlib_returns_dict_not_raises",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern",
+      "target": "tests_test_integration_testimportlibpattern_test_importlib_run_catalog_loaded",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern",
+      "target": "tests_test_integration_testimportlibpattern_test_importlib_semantic_query",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "tests_test_integration_testresponseshape",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_available_actions_present",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_filtered_by_present",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_total_available_present",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_recommendation_key_present",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_catalog_version_present",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_catalog_version_is_sha256",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_payload",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_actions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_available_actions_is_list",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_total_available_is_int",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_action_shape_has_required_fields",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_filtered_by_has_session_id",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_filtered_by_has_capability_set_id",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_semantic_response_shape",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_semantic_filtered_by_has_semantic_flag",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape",
+      "target": "tests_test_integration_testresponseshape_test_error_envelope_shape",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L189",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_py",
+      "target": "tests_test_integration_testendtoendcoverage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage",
+      "target": "tests_test_integration_testendtoendcoverage_test_mutate_actions_reachable",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage",
+      "target": "tests_test_integration_testendtoendcoverage_test_approve_actions_reachable",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L212",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage",
+      "target": "tests_test_integration_testendtoendcoverage_test_deploy_actions_reachable",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage",
+      "target": "tests_test_integration_testendtoendcoverage_test_total_catalog_size",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern_test_run_callable_via_importlib",
+      "target": "tests_test_integration_load_module",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern_test_health_callable_via_importlib",
+      "target": "tests_test_integration_load_module",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern_test_importlib_returns_dict_not_raises",
+      "target": "tests_test_integration_load_module",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern_test_importlib_run_catalog_loaded",
+      "target": "tests_test_integration_load_module",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testimportlibpattern_test_importlib_semantic_query",
+      "target": "tests_test_integration_load_module",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_available_actions_present",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_filtered_by_present",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_total_available_present",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_recommendation_key_present",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_catalog_version_present",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_catalog_version_is_sha256",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_payload",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_actions",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_available_actions_is_list",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_total_available_is_int",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_action_shape_has_required_fields",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_filtered_by_has_session_id",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_filtered_by_has_capability_set_id",
+      "target": "tests_test_integration_testresponseshape_ok_payload",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_1",
+      "target": "tests_test_integration_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_52",
+      "target": "tests_test_integration_testimportlibpattern",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_74",
+      "target": "tests_test_integration_testimportlibpattern_test_importlib_run_catalog_loaded",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_89",
+      "target": "tests_test_integration_testimportlibpattern_test_importlib_semantic_query",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_103",
+      "target": "tests_test_integration_testresponseshape",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_164",
+      "target": "tests_test_integration_testresponseshape_test_semantic_response_shape",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_178",
+      "target": "tests_test_integration_testresponseshape_test_semantic_filtered_by_has_semantic_flag",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_201",
+      "target": "tests_test_integration_testendtoendcoverage",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_rationale_233",
+      "target": "tests_test_integration_testendtoendcoverage_test_total_catalog_size",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "pytest",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "dawn_concord_catalog_loader",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "dawn_concord_types_entities",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "dawn_concord_types_enums",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "action_discovery_service_run",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "action_discovery_service_semantic_search",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "tests_test_semantic_search_loaded_semantic",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "tests_test_semantic_search_all_actions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "target": "tests_test_semantic_search_testsemanticsearchmodelloading_test_enabled_false_before_load",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "target": "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_true_on_success",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "target": "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_false_on_bad_model",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "target": "tests_test_semantic_search_testsemanticsearchmodelloading_test_embed_catalog_is_noop_when_disabled",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "target": "tests_test_semantic_search_testsemanticsearchmodelloading_test_embed_catalog_populates_embeddings",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "target": "tests_test_semantic_search_testsemanticsearchmodelloading_test_embedding_keys_are_resource_type_slash_name",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "tests_test_semantic_search_testrankbysimilarity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_returns_list",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_empty_candidates_returns_empty",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_threshold_zero_returns_all_candidates",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_threshold_one_returns_empty_or_one",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_ordering_most_similar_first",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_deploy_query_ranks_deploy_high",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_review_query_ranks_approve_high",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_empty_task_context_returns_candidates_unchanged",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_disabled_ss_returns_candidates_in_original_order",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_similarity_score_returns_float_when_enabled",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "tests_test_semantic_search_testrankbysimilarity_test_similarity_score_returns_none_when_disabled",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_task_context_triggers_semantic_path",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_results_non_empty_for_relevant_query",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_approve_query_includes_approve_action",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L212",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_path_includes_similarity_threshold_in_filtered_by",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_resource_type_filter",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L227",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_action_family_filter",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L239",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_no_task_context_uses_structured_path",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "tests_test_semantic_search_testsemanticintegrationinrun_test_catalog_version_present_in_semantic_response",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L260",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "tests_test_semantic_search_testsecurityinvariant",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L271",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant",
+      "target": "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_deploy_via_semantic",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L272",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant",
+      "target": "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_approve_via_semantic",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L282",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant",
+      "target": "tests_test_semantic_search_testsecurityinvariant_test_restricted_resource_type_excluded_even_with_semantic",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L291",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant",
+      "target": "tests_test_semantic_search_testsecurityinvariant_test_exclusion_respected_in_semantic_path",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L299",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_py",
+      "target": "tests_test_semantic_search_testgracefuldegradation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L312",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation",
+      "target": "tests_test_semantic_search_testgracefuldegradation_test_load_model_failure_leaves_enabled_false",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L313",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation",
+      "target": "tests_test_semantic_search_testgracefuldegradation_test_rank_by_similarity_with_disabled_ss_returns_all",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L319",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation",
+      "target": "tests_test_semantic_search_testgracefuldegradation_test_health_reports_semantic_enabled_correctly",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L326",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation",
+      "target": "tests_test_semantic_search_testgracefuldegradation_test_service_returns_ok_when_semantic_disabled",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L331",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation",
+      "target": "tests_test_semantic_search_testgracefuldegradation_test_semantic_disabled_task_context_falls_back_to_keyword",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L345",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_1",
+      "target": "tests_test_semantic_search_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_42",
+      "target": "tests_test_semantic_search_loaded_semantic",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_273",
+      "target": "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_deploy_via_semantic",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_332",
+      "target": "tests_test_semantic_search_testgracefuldegradation_test_service_returns_ok_when_semantic_disabled",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L332",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_346",
+      "target": "tests_test_semantic_search_testgracefuldegradation_test_semantic_disabled_task_context_falls_back_to_keyword",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L346",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "importlib_util",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "pathlib",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "pytest",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "action_discovery_service_run",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "tests_test_service_wrapper_testhappypath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_structured_query_returns_ok",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_payload_has_available_actions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_payload_has_catalog_version",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_payload_has_filtered_by",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_payload_has_total_available",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_max_results_respected",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_action_summary_shape",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_no_authoritative_for_mutation_field",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_recommendation_none_without_task_context",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath",
+      "target": "tests_test_service_wrapper_testhappypath_test_recommendation_present_with_task_context",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_approve_actions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_deploy_actions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t3_actions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t4_actions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_t3_agent_sees_approve_actions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_t4_agent_sees_deploy_action",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_exclusions_hide_named_action",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering",
+      "target": "tests_test_service_wrapper_testcapabilityfiltering_test_restricted_resource_type_returns_no_results",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "tests_test_service_wrapper_testcapabilityresolution",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution",
+      "target": "tests_test_service_wrapper_testcapabilityresolution_test_missing_capability_set_and_context_returns_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L217",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution",
+      "target": "tests_test_service_wrapper_testcapabilityresolution_test_error_envelope_has_stage",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution",
+      "target": "tests_test_service_wrapper_testcapabilityresolution_test_agent_class_id_without_store_returns_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution",
+      "target": "tests_test_service_wrapper_testcapabilityresolution_test_capability_set_dict_accepted_directly",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution",
+      "target": "tests_test_service_wrapper_testcapabilityresolution_test_trust_tier_from_session_context",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "tests_test_service_wrapper_testerrorcodes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L257",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testerrorcodes",
+      "target": "tests_test_service_wrapper_testerrorcodes_test_invalid_action_family_returns_invalid_query",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testerrorcodes",
+      "target": "tests_test_service_wrapper_testerrorcodes_test_run_never_raises",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L266",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testerrorcodes",
+      "target": "tests_test_service_wrapper_testerrorcodes_test_error_dict_has_required_keys",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L272",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "tests_test_service_wrapper_testhealth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L280",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_returns_dict",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L281",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_status_is_valid",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L284",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_has_required_keys",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_catalog_loaded",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L295",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_contracts_registered_positive",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L299",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_semantic_search_field_is_bool",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L303",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_catalog_version_sha256",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L307",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth",
+      "target": "tests_test_service_wrapper_testhealth_test_health_never_raises",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L310",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_py",
+      "target": "tests_test_service_wrapper_testimportlibpattern",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L318",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testimportlibpattern",
+      "target": "tests_test_service_wrapper_testimportlibpattern_test_importlib_callable",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L319",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testimportlibpattern",
+      "target": "tests_test_service_wrapper_testimportlibpattern_test_importlib_health_callable",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L332",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_rationale_1",
+      "target": "tests_test_service_wrapper_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_rationale_320",
+      "target": "tests_test_service_wrapper_testimportlibpattern_test_importlib_callable",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L320",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_run_rationale_1",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "run.py",
+      "source_location": "L89",
+      "weight": 0.8
+    },
+    {
+      "source": "action_discovery_service_run_rationale_186",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "run.py",
+      "source_location": "L89",
+      "weight": 0.8
+    },
+    {
+      "source": "action_discovery_service_run_rationale_256",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "run.py",
+      "source_location": "L89",
+      "weight": 0.8
+    },
+    {
+      "source": "action_discovery_service_run_rationale_278",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "run.py",
+      "source_location": "L89",
+      "weight": 0.8
+    },
+    {
+      "source": "action_discovery_service_run_rationale_361",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "run.py",
+      "source_location": "L89",
+      "weight": 0.8
+    },
+    {
+      "source": "action_discovery_service_run_rationale_458",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "run.py",
+      "source_location": "L89",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_1",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_42",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_273",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_332",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_semantic_search_rationale_346",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L33",
+      "weight": 0.8
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_ok_payload",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_semantic_response_shape",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_semantic_filtered_by_has_semantic_flag",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testresponseshape_test_error_envelope_shape",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L191",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage_test_mutate_actions_reachable",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage_test_approve_actions_reachable",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage_test_deploy_actions_reachable",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_integration_testendtoendcoverage_test_total_catalog_size",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_integration.py",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_loaded_semantic",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading_test_enabled_false_before_load",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_true_on_success",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_false_on_bad_model",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticsearchmodelloading_test_embed_catalog_is_noop_when_disabled",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity_test_disabled_ss_returns_candidates_in_original_order",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testrankbysimilarity_test_similarity_score_returns_none_when_disabled",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_task_context_triggers_semantic_path",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L198",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_results_non_empty_for_relevant_query",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_approve_query_includes_approve_action",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L213",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_path_includes_similarity_threshold_in_filtered_by",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L221",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_resource_type_filter",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_action_family_filter",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L240",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_no_task_context_uses_structured_path",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsemanticintegrationinrun_test_catalog_version_present_in_semantic_response",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_deploy_via_semantic",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L275",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_approve_via_semantic",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L283",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant_test_restricted_resource_type_excluded_even_with_semantic",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testsecurityinvariant_test_exclusion_respected_in_semantic_path",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L301",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation_test_load_model_failure_leaves_enabled_false",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L314",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation_test_rank_by_similarity_with_disabled_ss_returns_all",
+      "target": "action_discovery_service_semantic_search_semanticsearch",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L320",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation_test_health_reports_semantic_enabled_correctly",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L327",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation_test_service_returns_ok_when_semantic_disabled",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L337",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_semantic_search_testgracefuldegradation_test_semantic_disabled_task_context_falls_back_to_keyword",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_semantic_search.py",
+      "source_location": "L351",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_structured_query_returns_ok",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_payload_has_available_actions",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_payload_has_catalog_version",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_payload_has_filtered_by",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_payload_has_total_available",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_max_results_respected",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_action_summary_shape",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_no_authoritative_for_mutation_field",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_recommendation_none_without_task_context",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhappypath_test_recommendation_present_with_task_context",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_approve_actions",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_deploy_actions",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t3_actions",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t4_actions",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_t3_agent_sees_approve_actions",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_t4_agent_sees_deploy_action",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_exclusions_hide_named_action",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityfiltering_test_restricted_resource_type_returns_no_results",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution_test_missing_capability_set_and_context_returns_error",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution_test_error_envelope_has_stage",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution_test_agent_class_id_without_store_returns_error",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L227",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution_test_capability_set_dict_accepted_directly",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L236",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testcapabilityresolution_test_trust_tier_from_session_context",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testerrorcodes_test_invalid_action_family_returns_invalid_query",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L259",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testerrorcodes_test_run_never_raises",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L268",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testerrorcodes_test_error_dict_has_required_keys",
+      "target": "action_discovery_service_run_run",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_returns_dict",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L282",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_status_is_valid",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L285",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_has_required_keys",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L289",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_catalog_loaded",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L296",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_contracts_registered_positive",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L300",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_semantic_search_field_is_bool",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L305",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_catalog_version_sha256",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L308",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_service_wrapper_testhealth_test_health_never_raises",
+      "target": "action_discovery_service_run_health",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests\\test_service_wrapper.py",
+      "source_location": "L311",
+      "weight": 1.0
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "catalog_path_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines CATALOG_PATH from FORGE_ATLAS_CATALOG_PATH with action_catalogs default."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "default_session_id_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines DEFAULT_SESSION_ID from FORGE_ATLAS_DEFAULT_SESSION_ID."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "default_max_results_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines DEFAULT_MAX_RESULTS from FORGE_ATLAS_DEFAULT_MAX_RESULTS."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "similarity_threshold_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines SIMILARITY_THRESHOLD from ACTION_DISCOVERY_SIMILARITY_THRESHOLD."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "embedding_model_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines EMBEDDING_MODEL from FORGE_ATLAS_EMBEDDING_MODEL."
+    },
+    {
+      "source": "catalog_loader_startup",
+      "target": "catalog_path_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py startup constructs CatalogLoader(config.CATALOG_PATH)."
+    },
+    {
+      "source": "semantic_startup_embedding",
+      "target": "embedding_model_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py creates SemanticSearch(config.EMBEDDING_MODEL)."
+    },
+    {
+      "source": "semantic_startup_embedding",
+      "target": "semantic_load_model_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py calls _semantic.load_model() at module startup."
+    },
+    {
+      "source": "semantic_startup_embedding",
+      "target": "semantic_embed_catalog_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py calls _semantic.embed_catalog(_registry) when semantic search is enabled and registry loaded."
+    },
+    {
+      "source": "resolve_capability_set_function",
+      "target": "deserialise_capability_set_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_resolve_capability_set calls _deserialise_capability_set when capability_set is supplied."
+    },
+    {
+      "source": "resolve_capability_set_function",
+      "target": "error_envelope_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_resolve_capability_set returns _error for invalid capability_set, agent_class_id, or missing context."
+    },
+    {
+      "source": "deserialise_query_function",
+      "target": "default_session_id_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_deserialise_query uses config.DEFAULT_SESSION_ID when session_id is absent."
+    },
+    {
+      "source": "deserialise_query_function",
+      "target": "default_max_results_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_deserialise_query uses config.DEFAULT_MAX_RESULTS when max_results is absent."
+    },
+    {
+      "source": "collect_candidates_function",
+      "target": "catalog_loader_startup",
+      "relation": "depends_on",
+      "confidence": 0.88,
+      "kind": "INFERRED",
+      "evidence": "_collect_candidates reads the module-level _registry populated by CatalogLoader at startup."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "collect_candidates_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic starts by calling _collect_candidates(discovery_query.resource_type)."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "semantic_rank_by_similarity_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic calls _semantic.rank_by_similarity(task_context, candidates, threshold=...)."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "similarity_threshold_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic passes config.SIMILARITY_THRESHOLD into rank_by_similarity and filtered_by."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "governed_discovery_invariant",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic filters ranked actions with is_action_permitted before returning summaries."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "summary_to_dict_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic serializes summaries via [_summary_to_dict(s) for s in summaries]."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "semantic_similarity_score_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic computes top_score using _semantic.similarity_score for recommendations."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "ok_envelope_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic returns _ok(payload)."
+    },
+    {
+      "source": "run_function",
+      "target": "error_envelope_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() returns _error for catalog empty, invalid query, and discovery exceptions."
+    },
+    {
+      "source": "run_function",
+      "target": "deserialise_query_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() calls _deserialise_query(query) inside query parsing."
+    },
+    {
+      "source": "run_function",
+      "target": "resolve_capability_set_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() calls _resolve_capability_set(capability_set, session_context)."
+    },
+    {
+      "source": "run_function",
+      "target": "run_semantic_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() routes to _run_semantic when discovery_query.task_context and _semantic.enabled."
+    },
+    {
+      "source": "run_function",
+      "target": "summary_to_dict_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() serializes structured response.available_actions with _summary_to_dict."
+    },
+    {
+      "source": "run_function",
+      "target": "governed_discovery_invariant",
+      "relation": "implements",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "run.py docstring and structured route call execute_discovery with capability_set and agent_trust_tier."
+    },
+    {
+      "source": "run_function",
+      "target": "advisory_discovery_contract",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() payload omits authoritative_for_mutation and returns recommendations as advisory metadata."
+    },
+    {
+      "source": "health_function",
+      "target": "semantic_startup_embedding",
+      "relation": "depends_on",
+      "confidence": 0.86,
+      "kind": "INFERRED",
+      "evidence": "health() reports _semantic.enabled, which is established by startup embedding/model load."
+    },
+    {
+      "source": "health_function",
+      "target": "catalog_loader_startup",
+      "relation": "depends_on",
+      "confidence": 0.9,
+      "kind": "INFERRED",
+      "evidence": "health() derives catalog_loaded, contracts_registered, failures, and catalog_version from startup loader/registry state."
+    },
+    {
+      "source": "semantic_load_model_function",
+      "target": "semantic_search_class",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "load_model sets self._model and self.enabled based on SentenceTransformer initialization."
+    },
+    {
+      "source": "semantic_embed_catalog_function",
+      "target": "normalise_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "embed_catalog stores _normalise(emb) for each action description."
+    },
+    {
+      "source": "semantic_rank_by_similarity_function",
+      "target": "normalise_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "rank_by_similarity normalizes query and on-demand action embeddings."
+    },
+    {
+      "source": "semantic_similarity_score_function",
+      "target": "normalise_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "similarity_score normalizes query and action embeddings before dot product."
+    },
+    {
+      "source": "semantic_search_class",
+      "target": "semantic_dependencies",
+      "relation": "depends_on",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "semantic_search.py uses sentence_transformers and numpy; requirements.txt pins sentence-transformers, numpy, torch, and transformer stack."
+    },
+    {
+      "source": "main_module_entrypoint",
+      "target": "health_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "__main__.py imports health and calls h = health()."
+    },
+    {
+      "source": "main_module_entrypoint",
+      "target": "catalog_loader_startup",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "__main__.py exits 1 when health status is unhealthy due to no contracts or failures."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "catalog_persistence_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec \u00a73 defines the Catalog Persistence Layer."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec \u00a74 defines the Semantic Search Layer."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "service_wrapper_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec \u00a75 defines the Service Wrapper Layer and transport pattern."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "governed_discovery_invariant",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec \u00a77 says ActionDiscovery MUST filter results by session AgentClass and CapabilitySet."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "advisory_discovery_contract",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec \u00a77 says responses are advisory and must carry no authoritative_for_mutation field."
+    },
+    {
+      "source": "semantic_search_layer_concept",
+      "target": "semantic_search_class",
+      "relation": "implements",
+      "confidence": 0.95,
+      "kind": "INFERRED",
+      "evidence": "semantic_search.py class lifecycle matches Core Spec semantic layer design: load model, embed catalog, rank task_context."
+    },
+    {
+      "source": "service_wrapper_layer_concept",
+      "target": "run_function",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec \u00a75.1 specifies run(query, capability_set, session_context); run.py exposes that function."
+    },
+    {
+      "source": "service_wrapper_layer_concept",
+      "target": "health_function",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec \u00a76.4 specifies health() with catalog and semantic status; run.py implements health()."
+    },
+    {
+      "source": "implementation_plan_doc",
+      "target": "catalog_persistence_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Implementation Plan Phase 1 is Catalog Persistence Layer."
+    },
+    {
+      "source": "implementation_plan_doc",
+      "target": "service_wrapper_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Implementation Plan Phase 2 is Service Wrapper."
+    },
+    {
+      "source": "implementation_plan_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Implementation Plan Phase 3 is Semantic Search Layer."
+    },
+    {
+      "source": "punch_list_doc",
+      "target": "implementation_plan_doc",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Punch List is explicitly companion to Core Specification and Implementation Plan."
+    },
+    {
+      "source": "forgeatlas_whitepaper_doc",
+      "target": "governed_discovery_invariant",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Whitepaper states ForgeAtlas will never discover actions lacking trust tier or capability scope."
+    },
+    {
+      "source": "ai_developer_briefing_doc",
+      "target": "forgeworks_importlib_pattern",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Briefing names the established importlib pattern and gives code using spec_from_file_location."
+    },
+    {
+      "source": "ai_developer_briefing_doc",
+      "target": "forge_family_architecture",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Briefing lists CONCORD, ForgeGate, ForgeWorks, ForgeScaffold, DAWN, and ForgeAtlas roles."
+    },
+    {
+      "source": "forge_family_architecture",
+      "target": "governed_discovery_invariant",
+      "relation": "depends_on",
+      "confidence": 0.85,
+      "kind": "INFERRED",
+      "evidence": "Briefing places ForgeAtlas under CONCORD governance and states CapabilitySet/trust-tier filtering is the key invariant."
+    },
+    {
+      "source": "requirements_file",
+      "target": "semantic_dependencies",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "requirements.txt groups sentence-transformers, transformers, tokenizers, huggingface-hub, numpy, and torch under Semantic search."
+    },
+    {
+      "source": "test_service_wrapper_suite",
+      "target": "run_function",
+      "relation": "tests",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "test_service_wrapper.py imports run and calls run() across happy path, capability, error, and importlib tests."
+    },
+    {
+      "source": "test_service_wrapper_suite",
+      "target": "health_function",
+      "relation": "tests",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestHealth class asserts health() shape, status, catalog state, semantic flag, and non-raising behavior."
+    },
+    {
+      "source": "test_service_wrapper_suite",
+      "target": "governed_discovery_invariant",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "CapabilityFiltering tests assert T2 agents cannot see approve/deploy and exclusions/restricted resource types hide actions."
+    },
+    {
+      "source": "test_semantic_search_suite",
+      "target": "semantic_search_class",
+      "relation": "tests",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestSemanticSearchModelLoading and TestRankBySimilarity instantiate SemanticSearch and exercise load, embed, rank, score."
+    },
+    {
+      "source": "test_semantic_search_suite",
+      "target": "run_semantic_function",
+      "relation": "tests",
+      "confidence": 0.96,
+      "kind": "EXTRACTED",
+      "evidence": "TestSemanticIntegrationInRun asserts task_context triggers semantic path and filtered_by.semantic_search is true."
+    },
+    {
+      "source": "test_semantic_search_suite",
+      "target": "governed_discovery_invariant",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestSecurityInvariant asserts T2 agents never see deploy/approve via semantic search and restrictions/exclusions are respected."
+    },
+    {
+      "source": "test_integration_suite",
+      "target": "forgeworks_importlib_pattern",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestImportlibPattern mirrors spec_from_file_location, module_from_spec, exec_module and calls run()/health()."
+    },
+    {
+      "source": "test_integration_suite",
+      "target": "action_discovery_response_contract",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestResponseShape asserts available_actions, filtered_by, total_available, recommendation, catalog_version and no authoritative_for_mutation."
+    },
+    {
+      "source": "test_integration_suite",
+      "target": "advisory_discovery_contract",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Integration response-shape tests assert authoritative_for_mutation is absent from payload and actions."
+    },
+    {
+      "source": "run_function",
+      "target": "action_discovery_response_contract",
+      "relation": "produces",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() payload includes available_actions, filtered_by, total_available, catalog_version, recommendation."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "action_discovery_response_contract",
+      "relation": "produces",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic builds the same payload fields for semantic responses."
+    },
+    {
+      "source": "forgeatlas_whitepaper_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "conceptually_related_to",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Whitepaper describes natural-language query scoring via localized sentence-transformer embeddings and cosine similarity ranking."
+    },
+    {
+      "source": "ai_developer_briefing_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "conceptually_related_to",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Briefing lists the semantic search requirement: all-MiniLM-L6-v2, description embeddings, cosine ranking, threshold."
+    },
+    {
+      "source": "semantic_search_layer_concept",
+      "target": "run_semantic_function",
+      "relation": "semantically_similar_to",
+      "confidence": 0.91,
+      "kind": "INFERRED",
+      "evidence": "The concept's documented flow maps directly to _run_semantic's implemented candidate ranking and capability filtering sequence."
+    },
+    {
+      "source": "catalog_persistence_layer_concept",
+      "target": "catalog_loader_startup",
+      "relation": "semantically_similar_to",
+      "confidence": 0.88,
+      "kind": "INFERRED",
+      "evidence": "The concept describes YAML catalog hydration; run.py startup creates CatalogLoader and loads registry from configured catalog path."
+    },
+    {
+      "source": "service_wrapper_layer_concept",
+      "target": "forgeworks_importlib_pattern",
+      "relation": "depends_on",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec and Briefing both state the service wrapper follows ForgeWorks Pattern 1 importlib convention."
+    },
+    {
+      "source": "deserialise_query_function",
+      "target": "action_discovery_response_contract",
+      "relation": "depends_on",
+      "confidence": 0.65,
+      "kind": "AMBIGUOUS",
+      "evidence": "Query deserialization feeds response construction, but the response contract is not directly referenced in _deserialise_query."
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "three_layer_action_discovery_architecture",
+      "label": "Three-Layer ActionDiscovery Architecture",
+      "nodes": [
+        "catalog_persistence_layer_concept",
+        "semantic_search_layer_concept",
+        "service_wrapper_layer_concept",
+        "action_discovery_core_spec_doc",
+        "forgeatlas_whitepaper_doc"
+      ],
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec and Whitepaper both define ForgeAtlas/ActionDiscovery as catalog persistence, semantic search, and service wrapper layers."
+    },
+    {
+      "id": "semantic_query_security_flow",
+      "label": "Semantic Query Security Flow",
+      "nodes": [
+        "run_semantic_function",
+        "semantic_rank_by_similarity_function",
+        "similarity_threshold_config",
+        "governed_discovery_invariant",
+        "action_discovery_response_contract"
+      ],
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic explicitly ranks by similarity, applies threshold, filters with is_action_permitted, and returns the response payload."
+    },
+    {
+      "id": "qa_contract_surface",
+      "label": "QA Coverage for Service Contracts",
+      "nodes": [
+        "test_service_wrapper_suite",
+        "test_semantic_search_suite",
+        "test_integration_suite",
+        "run_function",
+        "health_function",
+        "governed_discovery_invariant",
+        "action_discovery_response_contract"
+      ],
+      "confidence": 0.96,
+      "kind": "EXTRACTED",
+      "evidence": "The three test files collectively cover run/health behavior, semantic integration, security invariant, importlib usage, and response shape."
+    },
+    {
+      "id": "runtime_configuration_surface",
+      "label": "Runtime Configuration Surface",
+      "nodes": [
+        "action_discovery_service_config_module",
+        "catalog_path_config",
+        "default_session_id_config",
+        "default_max_results_config",
+        "similarity_threshold_config",
+        "embedding_model_config",
+        "requirements_file"
+      ],
+      "confidence": 0.94,
+      "kind": "EXTRACTED",
+      "evidence": "config.py centralizes runtime environment values while requirements.txt pins the dependency/runtime package surface."
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

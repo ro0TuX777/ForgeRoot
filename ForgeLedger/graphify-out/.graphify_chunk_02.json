@@ -1,0 +1,972 @@
+{
+  "nodes": [
+    {
+      "id": "conftest_test_import_path_setup",
+      "label": "Test Import Path Setup",
+      "file_type": "code",
+      "source_file": "tests/conftest.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_adapters_concord_adapter_mapping",
+      "label": "CONCORD Adapter Mapping",
+      "file_type": "code",
+      "source_file": "tests/test_adapters.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_adapters_forgegate_adapter_mapping",
+      "label": "ForgeGate Adapter Mapping",
+      "file_type": "code",
+      "source_file": "tests/test_adapters.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_adapters_chainable_adapter_events",
+      "label": "Chainable Adapter Events",
+      "file_type": "code",
+      "source_file": "tests/test_adapters.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_anchoring_local_anchor_backend",
+      "label": "Local Anchor Backend",
+      "file_type": "code",
+      "source_file": "tests/test_anchoring.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_anchoring_checkpoint_anchor_verification",
+      "label": "Checkpoint Anchor Verification",
+      "file_type": "code",
+      "source_file": "tests/test_anchoring.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_audit_events_governance_audit_events",
+      "label": "Governance Audit Events",
+      "file_type": "code",
+      "source_file": "tests/test_audit_events.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_backend_contract_ledger_backend_contract",
+      "label": "Ledger Backend Contract",
+      "file_type": "code",
+      "source_file": "tests/test_backend_contract.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_backend_contract_fail_closed_writes",
+      "label": "Fail-Closed Writes",
+      "file_type": "code",
+      "source_file": "tests/test_backend_contract.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_backend_contract_export_import_chain_preservation",
+      "label": "Export Import Chain Preservation",
+      "file_type": "code",
+      "source_file": "tests/test_backend_contract.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_checkpoint_authenticated_checkpoints",
+      "label": "Authenticated Checkpoints",
+      "file_type": "code",
+      "source_file": "tests/test_checkpoint.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_checkpoint_truncation_and_recomputation_detection",
+      "label": "Truncation and Recomputation Detection",
+      "file_type": "code",
+      "source_file": "tests/test_checkpoint.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_durable_replay_durable_replay_protection",
+      "label": "Durable Replay Protection",
+      "file_type": "code",
+      "source_file": "tests/test_durable_replay.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_hash_chain_hash_chain_integrity",
+      "label": "Hash Chain Integrity",
+      "file_type": "code",
+      "source_file": "tests/test_hash_chain.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_jsonl_backend_jsonl_backend_persistence",
+      "label": "JSONL Backend Persistence",
+      "file_type": "code",
+      "source_file": "tests/test_jsonl_backend.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_jsonl_backend_legal_hold_sidecar",
+      "label": "Legal Hold Sidecar Persistence",
+      "file_type": "code",
+      "source_file": "tests/test_jsonl_backend.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_key_management_key_provider_abstraction",
+      "label": "Key Provider Abstraction",
+      "file_type": "code",
+      "source_file": "tests/test_key_management.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_key_management_secret_non_leakage",
+      "label": "Secret Non-Leakage",
+      "file_type": "code",
+      "source_file": "tests/test_key_management.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_legal_hold_hold_registry",
+      "label": "Hold Registry",
+      "file_type": "code",
+      "source_file": "tests/test_legal_hold.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_read_auditing_read_access_auditing",
+      "label": "Read Access Auditing",
+      "file_type": "code",
+      "source_file": "tests/test_read_auditing.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_read_auditing_sensitive_read_non_leakage",
+      "label": "Sensitive Read Non-Leakage",
+      "file_type": "code",
+      "source_file": "tests/test_read_auditing.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_redaction_ingest_time_redaction",
+      "label": "Ingest-Time Redaction",
+      "file_type": "code",
+      "source_file": "tests/test_redaction.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_redaction_redaction_receipts",
+      "label": "Redaction Receipts",
+      "file_type": "code",
+      "source_file": "tests/test_redaction.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_retention_retention_classification",
+      "label": "Retention Classification",
+      "file_type": "code",
+      "source_file": "tests/test_retention.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_retention_lifecycle_retention_lifecycle",
+      "label": "Retention Lifecycle",
+      "file_type": "code",
+      "source_file": "tests/test_retention_lifecycle.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_schema_canonical_event_schema",
+      "label": "Canonical Event Schema",
+      "file_type": "code",
+      "source_file": "tests/test_schema.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_sdk_forgeledger_client_sdk",
+      "label": "ForgeLedger Client SDK",
+      "file_type": "code",
+      "source_file": "tests/test_sdk.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_sdk_tenant_boundary_enforcement",
+      "label": "Tenant Boundary Enforcement",
+      "file_type": "code",
+      "source_file": "tests/test_sdk.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_validators_redaction_validator_hardening",
+      "label": "Redaction Validator Hardening",
+      "file_type": "code",
+      "source_file": "tests/test_validators.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "test_worm_object_backend_worm_object_backend",
+      "label": "WORM Object Backend",
+      "file_type": "code",
+      "source_file": "tests/test_worm_object_backend.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgeledger_whitepaper_evidence_substrate",
+      "label": "ForgeLedger Evidence Substrate",
+      "file_type": "document",
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgeledger_whitepaper_forge_root_ecosystem",
+      "label": "ForgeRoot Ecosystem",
+      "file_type": "document",
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgeledger_whitepaper_evidence_package_generation",
+      "label": "Evidence Package Generation",
+      "file_type": "document",
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgeledger_whitepaper_control_mapping_governance",
+      "label": "Control Mapping Governance",
+      "file_type": "document",
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgeledger_whitepaper_pilot_readiness_boundary",
+      "label": "Pilot Readiness Boundary",
+      "file_type": "document",
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "third_party_integration_questionnaire_integration_requirements",
+      "label": "Integration Requirements Questionnaire",
+      "file_type": "document",
+      "source_file": "third_party_integration_questionnaire.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "retention_policies_retention_policy_config",
+      "label": "Retention Policy Config",
+      "file_type": "document",
+      "source_file": "forgeledger/config/retention_policies.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "conftest_test_import_path_setup",
+      "target": "test_sdk_forgeledger_client_sdk",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "tests/conftest.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_adapters_concord_adapter_mapping",
+      "target": "forgeledger_whitepaper_forge_root_ecosystem",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_adapters.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_adapters_forgegate_adapter_mapping",
+      "target": "forgeledger_whitepaper_forge_root_ecosystem",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_adapters.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_adapters_chainable_adapter_events",
+      "target": "test_hash_chain_hash_chain_integrity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_adapters.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_anchoring_local_anchor_backend",
+      "target": "test_anchoring_checkpoint_anchor_verification",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_anchoring.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_anchoring_checkpoint_anchor_verification",
+      "target": "test_checkpoint_authenticated_checkpoints",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_anchoring.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_anchoring_local_anchor_backend",
+      "target": "test_audit_events_governance_audit_events",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_anchoring.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_audit_events_governance_audit_events",
+      "target": "test_redaction_ingest_time_redaction",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_audit_events.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_audit_events_governance_audit_events",
+      "target": "test_checkpoint_authenticated_checkpoints",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_audit_events.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_backend_contract_ledger_backend_contract",
+      "target": "test_jsonl_backend_jsonl_backend_persistence",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_backend_contract.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_backend_contract_ledger_backend_contract",
+      "target": "test_worm_object_backend_worm_object_backend",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.72,
+      "source_file": "tests/test_backend_contract.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_backend_contract_fail_closed_writes",
+      "target": "test_audit_events_governance_audit_events",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.62,
+      "source_file": "tests/test_backend_contract.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_backend_contract_export_import_chain_preservation",
+      "target": "test_hash_chain_hash_chain_integrity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_backend_contract.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_checkpoint_authenticated_checkpoints",
+      "target": "test_hash_chain_hash_chain_integrity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_checkpoint.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_checkpoint_truncation_and_recomputation_detection",
+      "target": "test_checkpoint_authenticated_checkpoints",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_checkpoint.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_durable_replay_durable_replay_protection",
+      "target": "test_sdk_forgeledger_client_sdk",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.78,
+      "source_file": "tests/test_durable_replay.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_hash_chain_hash_chain_integrity",
+      "target": "forgeledger_whitepaper_evidence_substrate",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.86,
+      "source_file": "tests/test_hash_chain.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_jsonl_backend_jsonl_backend_persistence",
+      "target": "test_hash_chain_hash_chain_integrity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_jsonl_backend.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_jsonl_backend_legal_hold_sidecar",
+      "target": "test_legal_hold_hold_registry",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.84,
+      "source_file": "tests/test_jsonl_backend.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_key_management_key_provider_abstraction",
+      "target": "test_checkpoint_authenticated_checkpoints",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_key_management.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_key_management_key_provider_abstraction",
+      "target": "test_redaction_ingest_time_redaction",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "tests/test_key_management.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_key_management_secret_non_leakage",
+      "target": "test_key_management_key_provider_abstraction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_key_management.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_legal_hold_hold_registry",
+      "target": "test_retention_lifecycle_retention_lifecycle",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_legal_hold.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_read_auditing_read_access_auditing",
+      "target": "test_audit_events_governance_audit_events",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_read_auditing.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_read_auditing_sensitive_read_non_leakage",
+      "target": "test_redaction_ingest_time_redaction",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.76,
+      "source_file": "tests/test_read_auditing.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_redaction_ingest_time_redaction",
+      "target": "test_redaction_redaction_receipts",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_redaction.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_redaction_ingest_time_redaction",
+      "target": "test_hash_chain_hash_chain_integrity",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_redaction.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_retention_retention_classification",
+      "target": "retention_policies_retention_policy_config",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "tests/test_retention.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_retention_lifecycle_retention_lifecycle",
+      "target": "retention_policies_retention_policy_config",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "tests/test_retention_lifecycle.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_retention_lifecycle_retention_lifecycle",
+      "target": "test_audit_events_governance_audit_events",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_retention_lifecycle.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_retention_lifecycle_retention_lifecycle",
+      "target": "test_legal_hold_hold_registry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_retention_lifecycle.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_schema_canonical_event_schema",
+      "target": "forgeledger_whitepaper_evidence_substrate",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.84,
+      "source_file": "tests/test_schema.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_sdk_forgeledger_client_sdk",
+      "target": "test_schema_canonical_event_schema",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_sdk.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_sdk_forgeledger_client_sdk",
+      "target": "test_durable_replay_durable_replay_protection",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_sdk.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_sdk_tenant_boundary_enforcement",
+      "target": "test_sdk_forgeledger_client_sdk",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_sdk.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_validators_redaction_validator_hardening",
+      "target": "test_redaction_redaction_receipts",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_validators.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_validators_redaction_validator_hardening",
+      "target": "test_schema_canonical_event_schema",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.73,
+      "source_file": "tests/test_validators.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_worm_object_backend_worm_object_backend",
+      "target": "forgeledger_whitepaper_pilot_readiness_boundary",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "tests/test_worm_object_backend.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgeledger_whitepaper_forge_root_ecosystem",
+      "target": "forgeledger_whitepaper_evidence_substrate",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgeledger_whitepaper_evidence_substrate",
+      "target": "forgeledger_whitepaper_evidence_package_generation",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgeledger_whitepaper_evidence_package_generation",
+      "target": "forgeledger_whitepaper_control_mapping_governance",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgeledger_whitepaper_pilot_readiness_boundary",
+      "target": "test_anchoring_local_anchor_backend",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgeledger_whitepaper_pilot_readiness_boundary",
+      "target": "test_worm_object_backend_worm_object_backend",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgeledger_whitepaper_pilot_readiness_boundary",
+      "target": "test_key_management_key_provider_abstraction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "third_party_integration_questionnaire_integration_requirements",
+      "target": "forgeledger_whitepaper_evidence_substrate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "third_party_integration_questionnaire.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "third_party_integration_questionnaire_integration_requirements",
+      "target": "test_redaction_ingest_time_redaction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "third_party_integration_questionnaire.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "third_party_integration_questionnaire_integration_requirements",
+      "target": "test_key_management_key_provider_abstraction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "third_party_integration_questionnaire.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "retention_policies_retention_policy_config",
+      "target": "test_retention_retention_classification",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger/config/retention_policies.yaml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "retention_policies_retention_policy_config",
+      "target": "test_retention_lifecycle_retention_lifecycle",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger/config/retention_policies.yaml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_read_auditing_read_access_auditing",
+      "target": "forgeledger_whitepaper_evidence_substrate",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.68,
+      "source_file": "tests/test_read_auditing.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "test_redaction_ingest_time_redaction",
+      "target": "forgeledger_whitepaper_evidence_substrate",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "tests/test_redaction.py",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "governance_evidence_flow",
+      "label": "Governance Evidence Flow",
+      "nodes": [
+        "test_adapters_concord_adapter_mapping",
+        "test_adapters_forgegate_adapter_mapping",
+        "forgeledger_whitepaper_forge_root_ecosystem",
+        "forgeledger_whitepaper_evidence_substrate"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md"
+    },
+    {
+      "id": "production_trust_boundary_hardening",
+      "label": "Production Trust Boundary Hardening",
+      "nodes": [
+        "test_redaction_ingest_time_redaction",
+        "test_checkpoint_authenticated_checkpoints",
+        "test_durable_replay_durable_replay_protection",
+        "test_anchoring_local_anchor_backend",
+        "test_key_management_key_provider_abstraction",
+        "test_worm_object_backend_worm_object_backend"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgeledger_whitepaper_draft.md"
+    },
+    {
+      "id": "retention_and_access_governance",
+      "label": "Retention And Access Governance",
+      "nodes": [
+        "test_retention_retention_classification",
+        "test_retention_lifecycle_retention_lifecycle",
+        "test_legal_hold_hold_registry",
+        "test_read_auditing_read_access_auditing",
+        "retention_policies_retention_policy_config"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.88,
+      "source_file": "tests/test_retention_lifecycle.py"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

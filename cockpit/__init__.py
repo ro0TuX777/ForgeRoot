@@ -1,0 +1,2 @@
+"""Azul Cockpit UI package."""
+

@@ -1,0 +1,82 @@
+framework: ESSENTIAL_EIGHT
+profile_version: "0.1"
+jurisdiction: AU
+sector: government
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "E8.ADMIN_PRIVILEGES.RESTRICT"
+    objective: >
+      Administrative privileges to AI agent systems are restricted to only
+      those users and agents who require them, and are validated before each use.
+    required_event_types:
+      - "concord.admission_decision"
+    required_fields:
+      - "actor.role"
+      - "actor.actor_type"
+      - "decision.decision_type"
+      - "policy.policy_id"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "control_coverage_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+    notes: >
+      CONCORD admission decisions provide evidence that agent capabilities and
+      trust tiers are validated before each action. Not a substitute for OS-level
+      privilege auditing.
+
+  - control_id: "E8.APPLICATION_CONTROL"
+    objective: >
+      Only approved agent actions and tool invocations are permitted to execute.
+    required_event_types:
+      - "forgegate.decision_record"
+      - "agent.tool_call"
+    required_fields:
+      - "decision.decision_type"
+      - "decision.reason"
+      - "policy.policy_id"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "evidence_gap_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+    notes: >
+      ForgeGate deny decisions evidence that unapproved actions are blocked.
+      agent.tool_call events record what was actually executed.
+
+  - control_id: "E8.MFA.HUMAN_GATE"
+    objective: >
+      High-risk actions require a human authentication step before proceeding.
+    required_event_types:
+      - "agent.human_review_required"
+      - "human.approval_decision"
+    required_fields:
+      - "actor.actor_type"
+      - "decision.decision_type"
+      - "decision.reason"
+    evidence_artifacts:
+      - "human_review_decisions.json"
+    retention_expectation: audit_7y
+    mapping_confidence: low
+    notes: >
+      Human-in-the-loop approval steps provide evidence analogous to MFA for
+      high-impact AI decisions. This is a conceptual mapping; actual MFA controls
+      are implemented in the identity layer, not ForgeRoot.
+
+  - control_id: "E8.BACKUPS.AUDIT_LOG_INTEGRITY"
+    objective: >
+      Audit logs are backed up and can be recovered with integrity intact.
+    required_event_types:
+      - "forgegate.decision_record"
+      - "concord.admission_decision"
+    required_fields:
+      - "integrity.event_hash"
+      - "integrity.previous_hash"
+    evidence_artifacts:
+      - "chain_validation_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+    notes: >
+      Hash chain validation provides integrity assurance for the audit log corpus.
+      Backup infrastructure itself is out of ForgeRoot's scope.

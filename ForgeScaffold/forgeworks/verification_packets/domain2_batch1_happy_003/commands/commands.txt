@@ -1,0 +1,2 @@
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_001_happy --mode supervised --out results/ops_batch_001_happy2_repeat --drift-plan packs/it_ops_runbook/test_batch_001_happy/drift/drift_plan.json
+python3 (generate expected_vs_actual + penalty summary)

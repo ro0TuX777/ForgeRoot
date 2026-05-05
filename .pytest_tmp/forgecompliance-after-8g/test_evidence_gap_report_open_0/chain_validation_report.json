@@ -1,0 +1,8 @@
+{
+  "broken_at_sequence": null,
+  "error": null,
+  "first_event_id": "e1",
+  "last_event_id": "e3",
+  "total_events": 3,
+  "valid": true
+}

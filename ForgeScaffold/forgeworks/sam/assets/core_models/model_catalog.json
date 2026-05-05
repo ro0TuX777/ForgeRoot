@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-02-27T12:54:07.362170",
+  "models": {
+    "deepseek-r1-8b-q4": {
+      "model_id": "deepseek-r1-8b-q4",
+      "display_name": "DeepSeek R1 8B (Q4_K_M)",
+      "description": "Current SAM default model - DeepSeek R1 with Q4_K_M quantization",
+      "model_family": "deepseek",
+      "huggingface_repo": "unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF",
+      "filename": "DeepSeek-R1-0528-Qwen3-8B-Q4_K_M.gguf",
+      "file_size": 4800000000,
+      "quantization": "Q4_K_M",
+      "context_length": 16000,
+      "recommended": true,
+      "tags": [
+        "current",
+        "default",
+        "reasoning"
+      ]
+    },
+    "deepseek-r1-8b-q8": {
+      "model_id": "deepseek-r1-8b-q8",
+      "display_name": "DeepSeek R1 8B (Q8_0)",
+      "description": "Higher quality DeepSeek R1 with Q8_0 quantization",
+      "model_family": "deepseek",
+      "huggingface_repo": "unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF",
+      "filename": "DeepSeek-R1-0528-Qwen3-8B-Q8_0.gguf",
+      "file_size": 8500000000,
+      "quantization": "Q8_0",
+      "context_length": 16000,
+      "recommended": false,
+      "tags": [
+        "high-quality",
+        "reasoning"
+      ]
+    },
+    "llama-3.1-8b-q4": {
+      "model_id": "llama-3.1-8b-q4",
+      "display_name": "Llama 3.1 8B Instruct (Q4_K_M)",
+      "description": "Meta's Llama 3.1 8B Instruct model with Q4_K_M quantization",
+      "model_family": "llama",
+      "huggingface_repo": "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+      "filename": "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+      "file_size": 4700000000,
+      "quantization": "Q4_K_M",
+      "context_length": 128000,
+      "recommended": true,
+      "tags": [
+        "long-context",
+        "instruct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.system_catalog
+spec:
+  description: "Generate a deterministic system catalog for the project workspace"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.system_catalog.json"
+      path: "system_catalog.json"
+      schema:
+        type: "json"
+        ref: "forgescaffold.system_catalog"
+  runtime:
+    timeoutSeconds: 900
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

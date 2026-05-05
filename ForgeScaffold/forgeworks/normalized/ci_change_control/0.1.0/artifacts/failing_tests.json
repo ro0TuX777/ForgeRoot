@@ -1,0 +1,6 @@
+{
+  "failing_tests": [
+    "tests/test_alpha.py::test_one",
+    "tests/test_beta.py::test_two"
+  ]
+}

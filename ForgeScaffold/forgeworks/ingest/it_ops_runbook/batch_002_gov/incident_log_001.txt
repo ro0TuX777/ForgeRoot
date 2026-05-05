@@ -1,0 +1,2 @@
+2026-02-27 13:20:41Z ALERT: service down in prod region us-east
+2026-02-27 13:22:05Z INFO: error rate 45%, latency > 2s

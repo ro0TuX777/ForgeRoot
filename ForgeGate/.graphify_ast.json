@@ -1,0 +1,401 @@
+{
+  "nodes": [
+    {
+      "id": "init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_main_py",
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "cli\\main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_main_app",
+      "label": "app()",
+      "file_type": "code",
+      "source_file": "cli\\main.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "cli_main_rationale_1",
+      "label": "Minimal ForgeGate CLI compatibility entry point.",
+      "file_type": "rationale",
+      "source_file": "cli\\main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "cli\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_init_rationale_1",
+      "label": "ForgeGate CLI package.",
+      "file_type": "rationale",
+      "source_file": "cli\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_evaluate_py",
+      "label": "evaluate.py",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_evaluate_forgegateevaluationerror",
+      "label": "ForgeGateEvaluationError",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "exception",
+      "label": "Exception",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "core_evaluate_evaluate",
+      "label": "evaluate()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "core_evaluate_normalize_signals",
+      "label": "_normalize_signals()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "core_evaluate_eval_expr",
+      "label": "_eval_expr()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L73"
+    },
+    {
+      "id": "core_evaluate_resolve_var",
+      "label": "_resolve_var()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L104"
+    },
+    {
+      "id": "core_evaluate_truthy",
+      "label": "_truthy()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L115"
+    },
+    {
+      "id": "core_evaluate_rationale_1",
+      "label": "Minimal deterministic ForgeGate evaluator compatibility layer.  This restores th",
+      "file_type": "rationale",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_evaluate_rationale_13",
+      "label": "Raised when an intent spec cannot be evaluated deterministically.",
+      "file_type": "rationale",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "core_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "core\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_init_rationale_1",
+      "label": "Core ForgeGate exports.",
+      "file_type": "rationale",
+      "source_file": "core\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "schemas\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_init_rationale_1",
+      "label": "ForgeGate schema package placeholder.",
+      "file_type": "rationale",
+      "source_file": "schemas\\__init__.py",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "init_py",
+      "target": "core_evaluate_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "__init__.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "argparse",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "forgegate_core_evaluate",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "cli_main_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_rationale_1",
+      "target": "cli_main_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_init_rationale_1",
+      "target": "cli_init_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_forgegateevaluationerror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_forgegateevaluationerror",
+      "target": "exception",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_evaluate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_normalize_signals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_eval_expr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_resolve_var",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_truthy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_evaluate",
+      "target": "core_evaluate_normalize_signals",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_evaluate",
+      "target": "core_evaluate_truthy",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_evaluate",
+      "target": "core_evaluate_eval_expr",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_eval_expr",
+      "target": "core_evaluate_resolve_var",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_eval_expr",
+      "target": "core_evaluate_truthy",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_eval_expr",
+      "target": "core_evaluate_forgegateevaluationerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_rationale_1",
+      "target": "core_evaluate_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_rationale_13",
+      "target": "core_evaluate_forgegateevaluationerror",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "core_init_py",
+      "target": "core_evaluate_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\__init__.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "core_init_rationale_1",
+      "target": "core_init_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_init_rationale_1",
+      "target": "schemas_init_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "schemas\\__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_app",
+      "target": "core_evaluate_evaluate",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "cli\\main.py",
+      "source_location": "L29",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

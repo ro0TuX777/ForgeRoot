@@ -1,0 +1,30 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.map_dataflow
+spec:
+  description: "Materialize a dataflow graph from the system catalog"
+  requires:
+    - artifactId: "forgescaffold.system_catalog.json"
+      path: "system_catalog.json"
+      schema:
+        type: "json"
+        ref: "forgescaffold.system_catalog"
+  produces:
+    - artifactId: "forgescaffold.dataflow_map.json"
+      path: "dataflow_map.json"
+      schema:
+        type: "json"
+        ref: "forgescaffold.dataflow_map"
+  runtime:
+    timeoutSeconds: 600
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

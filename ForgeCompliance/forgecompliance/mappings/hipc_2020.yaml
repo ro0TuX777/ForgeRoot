@@ -1,0 +1,77 @@
+framework: HIPC_2020
+profile_version: "0.1"
+jurisdiction: NZ
+sector: health
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "HIPC.RULE11.ACCESS_LOG"
+    objective: "Access to health information is logged and traceable to an identified individual."
+    required_event_types:
+      - "concord.admission_decision"
+      - "agent.tool_call"
+    required_fields:
+      - "actor.actor_id"
+      - "actor.role"
+      - "event_time"
+      - "tenant.tenant_id"
+      - "tenant.data_residency"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "retention_policy_report.json"
+    retention_expectation: health_10y
+    mapping_confidence: medium
+    notes: >
+      Applies when tenant.data_residency=NZ and payload.data_sensitivity=health_identifiable.
+      agent.tool_call events covering retrieval of health records are the primary evidence source.
+
+  - control_id: "HIPC.RULE5.DATA_ACCURACY"
+    objective: "Health information used in AI-assisted decisions is accurate, current, and complete."
+    required_event_types:
+      - "azul.verdict_summary"
+      - "human.approval_decision"
+    required_fields:
+      - "evidence.evidence_refs"
+      - "evidence.assertion_classes"
+      - "evidence.evidence_gaps"
+    evidence_artifacts:
+      - "evidence_gap_report.json"
+      - "human_review_decisions.json"
+    retention_expectation: health_10y
+    mapping_confidence: low
+    notes: >
+      Assertion class logging supports accuracy traceability. Partial support only —
+      does not cover source data quality in upstream health systems.
+
+  - control_id: "HIPC.RULE6.STORAGE_SECURITY"
+    objective: "Health information is protected against loss, unauthorised access, use, or disclosure."
+    required_event_types:
+      - "forgegate.decision_record"
+      - "warden.llm_call_metadata"
+    required_fields:
+      - "integrity.event_hash"
+      - "policy.retention_class"
+    evidence_artifacts:
+      - "chain_validation_report.json"
+      - "model_provider_boundary_report.json"
+    retention_expectation: health_10y
+    mapping_confidence: medium
+    notes: >
+      model_provider_boundary_report documents where LLM processing occurred —
+      required for data residency evidence under HIPC.
+
+  - control_id: "HIPC.RULE11.DISCLOSURE_CONTROL"
+    objective: "Disclosure of health information is controlled and recorded."
+    required_event_types:
+      - "forgegate.decision_record"
+      - "human.approval_decision"
+    required_fields:
+      - "decision.decision_type"
+      - "decision.reason"
+      - "actor.actor_id"
+      - "tenant.customer_boundary"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "human_review_decisions.json"
+    retention_expectation: health_10y
+    mapping_confidence: medium

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /i/ForgedRoot/warden -type f -name *.py)",
+      "Bash(find /i/ForgedRoot/cockpit -type f -name *.py)",
+      "Bash(xargs wc:*)",
+      "Read(//c/Users/vin/AppData/Local/Temp/claude/i--ForgedRoot/f6cc5020-f5ab-4be1-8918-2561fa9619f8/tasks/**)",
+      "Read(//f/SAM/SmallAgentModel-main/docs/**)",
+      "Read(//f/SAM/FromForgedRoot/**)",
+      "Bash(mkdir -p \"F:/SAM/FromForgedRoot\")",
+      "Bash(python -c \":*)"
+    ],
+    "additionalDirectories": [
+      "F:\\SAM\\FromForgedRoot"
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>graphify - graphify-out/graph.html</title>
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f0f1a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; display: flex; height: 100vh; overflow: hidden; }
+  #graph { flex: 1; }
+  #sidebar { width: 280px; background: #1a1a2e; border-left: 1px solid #2a2a4e; display: flex; flex-direction: column; overflow: hidden; }
+  #search-wrap { padding: 12px; border-bottom: 1px solid #2a2a4e; }
+  #search { width: 100%; background: #0f0f1a; border: 1px solid #3a3a5e; color: #e0e0e0; padding: 7px 10px; border-radius: 6px; font-size: 13px; outline: none; }
+  #search:focus { border-color: #4E79A7; }
+  #search-results { max-height: 140px; overflow-y: auto; padding: 4px 12px; border-bottom: 1px solid #2a2a4e; display: none; }
+  .search-item { padding: 4px 6px; cursor: pointer; border-radius: 4px; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .search-item:hover { background: #2a2a4e; }
+  #info-panel { padding: 14px; border-bottom: 1px solid #2a2a4e; min-height: 140px; }
+  #info-panel h3 { font-size: 13px; color: #aaa; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+  #info-content { font-size: 13px; color: #ccc; line-height: 1.6; }
+  #info-content .field { margin-bottom: 5px; }
+  #info-content .field b { color: #e0e0e0; }
+  #info-content .empty { color: #555; font-style: italic; }
+  .neighbor-link { display: block; padding: 2px 6px; margin: 2px 0; border-radius: 3px; cursor: pointer; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-left: 3px solid #333; }
+  .neighbor-link:hover { background: #2a2a4e; }
+  #neighbors-list { max-height: 160px; overflow-y: auto; margin-top: 4px; }
+  #legend-wrap { flex: 1; overflow-y: auto; padding: 12px; }
+  #legend-wrap h3 { font-size: 13px; color: #aaa; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .legend-item { display: flex; align-items: center; gap: 8px; padding: 4px 0; cursor: pointer; border-radius: 4px; font-size: 12px; }
+  .legend-item:hover { background: #2a2a4e; padding-left: 4px; }
+  .legend-item.dimmed { opacity: 0.35; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .legend-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .legend-count { color: #666; font-size: 11px; }
+  #stats { padding: 10px 14px; border-top: 1px solid #2a2a4e; font-size: 11px; color: #555; }
+  #legend-controls { display: flex; gap: 6px; margin-bottom: 8px; }
+  #legend-controls button { flex: 1; background: #0f0f1a; border: 1px solid #3a3a5e; color: #aaa; padding: 4px 0; border-radius: 4px; font-size: 11px; cursor: pointer; }
+  #legend-controls button:hover { border-color: #4E79A7; color: #e0e0e0; }
+</style>
+</head>
+<body>
+<div id="graph"></div>
+<div id="sidebar">
+  <div id="search-wrap">
+    <input id="search" type="text" placeholder="Search nodes..." autocomplete="off">
+    <div id="search-results"></div>
+  </div>
+  <div id="info-panel">
+    <h3>Node Info</h3>
+    <div id="info-content"><span class="empty">Click a node to inspect it</span></div>
+  </div>
+  <div id="legend-wrap">
+    <h3>Communities</h3>
+    <div id="legend-controls">
+      <button onclick="toggleAllCommunities(false)">Show All</button>
+      <button onclick="toggleAllCommunities(true)">Hide All</button>
+    </div>
+    <div id="legend"></div>
+  </div>
+  <div id="stats">50 nodes &middot; 61 edges &middot; 12 communities</div>
+</div>
+<script>
+const RAW_NODES = [{"id": "init_py", "label": "__init__.py", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "__init__.py", "community": 3, "community_name": "Community 3", "source_file": "__init__.py", "file_type": "code", "degree": 1}, {"id": "cli_main_py", "label": "main.py", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "main.py", "community": 7, "community_name": "Community 7", "source_file": "cli\\main.py", "file_type": "code", "degree": 2}, {"id": "cli_main_app", "label": "app()", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "app()", "community": 7, "community_name": "Community 7", "source_file": "cli\\main.py", "file_type": "code", "degree": 2}, {"id": "cli_main_rationale_1", "label": "Minimal ForgeGate CLI compatibility entry point.", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Minimal ForgeGate CLI compatibility entry point.", "community": 7, "community_name": "Community 7", "source_file": "cli\\main.py", "file_type": "rationale", "degree": 1}, {"id": "cli_init_py", "label": "__init__.py", "color": {"background": "#BAB0AC", "border": "#BAB0AC", "highlight": {"background": "#ffffff", "border": "#BAB0AC"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "__init__.py", "community": 9, "community_name": "Community 9", "source_file": "cli\\__init__.py", "file_type": "code", "degree": 1}, {"id": "cli_init_rationale_1", "label": "ForgeGate CLI package.", "color": {"background": "#BAB0AC", "border": "#BAB0AC", "highlight": {"background": "#ffffff", "border": "#BAB0AC"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "ForgeGate CLI package.", "community": 9, "community_name": "Community 9", "source_file": "cli\\__init__.py", "file_type": "rationale", "degree": 1}, {"id": "core_evaluate_py", "label": "evaluate.py", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 37.0, "font": {"size": 12, "color": "#ffffff"}, "title": "evaluate.py", "community": 3, "community_name": "Community 3", "source_file": "core\\evaluate.py", "file_type": "code", "degree": 9}, {"id": "core_evaluate_forgegateevaluationerror", "label": "ForgeGateEvaluationError", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "ForgeGateEvaluationError", "community": 8, "community_name": "Community 8", "source_file": "core\\evaluate.py", "file_type": "code", "degree": 4}, {"id": "exception", "label": "Exception", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Exception", "community": 8, "community_name": "Community 8", "source_file": "", "file_type": "code", "degree": 1}, {"id": "core_evaluate_evaluate", "label": "evaluate()", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 25.0, "font": {"size": 12, "color": "#ffffff"}, "title": "evaluate()", "community": 4, "community_name": "Community 4", "source_file": "core\\evaluate.py", "file_type": "code", "degree": 5}, {"id": "core_evaluate_normalize_signals", "label": "_normalize_signals()", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "_normalize_signals()", "community": 4, "community_name": "Community 4", "source_file": "core\\evaluate.py", "file_type": "code", "degree": 2}, {"id": "core_evaluate_eval_expr", "label": "_eval_expr()", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 25.0, "font": {"size": 12, "color": "#ffffff"}, "title": "_eval_expr()", "community": 4, "community_name": "Community 4", "source_file": "core\\evaluate.py", "file_type": "code", "degree": 5}, {"id": "core_evaluate_resolve_var", "label": "_resolve_var()", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "_resolve_var()", "community": 3, "community_name": "Community 3", "source_file": "core\\evaluate.py", "file_type": "code", "degree": 2}, {"id": "core_evaluate_truthy", "label": "_truthy()", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 19.0, "font": {"size": 12, "color": "#ffffff"}, "title": "_truthy()", "community": 4, "community_name": "Community 4", "source_file": "core\\evaluate.py", "file_type": "code", "degree": 3}, {"id": "core_evaluate_rationale_1", "label": "Minimal deterministic ForgeGate evaluator compatibility layer.  This restores th", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Minimal deterministic ForgeGate evaluator compatibility layer.  This restores th", "community": 3, "community_name": "Community 3", "source_file": "core\\evaluate.py", "file_type": "rationale", "degree": 1}, {"id": "core_evaluate_rationale_13", "label": "Raised when an intent spec cannot be evaluated deterministically.", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Raised when an intent spec cannot be evaluated deterministically.", "community": 8, "community_name": "Community 8", "source_file": "core\\evaluate.py", "file_type": "rationale", "degree": 1}, {"id": "core_init_py", "label": "__init__.py", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "__init__.py", "community": 10, "community_name": "Community 10", "source_file": "core\\__init__.py", "file_type": "code", "degree": 2}, {"id": "core_init_rationale_1", "label": "Core ForgeGate exports.", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Core ForgeGate exports.", "community": 10, "community_name": "Community 10", "source_file": "core\\__init__.py", "file_type": "rationale", "degree": 1}, {"id": "schemas_init_py", "label": "__init__.py", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "__init__.py", "community": 11, "community_name": "Community 11", "source_file": "schemas\\__init__.py", "file_type": "code", "degree": 1}, {"id": "schemas_init_rationale_1", "label": "ForgeGate schema package placeholder.", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "ForgeGate schema package placeholder.", "community": 11, "community_name": "Community 11", "source_file": "schemas\\__init__.py", "file_type": "rationale", "degree": 1}, {"id": "evaluate_evaluate", "label": "evaluate", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 40.0, "font": {"size": 12, "color": "#ffffff"}, "title": "evaluate", "community": 0, "community_name": "Community 0", "source_file": "forgegate/core/evaluate.py", "file_type": "code", "degree": 10}, {"id": "evaluate_forgegateevaluationerror", "label": "ForgeGateEvaluationError", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "ForgeGateEvaluationError", "community": 5, "community_name": "Community 5", "source_file": "forgegate/core/evaluate.py", "file_type": "code", "degree": 1}, {"id": "evaluate_normalize_signals", "label": "_normalize_signals", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "_normalize_signals", "community": 0, "community_name": "Community 0", "source_file": "forgegate/core/evaluate.py", "file_type": "code", "degree": 1}, {"id": "evaluate_eval_expr", "label": "_eval_expr", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "_eval_expr", "community": 5, "community_name": "Community 5", "source_file": "forgegate/core/evaluate.py", "file_type": "code", "degree": 6}, {"id": "evaluate_resolve_var", "label": "_resolve_var", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "_resolve_var", "community": 5, "community_name": "Community 5", "source_file": "forgegate/core/evaluate.py", "file_type": "code", "degree": 1}, {"id": "evaluate_truthy", "label": "_truthy", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "_truthy", "community": 5, "community_name": "Community 5", "source_file": "forgegate/core/evaluate.py", "file_type": "code", "degree": 2}, {"id": "main_app", "label": "CLI app", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "CLI app", "community": 0, "community_name": "Community 0", "source_file": "forgegate/cli/main.py", "file_type": "code", "degree": 2}, {"id": "main_evaluate_command", "label": "forgegate evaluate CLI Command", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 25.0, "font": {"size": 12, "color": "#ffffff"}, "title": "forgegate evaluate CLI Command", "community": 0, "community_name": "Community 0", "source_file": "forgegate/cli/main.py", "file_type": "code", "degree": 5}, {"id": "init_package_export", "label": "Package evaluate Export", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Package evaluate Export", "community": 0, "community_name": "Community 0", "source_file": "forgegate/__init__.py", "file_type": "code", "degree": 1}, {"id": "context_forgegate", "label": "ForgeGate", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "ForgeGate", "community": 1, "community_name": "Community 1", "source_file": "context.md", "file_type": "document", "degree": 2}, {"id": "context_deterministic_action_governance_gate", "label": "Deterministic Action-Governance Gate", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Deterministic Action-Governance Gate", "community": 1, "community_name": "Community 1", "source_file": "context.md", "file_type": "document", "degree": 6}, {"id": "context_proposed_action", "label": "ProposedAction", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 19.0, "font": {"size": 12, "color": "#ffffff"}, "title": "ProposedAction", "community": 1, "community_name": "Community 1", "source_file": "context.md", "file_type": "document", "degree": 3}, {"id": "context_signals", "label": "Signals", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 19.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Signals", "community": 0, "community_name": "Community 0", "source_file": "context.md", "file_type": "document", "degree": 3}, {"id": "context_budget_snapshot", "label": "BudgetSnapshot", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "BudgetSnapshot", "community": 0, "community_name": "Community 0", "source_file": "context.md", "file_type": "document", "degree": 1}, {"id": "context_decision_record", "label": "DecisionRecord", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "DecisionRecord", "community": 6, "community_name": "Community 6", "source_file": "context.md", "file_type": "document", "degree": 6}, {"id": "context_reference_gate", "label": "Reference Gate", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 19.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Reference Gate", "community": 0, "community_name": "Community 0", "source_file": "context.md", "file_type": "document", "degree": 3}, {"id": "context_canonical_hashing", "label": "Canonical Hashing", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Canonical Hashing", "community": 6, "community_name": "Community 6", "source_file": "context.md", "file_type": "document", "degree": 2}, {"id": "context_dawn_optional_substrate", "label": "DAWN Optional Execution Substrate", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "DAWN Optional Execution Substrate", "community": 6, "community_name": "Community 6", "source_file": "context.md", "file_type": "document", "degree": 1}, {"id": "context_scenario_test_harness", "label": "Scenario Test Harness", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Scenario Test Harness", "community": 0, "community_name": "Community 0", "source_file": "context.md", "file_type": "document", "degree": 1}, {"id": "context_phase_1_gate_interface", "label": "Phase 1 Gate Interface v0.1", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 19.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Phase 1 Gate Interface v0.1", "community": 0, "community_name": "Community 0", "source_file": "context.md", "file_type": "document", "degree": 3}, {"id": "forgegatewhitepaper_policy_enforcement_plane", "label": "Policy Enforcement Plane", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Policy Enforcement Plane", "community": 1, "community_name": "Community 1", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}, {"id": "forgegatewhitepaper_llm_policy_decider_risk", "label": "LLM Policy Decider Risk", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "LLM Policy Decider Risk", "community": 1, "community_name": "Community 1", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}, {"id": "forgegatewhitepaper_evaluation_pipeline", "label": "Evaluation Pipeline", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Evaluation Pipeline", "community": 2, "community_name": "Community 2", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 6}, {"id": "forgegatewhitepaper_constraints", "label": "Constraints", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Constraints", "community": 2, "community_name": "Community 2", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}, {"id": "forgegatewhitepaper_boundaries", "label": "Boundaries", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Boundaries", "community": 2, "community_name": "Community 2", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}, {"id": "forgegatewhitepaper_budgets", "label": "Budgets", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Budgets", "community": 2, "community_name": "Community 2", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}, {"id": "forgegatewhitepaper_tradeoffs", "label": "Tradeoffs", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Tradeoffs", "community": 2, "community_name": "Community 2", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}, {"id": "forgegatewhitepaper_shaping", "label": "Shaping", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Shaping", "community": 2, "community_name": "Community 2", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}, {"id": "forgegatewhitepaper_replay_safety", "label": "Replay Safety", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Replay Safety", "community": 6, "community_name": "Community 6", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 2}, {"id": "forgegatewhitepaper_policy_as_code", "label": "Policy as Code", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 13.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Policy as Code", "community": 1, "community_name": "Community 1", "source_file": "ForgeGatewhitepaper.md", "file_type": "document", "degree": 1}];
+const RAW_EDGES = [{"from": "init_py", "to": "core_evaluate_py", "label": "imports_from", "title": "imports_from [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "cli_main_py", "to": "cli_main_app", "label": "contains", "title": "contains [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "cli_main_py", "to": "cli_main_rationale_1", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "cli_main_app", "to": "core_evaluate_evaluate", "label": "calls", "title": "calls [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "cli_init_py", "to": "cli_init_rationale_1", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_evaluate_forgegateevaluationerror", "label": "contains", "title": "contains [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_evaluate_evaluate", "label": "contains", "title": "contains [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_evaluate_normalize_signals", "label": "contains", "title": "contains [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_evaluate_eval_expr", "label": "contains", "title": "contains [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_evaluate_resolve_var", "label": "contains", "title": "contains [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_evaluate_truthy", "label": "contains", "title": "contains [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_evaluate_rationale_1", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_py", "to": "core_init_py", "label": "imports_from", "title": "imports_from [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_forgegateevaluationerror", "to": "exception", "label": "inherits", "title": "inherits [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_forgegateevaluationerror", "to": "core_evaluate_eval_expr", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_forgegateevaluationerror", "to": "core_evaluate_rationale_13", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_evaluate", "to": "core_evaluate_normalize_signals", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_evaluate", "to": "core_evaluate_truthy", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_evaluate", "to": "core_evaluate_eval_expr", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_eval_expr", "to": "core_evaluate_resolve_var", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_evaluate_eval_expr", "to": "core_evaluate_truthy", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "core_init_py", "to": "core_init_rationale_1", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "schemas_init_py", "to": "schemas_init_rationale_1", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "main_app", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "init_package_export", "label": "implements", "title": "implements [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "evaluate_normalize_signals", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "evaluate_eval_expr", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "evaluate_truthy", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "context_reference_gate", "label": "semantically_similar_to", "title": "semantically_similar_to [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "evaluate_evaluate", "to": "context_decision_record", "label": "implements", "title": "implements [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "evaluate_evaluate", "to": "context_proposed_action", "label": "shares_data_with", "title": "shares_data_with [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "context_signals", "label": "shares_data_with", "title": "shares_data_with [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_evaluate", "to": "context_budget_snapshot", "label": "shares_data_with", "title": "shares_data_with [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_forgegateevaluationerror", "to": "evaluate_eval_expr", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_eval_expr", "to": "evaluate_resolve_var", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_eval_expr", "to": "evaluate_eval_expr", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "evaluate_eval_expr", "to": "evaluate_truthy", "label": "calls", "title": "calls [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "main_app", "to": "main_evaluate_command", "label": "implements", "title": "implements [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "main_evaluate_command", "to": "context_proposed_action", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "main_evaluate_command", "to": "context_signals", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "main_evaluate_command", "to": "context_decision_record", "label": "references", "title": "references [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "main_evaluate_command", "to": "context_phase_1_gate_interface", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_forgegate", "to": "context_deterministic_action_governance_gate", "label": "implements", "title": "implements [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_forgegate", "to": "forgegatewhitepaper_policy_enforcement_plane", "label": "semantically_similar_to", "title": "semantically_similar_to [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "context_deterministic_action_governance_gate", "to": "context_proposed_action", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_deterministic_action_governance_gate", "to": "context_signals", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_deterministic_action_governance_gate", "to": "context_decision_record", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_deterministic_action_governance_gate", "to": "forgegatewhitepaper_llm_policy_decider_risk", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_deterministic_action_governance_gate", "to": "forgegatewhitepaper_policy_as_code", "label": "rationale_for", "title": "rationale_for [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_decision_record", "to": "context_canonical_hashing", "label": "conceptually_related_to", "title": "conceptually_related_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_decision_record", "to": "context_dawn_optional_substrate", "label": "conceptually_related_to", "title": "conceptually_related_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_decision_record", "to": "forgegatewhitepaper_replay_safety", "label": "conceptually_related_to", "title": "conceptually_related_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_reference_gate", "to": "context_phase_1_gate_interface", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_reference_gate", "to": "forgegatewhitepaper_evaluation_pipeline", "label": "semantically_similar_to", "title": "semantically_similar_to [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "context_canonical_hashing", "to": "forgegatewhitepaper_replay_safety", "label": "conceptually_related_to", "title": "conceptually_related_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "context_scenario_test_harness", "to": "context_phase_1_gate_interface", "label": "conceptually_related_to", "title": "conceptually_related_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "forgegatewhitepaper_evaluation_pipeline", "to": "forgegatewhitepaper_constraints", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "forgegatewhitepaper_evaluation_pipeline", "to": "forgegatewhitepaper_boundaries", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "forgegatewhitepaper_evaluation_pipeline", "to": "forgegatewhitepaper_budgets", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "forgegatewhitepaper_evaluation_pipeline", "to": "forgegatewhitepaper_tradeoffs", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "forgegatewhitepaper_evaluation_pipeline", "to": "forgegatewhitepaper_shaping", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}];
+const LEGEND = [{"cid": 0, "color": "#4E79A7", "label": "Community 0", "count": 10}, {"cid": 1, "color": "#F28E2B", "label": "Community 1", "count": 6}, {"cid": 2, "color": "#E15759", "label": "Community 2", "count": 6}, {"cid": 3, "color": "#76B7B2", "label": "Community 3", "count": 4}, {"cid": 4, "color": "#59A14F", "label": "Community 4", "count": 4}, {"cid": 5, "color": "#EDC948", "label": "Community 5", "count": 4}, {"cid": 6, "color": "#B07AA1", "label": "Community 6", "count": 4}, {"cid": 7, "color": "#FF9DA7", "label": "Community 7", "count": 3}, {"cid": 8, "color": "#9C755F", "label": "Community 8", "count": 3}, {"cid": 9, "color": "#BAB0AC", "label": "Community 9", "count": 2}, {"cid": 10, "color": "#4E79A7", "label": "Community 10", "count": 2}, {"cid": 11, "color": "#F28E2B", "label": "Community 11", "count": 2}];
+
+// HTML-escape helper — prevents XSS when injecting graph data into innerHTML
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// Build vis datasets
+const nodesDS = new vis.DataSet(RAW_NODES.map(n => ({
+  id: n.id, label: n.label, color: n.color, size: n.size,
+  font: n.font, title: n.title,
+  _community: n.community, _community_name: n.community_name,
+  _source_file: n.source_file, _file_type: n.file_type, _degree: n.degree,
+})));
+
+const edgesDS = new vis.DataSet(RAW_EDGES.map((e, i) => ({
+  id: i, from: e.from, to: e.to,
+  label: '',
+  title: e.title,
+  dashes: e.dashes,
+  width: e.width,
+  color: e.color,
+  arrows: { to: { enabled: true, scaleFactor: 0.5 } },
+})));
+
+const container = document.getElementById('graph');
+const network = new vis.Network(container, { nodes: nodesDS, edges: edgesDS }, {
+  physics: {
+    enabled: true,
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -60,
+      centralGravity: 0.005,
+      springLength: 120,
+      springConstant: 0.08,
+      damping: 0.4,
+      avoidOverlap: 0.8,
+    },
+    stabilization: { iterations: 200, fit: true },
+  },
+  interaction: {
+    hover: true,
+    tooltipDelay: 100,
+    hideEdgesOnDrag: true,
+    navigationButtons: false,
+    keyboard: false,
+  },
+  nodes: { shape: 'dot', borderWidth: 1.5 },
+  edges: { smooth: { type: 'continuous', roundness: 0.2 }, selectionWidth: 3 },
+});
+
+network.once('stabilizationIterationsDone', () => {
+  network.setOptions({ physics: { enabled: false } });
+});
+
+function showInfo(nodeId) {
+  const n = nodesDS.get(nodeId);
+  if (!n) return;
+  const neighborIds = network.getConnectedNodes(nodeId);
+  const neighborItems = neighborIds.map(nid => {
+    const nb = nodesDS.get(nid);
+    const color = nb ? nb.color.background : '#555';
+    return `<span class="neighbor-link" style="border-left-color:${esc(color)}" onclick="focusNode(${JSON.stringify(nid)})">${esc(nb ? nb.label : nid)}</span>`;
+  }).join('');
+  document.getElementById('info-content').innerHTML = `
+    <div class="field"><b>${esc(n.label)}</b></div>
+    <div class="field">Type: ${esc(n._file_type || 'unknown')}</div>
+    <div class="field">Community: ${esc(n._community_name)}</div>
+    <div class="field">Source: ${esc(n._source_file || '-')}</div>
+    <div class="field">Degree: ${n._degree}</div>
+    ${neighborIds.length ? `<div class="field" style="margin-top:8px;color:#aaa;font-size:11px">Neighbors (${neighborIds.length})</div><div id="neighbors-list">${neighborItems}</div>` : ''}
+  `;
+}
+
+function focusNode(nodeId) {
+  network.focus(nodeId, { scale: 1.4, animation: true });
+  network.selectNodes([nodeId]);
+  showInfo(nodeId);
+}
+
+// Track hovered node — hover detection is more reliable than click params
+let hoveredNodeId = null;
+network.on('hoverNode', params => {
+  hoveredNodeId = params.node;
+  container.style.cursor = 'pointer';
+});
+network.on('blurNode', () => {
+  hoveredNodeId = null;
+  container.style.cursor = 'default';
+});
+container.addEventListener('click', () => {
+  if (hoveredNodeId !== null) {
+    showInfo(hoveredNodeId);
+    network.selectNodes([hoveredNodeId]);
+  }
+});
+network.on('click', params => {
+  if (params.nodes.length > 0) {
+    showInfo(params.nodes[0]);
+  } else if (hoveredNodeId === null) {
+    document.getElementById('info-content').innerHTML = '<span class="empty">Click a node to inspect it</span>';
+  }
+});
+
+const searchInput = document.getElementById('search');
+const searchResults = document.getElementById('search-results');
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.toLowerCase().trim();
+  searchResults.innerHTML = '';
+  if (!q) { searchResults.style.display = 'none'; return; }
+  const matches = RAW_NODES.filter(n => n.label.toLowerCase().includes(q)).slice(0, 20);
+  if (!matches.length) { searchResults.style.display = 'none'; return; }
+  searchResults.style.display = 'block';
+  matches.forEach(n => {
+    const el = document.createElement('div');
+    el.className = 'search-item';
+    el.textContent = n.label;
+    el.style.borderLeft = `3px solid ${n.color.background}`;
+    el.style.paddingLeft = '8px';
+    el.onclick = () => {
+      network.focus(n.id, { scale: 1.5, animation: true });
+      network.selectNodes([n.id]);
+      showInfo(n.id);
+      searchResults.style.display = 'none';
+      searchInput.value = '';
+    };
+    searchResults.appendChild(el);
+  });
+});
+document.addEventListener('click', e => {
+  if (!searchResults.contains(e.target) && e.target !== searchInput)
+    searchResults.style.display = 'none';
+});
+
+const hiddenCommunities = new Set();
+
+function toggleAllCommunities(hide) {
+  document.querySelectorAll('.legend-item').forEach(item => {
+    hide ? item.classList.add('dimmed') : item.classList.remove('dimmed');
+  });
+  LEGEND.forEach(c => {
+    if (hide) hiddenCommunities.add(c.cid); else hiddenCommunities.delete(c.cid);
+  });
+  const updates = RAW_NODES.map(n => ({ id: n.id, hidden: hide }));
+  nodesDS.update(updates);
+}
+
+const legendEl = document.getElementById('legend');
+LEGEND.forEach(c => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<div class="legend-dot" style="background:${c.color}"></div>
+    <span class="legend-label">${c.label}</span>
+    <span class="legend-count">${c.count}</span>`;
+  item.onclick = () => {
+    if (hiddenCommunities.has(c.cid)) {
+      hiddenCommunities.delete(c.cid);
+      item.classList.remove('dimmed');
+    } else {
+      hiddenCommunities.add(c.cid);
+      item.classList.add('dimmed');
+    }
+    const updates = RAW_NODES
+      .filter(n => n.community === c.cid)
+      .map(n => ({ id: n.id, hidden: hiddenCommunities.has(c.cid) }));
+    nodesDS.update(updates);
+  };
+  legendEl.appendChild(item);
+});
+</script>
+<script>
+// Render hyperedges as shaded regions
+const hyperedges = [{"id": "deterministic_gate_contract", "label": "Deterministic Gate Contract", "nodes": ["context_proposed_action", "context_signals", "context_budget_snapshot", "context_decision_record", "evaluate_evaluate"], "relation": "form", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "context.md"}, {"id": "evaluation_pipeline_steps", "label": "Evaluation Pipeline Steps", "nodes": ["forgegatewhitepaper_constraints", "forgegatewhitepaper_boundaries", "forgegatewhitepaper_budgets", "forgegatewhitepaper_tradeoffs", "forgegatewhitepaper_shaping", "context_decision_record"], "relation": "participate_in", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "ForgeGatewhitepaper.md"}, {"id": "cli_reference_evaluation_flow", "label": "CLI Reference Evaluation Flow", "nodes": ["main_app", "main_evaluate_command", "evaluate_evaluate", "context_decision_record"], "relation": "implement", "confidence": "INFERRED", "confidence_score": 0.84, "source_file": "forgegate/cli/main.py"}];
+// afterDrawing passes ctx already transformed to network coordinate space.
+// Draw node positions raw — no manual pan/zoom/DPR math needed.
+network.on('afterDrawing', function(ctx) {
+    hyperedges.forEach(h => {
+        const positions = h.nodes
+            .map(nid => network.getPositions([nid])[nid])
+            .filter(p => p !== undefined);
+        if (positions.length < 2) return;
+        ctx.save();
+        ctx.globalAlpha = 0.12;
+        ctx.fillStyle = '#6366f1';
+        ctx.strokeStyle = '#6366f1';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        // Centroid and expanded hull in network coordinates
+        const cx = positions.reduce((s, p) => s + p.x, 0) / positions.length;
+        const cy = positions.reduce((s, p) => s + p.y, 0) / positions.length;
+        const expanded = positions.map(p => ({
+            x: cx + (p.x - cx) * 1.15,
+            y: cy + (p.y - cy) * 1.15
+        }));
+        ctx.moveTo(expanded[0].x, expanded[0].y);
+        expanded.slice(1).forEach(p => ctx.lineTo(p.x, p.y));
+        ctx.closePath();
+        ctx.fill();
+        ctx.globalAlpha = 0.4;
+        ctx.stroke();
+        // Label
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = '#4f46e5';
+        ctx.font = 'bold 11px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(h.label, cx, cy - 5);
+        ctx.restore();
+    });
+});
+</script>
+</body>
+</html>

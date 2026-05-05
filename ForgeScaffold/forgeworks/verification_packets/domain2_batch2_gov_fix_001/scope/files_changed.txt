@@ -1,0 +1,4 @@
+packs/it_ops_runbook/test_batch_002_gov/intent_bundle/intent/intent_spec.json
+results/ops_batch_002_gov_fix/*
+results/ops_batch_002_gov_fix_repeat/*
+verification_packets/domain2_batch2_gov_fix_001/*

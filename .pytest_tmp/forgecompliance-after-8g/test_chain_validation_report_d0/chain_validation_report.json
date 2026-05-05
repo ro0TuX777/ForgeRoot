@@ -1,0 +1,8 @@
+{
+  "broken_at_sequence": 1,
+  "error": "previous_hash mismatch at sequence 1: event_id=e2 expected='ca5166efc8a2b55587dd584a5668536a77c9486275cef2f2db9d1e700c5cc424' got='bad_hash'",
+  "first_event_id": "e1",
+  "last_event_id": "e2",
+  "total_events": 2,
+  "valid": false
+}

@@ -1,0 +1,12 @@
+{
+  "46fd3c88-22f2-42a5-a576-3ab1a161696e": {
+    "hold_id": "46fd3c88-22f2-42a5-a576-3ab1a161696e",
+    "tenant_id": "t1",
+    "reason": "r",
+    "event_ids": [
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:19:04.764813+00:00",
+    "released": false
+  }
+}

@@ -1,0 +1,10 @@
+domain: generated_risk_controls
+unit_id: external.grpc
+actions:
+- id: review_required
+  description: Auto-generated contract candidate for external.grpc
+  guard_predicates:
+  - manual_review_required == True
+  - change_risk_acknowledged == True
+  risk_tier: 2
+  consistency_profile: eventual

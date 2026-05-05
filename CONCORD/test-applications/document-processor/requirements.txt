@@ -1,0 +1,5 @@
+fastapi==0.109.0
+uvicorn[standard]==0.23.2
+pydantic==2.9.0
+jsonschema==4.21.0
+pytest>=8.0,<9

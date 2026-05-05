@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/drift_plan.v0_1.json",
+  "title": "ForgeWorks Drift Plan",
+  "type": "object",
+  "required": ["schema_version", "domain", "events"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "domain": {"type": "string"},
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["at_step", "type"],
+        "properties": {
+          "at_step": {"type": "integer", "minimum": 0},
+          "type": {
+            "type": "string",
+            "enum": ["policy_change", "tool_version_bump", "queue_pressure_spike", "metric_schema_change"]
+          },
+          "payload": {"type": "object"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

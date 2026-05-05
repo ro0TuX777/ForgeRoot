@@ -1,0 +1,5 @@
+{
+  "proposed_action": {"schema_version": "0.1", "action_id": "read", "actor_id": "agent", "params": {}},
+  "signals": {"schema_version": "0.1", "values": {"env": "dev", "risk": 0.1}},
+  "expected": {"decision": "ALLOW"}
+}

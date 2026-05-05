@@ -1,0 +1,214 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "framework_reports": {
+    "NZISM": {
+      "claim_boundary": "Evidence support only. Not a compliance certification.",
+      "controls": [
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "high",
+          "control_id": "NZISM.LOGGING.EVENT_CAPTURE",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "warden.llm_call_metadata"
+          ],
+          "missing_required_fields": [],
+          "objective": "Security-relevant events are captured in audit logs.",
+          "present_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "partial"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "high",
+          "control_id": "NZISM.LOGGING.TAMPER_PROTECTION",
+          "mapping_version": "0.1",
+          "missing_event_types": [],
+          "missing_required_fields": [],
+          "objective": "Audit logs are protected against unauthorised modification or deletion.",
+          "present_event_types": [
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "covered"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "high",
+          "control_id": "NZISM.LOGGING.RETENTION",
+          "mapping_version": "0.1",
+          "missing_event_types": [],
+          "missing_required_fields": [],
+          "objective": "Audit logs are retained for the required minimum period.",
+          "present_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "covered"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "NZISM.ACCESS.AUTHORISATION",
+          "mapping_version": "0.1",
+          "missing_event_types": [],
+          "missing_required_fields": [],
+          "objective": "Access to systems is authorised before being granted.",
+          "present_event_types": [
+            "concord.admission_decision"
+          ],
+          "source_reference": null,
+          "status": "covered"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "NZISM.CHANGE.HUMAN_APPROVAL",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "objective": "High-impact changes are approved by an authorised human before execution.",
+          "present_event_types": [
+            "human.approval_decision"
+          ],
+          "source_reference": null,
+          "status": "partial"
+        }
+      ],
+      "coverage_percent": 60.0,
+      "covered": 3,
+      "framework": "NZISM",
+      "gaps": 0,
+      "generated_at": "2026-04-28T10:00:00Z",
+      "partial": 2,
+      "profile_version": "0.1",
+      "total_controls": 5
+    },
+    "SOC2": {
+      "claim_boundary": "Evidence support only. Not a compliance certification.",
+      "controls": [
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "SOC2.CC6.1",
+          "mapping_version": "0.1",
+          "missing_event_types": [],
+          "missing_required_fields": [],
+          "objective": "The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events to meet the entity's objectives.\n",
+          "present_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "covered"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "SOC2.CC7.2",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "agent.human_review_required",
+            "azul.verdict_summary"
+          ],
+          "missing_required_fields": [],
+          "objective": "The entity monitors system components and the operation of those controls on an ongoing basis to detect anomalies that are indicative of malicious acts, natural disasters, and errors affecting the entity's ability to meet its objectives.\n",
+          "present_event_types": [],
+          "source_reference": null,
+          "status": "gap"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "SOC2.CC8.1",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "objective": "The entity authorises, designs, develops or acquires, configures, documents, tests, approves, and implements changes to infrastructure, data, software, and procedures to meet its change management objectives.\n",
+          "present_event_types": [
+            "forgegate.decision_record",
+            "human.approval_decision"
+          ],
+          "source_reference": null,
+          "status": "partial"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "SOC2.CC2.2",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "objective": "The entity internally communicates information, including objectives and responsibilities for internal control, necessary to support the functioning of internal control.\n",
+          "present_event_types": [
+            "human.approval_decision"
+          ],
+          "source_reference": null,
+          "status": "partial"
+        },
+        {
+          "approval_status": "approved",
+          "claim_boundary": "Evidence support only. Not a compliance certification.",
+          "confidence": "medium",
+          "control_id": "SOC2.CC4.1",
+          "mapping_version": "0.1",
+          "missing_event_types": [
+            "forgegate.policy_evaluation"
+          ],
+          "missing_required_fields": [],
+          "objective": "The entity selects, develops, and performs ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning.\n",
+          "present_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record"
+          ],
+          "source_reference": null,
+          "status": "partial"
+        }
+      ],
+      "coverage_percent": 20.0,
+      "covered": 1,
+      "framework": "SOC2",
+      "gaps": 1,
+      "generated_at": "2026-04-28T10:00:00Z",
+      "partial": 3,
+      "profile_version": "0.1",
+      "total_controls": 5
+    }
+  },
+  "frameworks_analysed": [
+    "NZISM",
+    "SOC2"
+  ],
+  "generated_at": "2026-04-28T10:00:00Z",
+  "mapping_governance": {
+    "approved_count": 10,
+    "deprecated_count": 0,
+    "draft_count": 0,
+    "generated_at": "2026-04-28T10:00:00Z",
+    "missing_approver": [],
+    "missing_claim_boundary": [],
+    "missing_reviewer": [],
+    "reviewed_count": 0,
+    "total_mappings": 10
+  },
+  "total_events_analysed": 3
+}

@@ -1,0 +1,13 @@
+{
+  "candidates": [
+    {
+      "patchset_id": "db5536dcbf88e2edc0c6c9ce97c6b79af3ba4ca95cad09065f288c4ffd01d0c5",
+      "path": "/Users/vinsoncornejo/DAWN/projects/forgescaffold_phase9_ci/artifacts/forgescaffold.package_evidence/evidence_pack",
+      "reason": "max_packs"
+    }
+  ],
+  "deleted": [],
+  "enabled": true,
+  "prune_mode": "dry_run",
+  "status": "DONE"
+}

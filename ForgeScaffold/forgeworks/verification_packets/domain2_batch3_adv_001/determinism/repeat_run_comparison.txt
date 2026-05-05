@@ -1,0 +1,7 @@
+Ledger and approval hashes match between run and repeat run.
+
+$(shasum -a 256 results/ops_batch_003_adv/decision_ledger.jsonl)
+$(shasum -a 256 results/ops_batch_003_adv_repeat/decision_ledger.jsonl)
+
+$(shasum -a 256 results/ops_batch_003_adv/approval_records.jsonl)
+$(shasum -a 256 results/ops_batch_003_adv_repeat/approval_records.jsonl)

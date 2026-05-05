@@ -1,0 +1,36 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.generate_approval_template
+spec:
+  description: "Generate approval template for patchset approval"
+  requires:
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.review_packet.json"
+      path: "review_packet.json"
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.approval_template.json"
+      path: "approval_template.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.approval_instructions.md"
+      path: "approval_instructions.md"
+      schema:
+        type: "text"
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

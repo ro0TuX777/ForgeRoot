@@ -1,0 +1,14 @@
+{
+  "ticket_id": "CI-001",
+  "ticket_intent": "Fix CI failure: tests/test_case_001.py::test_case_001",
+  "hypothesis_path": null,
+  "spec_contract_path": null,
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 1,
+  "retry_count": 0,
+  "max_retries": 3,
+  "last_error_log": null,
+  "sandbox_directory": null
+}

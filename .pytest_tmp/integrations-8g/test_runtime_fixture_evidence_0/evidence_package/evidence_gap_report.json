@@ -1,0 +1,58 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "frameworks": {
+    "NZISM": {
+      "coverage_percent": 80.0,
+      "covered": 4,
+      "gaps": 1,
+      "open_controls": [
+        {
+          "control_id": "NZISM.CHANGE.HUMAN_APPROVAL",
+          "missing_event_types": [
+            "agent.human_review_required",
+            "human.approval_decision"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        }
+      ],
+      "partial": 0
+    },
+    "SOC2": {
+      "coverage_percent": 40.0,
+      "covered": 2,
+      "gaps": 1,
+      "open_controls": [
+        {
+          "control_id": "SOC2.CC7.2",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        },
+        {
+          "control_id": "SOC2.CC8.1",
+          "missing_event_types": [
+            "agent.human_review_required",
+            "human.approval_decision"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        },
+        {
+          "control_id": "SOC2.CC2.2",
+          "missing_event_types": [
+            "agent.human_review_required",
+            "human.approval_decision"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        }
+      ],
+      "partial": 2
+    }
+  },
+  "generated_at": "2026-04-29T22:34:59.640709+00:00",
+  "total_open_gaps": 4
+}

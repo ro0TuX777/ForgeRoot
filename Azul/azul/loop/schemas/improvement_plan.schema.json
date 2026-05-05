@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "forgroot.azul.loop.improvement_plan.v1",
+  "title": "ImprovementPlan",
+  "description": "Output of ForgedRoot's LEARN stage and input to any system's IMPROVE stage. Describes prompt, contract, policy, and distillation changes recommended by the Pattern Analyzer. Shared contract between ForgedRoot and any consumer (e.g. SAM). Version: 1.0.0",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "requires_human_review"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Schema version. Increment major on breaking changes."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp when this plan was generated."
+    },
+    "source_system": {
+      "type": "string",
+      "description": "Identifier of the system that generated this plan (e.g. 'forgroot', 'sam')."
+    },
+    "trigger": {
+      "type": "string",
+      "description": "What triggered this plan (e.g. 'scheduled', 'threshold_breach', 'manual')."
+    },
+    "requires_human_review": {
+      "type": "boolean",
+      "description": "Must be true. No IMPROVE action may be applied without human checkpoint. Reserved for future autonomous operation with explicit policy override."
+    },
+    "prompt_diffs": {
+      "type": "array",
+      "description": "Proposed changes to LLM prompt templates.",
+      "items": {
+        "$ref": "#/$defs/PromptDiff"
+      },
+      "default": []
+    },
+    "contract_patches": {
+      "type": "array",
+      "description": "Proposed changes to action contract YAML files.",
+      "items": {
+        "$ref": "#/$defs/ContractPatch"
+      },
+      "default": []
+    },
+    "policy_adjustments": {
+      "type": "array",
+      "description": "Proposed changes to governance policy YAML files.",
+      "items": {
+        "$ref": "#/$defs/PolicyAdjustment"
+      },
+      "default": []
+    },
+    "distillation_batch": {
+      "oneOf": [
+        {"$ref": "#/$defs/DistillationBatch"},
+        {"type": "null"}
+      ],
+      "description": "Metadata about training pairs ready for distillation. Null if no batch is ready."
+    }
+  },
+  "$defs": {
+    "PromptDiff": {
+      "type": "object",
+      "required": ["target_file", "additions", "removals", "rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "target_file": {
+          "type": "string",
+          "description": "Relative path to the prompt template or documentation file to modify."
+        },
+        "additions": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Lines or sections to add to the target file.",
+          "default": []
+        },
+        "removals": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Lines or sections to remove from the target file.",
+          "default": []
+        },
+        "examples": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Concrete examples to include alongside additions.",
+          "default": []
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this change is recommended. Derived from pattern analysis signal."
+        }
+      }
+    },
+    "ContractPatch": {
+      "type": "object",
+      "required": ["contract_name", "field_changes", "rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "contract_name": {
+          "type": "string",
+          "description": "Name of the action contract file (without path prefix)."
+        },
+        "field_changes": {
+          "type": "object",
+          "description": "Map of field name to proposed new value. Keys follow the contract YAML field names.",
+          "additionalProperties": true
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this contract change is recommended."
+        }
+      }
+    },
+    "PolicyAdjustment": {
+      "type": "object",
+      "required": ["domain", "threshold_changes", "rationale", "expected_impact"],
+      "additionalProperties": false,
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "Governance domain this adjustment applies to (e.g. 'system_operations', 'ci_change_control')."
+        },
+        "threshold_changes": {
+          "type": "object",
+          "description": "Map of threshold name to proposed new value.",
+          "additionalProperties": true
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this policy adjustment is recommended."
+        },
+        "expected_impact": {
+          "type": "string",
+          "description": "What this adjustment is expected to change in system behavior."
+        }
+      }
+    },
+    "DistillationBatch": {
+      "type": "object",
+      "required": ["pair_count", "avg_score", "domains", "manifest_path"],
+      "additionalProperties": false,
+      "properties": {
+        "pair_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of training pairs in this batch."
+        },
+        "avg_score": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Average quality score across pairs in this batch."
+        },
+        "domains": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Governance domains represented in this batch.",
+          "minItems": 1
+        },
+        "manifest_path": {
+          "type": "string",
+          "description": "Relative path to the distillation batch manifest file."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,332 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://forgeworks/schemas/review_bundle.v0_1.json",
+    "title": "ForgeWorks ReviewBundle",
+    "description": "Aggregated evidence bundle for a single ForgeWorks pipeline run. Travels inside the planner receipt's review_bundle field.",
+    "type": "object",
+    "required": [
+        "bundle_id",
+        "spec_id",
+        "request_id",
+        "created_at",
+        "bundle_status",
+        "summary",
+        "gates_passed",
+        "metrics",
+        "artifacts",
+        "risk_assessment"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "bundle_id": {
+            "type": "string",
+            "description": "Unique identifier for this bundle (brv- prefix + sha256[:12] of spec_id:timestamp).",
+            "minLength": 1
+        },
+        "spec_id": {
+            "type": "string",
+            "minLength": 1
+        },
+        "request_id": {
+            "type": "string",
+            "description": "SAM ticket_id that triggered this pipeline run.",
+            "minLength": 1
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "bundle_status": {
+            "type": "string",
+            "enum": [
+                "pending_review",
+                "approved",
+                "rejected",
+                "revision_requested"
+            ],
+            "description": "Always 'pending_review' on creation. SAM updates this field after making a decision."
+        },
+        "summary": {
+            "type": "object",
+            "description": "Human-readable overview of the pipeline run.",
+            "required": [
+                "domain",
+                "mode",
+                "goal",
+                "ticket_count",
+                "decision_count",
+                "total_score",
+                "pass_fail",
+                "pipeline_status",
+                "failure_gate",
+                "one_line"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "domain": {
+                    "type": "string"
+                },
+                "mode": {
+                    "type": "string",
+                    "enum": [
+                        "shadow",
+                        "supervised",
+                        "ramped"
+                    ]
+                },
+                "goal": {
+                    "type": "string"
+                },
+                "ticket_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "decision_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "approval_count": {
+                    "oneOf": [
+                        {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "total_score": {
+                    "type": "number"
+                },
+                "pass_fail": {
+                    "type": "boolean"
+                },
+                "pipeline_status": {
+                    "type": "string",
+                    "enum": [
+                        "DONE",
+                        "REPLAN",
+                        "STOP_FAILED"
+                    ]
+                },
+                "failure_gate": {
+                    "type": "string",
+                    "description": "'none' when pipeline succeeded, gate name otherwise."
+                },
+                "one_line": {
+                    "type": "string",
+                    "description": "Single sentence summary for human reviewers."
+                }
+            }
+        },
+        "gates_passed": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9,
+            "description": "Number of pipeline gates passed. 9 = full success."
+        },
+        "failure_gate": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "description": "Name of the gate that failed (e.g. 'ingest', 'run'). Null when gates_passed == 9."
+        },
+        "failure_reason": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "description": "Enumerated failure reason from planner_receipt. Null when pipeline succeeded (NONE maps to null)."
+        },
+        "metrics": {
+            "type": "object",
+            "description": "Lifted directly from planner_receipt.metrics.",
+            "required": [
+                "total_score",
+                "pass_fail",
+                "deny_count",
+                "oracle_mismatch_count",
+                "escalation_count"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "total_score": {
+                    "type": "number"
+                },
+                "pass_fail": {
+                    "type": "boolean"
+                },
+                "deny_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "oracle_mismatch_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "escalation_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "drift_events_applied": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "artifacts": {
+            "type": "object",
+            "description": "Paths to pipeline output files. Keys are null when the corresponding stage did not execute.",
+            "required": [
+                "run_summary",
+                "decision_ledger",
+                "score_json",
+                "report_md"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "run_summary": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "decision_ledger": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "score_json": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "report_md": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                }
+            }
+        },
+        "risk_assessment": {
+            "type": "object",
+            "required": [
+                "highest_risk_level",
+                "deny_count",
+                "oracle_mismatch_count",
+                "escalation_count",
+                "has_drift_events",
+                "pass_fail",
+                "score_below_threshold"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "highest_risk_level": {
+                    "type": "string",
+                    "enum": [
+                        "low",
+                        "med",
+                        "high",
+                        "critical"
+                    ]
+                },
+                "deny_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "oracle_mismatch_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "escalation_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "has_drift_events": {
+                    "type": "boolean"
+                },
+                "pass_fail": {
+                    "type": "boolean"
+                },
+                "score_below_threshold": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "reviewer_id": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "review_decision": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "approved",
+                        "rejected",
+                        "revision_requested"
+                    ]
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "review_notes": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "review_completed_at": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    }
+}

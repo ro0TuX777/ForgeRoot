@@ -1,0 +1,25 @@
+# ForgeAtlas — ActionDiscovery Service
+# All versions pinned for reproducible Docker builds.
+
+# YAML parsing (catalog manifests)
+PyYAML==6.0.1
+
+# Schema validation (ActionContract / StateContract)
+pydantic==2.11.7
+pydantic-core==2.33.2
+
+# Semantic search
+sentence-transformers==4.1.0
+transformers==4.57.3
+tokenizers==0.22.2
+huggingface-hub==0.34.4
+
+# Numerical operations (cosine similarity)
+numpy==1.26.4
+
+# PyTorch CPU — required by sentence-transformers
+# Pinned to CPU variant to keep image size manageable.
+torch==2.7.1
+
+# Test dependencies (not installed in production image)
+pytest==9.0.2

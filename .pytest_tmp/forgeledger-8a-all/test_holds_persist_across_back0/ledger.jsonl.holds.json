@@ -1,0 +1,12 @@
+{
+  "63279f78-612a-4c2c-bba9-b6091d79ec60": {
+    "hold_id": "63279f78-612a-4c2c-bba9-b6091d79ec60",
+    "tenant_id": "t1",
+    "reason": "r",
+    "event_ids": [
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T21:28:16.432908+00:00",
+    "released": false
+  }
+}

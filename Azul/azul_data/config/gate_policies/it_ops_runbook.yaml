@@ -1,0 +1,11 @@
+# Azul — IT Ops Runbook Gate Policy
+# ===================================
+# Runbook compliance checks are typically more procedural.
+# A single oracle mismatch warrants investigation but not a hard block.
+
+min_score: 70.0
+warn_score: 75.0 # Lower warn threshold — runbooks have tighter scoring bands
+max_deny_count: 0
+max_oracle_mismatch: 1 # Allow 1 mismatch (warn, not critical)
+max_escalation_count: 2
+require_pass_fail: true

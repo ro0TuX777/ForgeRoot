@@ -1,0 +1,49 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.verify_evidence
+spec:
+  description: "Verify evidence signature, trust, and receipt linkage"
+  requires:
+    - artifactId: "forgescaffold.evidence_manifest.json"
+      path: "evidence_manifest.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.evidence_signature.json"
+      path: "evidence_signature.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.evidence_receipt.json"
+      path: "evidence_receipt.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.approval_receipt.json"
+      path: "approval_receipt.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.rollback_report.json"
+      path: "rollback_report.json"
+      optional: true
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.evidence_verification_report.json"
+      path: "evidence_verification_report.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "code": [
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\__init__.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\__main__.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_integration.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_semantic_search.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_service_wrapper.py",
+      "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\__init__.py"
+    ],
+    "document": [
+      "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Implementation_Plan.md",
+      "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Punch_List.md",
+      "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlaswhitepaper.md",
+      "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlas_AI_Dev_Briefing.md",
+      "F:\\ForgedRoot\\ForgeAtlas\\requirements.txt"
+    ],
+    "paper": [],
+    "image": [],
+    "video": []
+  },
+  "total_files": 15,
+  "total_words": 12231,
+  "needs_graph": false,
+  "warning": "Corpus is ~12,231 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [],
+  "graphifyignore_patterns": 6
+}

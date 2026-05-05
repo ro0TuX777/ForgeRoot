@@ -1,0 +1,100 @@
+framework: APRA_CPS_234
+profile_version: "0.1"
+jurisdiction: AU
+sector: finance
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "CPS234.P15.CAPABILITY"
+    objective: >
+      The APRA-regulated entity maintains information security capability
+      commensurate with the size and extent of threats to its information assets.
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "policy.policy_id"
+      - "policy.policy_hash"
+      - "decision.risk_level"
+    evidence_artifacts:
+      - "control_coverage_report.json"
+      - "ledger_slice.jsonl"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+    notes: >
+      Policy hash and risk level fields demonstrate that capability assessments
+      are version-controlled and risk-aware. Partial support only.
+
+  - control_id: "CPS234.P18.POLICY"
+    objective: >
+      The entity maintains an information security policy framework aligned to
+      its information security capabilities and risk appetite.
+    required_event_types:
+      - "forgegate.policy_evaluation"
+      - "concord.admission_decision"
+    required_fields:
+      - "policy.policy_id"
+      - "policy.policy_hash"
+      - "policy.retention_class"
+    evidence_artifacts:
+      - "control_coverage_report.json"
+      - "retention_policy_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "CPS234.P24.INCIDENT"
+    objective: >
+      Information security incidents are detected, reported, and managed
+      in a timely and effective manner.
+    required_event_types:
+      - "agent.human_review_required"
+      - "human.approval_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "decision.decision_type"
+      - "decision.reason"
+      - "decision.risk_level"
+      - "actor.actor_id"
+    evidence_artifacts:
+      - "human_review_decisions.json"
+      - "evidence_gap_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "CPS234.P26.TESTING"
+    objective: >
+      The entity tests the effectiveness of its information security controls
+      on a systematic basis.
+    required_event_types:
+      - "azul.verdict_summary"
+    required_fields:
+      - "decision.decision_type"
+      - "evidence.assertion_classes"
+      - "evidence.evidence_gaps"
+    evidence_artifacts:
+      - "evidence_gap_report.json"
+      - "chain_validation_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: low
+    notes: >
+      Azul verdict summaries provide evidence that agent-proposed changes are
+      evaluated against safety controls. Not a substitute for formal control testing.
+
+  - control_id: "CPS234.P28.AUDIT"
+    objective: >
+      Internal audit provides independent assurance that information security
+      controls are operating effectively.
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+      - "human.approval_decision"
+    required_fields:
+      - "integrity.event_hash"
+      - "integrity.previous_hash"
+      - "policy.policy_hash"
+    evidence_artifacts:
+      - "chain_validation_report.json"
+      - "ledger_slice.jsonl"
+      - "control_coverage_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: high

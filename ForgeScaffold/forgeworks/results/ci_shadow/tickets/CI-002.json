@@ -1,0 +1,1 @@
+{"actions_proposed":["ticket.advance_phase","proc.run_tests","promote.copy_to_codebase","ticket.close"],"decisions_received":["ALLOW","ALLOW","ALLOW","ALLOW"],"domain":"ci_change_control","final_status":"completed","phases_visited":["Scout","Builder","Judge","Deployer"],"ticket_id":"CI-002"}

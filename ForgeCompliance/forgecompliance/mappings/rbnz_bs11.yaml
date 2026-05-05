@@ -1,0 +1,81 @@
+framework: RBNZ_BS11
+profile_version: "0.1"
+jurisdiction: NZ
+sector: finance
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "BS11.S3.GOVERNANCE"
+    objective: >
+      The bank's board and senior management maintain governance over outsourced
+      services, including AI-assisted decision-making systems.
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+      - "human.approval_decision"
+    required_fields:
+      - "actor.role"
+      - "decision.decision_type"
+      - "policy.policy_id"
+      - "policy.policy_hash"
+    evidence_artifacts:
+      - "control_coverage_report.json"
+      - "human_review_decisions.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+    notes: >
+      Policy hash captures the version of governance rules in effect at decision time.
+      Human approval decisions provide evidence of senior management oversight.
+
+  - control_id: "BS11.S4.RISK_MANAGEMENT"
+    objective: >
+      Risks associated with outsourced AI services are identified, assessed,
+      and managed within the bank's risk framework.
+    required_event_types:
+      - "forgegate.decision_record"
+      - "azul.verdict_summary"
+    required_fields:
+      - "decision.risk_level"
+      - "decision.reason"
+      - "evidence.evidence_gaps"
+    evidence_artifacts:
+      - "evidence_gap_report.json"
+      - "chain_validation_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "BS11.S5.SERVICE_AGREEMENT"
+    objective: >
+      Service agreements with AI providers include audit rights and
+      documented performance obligations.
+    required_event_types:
+      - "warden.llm_call_metadata"
+    required_fields:
+      - "system_context.source_module"
+      - "system_context.deployment_id"
+      - "tenant.tenant_id"
+    evidence_artifacts:
+      - "model_provider_boundary_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: low
+    notes: >
+      warden.llm_call_metadata provides partial evidence of the AI provider
+      boundary. A complete service agreement audit requires additional documentation
+      outside ForgeRoot's scope.
+
+  - control_id: "BS11.S5.AUDIT_ACCESS"
+    objective: >
+      The bank retains audit access rights over outsourced AI services,
+      evidenced by tamper-evident audit trails.
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "integrity.event_hash"
+      - "integrity.previous_hash"
+      - "policy.retention_class"
+    evidence_artifacts:
+      - "chain_validation_report.json"
+      - "retention_policy_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: high

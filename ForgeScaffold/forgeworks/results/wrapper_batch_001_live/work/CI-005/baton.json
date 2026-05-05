@@ -1,0 +1,21 @@
+{
+  "ticket_id": "CI-005",
+  "ticket_intent": "Fix CI failure: tests/test_drift_sensitive.py::test_under_load",
+  "hypothesis_path": "results/wrapper_batch_001_live/work/CI-005/CI-005_hypothesis.json",
+  "spec_contract_path": "results/wrapper_batch_001_live/work/CI-005/CI-005_spec_contract.yaml",
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 5,
+  "retry_count": 0,
+  "max_retries": 3,
+  "last_error_log": null,
+  "sandbox_directory": "results/wrapper_batch_001_live/work/CI-005/workspace/CI-005_sandbox",
+  "phase_timing": {
+    "Scout": 0.004,
+    "Legislator": 0.003,
+    "Builder": 0.009,
+    "Deployer": 0.0
+  },
+  "phase_tokens": {}
+}

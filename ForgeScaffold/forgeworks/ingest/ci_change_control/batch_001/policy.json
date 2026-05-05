@@ -1,0 +1,6 @@
+{
+  "allowed_action_classes": ["code_patch", "test_fix"],
+  "forbidden_actions": ["disable_tests", "edit_ci_workflows"],
+  "max_files_changed": 3,
+  "require_approval_if_core_path_touched": true
+}

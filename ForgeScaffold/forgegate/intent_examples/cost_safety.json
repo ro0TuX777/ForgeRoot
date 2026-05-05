@@ -1,0 +1,11 @@
+{
+  "intent_id": "cost_safety",
+  "intent_version": "1",
+  "budgets": [
+    {"id": "tokens", "kind": "tokens", "limit": 10000, "window": "day", "warning_threshold": 8000}
+  ],
+  "tradeoffs": [
+    {"id": "prefer_cost", "when": {"op": "gt", "left": {"var": "signals.cost"}, "right": 100}}
+  ],
+  "escalation": {"channels": ["finance"], "required_payload_fields": ["owner"]}
+}

@@ -1,0 +1,32 @@
+name: forgegate_ci
+
+on:
+  push:
+    paths:
+      - 'forgegate/**'
+      - '.github/workflows/forgegate_ci.yml'
+  pull_request:
+    paths:
+      - 'forgegate/**'
+      - '.github/workflows/forgegate_ci.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install ForgeGate
+        run: |
+          cd forgegate
+          pip install -e '.[dev,crypto]'
+      - name: Run tests
+        run: |
+          cd forgegate
+          pytest -q
+      - name: Validate bundle example
+        run: |
+          cd forgegate
+          forgegate validate-bundle ./intent_bundle_example

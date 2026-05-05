@@ -1,0 +1,14 @@
+{
+  "ticket_id": "CI-001",
+  "ticket_intent": "Fix CI failure: tests/test_case_001.py::test_case_001",
+  "hypothesis_path": "results/test_batch_003/work/CI-001/CI-001_hypothesis.json",
+  "spec_contract_path": "results/test_batch_003/work/CI-001/CI-001_spec_contract.yaml",
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 5,
+  "retry_count": 0,
+  "max_retries": 3,
+  "last_error_log": null,
+  "sandbox_directory": "results/test_batch_003/work/CI-001/CI-001_sandbox"
+}

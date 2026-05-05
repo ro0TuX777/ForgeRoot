@@ -1,0 +1,12 @@
+{
+  "status": "error",
+  "error": {
+    "code": "MISSING_REQUIRED_RAW_FILE",
+    "message": "missing required raw file: runbook_service_down.md",
+    "stage": "normalize",
+    "details": {
+      "domain": "it_ops_runbook",
+      "path": "ingest/it_ops_runbook/batch_002_gov_bad"
+    }
+  }
+}

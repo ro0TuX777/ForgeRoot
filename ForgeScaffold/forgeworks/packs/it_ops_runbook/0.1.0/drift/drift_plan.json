@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "domain": "it_ops_runbook",
+  "events": [
+    {
+      "at_step": 1,
+      "type": "metric_schema_change",
+      "payload": {
+        "old_key": "queue.pressure",
+        "renamed_key": "queue.pressure.v2"
+      }
+    },
+    {
+      "at_step": 2,
+      "type": "tool_version_bump",
+      "payload": {
+        "version": "v3"
+      }
+    }
+  ]
+}

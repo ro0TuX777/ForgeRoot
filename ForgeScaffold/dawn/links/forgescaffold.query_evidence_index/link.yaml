@@ -1,0 +1,24 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.query_evidence_index
+spec:
+  description: "Query evidence index for audit results"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.evidence_query_results.json"
+      path: "evidence_query_results.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.evidence_query_results.md"
+      path: "evidence_query_results.md"
+      schema:
+        type: "text"
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

@@ -1,0 +1,28 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.obs_define_schema
+spec:
+  description: "Emit a unified log envelope schema and observability recommendations"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.log_envelope.schema.json"
+      path: "log_envelope.schema.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.observability_recommendations.md"
+      path: "observability_recommendations.md"
+      schema:
+        type: "text"
+  runtime:
+    timeoutSeconds: 300
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

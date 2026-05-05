@@ -1,0 +1,20 @@
+{
+  "fixture_provenance": "representative_hand_authored",
+  "subsystem": "ForgeGate",
+  "actor_id": "forgegate.policy_evaluator",
+  "decision_type": "allow",
+  "reason": "policy constraints satisfied",
+  "risk_level": "low",
+  "tenant_id": "tenant-001",
+  "customer_boundary": "customer-a",
+  "data_residency": "NZ",
+  "policy_id": "forgegate-policy-v1",
+  "policy_hash": "sha256:forgegate-allow-policy",
+  "blast_radius_score": 0.22,
+  "evidence_refs": ["forgegate://decision/allow-001"],
+  "evidence_gaps": [],
+  "frameworks": ["NZISM", "SOC2"],
+  "action_type": "decision_record",
+  "environment": "local",
+  "deployment_id": "runtime-fixture"
+}

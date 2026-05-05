@@ -1,0 +1,14 @@
+packs/it_ops_runbook/test_batch_003_adv/artifact_index.json
+packs/it_ops_runbook/test_batch_003_adv/artifacts/incident_log_001.txt
+packs/it_ops_runbook/test_batch_003_adv/artifacts/metadata.json
+packs/it_ops_runbook/test_batch_003_adv/artifacts/metrics_snapshot.json
+packs/it_ops_runbook/test_batch_003_adv/artifacts/policy.json
+packs/it_ops_runbook/test_batch_003_adv/artifacts/runbook_service_down.md
+packs/it_ops_runbook/test_batch_003_adv/artifacts/service_context.json
+packs/it_ops_runbook/test_batch_003_adv/drift/drift_plan.json
+packs/it_ops_runbook/test_batch_003_adv/intent_bundle/intent/intent_spec.json
+packs/it_ops_runbook/test_batch_003_adv/oracle/expectations.jsonl
+packs/it_ops_runbook/test_batch_003_adv/run_config.json
+packs/it_ops_runbook/test_batch_003_adv/scoring/scoring.json
+packs/it_ops_runbook/test_batch_003_adv/signals.jsonl
+packs/it_ops_runbook/test_batch_003_adv/tickets.jsonl

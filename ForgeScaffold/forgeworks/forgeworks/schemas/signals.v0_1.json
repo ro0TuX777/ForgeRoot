@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/signals.v0_1.json",
+  "title": "ForgeWorks Signals",
+  "type": "object",
+  "required": ["schema_version", "ticket_id", "values"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "ticket_id": {"type": "string"},
+    "values": {"type": "object"}
+  },
+  "additionalProperties": true
+}

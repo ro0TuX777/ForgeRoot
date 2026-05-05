@@ -1,0 +1,62 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.package_evidence
+spec:
+  description: "Bundle patchset apply evidence into a single folder"
+  requires:
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.apply_report.json"
+      path: "apply_report.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.rollback_patchset.json"
+      path: "rollback_patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.workspace_snapshot.json"
+      path: "workspace_snapshot.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.verification_report.json"
+      path: "verification_report.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.test_results.manifest.json"
+      path: "test_results/manifest.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.approval_receipt.json"
+      path: "approval_receipt.json"
+      optional: true
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.rollback_report.json"
+      path: "rollback_report.json"
+      optional: true
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.evidence_pack.manifest.json"
+      path: "evidence_pack/manifest.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.evidence_manifest.json"
+      path: "evidence_pack/manifest.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 300
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

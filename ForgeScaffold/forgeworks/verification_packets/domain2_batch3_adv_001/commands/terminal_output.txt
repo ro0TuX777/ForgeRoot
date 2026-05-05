@@ -1,0 +1,57 @@
+Normalization: OK
+Domain: it_ops_runbook
+Raw input: ingest/it_ops_runbook/batch_003_adv
+Workcell output: packs/it_ops_runbook/test_batch_003_adv
+Tickets written: 1
+Artifacts indexed: 6
+Signals written: 1
+workcell_hash: 7633d0061d79bc86fac16d30242f494a069f5dd1c3594ee36778e753f4768af4
+
+Validation: OK
+Workcell: packs/it_ops_runbook/test_batch_003_adv
+Schemas checked: ticket, artifact_index, signals, run_config
+workcell_hash: 7633d0061d79bc86fac16d30242f494a069f5dd1c3594ee36778e753f4768af4
+
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_003_adv
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_003_adv/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_003_adv/approval_records.jsonl
+workcell_hash: 7633d0061d79bc86fac16d30242f494a069f5dd1c3594ee36778e753f4768af4
+
+Score: OK
+Results: results/ops_batch_003_adv
+Oracle: packs/it_ops_runbook/test_batch_003_adv/oracle/expectations.jsonl
+Scoring config: packs/it_ops_runbook/test_batch_003_adv/scoring/scoring.json
+Total score: 99.5
+Pass: true
+score.json: results/ops_batch_003_adv/score.json
+
+Report: OK
+Results: results/ops_batch_003_adv
+Markdown report: results/ops_batch_003_adv/report.md
+
+expected_vs_actual + penalty summary generated
+
+Normalization: FAILED
+Domain: it_ops_runbook
+Error: missing required raw file: runbook_service_down.md
+
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_003_adv
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_003_adv_repeat/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_003_adv_repeat/approval_records.jsonl
+workcell_hash: 7633d0061d79bc86fac16d30242f494a069f5dd1c3594ee36778e753f4768af4
+
+6ad06782d728955012ab6a2373af5dbbcddebedb7ebfe73808821fa0c2de310c  results/ops_batch_003_adv/decision_ledger.jsonl
+09986f69051ab13e5ca6d4a4d8a76a235db64a85a9153b9037ceee259179bd0c  results/ops_batch_003_adv/approval_records.jsonl
+6ad06782d728955012ab6a2373af5dbbcddebedb7ebfe73808821fa0c2de310c  results/ops_batch_003_adv_repeat/decision_ledger.jsonl
+09986f69051ab13e5ca6d4a4d8a76a235db64a85a9153b9037ceee259179bd0c  results/ops_batch_003_adv_repeat/approval_records.jsonl
+3b464b102d18b10fcdf2f7296cdde523a503020d7728499cb2c5aa45286f1b4e  results/ops_batch_003_adv/score.json

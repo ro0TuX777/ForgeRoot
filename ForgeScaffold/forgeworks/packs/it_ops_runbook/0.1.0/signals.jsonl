@@ -1,0 +1,1 @@
+{"schema_version":"0.1","ticket_id":"OPS-001","values":{"blast_radius":"medium","echo.fidelity":"D3","env":"prod","queue.pressure":0.35,"retry.count":1,"runbook.present":true,"service.tier":"tier-1"}}

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/planner_receipt.v0_1.json",
+  "title": "ForgePlanner Execution Receipt",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "spec_id",
+    "timestamp",
+    "status",
+    "failure_reason",
+    "gates_passed",
+    "metrics",
+    "artifacts"
+  ],
+  "additionalProperties": false,
+  "$comment": "review_bundle added in JOINT-001 v0.2 — optional, additive, backward-compatible",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "spec_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DONE",
+        "REPLAN",
+        "STOP_FAILED"
+      ]
+    },
+    "failure_reason": {
+      "type": "string",
+      "enum": [
+        "INVALID_PLANNER_SPEC",
+        "UNKNOWN_SPEC_FIELD",
+        "UNSUPPORTED_DOMAIN",
+        "MISSING_REQUIRED_RAW_FILE",
+        "SPEC_COMPILE_FAILED",
+        "INVALID_WORKCELL",
+        "INVALID_INTENT_BUNDLE_PATH",
+        "FORGEGATE_UNAVAILABLE",
+        "MALFORMED_DRIFT_PLAN",
+        "MALFORMED_ORACLE",
+        "RUN_FAILED",
+        "SCORE_FAILED",
+        "REPORT_FAILED",
+        "RESULT_READER_FAILED",
+        "NO_PROGRESS_LIMIT_REACHED",
+        "MAX_ITERATIONS_EXCEEDED",
+        "NONE"
+      ]
+    },
+    "gates_passed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "total_score",
+        "pass_fail",
+        "deny_count",
+        "oracle_mismatch_count",
+        "escalation_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_score": {
+          "type": "number"
+        },
+        "pass_fail": {
+          "type": "boolean"
+        },
+        "deny_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "oracle_mismatch_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "escalation_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "drift_events_applied": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "run_summary": {
+          "type": "string"
+        },
+        "decision_ledger": {
+          "type": "string"
+        },
+        "score_json": {
+          "type": "string"
+        },
+        "report_md": {
+          "type": "string"
+        }
+      }
+    },
+    "review_bundle": {
+      "description": "Optional ReviewBundle assembled by ForgeWorks after pipeline execution. Present when at least gate 1 (spec validation) passes. Schema: review_bundle.v0_1. Consumers that do not recognise this field may safely ignore it.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "DONE"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "failure_reason": {
+            "const": "NONE"
+          }
+        }
+      }
+    }
+  ]
+}

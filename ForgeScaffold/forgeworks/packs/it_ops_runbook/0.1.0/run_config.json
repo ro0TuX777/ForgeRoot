@@ -1,0 +1,1 @@
+{"approval_policy":{"auto_reject_actions":[],"ramped_auto_allow_risk_tiers":["low"],"ramped_auto_allow_side_effects":["none","read"]},"domain":"it_ops_runbook","intent_bundle_path":"./intent_bundle","mode":"shadow","preflight":{"check_generate":true,"check_ollama":true,"docker_containers":[],"generate_timeout_seconds":10},"schema_version":"0.1","seed":123}

@@ -1,0 +1,25 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.status_global
+spec:
+  description: "Global operator status across projects"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.status_global.json"
+      path: "evidence/global/status.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.status_global.md"
+      path: "evidence/global/status.md"
+      schema:
+        type: "text"
+      optional: true
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

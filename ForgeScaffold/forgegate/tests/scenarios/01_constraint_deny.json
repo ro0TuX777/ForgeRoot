@@ -1,0 +1,23 @@
+{
+  "name": "constraint deny",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1",
+    "constraints": [
+      {"id": "c_deny", "when": {"op": "eq", "left": {"var": "signals.risk"}, "right": "high"}, "effect": "deny"}
+    ],
+    "escalation": {"channels": ["ops"], "required_payload_fields": ["justification"]}
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "deploy",
+    "actor_id": "agent-1",
+    "params": {"env": "prod"},
+    "nonce": "abc"
+  },
+  "signals": {"schema_version": "0.1", "values": {"risk": "high"}},
+  "expected": {
+    "decision": "DENY",
+    "must_include": ["reasons.triggered_rules"]
+  }
+}

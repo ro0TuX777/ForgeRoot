@@ -1,0 +1,12 @@
+{
+  "c290521b-f94c-4b52-95a3-c0e0f790fd61": {
+    "hold_id": "c290521b-f94c-4b52-95a3-c0e0f790fd61",
+    "tenant_id": "t1",
+    "reason": "r",
+    "event_ids": [
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:53:42.519423+00:00",
+    "released": false
+  }
+}

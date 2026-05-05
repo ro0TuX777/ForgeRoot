@@ -1,0 +1,91 @@
+{
+  "ticket_id": "azul-c281a73b",
+  "ticket_type": "ci_gate",
+  "priority": "normal",
+  "status": "COMPLETED",
+  "domain": "system_operations",
+  "mode": "shadow",
+  "change_summary": "Warden auto verify: 1 changed file(s) in HELIOS BACKUP BETA",
+  "change_payload": {
+    "diff": "--- a/Helios/apt-test/ansible_service.py\n+++ b/Helios/apt-test/ansible_service.py\n@@ -15,7 +15,7 @@\n         \n         # Ensure ansible logs directory exists with proper permissions\n         self.log_dir = '/backend/logs'\n-        os.makedirs(self.log_dir, exist_ok=True)\n+        os.makedirs(self.log_dir, exist_ok=False)\n         \n         # Initialize ansible components\n         self.loader = DataLoader()"
+  },
+  "source": {
+    "adapter": "cli"
+  },
+  "target_files": [
+    "Helios/apt-test/ansible_service.py"
+  ],
+  "blast_radius": {
+    "units": [],
+    "affected_files": [
+      "Helios/apt-test/ansible_service.py"
+    ],
+    "total_units": 10,
+    "affected_count": 0,
+    "project_root": "/Users/vinsoncornejo/ForgedRoot/Azul"
+  },
+  "environment_id": "922a5f2e-e090-4fc7-bcbb-bd2ed4dfbd63",
+  "planner_spec": {
+    "schema_version": "0.1",
+    "spec_id": "azul-azul-c281a73b-74446682",
+    "request_id": "azul-c281a73b",
+    "goal": "Warden auto verify: 1 changed file(s) in HELIOS BACKUP BETA",
+    "domain": "system_operations",
+    "mode": "shadow",
+    "notes": "Azul verification \u2014 ci_gate | priority=normal",
+    "source": {
+      "generator": {
+        "script_id": "generate_ci_batch",
+        "args": {}
+      }
+    },
+    "workcell": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-c281a73b/workcell"
+    },
+    "run": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-c281a73b/workcell/results"
+    },
+    "score": {
+      "oracle_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/oracle.yaml",
+      "scoring_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/scoring.yaml"
+    },
+    "report": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-c281a73b/workcell/results/report.md"
+    },
+    "loop_policy": {
+      "max_iterations": 1,
+      "target_score": 80.0,
+      "replan_on_fail": false
+    }
+  },
+  "review_bundle": {
+    "bundle_id": "rb-degraded-48640d9361af",
+    "summary": {
+      "domain": "system_operations",
+      "request_id": "azul-c281a73b",
+      "degraded_mode": true,
+      "degraded_reason": "ForgeWorks degraded fallback: No module named 'huggingface_hub'"
+    },
+    "metrics": {
+      "total_score": 95.0,
+      "pass_fail": true,
+      "deny_count": 0,
+      "oracle_mismatch_count": 0,
+      "escalation_count": 0
+    }
+  },
+  "gate_result": {
+    "passed": true,
+    "severity": "ok",
+    "alerts": []
+  },
+  "verdict": "pass",
+  "verdict_reason": null,
+  "xp_awarded": 19,
+  "training_pair": null,
+  "gate_policy": null,
+  "created_at": "2026-03-12T04:16:42.988110+00:00",
+  "updated_at": "2026-03-12T04:16:43.090129+00:00",
+  "completed_at": "2026-03-12T04:16:43.090126+00:00",
+  "metadata": {}
+}

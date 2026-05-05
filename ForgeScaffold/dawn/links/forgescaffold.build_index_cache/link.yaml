@@ -1,0 +1,25 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.build_index_cache
+spec:
+  description: "Build a deterministic SQLite cache for evidence_index.jsonl"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.evidence_index_cache.sqlite"
+      path: "evidence/cache/evidence_index_cache.sqlite"
+      schema:
+        type: "binary"
+      optional: true
+    - artifactId: "forgescaffold.cache_build_report.json"
+      path: "cache_build_report.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

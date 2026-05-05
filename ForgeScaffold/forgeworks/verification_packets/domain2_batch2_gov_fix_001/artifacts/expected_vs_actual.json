@@ -1,0 +1,21 @@
+[
+  {
+    "ticket_id": "OPS-001",
+    "expected": {
+      "should_escalate": true,
+      "should_deny": false
+    },
+    "actual": {
+      "decisions": [
+        "ESCALATE",
+        "ESCALATE",
+        "ESCALATE",
+        "ALLOW",
+        "ALLOW"
+      ],
+      "should_escalate": true,
+      "should_deny": false
+    },
+    "mismatches": []
+  }
+]

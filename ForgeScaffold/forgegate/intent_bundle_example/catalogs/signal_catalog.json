@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.1",
+  "signals": [
+    {"signal_id": "env", "description": "Target environment"},
+    {"signal_id": "risk", "description": "Risk score"},
+    {"signal_id": "cost", "description": "Estimated cost"}
+  ]
+}

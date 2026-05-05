@@ -1,0 +1,11 @@
+# Azul — Default Gate Policy
+# ============================
+# These values are used for all tickets unless overridden per-domain or per-ticket.
+# Matches SAM's DEFAULT_GATE_POLICY exactly (see fw_result_gate.py).
+
+min_score: 70.0            # CRITICAL if total_score < 70 — hard block
+warn_score: 80.0           # WARN if total_score < 80 (but >= 70) — soft alert
+max_deny_count: 0          # WARN if ForgeGate deny decisions > 0
+max_oracle_mismatch: 0     # WARN if oracle mismatches > 0
+max_escalation_count: 2    # WARN if escalation events > 2
+require_pass_fail: true    # CRITICAL if pass_fail=False — hard block

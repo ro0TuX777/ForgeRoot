@@ -1,0 +1,40 @@
+{
+  "title": "ForgeScaffold System Catalog",
+  "type": "object",
+  "required": ["project_id", "units"],
+  "properties": {
+    "project_id": {"type": "string"},
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "path"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {
+            "type": "string",
+            "enum": ["module", "service", "agent_step", "datastore", "external_dependency"]
+          },
+          "path": {"type": "string"},
+          "entrypoint": {"type": ["string", "null"]},
+          "language": {"type": ["string", "null"]},
+          "owner_tag": {"type": ["string", "null"]},
+          "risk_tags": {"type": "array", "items": {"type": "string"}},
+          "exports": {"type": "array", "items": {"type": "string"}},
+          "observability": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "logs": {"type": ["string", "null"]},
+              "tracing": {"type": ["string", "null"]},
+              "metrics": {"type": ["string", "null"]}
+            }
+          },
+          "metadata": {"type": "object"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

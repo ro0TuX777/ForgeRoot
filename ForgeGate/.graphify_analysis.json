@@ -1,0 +1,233 @@
+{
+  "communities": {
+    "0": [
+      "context_budget_snapshot",
+      "context_phase_1_gate_interface",
+      "context_reference_gate",
+      "context_scenario_test_harness",
+      "context_signals",
+      "evaluate_evaluate",
+      "evaluate_normalize_signals",
+      "init_package_export",
+      "main_app",
+      "main_evaluate_command"
+    ],
+    "1": [
+      "context_deterministic_action_governance_gate",
+      "context_forgegate",
+      "context_proposed_action",
+      "forgegatewhitepaper_llm_policy_decider_risk",
+      "forgegatewhitepaper_policy_as_code",
+      "forgegatewhitepaper_policy_enforcement_plane"
+    ],
+    "2": [
+      "forgegatewhitepaper_boundaries",
+      "forgegatewhitepaper_budgets",
+      "forgegatewhitepaper_constraints",
+      "forgegatewhitepaper_evaluation_pipeline",
+      "forgegatewhitepaper_shaping",
+      "forgegatewhitepaper_tradeoffs"
+    ],
+    "3": [
+      "core_evaluate_py",
+      "core_evaluate_rationale_1",
+      "core_evaluate_resolve_var",
+      "init_py"
+    ],
+    "4": [
+      "core_evaluate_eval_expr",
+      "core_evaluate_evaluate",
+      "core_evaluate_normalize_signals",
+      "core_evaluate_truthy"
+    ],
+    "5": [
+      "evaluate_eval_expr",
+      "evaluate_forgegateevaluationerror",
+      "evaluate_resolve_var",
+      "evaluate_truthy"
+    ],
+    "6": [
+      "context_canonical_hashing",
+      "context_dawn_optional_substrate",
+      "context_decision_record",
+      "forgegatewhitepaper_replay_safety"
+    ],
+    "7": [
+      "cli_main_app",
+      "cli_main_py",
+      "cli_main_rationale_1"
+    ],
+    "8": [
+      "core_evaluate_forgegateevaluationerror",
+      "core_evaluate_rationale_13",
+      "exception"
+    ],
+    "9": [
+      "cli_init_py",
+      "cli_init_rationale_1"
+    ],
+    "10": [
+      "core_init_py",
+      "core_init_rationale_1"
+    ],
+    "11": [
+      "schemas_init_py",
+      "schemas_init_rationale_1"
+    ]
+  },
+  "cohesion": {
+    "0": 0.24,
+    "1": 0.33,
+    "2": 0.33,
+    "3": 0.5,
+    "4": 0.67,
+    "5": 0.67,
+    "6": 0.67,
+    "7": 0.67,
+    "8": 0.67,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "evaluate_evaluate",
+      "label": "evaluate",
+      "degree": 10
+    },
+    {
+      "id": "evaluate_eval_expr",
+      "label": "_eval_expr",
+      "degree": 6
+    },
+    {
+      "id": "context_deterministic_action_governance_gate",
+      "label": "Deterministic Action-Governance Gate",
+      "degree": 6
+    },
+    {
+      "id": "context_decision_record",
+      "label": "DecisionRecord",
+      "degree": 6
+    },
+    {
+      "id": "forgegatewhitepaper_evaluation_pipeline",
+      "label": "Evaluation Pipeline",
+      "degree": 6
+    },
+    {
+      "id": "core_evaluate_evaluate",
+      "label": "evaluate()",
+      "degree": 5
+    },
+    {
+      "id": "core_evaluate_eval_expr",
+      "label": "_eval_expr()",
+      "degree": 5
+    },
+    {
+      "id": "main_evaluate_command",
+      "label": "forgegate evaluate CLI Command",
+      "degree": 5
+    },
+    {
+      "id": "core_evaluate_forgegateevaluationerror",
+      "label": "ForgeGateEvaluationError",
+      "degree": 4
+    },
+    {
+      "id": "core_evaluate_truthy",
+      "label": "_truthy()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Reference Gate",
+      "target": "evaluate",
+      "source_files": [
+        "context.md",
+        "forgegate/core/evaluate.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "evaluate",
+      "target": "DecisionRecord",
+      "source_files": [
+        "forgegate/core/evaluate.py",
+        "context.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "implements",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "forgegate evaluate CLI Command",
+      "target": "DecisionRecord",
+      "source_files": [
+        "forgegate/cli/main.py",
+        "context.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Evaluation Pipeline",
+      "target": "Reference Gate",
+      "source_files": [
+        "ForgeGatewhitepaper.md",
+        "context.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "app()",
+      "target": "evaluate()",
+      "source_files": [
+        "cli\\main.py",
+        "core\\evaluate.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `app()` unexpectedly reaches hub `evaluate()`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `evaluate` connect `Community 0` to `Community 1`, `Community 5`, `Community 6`?",
+      "why": "High betweenness centrality (0.222) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Reference Gate` connect `Community 0` to `Community 2`?",
+      "why": "High betweenness centrality (0.131) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Evaluation Pipeline` connect `Community 2` to `Community 0`?",
+      "why": "High betweenness centrality (0.111) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `evaluate` (e.g. with `Reference Gate` and `DecisionRecord`) actually correct?",
+      "why": "`evaluate` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `DecisionRecord` (e.g. with `forgegate evaluate CLI Command` and `evaluate`) actually correct?",
+      "why": "`DecisionRecord` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Minimal ForgeGate CLI compatibility entry point.`, `ForgeGate CLI package.`, `Minimal deterministic ForgeGate evaluator compatibility layer.  This restores th` to the rest of the system?",
+      "why": "21 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

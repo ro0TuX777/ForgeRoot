@@ -1,0 +1,9 @@
+python3 -m forgeworks.cli normalize --domain it_ops_runbook --raw ingest/it_ops_runbook/batch_003_adv --out packs/it_ops_runbook/test_batch_003_adv
+python3 -m forgeworks.cli validate --workcell packs/it_ops_runbook/test_batch_003_adv
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_003_adv --mode supervised --out results/ops_batch_003_adv --drift-plan packs/it_ops_runbook/test_batch_003_adv/drift/drift_plan.json
+python3 -m forgeworks.cli score --results results/ops_batch_003_adv --oracle packs/it_ops_runbook/test_batch_003_adv/oracle/expectations.jsonl --scoring packs/it_ops_runbook/test_batch_003_adv/scoring/scoring.json
+python3 -m forgeworks.cli report --results results/ops_batch_003_adv --score results/ops_batch_003_adv/score.json --out results/ops_batch_003_adv/report.md
+python3 (generate expected_vs_actual + penalty summary)
+python3 -m forgeworks.cli normalize --domain it_ops_runbook --raw ingest/it_ops_runbook/batch_003_adv_bad --out /tmp/fw_bad_ops_adv (expected failure)
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_003_adv --mode supervised --out results/ops_batch_003_adv_repeat --drift-plan packs/it_ops_runbook/test_batch_003_adv/drift/drift_plan.json
+shasum -a 256 results/ops_batch_003_adv/decision_ledger.jsonl results/ops_batch_003_adv/approval_records.jsonl results/ops_batch_003_adv_repeat/decision_ledger.jsonl results/ops_batch_003_adv_repeat/approval_records.jsonl results/ops_batch_003_adv/score.json

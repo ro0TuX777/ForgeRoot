@@ -1,0 +1,8 @@
+pipelineId: "forgescaffold_global_ops_v10"
+links:
+  - id: forgescaffold.build_global_catalog
+  - id: forgescaffold.build_all_caches
+  - id: forgescaffold.status_global
+  - id: forgescaffold.query_global_evidence
+    config:
+      limit: 10

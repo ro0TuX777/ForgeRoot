@@ -1,0 +1,3 @@
+results/ops_batch_001_happy2/*
+results/ops_batch_001_happy2_repeat/*
+verification_packets/domain2_batch1_happy_003/*

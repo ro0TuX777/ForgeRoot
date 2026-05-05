@@ -1,0 +1,1 @@
+{"action_is_destructive":true,"forbidden_actions":["restart_service","config_change"],"require_approval":true}

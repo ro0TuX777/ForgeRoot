@@ -1,0 +1,2 @@
+2026-02-27 09:12:01Z ALERT: latency elevated on staging service
+2026-02-27 09:15:17Z INFO: no error spike observed

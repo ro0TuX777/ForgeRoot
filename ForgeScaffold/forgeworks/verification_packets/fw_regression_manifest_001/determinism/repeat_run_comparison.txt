@@ -1,0 +1,1 @@
+Regression-check executed against frozen manifest. See commands/terminal_output.txt for details.

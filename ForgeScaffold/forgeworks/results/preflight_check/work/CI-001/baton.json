@@ -1,0 +1,22 @@
+{
+  "ticket_id": "CI-001",
+  "ticket_intent": "Fix CI failure: tests/test_alpha.py::test_safe_fix",
+  "hypothesis_path": "results/preflight_check/work/CI-001/CI-001_hypothesis.json",
+  "spec_contract_path": "results/preflight_check/work/CI-001/CI-001_spec_contract.yaml",
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 99,
+  "retry_count": 3,
+  "max_retries": 3,
+  "last_error_log": "ForgeGate Security Blocked Sandbox Execution:\nReason: [{'id': 'require_workspace_jail', 'type': 'constraint', 'effect': 'deny'}]",
+  "sandbox_directory": "results/preflight_check/work/CI-001/CI-001_sandbox",
+  "phase_timing": {
+    "Scout": 54.904,
+    "Legislator": 53.312,
+    "Builder": 54.297,
+    "Builder_retry1": 57.353,
+    "Builder_retry2": 53.824
+  },
+  "phase_tokens": {}
+}

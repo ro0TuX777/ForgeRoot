@@ -1,0 +1,7 @@
+Ledger and approval hashes match between fix run and repeat run.
+
+$(shasum -a 256 results/ops_batch_002_gov_fix/decision_ledger.jsonl)
+$(shasum -a 256 results/ops_batch_002_gov_fix_repeat/decision_ledger.jsonl)
+
+$(shasum -a 256 results/ops_batch_002_gov_fix/approval_records.jsonl)
+$(shasum -a 256 results/ops_batch_002_gov_fix_repeat/approval_records.jsonl)

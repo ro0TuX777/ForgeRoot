@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+# scripts/forge-assess <project_id>
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/setup_env.sh"
+
+PROJECT_ID="${1:-}"
+if [[ -z "$PROJECT_ID" ]]; then
+  echo "Usage: ./scripts/forge-assess <project_id>"
+  exit 1
+fi
+
+SYSTEM_CATALOG="$FORGE_ROOT/DAWN/projects/$PROJECT_ID/artifacts/forgescaffold.system_catalog/system_catalog.json"
+if [[ ! -f "$SYSTEM_CATALOG" ]]; then
+  echo "Error: system catalog not found at $SYSTEM_CATALOG"
+  echo "Run ./scripts/forge-scan $PROJECT_ID first."
+  exit 1
+fi
+
+OUT_DIR="$FORGE_ROOT/DAWN/projects/$PROJECT_ID/artifacts/concord.danger_map"
+mkdir -p "$OUT_DIR"
+
+echo "Running CONCORD governance assessment shim for project: $PROJECT_ID"
+
+PROJECT_ID="$PROJECT_ID" SYSTEM_CATALOG="$SYSTEM_CATALOG" OUT_DIR="$OUT_DIR" "$FORGE_PYTHON" - <<'PY'
+import json
+import os
+from dataclasses import asdict
+from pathlib import Path
+
+from dawn.concord.scanner_kernel import build_danger_map
+
+project_id = os.environ["PROJECT_ID"]
+catalog_path = Path(os.environ["SYSTEM_CATALOG"])
+out_dir = Path(os.environ["OUT_DIR"])
+
+catalog = json.loads(catalog_path.read_text())
+units = catalog.get("units", [])
+unit_ids = {u.get("id", "") for u in units}
+
+# Current scanner kernel is library-only and expects typed observations.
+# Shim behavior: produce a valid DangerMap envelope and attach heuristic flags
+# from ForgeScaffold catalog metadata so teams can iterate quickly.
+danger_map = build_danger_map(
+    scan_id=f"{project_id}-scan",
+    single_point_findings=[],
+    compound_candidates=[],
+)
+
+heuristic_flags = []
+if any(uid.startswith("external.subprocess") for uid in unit_ids):
+    heuristic_flags.append("subprocess_usage_detected")
+if any(uid.startswith("external.requests") or uid.startswith("external.httpx") for uid in unit_ids):
+    heuristic_flags.append("external_http_dependency_detected")
+if any(uid.startswith("datastore.") for uid in unit_ids):
+    heuristic_flags.append("datastore_surface_detected")
+
+report = asdict(danger_map)
+report["project_id"] = project_id
+report["source_system_catalog"] = str(catalog_path)
+report["unit_count"] = len(units)
+report["heuristic_flags"] = heuristic_flags
+
+out_path = out_dir / "danger_map.json"
+out_path.write_text(json.dumps(report, indent=2))
+print(str(out_path))
+PY
+
+echo "Assessment complete."
+echo "Danger map path: $OUT_DIR/danger_map.json"

@@ -1,0 +1,19 @@
+{
+  "name": "replay determinism",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1"
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "read",
+    "actor_id": "agent-8",
+    "params": {"path": "README.md"},
+    "nonce": "volatile"
+  },
+  "signals": {"schema_version": "0.1", "values": {"latency": 5}},
+  "expected": {
+    "decision": "ALLOW",
+    "must_include": ["decision_id", "input_hash"]
+  }
+}

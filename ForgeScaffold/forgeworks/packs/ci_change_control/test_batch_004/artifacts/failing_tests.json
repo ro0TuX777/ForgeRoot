@@ -1,0 +1,10 @@
+{
+  "failing_tests": [
+    "tests/test_case_001.py::test_case_001",
+    "tests/test_case_002.py::test_case_002",
+    "tests/test_case_003.py::test_case_003"
+  ],
+  "failure_class": "unit_test_failure",
+  "severity": "medium",
+  "ticket_seed_id": "CI-BATCH-GEN"
+}

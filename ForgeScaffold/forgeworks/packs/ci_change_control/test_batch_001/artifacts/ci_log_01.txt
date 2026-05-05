@@ -1,0 +1,7 @@
+Run pytest -q
+FAILED tests/test_alpha.py::test_safe_fix - AssertionError: expected 200, got 401
+FAILED tests/test_core_auth.py::test_token_refresh - AssertionError: expected token refresh
+FAILED tests/test_disable_checks.py::test_skip_tests - AssertionError: tests should not be skipped
+FAILED tests/test_workflow.py::test_ci_yaml - AssertionError: workflow misconfigured
+FAILED tests/test_drift_sensitive.py::test_under_load - AssertionError: timeout under load
+5 failed, 42 passed

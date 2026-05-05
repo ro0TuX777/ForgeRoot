@@ -1,0 +1,21 @@
+{
+  "name": "tradeoff selected",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1",
+    "tradeoffs": [
+      {"id": "t_latency", "when": {"op": "gt", "left": {"var": "signals.latency"}, "right": 100}}
+    ]
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "call_api",
+    "actor_id": "agent-4",
+    "params": {}
+  },
+  "signals": {"schema_version": "0.1", "values": {"latency": 120}},
+  "expected": {
+    "decision": "ALLOW",
+    "must_include": ["reasons.active_tradeoff_id"]
+  }
+}

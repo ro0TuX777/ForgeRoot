@@ -1,0 +1,764 @@
+{
+  "nodes": [
+    {
+      "id": "obs_define_schema_run",
+      "label": "obs.define.schema.run",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/obs_define_schema/run.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "obs_instrument_patchset_run",
+      "label": "obs.instrument.patchset.run",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/obs_instrument_patchset/run.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "package_evidence_run",
+      "label": "package.evidence.run",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/package_evidence/run.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "system_catalog_run",
+      "label": "system.catalog.run",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/system_catalog/run.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "test_matrix_run",
+      "label": "test.matrix.run",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/test_matrix/run.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "verify_post_apply_run",
+      "label": "verify.post.apply.run",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/verify_post_apply/run.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "forgescaffold_adapter",
+      "label": "forgescaffold.adapter",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_adapter.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "forgescaffold_coding_context",
+      "label": "forgescaffold.coding.context",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_coding_context.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "forgescaffold_test_validator",
+      "label": "forgescaffold.test.validator",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_test_validator.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "scaffolding_init",
+      "label": "scaffolding.init",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/__init__.py",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "policy_trusted_signers",
+      "label": "policy.trusted.signers",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/policy.trusted_signers.yaml",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "trusted_signers_yaml",
+      "label": "trusted.signers.yaml",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/trusted_signers.yaml",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "apply_patchset_link_yaml",
+      "label": "apply.patchset.link.yaml",
+      "type": "source_file",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/apply_patchset/link.yaml",
+      "attrs": {
+        "role": "chunk_02_input"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__apply_patchset",
+      "label": "forgescaffold.apply_patchset",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.apply_patchset/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.apply_patchset"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__build_all_caches",
+      "label": "forgescaffold.build_all_caches",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.build_all_caches/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.build_all_caches"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__build_global_catalog",
+      "label": "forgescaffold.build_global_catalog",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.build_global_catalog/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.build_global_catalog"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__build_index_cache",
+      "label": "forgescaffold.build_index_cache",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.build_index_cache/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.build_index_cache"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__gate_patchset_approval",
+      "label": "forgescaffold.gate_patchset_approval",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.gate_patchset_approval/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.gate_patchset_approval"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__generate_approval_template",
+      "label": "forgescaffold.generate_approval_template",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.generate_approval_template/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.generate_approval_template"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__generate_review_packet",
+      "label": "forgescaffold.generate_review_packet",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.generate_review_packet/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.generate_review_packet"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__prune_evidence",
+      "label": "forgescaffold.prune_evidence",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.prune_evidence/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.prune_evidence"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__query_evidence_index",
+      "label": "forgescaffold.query_evidence_index",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.query_evidence_index/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.query_evidence_index"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__query_global_evidence",
+      "label": "forgescaffold.query_global_evidence",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.query_global_evidence/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.query_global_evidence"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__sign_evidence",
+      "label": "forgescaffold.sign_evidence",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.sign_evidence/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.sign_evidence"
+      }
+    },
+    {
+      "id": "link_spec_forgescaffold__status",
+      "label": "forgescaffold.status",
+      "type": "dawn_link_spec",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/forgescaffold.status/link.yaml",
+      "attrs": {
+        "metadata_name": "forgescaffold.status"
+      }
+    },
+    {
+      "id": "art_log_envelope_schema",
+      "label": "forgescaffold.log_envelope.schema.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/obs_define_schema/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.log_envelope.schema.json"
+      }
+    },
+    {
+      "id": "art_obs_recommendations",
+      "label": "forgescaffold.observability_recommendations.md",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/obs_define_schema/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.observability_recommendations.md"
+      }
+    },
+    {
+      "id": "art_instr_patchset",
+      "label": "forgescaffold.instrumentation.patchset.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/obs_instrument_patchset/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.instrumentation.patchset.json"
+      }
+    },
+    {
+      "id": "art_system_catalog",
+      "label": "forgescaffold.system_catalog.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/system_catalog/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.system_catalog.json"
+      }
+    },
+    {
+      "id": "art_test_matrix_yaml",
+      "label": "forgescaffold.test_matrix.yaml",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/test_matrix/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.test_matrix.yaml"
+      }
+    },
+    {
+      "id": "art_test_harness_manifest",
+      "label": "forgescaffold.test_harness.manifest.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/test_matrix/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.test_harness.manifest.json"
+      }
+    },
+    {
+      "id": "art_verify_report",
+      "label": "forgescaffold.verification_report.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/verify_post_apply/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.verification_report.json"
+      }
+    },
+    {
+      "id": "art_test_results_manifest",
+      "label": "forgescaffold.test_results.manifest.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/verify_post_apply/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.test_results.manifest.json"
+      }
+    },
+    {
+      "id": "art_evidence_pack_manifest",
+      "label": "forgescaffold.evidence_pack.manifest.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/package_evidence/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.evidence_pack.manifest.json"
+      }
+    },
+    {
+      "id": "art_evidence_manifest_alias",
+      "label": "forgescaffold.evidence_manifest.json",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/package_evidence/run.py",
+      "attrs": {
+        "artifact_id": "forgescaffold.evidence_manifest.json"
+      }
+    },
+    {
+      "id": "bund_dawn_project",
+      "label": "dawn.project.bundle",
+      "type": "artifact_kind",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/obs_instrument_patchset/run.py",
+      "attrs": {
+        "artifact_id": "dawn.project.bundle"
+      }
+    },
+    {
+      "id": "dawn_registry_schemas",
+      "label": "dawn.runtime.schemas.SCHEMA_REGISTRY",
+      "type": "runtime_schema_registry_hook",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/links/obs_define_schema/run.py",
+      "attrs": {
+        "module": "dawn.runtime.schemas"
+      }
+    },
+    {
+      "id": "class_ForgeScaffoldCodingContext",
+      "label": "ForgeScaffoldCodingContext",
+      "type": "python_class",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_coding_context.py",
+      "attrs": {
+        "exported_public": true
+      }
+    },
+    {
+      "id": "fn_generate_test_matrix",
+      "label": "generate_test_matrix",
+      "type": "python_function",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_test_validator.py",
+      "attrs": {
+        "exported_public": true
+      }
+    },
+    {
+      "id": "fn_validate_code_proposal",
+      "label": "validate_code_proposal",
+      "type": "python_function",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_test_validator.py",
+      "attrs": {
+        "exported_public": true
+      }
+    },
+    {
+      "id": "fn_create_patchset",
+      "label": "create_patchset",
+      "type": "python_function",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_adapter.py",
+      "attrs": {
+        "exported_public": true
+      }
+    },
+    {
+      "id": "fn_run_apply_pipeline",
+      "label": "run_apply_pipeline",
+      "type": "python_function",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_adapter.py",
+      "attrs": {
+        "exported_public": false
+      }
+    },
+    {
+      "id": "fn_stamp_ticket_event",
+      "label": "stamp_ticket_event",
+      "type": "python_function",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_adapter.py",
+      "attrs": {
+        "exported_public": true
+      }
+    },
+    {
+      "id": "fn_get_ticket_evidence",
+      "label": "get_ticket_evidence",
+      "type": "python_function",
+      "file": "F:/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/runner/scaffolding/forgescaffold_adapter.py",
+      "attrs": {
+        "exported_public": true
+      }
+    },
+    {
+      "id": "policy_signer_sig1",
+      "label": "sig1",
+      "type": "trusted_signer_entry",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/policy.trusted_signers.yaml",
+      "attrs": {
+        "defined_in_policy": true
+      }
+    },
+    {
+      "id": "policy_signer_sig2",
+      "label": "sig2",
+      "type": "trusted_signer_entry",
+      "file": "F:/ForgedRoot/ForgeScaffold/dawn_extensions/policy.trusted_signers.yaml",
+      "attrs": {
+        "defined_in_policy": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "obs_define_schema_run",
+      "target": "dawn_registry_schemas",
+      "relation": "conditionally_registers_json_schema_in_registry",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "register_schema() loads JSON and assigns SCHEMA_REGISTRY[schema_name]"
+    },
+    {
+      "source": "obs_define_schema_run",
+      "target": "art_log_envelope_schema",
+      "relation": "sandbox_publish_primary_output",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "sandbox.publish('forgescaffold.log_envelope.schema.json', …)"
+    },
+    {
+      "source": "obs_define_schema_run",
+      "target": "art_obs_recommendations",
+      "relation": "sandbox_publish_text_output",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "sandbox.publish_text observability markdown"
+    },
+    {
+      "source": "obs_instrument_patchset_run",
+      "target": "art_system_catalog",
+      "relation": "artifact_store_load_required",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "_load_artifact(artifact_store, \"forgescaffold.system_catalog.json\")"
+    },
+    {
+      "source": "obs_instrument_patchset_run",
+      "target": "bund_dawn_project",
+      "relation": "artifact_store_load_required",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "_load_artifact(dawn.project.bundle)"
+    },
+    {
+      "source": "obs_instrument_patchset_run",
+      "target": "dawn_registry_schemas",
+      "relation": "conditionally_registers_json_schema_in_registry",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "register_schema forgescaffold.instrumentation.patchset"
+    },
+    {
+      "source": "obs_instrument_patchset_run",
+      "target": "art_instr_patchset",
+      "relation": "sandbox_publish_patchset",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "sandbox.publish \"forgescaffold.instrumentation.patchset.json\""
+    },
+    {
+      "source": "system_catalog_run",
+      "target": "dawn_registry_schemas",
+      "relation": "conditionally_registers_json_schema_in_registry",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "register_schema forgescaffold.system_catalog"
+    },
+    {
+      "source": "system_catalog_run",
+      "target": "art_system_catalog",
+      "relation": "sandbox_publish_system_catalog_json",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "sandbox.publish system_catalog artifact"
+    },
+    {
+      "source": "test_matrix_run",
+      "target": "art_system_catalog",
+      "relation": "load_artifact_from_store",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "load_artifact(system_catalog)"
+    },
+    {
+      "source": "test_matrix_run",
+      "target": "art_test_matrix_yaml",
+      "relation": "sandbox_publish_yaml_matrix",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "publish_text forgescaffold.test_matrix.yaml"
+    },
+    {
+      "source": "test_matrix_run",
+      "target": "art_test_harness_manifest",
+      "relation": "sandbox_publish_harness_manifest",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "sandbox.publish test_harness.manifest"
+    },
+    {
+      "source": "verify_post_apply_run",
+      "target": "art_test_matrix_yaml",
+      "relation": "loads_test_matrix_yaml",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "_load_artifact(\"forgescaffold.test_matrix.yaml\")"
+    },
+    {
+      "source": "verify_post_apply_run",
+      "target": "art_verify_report",
+      "relation": "sandbox_publish_verification_report",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "publish verification_report.json"
+    },
+    {
+      "source": "verify_post_apply_run",
+      "target": "art_test_results_manifest",
+      "relation": "sandbox_publish_test_logs_manifest",
+      "confidence": 0.98,
+      "kind": "EXTRACTED",
+      "evidence": "publish test_results/manifest.json"
+    },
+    {
+      "source": "package_evidence_run",
+      "target": "art_evidence_pack_manifest",
+      "relation": "creates_aggregate_evidence_manifest",
+      "confidence": 0.96,
+      "kind": "EXTRACTED",
+      "evidence": "loops artifact_ids and writes evidence_pack/manifest.json"
+    },
+    {
+      "source": "link_spec_forgescaffold__apply_patchset",
+      "target": "art_instr_patchset",
+      "relation": "link_spec_requires_artifact_id",
+      "confidence": 0.97,
+      "kind": "EXTRACTED",
+      "evidence": "requires instrumentation.patchset -> forgescaffold.instrumentation.patchset.json"
+    },
+    {
+      "source": "link_spec_forgescaffold__apply_patchset",
+      "target": "bund_dawn_project",
+      "relation": "link_spec_requires_bundle_artifact_id",
+      "confidence": 0.97,
+      "kind": "EXTRACTED",
+      "evidence": "requires dawn.project.bundle"
+    },
+    {
+      "source": "link_spec_forgescaffold__sign_evidence",
+      "target": "art_evidence_manifest_alias",
+      "relation": "link_spec_requires_artifact_id",
+      "confidence": 0.97,
+      "kind": "EXTRACTED",
+      "evidence": "requires forgescaffold.evidence_manifest.json"
+    },
+    {
+      "source": "link_spec_forgescaffold__gate_patchset_approval",
+      "target": "art_instr_patchset",
+      "relation": "link_spec_requires_artifact_id",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "gate requires patchset"
+    },
+    {
+      "source": "link_spec_forgescaffold__generate_review_packet",
+      "target": "art_system_catalog",
+      "relation": "link_spec_optional_artifact_dependency",
+      "confidence": 0.9,
+      "kind": "EXTRACTED",
+      "evidence": "optional forgescaffold.system_catalog.json path"
+    },
+    {
+      "source": "forgescaffold_coding_context",
+      "target": "class_ForgeScaffoldCodingContext",
+      "relation": "defines_symbol",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": "ForgeScaffoldCodingContext class declaration"
+    },
+    {
+      "source": "class_ForgeScaffoldCodingContext",
+      "target": "system_catalog_run",
+      "relation": "dynamic_import_collects_catalog_conceptually",
+      "confidence": 0.74,
+      "kind": "INFERRED",
+      "evidence": "_import_fs_module target forgescaffold.system_catalog parallels system_catalog/link"
+    },
+    {
+      "source": "forgescaffold_test_validator",
+      "target": "fn_generate_test_matrix",
+      "relation": "defines_symbol",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": ""
+    },
+    {
+      "source": "forgescaffold_test_validator",
+      "target": "fn_validate_code_proposal",
+      "relation": "defines_symbol",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": ""
+    },
+    {
+      "source": "scaffolding_init",
+      "target": "class_ForgeScaffoldCodingContext",
+      "relation": "re_exports",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": "__init__ import"
+    },
+    {
+      "source": "scaffolding_init",
+      "target": "fn_generate_test_matrix",
+      "relation": "re_exports",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": ""
+    },
+    {
+      "source": "scaffolding_init",
+      "target": "fn_validate_code_proposal",
+      "relation": "re_exports",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": ""
+    },
+    {
+      "source": "scaffolding_init",
+      "target": "fn_create_patchset",
+      "relation": "re_exports",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": ""
+    },
+    {
+      "source": "scaffolding_init",
+      "target": "fn_stamp_ticket_event",
+      "relation": "re_exports",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": ""
+    },
+    {
+      "source": "scaffolding_init",
+      "target": "fn_get_ticket_evidence",
+      "relation": "re_exports",
+      "confidence": 0.99,
+      "kind": "EXTRACTED",
+      "evidence": ""
+    },
+    {
+      "source": "fn_create_patchset",
+      "target": "art_instr_patchset",
+      "relation": "writes_related_patchset_json_workspace",
+      "confidence": 0.82,
+      "kind": "INFERRED",
+      "evidence": "instrumentation.patchset.json path naming mirrors artifact naming"
+    },
+    {
+      "source": "policy_trusted_signers",
+      "target": "policy_signer_sig1",
+      "relation": "documents_trusted_identity",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "trusted_signers[0].label \"sig1\""
+    },
+    {
+      "source": "policy_trusted_signers",
+      "target": "policy_signer_sig2",
+      "relation": "documents_trusted_identity",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "trusted_signers[1].label \"sig2\""
+    },
+    {
+      "source": "trusted_signers_yaml",
+      "target": "policy_signer_sig1",
+      "relation": "documents_trusted_identity",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "mirrors identical trusted_signers list"
+    },
+    {
+      "source": "trusted_signers_yaml",
+      "target": "policy_signer_sig2",
+      "relation": "documents_trusted_identity",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "mirrors identical trusted_signers list"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "he_obs_define_outputs",
+      "label": "obs_define_schema_publish_pair",
+      "nodes": [
+        "obs_define_schema_run",
+        "art_log_envelope_schema",
+        "art_obs_recommendations"
+      ],
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "run() publishes schema JSON and recommendations markdown"
+    },
+    {
+      "id": "he_obs_instrument_consumer_graph",
+      "label": "instrumentation_patchset_data_sources",
+      "nodes": [
+        "obs_instrument_patchset_run",
+        "art_system_catalog",
+        "bund_dawn_project",
+        "art_instr_patchset"
+      ],
+      "confidence": 0.94,
+      "kind": "EXTRACTED",
+      "evidence": "reads catalog bundle then publishes instrumentation.patchset.json"
+    },
+    {
+      "id": "he_matrix_then_verify_L0_L1",
+      "label": "test_matrix_feeds_verify_post_apply",
+      "nodes": [
+        "test_matrix_run",
+        "verify_post_apply_run",
+        "art_test_matrix_yaml",
+        "art_verify_report"
+      ],
+      "confidence": 0.93,
+      "kind": "EXTRACTED",
+      "evidence": "verify reads matrix yaml; evaluates L0_contract and L1_slice commands only"
+    },
+    {
+      "id": "he_scaffolding_public_bundle",
+      "label": "runner_scaffolding_exports",
+      "nodes": [
+        "scaffolding_init",
+        "class_ForgeScaffoldCodingContext",
+        "fn_generate_test_matrix",
+        "fn_validate_code_proposal",
+        "fn_create_patchset",
+        "fn_stamp_ticket_event",
+        "fn_get_ticket_evidence"
+      ],
+      "confidence": 0.97,
+      "kind": "EXTRACTED",
+      "evidence": "__all__ aggregates coding context validator adapter helpers"
+    }
+  ]
+}

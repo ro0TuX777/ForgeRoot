@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/ticket.v0_1.json",
+  "title": "ForgeWorks Ticket",
+  "type": "object",
+  "required": ["schema_version", "ticket_id", "domain", "priority", "type", "inputs", "expected_outcome_ref"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "ticket_id": {"type": "string"},
+    "domain": {"type": "string"},
+    "priority": {"type": "string"},
+    "type": {"type": "string"},
+    "inputs": {"type": "object"},
+    "expected_outcome_ref": {"type": "string"}
+  },
+  "additionalProperties": true
+}

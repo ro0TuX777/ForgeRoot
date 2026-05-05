@@ -1,0 +1,21 @@
+{
+  "ticket_id": "CI-002",
+  "ticket_intent": "Fix CI failure: tests/test_core_auth.py::test_token_refresh",
+  "hypothesis_path": "results/test_batch_006_live/work/CI-002/CI-002_hypothesis.json",
+  "spec_contract_path": "results/test_batch_006_live/work/CI-002/CI-002_spec_contract.yaml",
+  "builder_artifact_path": null,
+  "sandbox_receipt_path": null,
+  "judge_verdict_path": null,
+  "current_phase": 5,
+  "retry_count": 0,
+  "max_retries": 3,
+  "last_error_log": null,
+  "sandbox_directory": "results/test_batch_006_live/work/CI-002/workspace/CI-002_sandbox",
+  "phase_timing": {
+    "Scout": 4.363,
+    "Legislator": 6.56,
+    "Builder": 7.35,
+    "Deployer": 0.001
+  },
+  "phase_tokens": {}
+}

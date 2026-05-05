@@ -1,0 +1,37 @@
+### validate
+Validation: OK
+Workcell: packs/it_ops_runbook/test_batch_001
+Schemas checked: ticket, artifact_index, signals, run_config
+workcell_hash: b5f2d0d2e31f304851d364a352d7298b42ff354490dc48411c8a2eb54563f4f0
+### run
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_001
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_001_live/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_001_live/approval_records.jsonl
+workcell_hash: b5f2d0d2e31f304851d364a352d7298b42ff354490dc48411c8a2eb54563f4f0
+### score
+Score: OK
+Results: results/ops_batch_001_live
+Oracle: packs/it_ops_runbook/test_batch_001/oracle/expectations.jsonl
+Scoring config: packs/it_ops_runbook/test_batch_001/scoring/scoring.json
+Total score: 99.5
+Pass: true
+score.json: results/ops_batch_001_live/score.json
+### report
+Report: OK
+Results: results/ops_batch_001_live
+Markdown report: results/ops_batch_001_live/report.md
+### repeat_run
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_001
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_001_live_repeat/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_001_live_repeat/approval_records.jsonl
+workcell_hash: b5f2d0d2e31f304851d364a352d7298b42ff354490dc48411c8a2eb54563f4f0

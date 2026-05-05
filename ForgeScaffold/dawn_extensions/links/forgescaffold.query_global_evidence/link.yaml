@@ -1,0 +1,20 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.query_global_evidence
+spec:
+  description: "Query evidence across projects using global catalog"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.evidence_global_query_results.json"
+      path: "evidence_global_query_results.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

@@ -1,0 +1,26 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.build_global_catalog
+spec:
+  description: "Build a deterministic global catalog of per-project evidence"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.global_catalog.json"
+      path: "evidence/global/catalog.json"
+      schema:
+        type: "json"
+      optional: true
+    - artifactId: "forgescaffold.global_catalog.signature.json"
+      path: "evidence/global/catalog.signature.json"
+      schema:
+        type: "json"
+      optional: true
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

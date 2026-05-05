@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+# scripts/azul-verify --domain <domain> --diff <patch_file> --summary "<text>"
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/setup_env.sh"
+
+DOMAIN="ci_change_control"
+SUMMARY="Manual verification request"
+DIFF_FILE=""
+
+while [[ "$#" -gt 0 ]]; do
+  case "$1" in
+    --domain)
+      DOMAIN="${2:-}"
+      shift 2
+      ;;
+    --diff)
+      DIFF_FILE="${2:-}"
+      shift 2
+      ;;
+    --summary)
+      SUMMARY="${2:-}"
+      shift 2
+      ;;
+    *)
+      echo "Unknown parameter: $1"
+      echo "Usage: ./scripts/azul-verify --domain <domain> --diff <patch_file> --summary \"<text>\""
+      exit 1
+      ;;
+  esac
+done
+
+if [[ -z "$DIFF_FILE" ]]; then
+  echo "Error: --diff is required."
+  exit 1
+fi
+
+if [[ ! -f "$DIFF_FILE" ]]; then
+  echo "Error: diff file not found at $DIFF_FILE"
+  exit 1
+fi
+
+echo "Submitting change to Azul verification..."
+
+PAYLOAD="$("$FORGE_PYTHON" -c 'import json, sys; print(json.dumps({"diff": open(sys.argv[1], "r").read()}))' "$DIFF_FILE")"
+
+# Best-effort changed-file extraction from unified diffs (Bash 3 compatible).
+TARGET_FILES=()
+while IFS= read -r line; do
+  [[ -z "$line" ]] && continue
+  TARGET_FILES+=("$line")
+done < <(grep -E '^\+\+\+ b/' "$DIFF_FILE" | sed -E 's/^\+\+\+ b\///' | awk '!seen[$0]++')
+
+cd "$FORGE_ROOT/Azul"
+
+CMD=("$FORGE_PYTHON" -m azul.adapters.cli --summary "$SUMMARY" --domain "$DOMAIN" --payload "$PAYLOAD")
+if [[ "${#TARGET_FILES[@]}" -gt 0 ]]; then
+  CMD+=(--files "${TARGET_FILES[@]}")
+fi
+
+"${CMD[@]}"
+
+echo "Azul verification request submitted."

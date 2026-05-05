@@ -1,0 +1,19 @@
+{
+  "name": "redaction applied",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1",
+    "redactions": ["params.secret"]
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "send",
+    "actor_id": "agent-9",
+    "params": {"secret": "token"}
+  },
+  "signals": {"schema_version": "0.1", "values": {}},
+  "expected": {
+    "decision": "ALLOW",
+    "must_include": ["redactions_applied"]
+  }
+}

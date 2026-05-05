@@ -1,0 +1,18 @@
+{
+  "fixture_provenance": "representative_hand_authored",
+  "subsystem": "Azul",
+  "actor_id": "azul.safety_engine",
+  "verdict": "deny",
+  "reason": "unsafe content category exceeded threshold",
+  "tenant_id": "tenant-001",
+  "customer_boundary": "customer-a",
+  "data_residency": "NZ",
+  "policy_id": "azul-safety-v1",
+  "policy_hash": "sha256:azul-verdict-policy",
+  "safety_score": 0.31,
+  "flagged_categories": ["unsafe_instruction"],
+  "evidence_refs": ["azul://verdict/summary-001"],
+  "frameworks": ["SOC2", "NIST_CSF_2_0"],
+  "environment": "local",
+  "deployment_id": "runtime-fixture"
+}

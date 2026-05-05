@@ -1,0 +1,7 @@
+{"ticket_id": "azul-cdf62706", "xp": 19, "ticket_type": "ci_gate", "domain": "system_operations", "score": 95.0, "priority": "normal", "status": "COMPLETED", "timestamp": "2026-03-12T04:02:46.860111+00:00"}
+{"ticket_id": "azul-5d74c86d", "xp": 19, "ticket_type": "ci_gate", "domain": "system_operations", "score": 95.0, "priority": "normal", "status": "COMPLETED", "timestamp": "2026-03-12T04:03:01.256123+00:00"}
+{"ticket_id": "azul-92ee2e1e", "xp": 19, "ticket_type": "ci_gate", "domain": "ci_change_control", "score": 95.0, "priority": "normal", "status": "COMPLETED", "timestamp": "2026-03-12T04:05:29.106364+00:00"}
+{"ticket_id": "azul-4cf23ff0", "xp": 19, "ticket_type": "ci_gate", "domain": "system_operations", "score": 95.0, "priority": "normal", "status": "COMPLETED", "timestamp": "2026-03-12T04:16:06.425900+00:00"}
+{"ticket_id": "azul-c281a73b", "xp": 19, "ticket_type": "ci_gate", "domain": "system_operations", "score": 95.0, "priority": "normal", "status": "COMPLETED", "timestamp": "2026-03-12T04:16:43.090135+00:00"}
+{"ticket_id": "azul-17b7cd03", "xp": 19, "ticket_type": "ci_gate", "domain": "system_operations", "score": 95.0, "priority": "normal", "status": "COMPLETED", "timestamp": "2026-03-12T04:17:49.909441+00:00"}
+{"ticket_id": "azul-ef947816", "xp": 19, "ticket_type": "ci_gate", "domain": "system_operations", "score": 95.0, "priority": "normal", "status": "COMPLETED", "timestamp": "2026-03-12T04:37:33.433614+00:00"}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/decision_record.v0_1.json",
+  "title": "ForgeGate DecisionRecord v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "gate_version",
+    "intent_id",
+    "intent_version",
+    "decision",
+    "decision_id",
+    "input_hash",
+    "reasons"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "gate_version": {"type": "string", "minLength": 1, "maxLength": 32},
+    "intent_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "intent_version": {"type": "string", "minLength": 1, "maxLength": 128},
+    "decision": {"type": "string", "enum": ["ALLOW", "ALLOW_WITH_MODS", "ESCALATE", "DENY"]},
+    "decision_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "reasons": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["triggered_rules"],
+      "properties": {
+        "triggered_rules": {
+          "type": "array",
+          "items": {"type": "object"},
+          "maxItems": 128
+        },
+        "active_tradeoff_id": {"type": "string"},
+        "boundary_result": {"type": "object"},
+        "budget_state": {"type": "object"}
+      }
+    },
+    "escalation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["channels", "required_payload_fields"],
+      "properties": {
+        "kind": {"type": "string"},
+        "channels": {"type": "array", "items": {"type": "string"}},
+        "required_payload_fields": {"type": "array", "items": {"type": "string"}},
+        "sla_minutes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "mods": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "param_overrides": {"type": "object", "additionalProperties": true},
+        "required_steps": {"type": "array", "items": {"type": "string"}},
+        "caps": {"type": "object", "additionalProperties": true}
+      }
+    },
+    "redactions_applied": {"type": "array", "items": {"type": "string"}}
+  }
+}

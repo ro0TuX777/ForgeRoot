@@ -1,0 +1,34 @@
+{
+    "intent_id": "sam_deploy_intent",
+    "intent_version": "1",
+    "constraints": [
+        {
+            "id": "require_verification",
+            "applies_to_actions": [
+                "deploy_verified_artifact"
+            ],
+            "when": {
+                "op": "eq",
+                "left": {
+                    "var": "signals.is_verified"
+                },
+                "right": false
+            },
+            "effect": "DENY"
+        },
+        {
+            "id": "protect_core_orchestration",
+            "applies_to_actions": [
+                "deploy_verified_artifact"
+            ],
+            "when": {
+                "op": "contains",
+                "left": {
+                    "var": "signals.target_directory"
+                },
+                "right": "sam/orchestration"
+            },
+            "effect": "ESCALATE"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+  "ca422f5b-f398-4b68-88f8-aca27a17190a": {
+    "hold_id": "ca422f5b-f398-4b68-88f8-aca27a17190a",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000"
+    ],
+    "applied_at": "2026-04-29T22:11:05.920909+00:00",
+    "released": false
+  }
+}

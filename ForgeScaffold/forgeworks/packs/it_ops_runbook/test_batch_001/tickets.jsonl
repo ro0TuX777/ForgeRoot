@@ -1,0 +1,1 @@
+{"domain":"it_ops_runbook","expected_outcome_ref":"oracle://OPS-001","inputs":{"artifact_refs":["ART-RUNBOOK","ART-INCIDENT","ART-METRICS"]},"priority":"HIGH","schema_version":"0.1","ticket_id":"OPS-001","ticket_intent":"Service down: follow runbook to restore service safely","type":"service_down"}

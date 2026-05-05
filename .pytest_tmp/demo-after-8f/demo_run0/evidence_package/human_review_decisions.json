@@ -1,0 +1,127 @@
+{
+  "events": [
+    {
+      "actor": {
+        "actor_id": "agent.solution_designer",
+        "actor_type": "agent",
+        "role": "solution_engineer"
+      },
+      "control_tags": [
+        "NZISM.CHANGE.HUMAN_APPROVAL",
+        "SOC2.CC8.1"
+      ],
+      "decision": {
+        "decision_type": "review",
+        "reason": "high_impact_infrastructure_design_requires_human_approval",
+        "risk_level": "high"
+      },
+      "event_id": "demo-evt-007",
+      "event_time": "2026-04-29T09:00:06Z",
+      "event_type": "agent.human_review_required",
+      "evidence": {
+        "assertion_classes": [
+          "FACT",
+          "RECOMMENDATION"
+        ],
+        "evidence_gaps": [
+          {
+            "blocking": true,
+            "gap_type": "customer_capacity_confirmation_required"
+          }
+        ],
+        "evidence_refs": [
+          "doc:veeam_integration#immutable-backup-targets",
+          "doc:nz_data_residency_policy#section-3-local-jurisdiction",
+          "doc:ransomware_resilience_playbook#air-gap-strategy",
+          "doc:msp_capacity_planning#2pb-to-10pb-scaling"
+        ]
+      },
+      "integrity": {
+        "event_hash": "d47dd33e5941ef9f029c1c5831a3de26b91a4ea6a1912d3226c4fb323c934c71",
+        "previous_hash": "acd8fea4d7d92607596eccb786e850a2ad693310fc97ace877a2ef856baeee26",
+        "signature": null,
+        "signing_key_id": null
+      },
+      "ledger_version": "0.1",
+      "payload": null,
+      "policy": {
+        "legal_hold": false,
+        "policy_hash": "sha256:policy_hash_placeholder",
+        "policy_id": "forgeroot_policy_nz_msp_v0.1",
+        "retention_class": "audit_7y"
+      },
+      "redaction_receipts": [],
+      "system_context": {
+        "deployment_id": "forgeroot-demo",
+        "environment": "local",
+        "source_module": "CONCORD"
+      },
+      "tenant": {
+        "customer_boundary": "synthetic_customer_a",
+        "data_residency": "NZ",
+        "tenant_id": "demo_msp_nz_001"
+      }
+    },
+    {
+      "actor": {
+        "actor_id": "human.lead_architect",
+        "actor_type": "human",
+        "role": "lead_architect"
+      },
+      "control_tags": [
+        "NZISM.CHANGE.HUMAN_APPROVAL",
+        "SOC2.CC8.1"
+      ],
+      "decision": {
+        "decision_type": "allow",
+        "reason": "architect_approved_2pb_design_with_conditions",
+        "risk_level": "low"
+      },
+      "event_id": "demo-evt-008",
+      "event_time": "2026-04-29T09:05:00Z",
+      "event_type": "human.approval_decision",
+      "evidence": {
+        "assertion_classes": [
+          "FACT",
+          "RECOMMENDATION"
+        ],
+        "evidence_gaps": [],
+        "evidence_refs": [
+          "doc:veeam_integration#immutable-backup-targets",
+          "doc:nz_data_residency_policy#section-3-local-jurisdiction",
+          "doc:ransomware_resilience_playbook#air-gap-strategy",
+          "doc:msp_capacity_planning#2pb-to-10pb-scaling"
+        ]
+      },
+      "integrity": {
+        "event_hash": "558929a22c84d5e72d6af51b5193bd8fa3b784714c73e01c3da33b6b29fc5ab7",
+        "previous_hash": "d47dd33e5941ef9f029c1c5831a3de26b91a4ea6a1912d3226c4fb323c934c71",
+        "signature": null,
+        "signing_key_id": null
+      },
+      "ledger_version": "0.1",
+      "payload": {
+        "approval_note": "Approved subject to: (1) final BOM review, (2) customer sign-off on capacity assumptions."
+      },
+      "policy": {
+        "legal_hold": false,
+        "policy_hash": "sha256:policy_hash_placeholder",
+        "policy_id": "forgeroot_policy_nz_msp_v0.1",
+        "retention_class": "audit_7y"
+      },
+      "redaction_receipts": [],
+      "system_context": {
+        "deployment_id": "forgeroot-demo",
+        "environment": "local",
+        "source_module": "CONCORD"
+      },
+      "tenant": {
+        "customer_boundary": "synthetic_customer_a",
+        "data_residency": "NZ",
+        "tenant_id": "demo_msp_nz_001"
+      }
+    }
+  ],
+  "generated_at": "2026-04-29T22:25:00.330816+00:00",
+  "total_human_review_events": 2
+}

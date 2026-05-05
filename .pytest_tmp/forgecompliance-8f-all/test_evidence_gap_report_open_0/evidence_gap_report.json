@@ -1,0 +1,72 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "frameworks": {
+    "NZISM": {
+      "coverage_percent": 60.0,
+      "covered": 3,
+      "gaps": 0,
+      "open_controls": [
+        {
+          "control_id": "NZISM.LOGGING.EVENT_CAPTURE",
+          "missing_event_types": [
+            "warden.llm_call_metadata"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        },
+        {
+          "control_id": "NZISM.CHANGE.HUMAN_APPROVAL",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        }
+      ],
+      "partial": 2
+    },
+    "SOC2": {
+      "coverage_percent": 20.0,
+      "covered": 1,
+      "gaps": 1,
+      "open_controls": [
+        {
+          "control_id": "SOC2.CC7.2",
+          "missing_event_types": [
+            "agent.human_review_required",
+            "azul.verdict_summary"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        },
+        {
+          "control_id": "SOC2.CC8.1",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        },
+        {
+          "control_id": "SOC2.CC2.2",
+          "missing_event_types": [
+            "agent.human_review_required"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        },
+        {
+          "control_id": "SOC2.CC4.1",
+          "missing_event_types": [
+            "forgegate.policy_evaluation"
+          ],
+          "missing_required_fields": [],
+          "status": "partial"
+        }
+      ],
+      "partial": 3
+    }
+  },
+  "generated_at": "2026-04-28T10:00:00Z",
+  "total_open_gaps": 6
+}

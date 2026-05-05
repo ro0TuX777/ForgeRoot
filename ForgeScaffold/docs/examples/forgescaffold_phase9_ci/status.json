@@ -1,0 +1,181 @@
+{
+  "latest_runs": [
+    {
+      "approval_id": "approval-2",
+      "approval_id_status": "consumed",
+      "approvers": [
+        "one",
+        "two"
+      ],
+      "bundle_content_sha256": "3db3090e6e5e440aac5a9c0555bcc6af369afdeee81135607e4e11241f5f11b1",
+      "evidence_pack_path": "/Users/vinsoncornejo/DAWN/projects/forgescaffold_phase9_ci/artifacts/forgescaffold.package_evidence/evidence_pack",
+      "lock_forced": false,
+      "lock_ttl_minutes": 30,
+      "manifest_hash": "4074c38574c00d9c950dfc5bd480a46c32dd58ba26305696d27472456e4247a4",
+      "patchset_id": "db5536dcbf88e2edc0c6c9ce97c6b79af3ba4ca95cad09065f288c4ffd01d0c5",
+      "pipeline_name": "forgescaffold_apply_v7_operational_runnable",
+      "review_packet_sha256": "bec4a5a6fa6c949421c7914fb8bda6adce2a10161888ace7ea9312ac97c8de26",
+      "risk_level": "medium",
+      "schema_version": "2.0.0",
+      "signature_count_required": 1,
+      "signature_count_valid": 2,
+      "signer_fingerprint": "7863759331d93277adafde101f98be514b3193542b3a9f5ed6da3579fcc988e8",
+      "signer_fingerprints": [
+        "7863759331d93277adafde101f98be514b3193542b3a9f5ed6da3579fcc988e8",
+        "529d36172b5cea9fb0c790ba8a3ce4a0c666ad5c751da7a03632425c6373c565"
+      ],
+      "status": "PASS",
+      "ticket": null,
+      "timestamp": "2026-02-20T21:10:24.782762Z",
+      "verification_mode": "runnable_only"
+    },
+    {
+      "approvers": [
+        "legacy"
+      ],
+      "patchset_id": "legacy",
+      "risk_level": "low",
+      "status": "PASS",
+      "timestamp": "2026-02-20T21:10:24.182462Z"
+    },
+    {
+      "approval_id": "approval-1",
+      "approval_id_status": "consumed",
+      "approvers": [
+        "one",
+        "two"
+      ],
+      "bundle_content_sha256": "3db3090e6e5e440aac5a9c0555bcc6af369afdeee81135607e4e11241f5f11b1",
+      "evidence_pack_path": "/Users/vinsoncornejo/DAWN/projects/forgescaffold_phase9_ci/artifacts/forgescaffold.package_evidence/evidence_pack",
+      "lock_forced": false,
+      "lock_ttl_minutes": 30,
+      "manifest_hash": "4074c38574c00d9c950dfc5bd480a46c32dd58ba26305696d27472456e4247a4",
+      "patchset_id": "db5536dcbf88e2edc0c6c9ce97c6b79af3ba4ca95cad09065f288c4ffd01d0c5",
+      "pipeline_name": "forgescaffold_apply_v7_operational_runnable",
+      "review_packet_sha256": "bec4a5a6fa6c949421c7914fb8bda6adce2a10161888ace7ea9312ac97c8de26",
+      "risk_level": "medium",
+      "schema_version": "2.0.0",
+      "signature_count_required": 1,
+      "signature_count_valid": 2,
+      "signer_fingerprint": "7863759331d93277adafde101f98be514b3193542b3a9f5ed6da3579fcc988e8",
+      "signer_fingerprints": [
+        "7863759331d93277adafde101f98be514b3193542b3a9f5ed6da3579fcc988e8",
+        "529d36172b5cea9fb0c790ba8a3ce4a0c666ad5c751da7a03632425c6373c565"
+      ],
+      "status": "PASS",
+      "ticket": null,
+      "timestamp": "2026-02-20T21:10:24.162797Z",
+      "verification_mode": "runnable_only"
+    },
+    {
+      "approval_id": "approval-2",
+      "approval_id_status": "consumed",
+      "approvers": [
+        "one",
+        "two"
+      ],
+      "bundle_content_sha256": "3db3090e6e5e440aac5a9c0555bcc6af369afdeee81135607e4e11241f5f11b1",
+      "evidence_pack_path": "/Users/vinsoncornejo/DAWN/projects/forgescaffold_phase9_ci/artifacts/forgescaffold.package_evidence/evidence_pack",
+      "lock_forced": false,
+      "lock_ttl_minutes": 30,
+      "manifest_hash": "4074c38574c00d9c950dfc5bd480a46c32dd58ba26305696d27472456e4247a4",
+      "patchset_id": "db5536dcbf88e2edc0c6c9ce97c6b79af3ba4ca95cad09065f288c4ffd01d0c5",
+      "pipeline_name": "forgescaffold_apply_v7_operational_runnable",
+      "review_packet_sha256": "bec4a5a6fa6c949421c7914fb8bda6adce2a10161888ace7ea9312ac97c8de26",
+      "risk_level": "medium",
+      "schema_version": "2.0.0",
+      "signature_count_required": 1,
+      "signature_count_valid": 2,
+      "signer_fingerprint": "7863759331d93277adafde101f98be514b3193542b3a9f5ed6da3579fcc988e8",
+      "signer_fingerprints": [
+        "7863759331d93277adafde101f98be514b3193542b3a9f5ed6da3579fcc988e8",
+        "529d36172b5cea9fb0c790ba8a3ce4a0c666ad5c751da7a03632425c6373c565"
+      ],
+      "status": "PASS",
+      "ticket": null,
+      "timestamp": "2026-02-20T21:09:07.754902Z",
+      "verification_mode": "runnable_only"
+    },
+    {
+      "approvers": [
+        "legacy"
+      ],
+      "patchset_id": "legacy",
+      "risk_level": "low",
+      "status": "PASS",
+      "timestamp": "2026-02-20T21:09:07.170033Z"
+    }
+  ],
+  "lock": {
+    "path": "/Users/vinsoncornejo/DAWN/projects/forgescaffold_phase9_ci/.locks/forgescaffold_apply.lock",
+    "present": false
+  },
+  "policy": {
+    "lock_ttl_minutes": 30,
+    "min_signatures_by_risk": {
+      "high": 2,
+      "low": 1,
+      "medium": 1
+    },
+    "retention": {
+      "enabled": false,
+      "max_days": null,
+      "max_index_lines": null,
+      "max_packs": null,
+      "prune_mode": "dry_run"
+    },
+    "risk_rules": {
+      "high_risk_ops": [
+        "delete",
+        "rename"
+      ],
+      "high_risk_path_match": [
+        "^src/.*auth",
+        "^src/.*security"
+      ],
+      "max_risk_without_auto_block": "medium",
+      "require_risk_ack_for": [
+        "high"
+      ],
+      "require_two_person_for": [
+        "high"
+      ],
+      "sensitive_path_prefixes": [
+        "dawn/",
+        ".git/",
+        "ci/",
+        "infra/"
+      ]
+    }
+  },
+  "signers": [
+    {
+      "expired": false,
+      "fingerprint": "7863759331d93277adafde101f98be514b3193542b3a9f5ed6da3579fcc988e8",
+      "label": "sig1",
+      "revoked": false,
+      "scopes": {
+        "pipelines": [
+          "forgescaffold_apply_v7_operational_runnable"
+        ],
+        "projects": [
+          "forgescaffold_phase9_ci"
+        ]
+      }
+    },
+    {
+      "expired": false,
+      "fingerprint": "529d36172b5cea9fb0c790ba8a3ce4a0c666ad5c751da7a03632425c6373c565",
+      "label": "sig2",
+      "revoked": false,
+      "scopes": {
+        "pipelines": [
+          "forgescaffold_apply_v7_operational_runnable"
+        ],
+        "projects": [
+          "forgescaffold_phase9_ci"
+        ]
+      }
+    }
+  ]
+}

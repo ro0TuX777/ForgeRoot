@@ -1,0 +1,20 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.append_ticket_event
+spec:
+  description: "Append a ticket ledger event"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.ticket_event_receipt.json"
+      path: "ticket_event_receipt.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 30
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

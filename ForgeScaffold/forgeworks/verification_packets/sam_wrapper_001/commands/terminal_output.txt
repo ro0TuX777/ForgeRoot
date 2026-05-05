@@ -1,0 +1,10 @@
+### validate ok
+{"payload": {"schemas_checked": ["ticket", "artifact_index", "signals", "run_config"], "status": "OK", "workcell": "packs/ci_change_control/test_batch_006", "workcell_hash": "7d37e76799609527e5c3168e1d7b93ac82b63ee629f80087d251b4f1bec0ac35"}, "status": "ok"}
+### validate error
+{"error": {"code": "INVALID_WORKCELL", "details": {"errors": [{"error": "missing file: tickets.jsonl", "file": "workcell"}, {"error": "missing file: artifact_index.json", "file": "workcell"}, {"error": "missing file: signals.jsonl", "file": "workcell"}, {"error": "missing file: run_config.json", "file": "workcell"}]}, "message": "validation failed", "stage": "validate"}, "status": "error"}
+### score
+{"payload": {"pass": true, "penalty_count": 0, "results_path": "results/test_batch_006_live", "score_path": "results/test_batch_006_live/score.json", "total_score": 81.5}, "status": "ok"}
+### report
+{"payload": {"report_path": "results/test_batch_006_live/report.md"}, "status": "ok"}
+### summary
+{"payload": {"runs_summarized": 19, "summary_path": "results/summary.md"}, "status": "ok"}

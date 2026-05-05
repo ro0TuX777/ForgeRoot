@@ -1,0 +1,25 @@
+{
+  "name": "allow with mods",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1",
+    "shaping": [
+      {
+        "id": "s1",
+        "when": {"op": "gt", "left": {"var": "signals.cost"}, "right": 50},
+        "mods": {"param_overrides": {"mode": "safe"}, "caps": {"max_tokens": 1000}}
+      }
+    ]
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "summarize",
+    "actor_id": "agent-5",
+    "params": {"mode": "fast"}
+  },
+  "signals": {"schema_version": "0.1", "values": {"cost": 75}},
+  "expected": {
+    "decision": "ALLOW_WITH_MODS",
+    "must_include": ["mods.param_overrides", "mods.caps"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "972b1620-2656-434c-8a69-774bc0242f14": {
+    "hold_id": "972b1620-2656-434c-8a69-774bc0242f14",
+    "tenant_id": "tenant-001",
+    "reason": "test_hold",
+    "event_ids": [
+      "evt-hold-001"
+    ],
+    "applied_at": "2026-04-29T22:01:50.009444+00:00",
+    "released": false
+  }
+}

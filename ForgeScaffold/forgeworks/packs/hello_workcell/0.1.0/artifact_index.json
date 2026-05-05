@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.1",
+  "artifacts": [
+    {
+      "artifact_id": "ART-001",
+      "path": "artifacts/input.txt",
+      "kind": "text"
+    }
+  ]
+}

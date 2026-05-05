@@ -1,0 +1,18 @@
+{
+  "repo": "sample-service",
+  "commit": "def456",
+  "candidate_files": [
+    "src/auth.py",
+    "tests/test_approval_bypass.py",
+    ".github/workflows/ci.yml"
+  ],
+  "forbidden_paths": [
+    ".github/workflows/",
+    "sam/orchestration/"
+  ],
+  "core_paths": [
+    "src/auth.py"
+  ],
+  "touches_ci_config": true,
+  "touches_core_paths": true
+}

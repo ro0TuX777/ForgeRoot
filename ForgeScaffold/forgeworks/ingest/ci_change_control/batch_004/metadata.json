@@ -1,0 +1,7 @@
+{
+  "echo_fidelity": "D2",
+  "mode_hint": "supervised",
+  "priority": "HIGH",
+  "queue_pressure": 0.7,
+  "retry_count": 2
+}

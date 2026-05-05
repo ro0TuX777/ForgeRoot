@@ -1,0 +1,19 @@
+python3 - <<'PY'
+from forgeworks.sam import service_wrapper
+import json
+
+print('### validate ok')
+print(json.dumps(service_wrapper.validate('packs/ci_change_control/test_batch_006'), sort_keys=True))
+
+print('### validate error')
+print(json.dumps(service_wrapper.validate('packs/ci_change_control/does_not_exist'), sort_keys=True))
+
+print('### score')
+print(json.dumps(service_wrapper.score('results/test_batch_006_live', 'packs/ci_change_control/test_batch_006/oracle/expectations.jsonl', 'packs/ci_change_control/test_batch_006/scoring/scoring.json'), sort_keys=True))
+
+print('### report')
+print(json.dumps(service_wrapper.report('results/test_batch_006_live', 'results/test_batch_006_live/score.json', 'results/test_batch_006_live/report.md'), sort_keys=True))
+
+print('### summary')
+print(json.dumps(service_wrapper.summary('results', 'results/summary.md'), sort_keys=True))
+PY

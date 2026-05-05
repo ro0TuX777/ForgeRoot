@@ -1,0 +1,13 @@
+{
+  "49a20510-708a-4bbe-af43-491d091e5b8b": {
+    "hold_id": "49a20510-708a-4bbe-af43-491d091e5b8b",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:11:05.900269+00:00",
+    "released": false
+  }
+}

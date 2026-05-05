@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/approval_stamp.v0_1.json",
+  "title": "ForgeGate Approval Stamp v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "intent_id", "intent_version", "approved_by", "reason"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "intent_id": {"type": "string"},
+    "intent_version": {"type": "string"},
+    "approved_by": {"type": "string"},
+    "reason": {"type": "string"}
+  }
+}

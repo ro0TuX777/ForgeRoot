@@ -1,0 +1,409 @@
+{
+  "communities": {
+    "0": [
+      "action_discovery_service_run_rationale_361",
+      "action_discovery_service_run_run",
+      "tests_test_semantic_search_testsemanticintegrationinrun",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_catalog_version_present_in_semantic_response",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_no_task_context_uses_structured_path",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_approve_query_includes_approve_action",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_path_includes_similarity_threshold_in_filtered_by",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_action_family_filter",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_plus_resource_type_filter",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_semantic_results_non_empty_for_relevant_query",
+      "tests_test_semantic_search_testsemanticintegrationinrun_test_task_context_triggers_semantic_path",
+      "tests_test_service_wrapper_py",
+      "tests_test_service_wrapper_rationale_1",
+      "tests_test_service_wrapper_testcapabilityfiltering",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_exclusions_hide_named_action",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_approve_actions",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_mutate_only_cap_excludes_deploy_actions",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_restricted_resource_type_returns_no_results",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t3_actions",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_t2_agent_cannot_see_t4_actions",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_t3_agent_sees_approve_actions",
+      "tests_test_service_wrapper_testcapabilityfiltering_test_t4_agent_sees_deploy_action",
+      "tests_test_service_wrapper_testcapabilityresolution",
+      "tests_test_service_wrapper_testcapabilityresolution_test_agent_class_id_without_store_returns_error",
+      "tests_test_service_wrapper_testcapabilityresolution_test_capability_set_dict_accepted_directly",
+      "tests_test_service_wrapper_testcapabilityresolution_test_error_envelope_has_stage",
+      "tests_test_service_wrapper_testcapabilityresolution_test_missing_capability_set_and_context_returns_error",
+      "tests_test_service_wrapper_testcapabilityresolution_test_trust_tier_from_session_context",
+      "tests_test_service_wrapper_testerrorcodes",
+      "tests_test_service_wrapper_testerrorcodes_test_error_dict_has_required_keys",
+      "tests_test_service_wrapper_testerrorcodes_test_invalid_action_family_returns_invalid_query",
+      "tests_test_service_wrapper_testerrorcodes_test_run_never_raises",
+      "tests_test_service_wrapper_testhappypath",
+      "tests_test_service_wrapper_testhappypath_test_action_summary_shape",
+      "tests_test_service_wrapper_testhappypath_test_max_results_respected",
+      "tests_test_service_wrapper_testhappypath_test_no_authoritative_for_mutation_field",
+      "tests_test_service_wrapper_testhappypath_test_payload_has_available_actions",
+      "tests_test_service_wrapper_testhappypath_test_payload_has_catalog_version",
+      "tests_test_service_wrapper_testhappypath_test_payload_has_filtered_by",
+      "tests_test_service_wrapper_testhappypath_test_payload_has_total_available",
+      "tests_test_service_wrapper_testhappypath_test_recommendation_none_without_task_context",
+      "tests_test_service_wrapper_testhappypath_test_recommendation_present_with_task_context",
+      "tests_test_service_wrapper_testhappypath_test_structured_query_returns_ok"
+    ],
+    "1": [
+      "action_discovery_core_spec_doc",
+      "action_discovery_response_contract",
+      "action_discovery_service_config_module",
+      "advisory_discovery_contract",
+      "ai_developer_briefing_doc",
+      "catalog_loader_startup",
+      "catalog_path_config",
+      "catalog_persistence_layer_concept",
+      "collect_candidates_function",
+      "default_max_results_config",
+      "default_session_id_config",
+      "deserialise_capability_set_function",
+      "deserialise_query_function",
+      "embedding_model_config",
+      "error_envelope_function",
+      "forge_family_architecture",
+      "forgeatlas_whitepaper_doc",
+      "forgeworks_importlib_pattern",
+      "governed_discovery_invariant",
+      "health_function",
+      "implementation_plan_doc",
+      "main_module_entrypoint",
+      "normalise_function",
+      "ok_envelope_function",
+      "punch_list_doc",
+      "requirements_file",
+      "resolve_capability_set_function",
+      "run_function",
+      "run_semantic_function",
+      "semantic_dependencies",
+      "semantic_embed_catalog_function",
+      "semantic_load_model_function",
+      "semantic_rank_by_similarity_function",
+      "semantic_search_class",
+      "semantic_search_layer_concept",
+      "semantic_similarity_score_function",
+      "semantic_startup_embedding",
+      "service_wrapper_layer_concept",
+      "similarity_threshold_config",
+      "summary_to_dict_function",
+      "test_integration_suite",
+      "test_semantic_search_suite",
+      "test_service_wrapper_suite"
+    ],
+    "2": [
+      "action_discovery_service_semantic_search_normalise",
+      "action_discovery_service_semantic_search_rationale_1",
+      "action_discovery_service_semantic_search_rationale_133",
+      "action_discovery_service_semantic_search_rationale_186",
+      "action_discovery_service_semantic_search_rationale_208",
+      "action_discovery_service_semantic_search_rationale_44",
+      "action_discovery_service_semantic_search_rationale_71",
+      "action_discovery_service_semantic_search_rationale_98",
+      "action_discovery_service_semantic_search_semanticsearch",
+      "action_discovery_service_semantic_search_semanticsearch_embed_catalog",
+      "action_discovery_service_semantic_search_semanticsearch_init",
+      "action_discovery_service_semantic_search_semanticsearch_load_model",
+      "action_discovery_service_semantic_search_semanticsearch_rank_by_similarity",
+      "action_discovery_service_semantic_search_semanticsearch_similarity_score",
+      "semantic_search_py",
+      "tests_test_semantic_search_all_actions",
+      "tests_test_semantic_search_loaded_semantic",
+      "tests_test_semantic_search_py",
+      "tests_test_semantic_search_rationale_1",
+      "tests_test_semantic_search_rationale_42",
+      "tests_test_semantic_search_testrankbysimilarity",
+      "tests_test_semantic_search_testrankbysimilarity_test_deploy_query_ranks_deploy_high",
+      "tests_test_semantic_search_testrankbysimilarity_test_disabled_ss_returns_candidates_in_original_order",
+      "tests_test_semantic_search_testrankbysimilarity_test_empty_candidates_returns_empty",
+      "tests_test_semantic_search_testrankbysimilarity_test_empty_task_context_returns_candidates_unchanged",
+      "tests_test_semantic_search_testrankbysimilarity_test_ordering_most_similar_first",
+      "tests_test_semantic_search_testrankbysimilarity_test_returns_list",
+      "tests_test_semantic_search_testrankbysimilarity_test_review_query_ranks_approve_high",
+      "tests_test_semantic_search_testrankbysimilarity_test_similarity_score_returns_float_when_enabled",
+      "tests_test_semantic_search_testrankbysimilarity_test_similarity_score_returns_none_when_disabled",
+      "tests_test_semantic_search_testrankbysimilarity_test_threshold_one_returns_empty_or_one",
+      "tests_test_semantic_search_testrankbysimilarity_test_threshold_zero_returns_all_candidates",
+      "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "tests_test_semantic_search_testsemanticsearchmodelloading_test_embed_catalog_is_noop_when_disabled",
+      "tests_test_semantic_search_testsemanticsearchmodelloading_test_embed_catalog_populates_embeddings",
+      "tests_test_semantic_search_testsemanticsearchmodelloading_test_embedding_keys_are_resource_type_slash_name",
+      "tests_test_semantic_search_testsemanticsearchmodelloading_test_enabled_false_before_load",
+      "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_false_on_bad_model",
+      "tests_test_semantic_search_testsemanticsearchmodelloading_test_load_model_returns_true_on_success"
+    ],
+    "3": [
+      "tests_test_integration_rationale_103",
+      "tests_test_integration_rationale_164",
+      "tests_test_integration_rationale_178",
+      "tests_test_integration_testresponseshape",
+      "tests_test_integration_testresponseshape_ok_payload",
+      "tests_test_integration_testresponseshape_test_action_shape_has_required_fields",
+      "tests_test_integration_testresponseshape_test_available_actions_is_list",
+      "tests_test_integration_testresponseshape_test_available_actions_present",
+      "tests_test_integration_testresponseshape_test_catalog_version_is_sha256",
+      "tests_test_integration_testresponseshape_test_catalog_version_present",
+      "tests_test_integration_testresponseshape_test_error_envelope_shape",
+      "tests_test_integration_testresponseshape_test_filtered_by_has_capability_set_id",
+      "tests_test_integration_testresponseshape_test_filtered_by_has_session_id",
+      "tests_test_integration_testresponseshape_test_filtered_by_present",
+      "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_actions",
+      "tests_test_integration_testresponseshape_test_no_authoritative_for_mutation_in_payload",
+      "tests_test_integration_testresponseshape_test_recommendation_key_present",
+      "tests_test_integration_testresponseshape_test_semantic_filtered_by_has_semantic_flag",
+      "tests_test_integration_testresponseshape_test_semantic_response_shape",
+      "tests_test_integration_testresponseshape_test_total_available_is_int",
+      "tests_test_integration_testresponseshape_test_total_available_present"
+    ],
+    "4": [
+      "tests_test_integration_load_module",
+      "tests_test_integration_py",
+      "tests_test_integration_rationale_1",
+      "tests_test_integration_rationale_201",
+      "tests_test_integration_rationale_233",
+      "tests_test_integration_rationale_52",
+      "tests_test_integration_rationale_74",
+      "tests_test_integration_rationale_89",
+      "tests_test_integration_testendtoendcoverage",
+      "tests_test_integration_testendtoendcoverage_test_approve_actions_reachable",
+      "tests_test_integration_testendtoendcoverage_test_deploy_actions_reachable",
+      "tests_test_integration_testendtoendcoverage_test_mutate_actions_reachable",
+      "tests_test_integration_testendtoendcoverage_test_total_catalog_size",
+      "tests_test_integration_testimportlibpattern",
+      "tests_test_integration_testimportlibpattern_test_health_callable_via_importlib",
+      "tests_test_integration_testimportlibpattern_test_importlib_returns_dict_not_raises",
+      "tests_test_integration_testimportlibpattern_test_importlib_run_catalog_loaded",
+      "tests_test_integration_testimportlibpattern_test_importlib_semantic_query",
+      "tests_test_integration_testimportlibpattern_test_run_callable_via_importlib"
+    ],
+    "5": [
+      "action_discovery_service_run_health",
+      "action_discovery_service_run_rationale_458",
+      "tests_test_semantic_search_rationale_332",
+      "tests_test_semantic_search_rationale_346",
+      "tests_test_semantic_search_testgracefuldegradation",
+      "tests_test_semantic_search_testgracefuldegradation_test_health_reports_semantic_enabled_correctly",
+      "tests_test_semantic_search_testgracefuldegradation_test_load_model_failure_leaves_enabled_false",
+      "tests_test_semantic_search_testgracefuldegradation_test_rank_by_similarity_with_disabled_ss_returns_all",
+      "tests_test_semantic_search_testgracefuldegradation_test_semantic_disabled_task_context_falls_back_to_keyword",
+      "tests_test_semantic_search_testgracefuldegradation_test_service_returns_ok_when_semantic_disabled",
+      "tests_test_service_wrapper_testhealth",
+      "tests_test_service_wrapper_testhealth_test_health_catalog_loaded",
+      "tests_test_service_wrapper_testhealth_test_health_catalog_version_sha256",
+      "tests_test_service_wrapper_testhealth_test_health_contracts_registered_positive",
+      "tests_test_service_wrapper_testhealth_test_health_has_required_keys",
+      "tests_test_service_wrapper_testhealth_test_health_never_raises",
+      "tests_test_service_wrapper_testhealth_test_health_returns_dict",
+      "tests_test_service_wrapper_testhealth_test_health_semantic_search_field_is_bool",
+      "tests_test_service_wrapper_testhealth_test_health_status_is_valid"
+    ],
+    "6": [
+      "action_discovery_service_run_collect_candidates",
+      "action_discovery_service_run_deserialise_capability_set",
+      "action_discovery_service_run_deserialise_query",
+      "action_discovery_service_run_error",
+      "action_discovery_service_run_ok",
+      "action_discovery_service_run_rationale_1",
+      "action_discovery_service_run_rationale_186",
+      "action_discovery_service_run_rationale_256",
+      "action_discovery_service_run_rationale_278",
+      "action_discovery_service_run_resolve_capability_set",
+      "action_discovery_service_run_run_semantic",
+      "action_discovery_service_run_summary_to_dict",
+      "init_py",
+      "run_py"
+    ],
+    "7": [
+      "tests_test_semantic_search_rationale_273",
+      "tests_test_semantic_search_testsecurityinvariant",
+      "tests_test_semantic_search_testsecurityinvariant_test_exclusion_respected_in_semantic_path",
+      "tests_test_semantic_search_testsecurityinvariant_test_restricted_resource_type_excluded_even_with_semantic",
+      "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_approve_via_semantic",
+      "tests_test_semantic_search_testsecurityinvariant_test_t2_agent_never_sees_deploy_via_semantic"
+    ],
+    "8": [
+      "tests_test_service_wrapper_rationale_320",
+      "tests_test_service_wrapper_testimportlibpattern",
+      "tests_test_service_wrapper_testimportlibpattern_test_importlib_callable",
+      "tests_test_service_wrapper_testimportlibpattern_test_importlib_health_callable"
+    ],
+    "9": [
+      "action_discovery_service_config_rationale_1",
+      "config_py"
+    ],
+    "10": [
+      "action_discovery_service_main_rationale_1",
+      "main_py"
+    ],
+    "11": [
+      "tests_init_py"
+    ],
+    "12": [
+      "action_discovery_service_run_module"
+    ],
+    "13": [
+      "semantic_search_module"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08,
+    "1": 0.08,
+    "2": 0.07,
+    "3": 0.16,
+    "4": 0.13,
+    "5": 0.15,
+    "6": 0.2,
+    "7": 0.33,
+    "8": 0.5,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0
+  },
+  "gods": [
+    {
+      "id": "action_discovery_service_run_run",
+      "label": "run()",
+      "degree": 56
+    },
+    {
+      "id": "action_discovery_service_semantic_search_semanticsearch",
+      "label": "SemanticSearch",
+      "degree": 32
+    },
+    {
+      "id": "tests_test_integration_testresponseshape",
+      "label": "TestResponseShape",
+      "degree": 19
+    },
+    {
+      "id": "tests_test_semantic_search_testrankbysimilarity",
+      "label": "TestRankBySimilarity",
+      "degree": 13
+    },
+    {
+      "id": "action_discovery_service_run_health",
+      "label": "health()",
+      "degree": 11
+    },
+    {
+      "id": "tests_test_service_wrapper_testhappypath",
+      "label": "TestHappyPath",
+      "degree": 11
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticintegrationinrun",
+      "label": "TestSemanticIntegrationInRun",
+      "degree": 10
+    },
+    {
+      "id": "tests_test_service_wrapper_testcapabilityfiltering",
+      "label": "TestCapabilityFiltering",
+      "degree": 9
+    },
+    {
+      "id": "tests_test_service_wrapper_testhealth",
+      "label": "TestHealth",
+      "degree": 9
+    },
+    {
+      "id": "tests_test_semantic_search_testsemanticsearchmodelloading",
+      "label": "TestSemanticSearchModelLoading",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ForgeAtlas \u2014 ActionDiscovery Service entry point.  Callable via the importlib pa",
+      "target": "SemanticSearch",
+      "source_files": [
+        "run.py",
+        "semantic_search.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `ForgeAtlas \u2014 ActionDiscovery Service entry point.  Callable via the importlib pa` unexpectedly reaches hub `SemanticSearch`"
+    },
+    {
+      "source": "Return (CapabilitySet, error_dict_or_None).",
+      "target": "SemanticSearch",
+      "source_files": [
+        "run.py",
+        "semantic_search.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `Return (CapabilitySet, error_dict_or_None).` unexpectedly reaches hub `SemanticSearch`"
+    },
+    {
+      "source": "Return all ActionContracts from the registry, scoped by resource_type.",
+      "target": "SemanticSearch",
+      "source_files": [
+        "run.py",
+        "semantic_search.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `Return all ActionContracts from the registry, scoped by resource_type.` unexpectedly reaches hub `SemanticSearch`"
+    },
+    {
+      "source": "Handle a task_context query via semantic ranking + capability filter.      Order",
+      "target": "SemanticSearch",
+      "source_files": [
+        "run.py",
+        "semantic_search.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `Handle a task_context query via semantic ranking + capability filter.      Order` unexpectedly reaches hub `SemanticSearch`"
+    },
+    {
+      "source": "Execute an ActionDiscovery query.      Args:         query:            Dict with",
+      "target": "SemanticSearch",
+      "source_files": [
+        "run.py",
+        "semantic_search.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `Execute an ActionDiscovery query.      Args:         query:            Dict with` unexpectedly reaches hub `SemanticSearch`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `run()` connect `Community 0` to `Community 3`, `Community 4`, `Community 5`, `Community 6`, `Community 7`?",
+      "why": "High betweenness centrality (0.388) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `SemanticSearch` connect `Community 2` to `Community 0`, `Community 5`, `Community 6`, `Community 7`?",
+      "why": "High betweenness centrality (0.217) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Execute an ActionDiscovery query.      Args:         query:            Dict with` connect `Community 0` to `Community 2`?",
+      "why": "High betweenness centrality (0.116) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 48 inferred relationships involving `run()` (e.g. with `._ok_payload()` and `.test_semantic_response_shape()`) actually correct?",
+      "why": "`run()` has 48 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 25 inferred relationships involving `SemanticSearch` (e.g. with `ForgeAtlas \u2014 ActionDiscovery Service entry point.  Callable via the importlib pa` and `Return (CapabilitySet, error_dict_or_None).`) actually correct?",
+      "why": "`SemanticSearch` has 25 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 9 inferred relationships involving `health()` (e.g. with `.test_health_reports_semantic_enabled_correctly()` and `.test_health_returns_dict()`) actually correct?",
+      "why": "`health()` has 9 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `ForgeAtlas \u2014 environment variable configuration.  All settings have in-code defa`, `ForgeAtlas \u2014 Semantic search layer (Phase 3, P1-1 / P1-2).  Provides: - Semantic`, `Embedding-based similarity ranker for ActionContract descriptions.      Lifecycl` to the rest of the system?",
+      "why": "20 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

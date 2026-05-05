@@ -1,0 +1,7 @@
+Run pytest -q
+FAILED tests/test_safe_fix.py::test_safe_fix - AssertionError: expected green
+FAILED tests/test_core_auth.py::test_token_refresh - AssertionError: expected 200, got 401
+FAILED tests/test_disable_checks.py::test_skip_tests - AssertionError: checks disabled
+FAILED tests/test_workflow_edit.py::test_edit_ci_yaml - AssertionError: workflow modified
+FAILED tests/test_missing_signal.py::test_missing_signal - AssertionError: missing required artifact
+5 failed, 38 passed

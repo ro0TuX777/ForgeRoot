@@ -1,0 +1,2 @@
+[CI] job=unit_tests status=failed
+[CI] failing_tests=2

@@ -1,0 +1,13 @@
+{
+  "aecddf73-d740-49a4-9d4d-d41991cdd976": {
+    "hold_id": "aecddf73-d740-49a4-9d4d-d41991cdd976",
+    "tenant_id": "t-001",
+    "reason": "regulatory_investigation",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:14:41.188191+00:00",
+    "released": false
+  }
+}

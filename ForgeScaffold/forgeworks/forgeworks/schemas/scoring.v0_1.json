@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/scoring.v0_1.json",
+  "title": "ForgeWorks Scoring",
+  "type": "object",
+  "required": ["schema_version", "weights", "penalties", "thresholds"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "weights": {
+      "type": "object",
+      "required": ["correctness", "safety", "governance", "efficiency"],
+      "properties": {
+        "correctness": {"type": "number"},
+        "safety": {"type": "number"},
+        "governance": {"type": "number"},
+        "efficiency": {"type": "number"}
+      }
+    },
+    "penalties": {"type": "object"},
+    "thresholds": {"type": "object"}
+  },
+  "additionalProperties": false
+}

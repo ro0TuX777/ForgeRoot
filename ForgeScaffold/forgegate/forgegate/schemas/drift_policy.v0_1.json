@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/drift_policy.v0_1.json",
+  "title": "ForgeGate Drift Policy v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["thresholds"],
+  "properties": {
+    "thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "escalation_rate_by_action.max": {"type": "number"},
+        "deny_rate.max": {"type": "number"},
+        "missing_signal_rate.max": {"type": "number"}
+      }
+    },
+    "severities": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "warn": {"type": "array", "items": {"type": "string"}},
+        "critical": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

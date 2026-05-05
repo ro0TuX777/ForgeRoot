@@ -1,0 +1,102 @@
+framework: ISO27001_2022
+profile_version: "0.1"
+jurisdiction: GLOBAL
+sector: all
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "ISO27001.A8.15.LOGGING"
+    objective: >
+      Event logs that record user activities, exceptions, faults, and information
+      security events are produced, stored, protected, and analysed. (Annex A 8.15)
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+      - "warden.llm_call_metadata"
+    required_fields:
+      - "event_id"
+      - "event_time"
+      - "actor.actor_id"
+      - "integrity.event_hash"
+      - "policy.retention_class"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "chain_validation_report.json"
+      - "retention_policy_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: high
+
+  - control_id: "ISO27001.A8.16.MONITORING"
+    objective: >
+      Networks, systems, and applications are monitored for anomalous behaviour
+      and appropriate actions are taken to evaluate potential information security
+      incidents. (Annex A 8.16)
+    required_event_types:
+      - "azul.verdict_summary"
+      - "agent.human_review_required"
+    required_fields:
+      - "decision.risk_level"
+      - "evidence.evidence_gaps"
+      - "decision.decision_type"
+    evidence_artifacts:
+      - "evidence_gap_report.json"
+      - "human_review_decisions.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "ISO27001.A5.3.SEGREGATION_OF_DUTIES"
+    objective: >
+      Conflicting duties and areas of responsibility are segregated to reduce
+      opportunities for unauthorised or unintentional modification or misuse. (A 5.3)
+    required_event_types:
+      - "agent.human_review_required"
+      - "human.approval_decision"
+    required_fields:
+      - "actor.actor_type"
+      - "actor.role"
+      - "decision.decision_type"
+    evidence_artifacts:
+      - "human_review_decisions.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+    notes: >
+      Human approval events demonstrate that AI agent actions requiring elevated
+      authority are reviewed by a separate human actor before execution.
+
+  - control_id: "ISO27001.A5.25.SECURITY_EVENT_ASSESSMENT"
+    objective: >
+      Information security events are assessed and it is decided whether they
+      are to be classified as information security incidents. (A 5.25)
+    required_event_types:
+      - "forgegate.decision_record"
+      - "forgegate.policy_evaluation"
+    required_fields:
+      - "decision.risk_level"
+      - "decision.decision_type"
+      - "decision.reason"
+      - "policy.policy_id"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "evidence_gap_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "ISO27001.A8.25.SECURE_DEVELOPMENT"
+    objective: >
+      Rules for the secure development of software and systems are established
+      and applied to developments within the organisation. (A 8.25)
+    required_event_types:
+      - "azul.verdict_summary"
+      - "forgegate.decision_record"
+    required_fields:
+      - "evidence.evidence_refs"
+      - "evidence.assertion_classes"
+      - "decision.decision_type"
+    evidence_artifacts:
+      - "evidence_gap_report.json"
+      - "control_coverage_report.json"
+    retention_expectation: support_1y
+    mapping_confidence: low
+    notes: >
+      Azul safety verdicts provide evidence that proposed code changes are
+      evaluated before execution. Not a substitute for a formal SDLC programme.

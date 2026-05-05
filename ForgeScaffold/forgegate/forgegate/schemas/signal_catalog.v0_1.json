@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/signal_catalog.v0_1.json",
+  "title": "ForgeGate Signal Catalog v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "signals"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["signal_id", "description"],
+        "properties": {
+          "signal_id": {"type": "string"},
+          "description": {"type": "string"},
+          "unit": {"type": "string"},
+          "type": {"type": "string", "enum": ["string", "number", "boolean", "enum"]},
+          "enum": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

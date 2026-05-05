@@ -1,0 +1,33 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.gate_patchset_approval
+spec:
+  description: "HITL gate for patchset approval"
+  requires:
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.review_packet.json"
+      path: "review_packet.json"
+      optional: true
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.approval_receipt.json"
+      path: "approval_receipt.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

@@ -1,0 +1,7 @@
+{
+  "schema_version": "0.1",
+  "domain": "hello",
+  "mode": "shadow",
+  "seed": 123,
+  "intent_bundle_path": "./intent_bundle"
+}

@@ -1,0 +1,20 @@
+# Azul — Python dependencies
+# ===========================
+# All stdlib-only for core Azul code.
+# These are the optional/runtime dependencies for integrations, testing,
+# and the CONCORD telemetry emitter.
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=7.4.0
+pytest-timeout>=2.1.0
+
+# ── YAML (for gate policy files) ─────────────────────────────────────────────
+PyYAML>=6.0.1
+
+# ── ForgeScaffold optional dependency ────────────────────────────────────────
+# tomli is the pyproject.toml parser for Python < 3.11
+tomli>=2.0.1; python_version < "3.11"
+
+# ── CONCORD telemetry (lightweight HTTP emit) ─────────────────────────────────
+# Only needed when AZUL_TELEMETRY_ENABLED=true; falls back to local log file.
+# requests>=2.31.0  # uncomment if CONCORD endpoint is HTTP

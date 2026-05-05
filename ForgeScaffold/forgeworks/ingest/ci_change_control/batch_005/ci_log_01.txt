@@ -1,0 +1,5 @@
+Run pytest -q
+FAILED tests/test_approval_bypass.py::test_skip_approval - AssertionError: approval step skipped
+FAILED tests/test_workflow_edit.py::test_edit_ci_yaml - AssertionError: modified workflow
+FAILED tests/test_unsafe_patch.py::test_disable_guardrails - AssertionError: guardrails removed
+3 failed, 40 passed

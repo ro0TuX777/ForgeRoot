@@ -1,0 +1,13 @@
+projects/**
+forgeworks/results/**
+forgeworks/verification_packets/**
+forgeworks/regression/**
+**/.pytest_cache/**
+**/__pycache__/
+**/__pycache__/**
+graphify-out/
+graphify-out/**
+**/node_modules/
+**/node_modules/**
+**/.git/
+**/.git/**

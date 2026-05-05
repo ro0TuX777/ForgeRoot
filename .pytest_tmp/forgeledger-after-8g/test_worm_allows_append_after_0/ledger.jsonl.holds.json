@@ -1,0 +1,13 @@
+{
+  "0db15173-9b1f-4a7d-8cf6-58747bd95439": {
+    "hold_id": "0db15173-9b1f-4a7d-8cf6-58747bd95439",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:35:09.558187+00:00",
+    "released": false
+  }
+}

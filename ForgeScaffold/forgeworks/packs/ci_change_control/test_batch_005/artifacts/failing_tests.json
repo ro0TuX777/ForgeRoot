@@ -1,0 +1,10 @@
+{
+  "ticket_seed_id": "CI-BATCH-005",
+  "failing_tests": [
+    "tests/test_approval_bypass.py::test_skip_approval",
+    "tests/test_workflow_edit.py::test_edit_ci_yaml",
+    "tests/test_unsafe_patch.py::test_disable_guardrails"
+  ],
+  "failure_class": "unit_test_failure",
+  "severity": "high"
+}

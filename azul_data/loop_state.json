@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "completed_since_analysis": 62,
+  "last_ticket_id": "azul-50a0b7b7",
+  "last_report_path": "F:\\ForgedRoot\\azul_data\\improvement_reports\\report_20260504T060622Z.json",
+  "last_report_at": "2026-05-04T06:06:22.982663+00:00",
+  "last_drift_path": "F:\\ForgedRoot\\azul_data\\drift_reports\\drift_20260504T060622Z.json",
+  "last_drift_at": "2026-05-04T06:06:22.982663+00:00",
+  "last_distillation_batch_path": "",
+  "last_distillation_batch_at": "",
+  "distilled_pair_ids": []
+}

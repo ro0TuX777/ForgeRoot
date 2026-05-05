@@ -1,0 +1,1 @@
+{"schema_version":"0.1","ticket_id":"CI-001","values":{"change.touches_ci_config":true,"change.touches_core_paths":true,"echo.fidelity":"D4","queue.pressure":0.2,"retry.count":5,"spec.present":true}}

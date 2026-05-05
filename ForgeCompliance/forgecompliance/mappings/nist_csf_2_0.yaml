@@ -1,0 +1,96 @@
+framework: NIST_CSF_2_0
+profile_version: "0.1"
+jurisdiction: GLOBAL
+sector: all
+claim_boundary: "Evidence support only. Not a compliance certification."
+
+controls:
+  - control_id: "NIST_CSF.GV.RM-01"
+    objective: >
+      Risk management objectives are established and agreed to by organisational
+      stakeholders. (GV.RM-01)
+    required_event_types:
+      - "forgegate.policy_evaluation"
+      - "concord.admission_decision"
+    required_fields:
+      - "policy.policy_id"
+      - "policy.policy_hash"
+      - "decision.risk_level"
+    evidence_artifacts:
+      - "control_coverage_report.json"
+      - "retention_policy_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "NIST_CSF.PR.AA-05"
+    objective: >
+      Access permissions, entitlements, and authorisations are defined in a policy,
+      managed, enforced, and reviewed, and incorporate the principles of least
+      privilege and separation of duties. (PR.AA-05)
+    required_event_types:
+      - "concord.admission_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "actor.actor_id"
+      - "actor.role"
+      - "decision.decision_type"
+      - "policy.policy_id"
+    evidence_artifacts:
+      - "ledger_slice.jsonl"
+      - "control_coverage_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: high
+
+  - control_id: "NIST_CSF.DE.AE-02"
+    objective: >
+      Potentially adverse events are analysed to better characterise them.
+      (DE.AE-02)
+    required_event_types:
+      - "azul.verdict_summary"
+      - "forgegate.decision_record"
+    required_fields:
+      - "decision.risk_level"
+      - "decision.reason"
+      - "evidence.evidence_gaps"
+    evidence_artifacts:
+      - "evidence_gap_report.json"
+      - "chain_validation_report.json"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "NIST_CSF.RS.AN-03"
+    objective: >
+      Analysis is performed to establish what has occurred during an incident
+      and the root cause of the incident. (RS.AN-03)
+    required_event_types:
+      - "agent.human_review_required"
+      - "human.approval_decision"
+      - "forgegate.decision_record"
+    required_fields:
+      - "actor.actor_id"
+      - "decision.decision_type"
+      - "decision.reason"
+      - "event_time"
+    evidence_artifacts:
+      - "human_review_decisions.json"
+      - "ledger_slice.jsonl"
+    retention_expectation: audit_7y
+    mapping_confidence: medium
+
+  - control_id: "NIST_CSF.DE.CM-06"
+    objective: >
+      External service provider activities and services are monitored to find
+      potentially adverse events. (DE.CM-06)
+    required_event_types:
+      - "warden.llm_call_metadata"
+    required_fields:
+      - "system_context.source_module"
+      - "system_context.deployment_id"
+      - "tenant.data_residency"
+    evidence_artifacts:
+      - "model_provider_boundary_report.json"
+    retention_expectation: support_1y
+    mapping_confidence: medium
+    notes: >
+      warden.llm_call_metadata provides evidence of external AI provider
+      interactions. model_provider_boundary_report records where processing occurred.

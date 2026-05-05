@@ -1,0 +1,6 @@
+event_type,count
+azul.verdict_summary,1
+concord.admission_decision,2
+forgegate.decision_record,1
+forgegate.policy_evaluation,1
+warden.llm_call_metadata,1

@@ -1,0 +1,12 @@
+{
+  "9795224b-403e-480f-87ee-c632e60bf60f": {
+    "hold_id": "9795224b-403e-480f-87ee-c632e60bf60f",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000"
+    ],
+    "applied_at": "2026-04-29T21:28:15.832667+00:00",
+    "released": false
+  }
+}

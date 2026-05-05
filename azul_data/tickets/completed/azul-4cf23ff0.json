@@ -1,0 +1,91 @@
+{
+  "ticket_id": "azul-4cf23ff0",
+  "ticket_type": "ci_gate",
+  "priority": "normal",
+  "status": "COMPLETED",
+  "domain": "system_operations",
+  "mode": "shadow",
+  "change_summary": "Warden auto verify: 1 changed file(s) in HELIOS BACKUP BETA",
+  "change_payload": {
+    "diff": "--- /dev/null\n+++ b/Helios/apt-test/ansible_service.py\n@@ -0,0 +1,64 @@\n+import os\n+import ansible_runner\n+from ansible.inventory.manager import InventoryManager\n+from ansible.parsing.dataloader import DataLoader\n+from ansible.playbook import Play\n+from ansible.playbook.playbook import Playbook\n+from ansible.executor.task_queue_manager import TaskQueueManager\n+from ansible.plugins.callback import CallbackBase\n+from ansible import context\n+\n+class AnsibleService:\n+    def __init__(self):\n+        self.inventory_path = os.path.join(os.path.dirname(__file__), '../ansible/inventory/hosts.ini')\n+        self.playbook_dir = os.path.join(os.path.dirname(__file__), '../ansible/playbooks')\n+        \n+        # Ensure ansible logs directory exists with proper permissions\n+        self.log_dir = '/backend/logs'\n+        os.makedirs(self.log_dir, exist_ok=True)\n+        \n+        # Initialize ansible components\n+        self.loader = DataLoader()\n+        \n+    async def run_playbook(self, playbook_name, extra_vars=None):\n+        try:\n+            # Set up the inventory\n+            if not os.path.exists(self.inventory_path):\n+                # Create default inventory if it doesn't exist\n+                self._create_default_inventory()\n+            \n+            # Run the playbook\n+            result = ansible_runner.run(\n+                playbook=os.path.join(self.playbook_dir, playbook_name),\n+                inventory=self.inventory_path,\n+                extravars=extra_vars or {},\n+                quiet=True\n+            )\n+            \n+            return {\n+                'status': 'success' if result.rc == 0 else 'failed',\n+                'rc': result.rc,\n+                'events': result.events\n+            }\n+            \n+        except Exception as e:\n+            return {\n+                'status': 'error',\n+                'message': str(e)\n+            }\n+    \n+    def _create_default_inventory(self):\n+        # Create the inventory directory if it doesn't exist\n+        os.makedirs(os.path.dirname(self.inventory_path), exist_ok=True)\n+        \n+        # Create a basic inventory file with localhost\n+        with open(self.inventory_path, 'w') as f:\n+            f.write(\"\"\"[local]\n+localhost ansible_connection=local\n+\n+[all:vars]\n+ansible_python_interpreter=/usr/bin/python3\n+\"\"\")\n+\n+# Create singleton instance\n+ansible_service = AnsibleService()"
+  },
+  "source": {
+    "adapter": "cli"
+  },
+  "target_files": [
+    "Helios/apt-test/ansible_service.py"
+  ],
+  "blast_radius": {
+    "units": [],
+    "affected_files": [
+      "Helios/apt-test/ansible_service.py"
+    ],
+    "total_units": 10,
+    "affected_count": 0,
+    "project_root": "/Users/vinsoncornejo/ForgedRoot/Azul"
+  },
+  "environment_id": "b27e2be1-3e61-4eb8-8a9b-0a7ea80bfc19",
+  "planner_spec": {
+    "schema_version": "0.1",
+    "spec_id": "azul-azul-4cf23ff0-2360b576",
+    "request_id": "azul-4cf23ff0",
+    "goal": "Warden auto verify: 1 changed file(s) in HELIOS BACKUP BETA",
+    "domain": "system_operations",
+    "mode": "shadow",
+    "notes": "Azul verification \u2014 ci_gate | priority=normal",
+    "source": {
+      "generator": {
+        "script_id": "generate_ci_batch",
+        "args": {}
+      }
+    },
+    "workcell": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-4cf23ff0/workcell"
+    },
+    "run": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-4cf23ff0/workcell/results"
+    },
+    "score": {
+      "oracle_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/oracle.yaml",
+      "scoring_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/scoring.yaml"
+    },
+    "report": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-4cf23ff0/workcell/results/report.md"
+    },
+    "loop_policy": {
+      "max_iterations": 1,
+      "target_score": 80.0,
+      "replan_on_fail": false
+    }
+  },
+  "review_bundle": {
+    "bundle_id": "rb-degraded-4de418072131",
+    "summary": {
+      "domain": "system_operations",
+      "request_id": "azul-4cf23ff0",
+      "degraded_mode": true,
+      "degraded_reason": "ForgeWorks degraded fallback: No module named 'huggingface_hub'"
+    },
+    "metrics": {
+      "total_score": 95.0,
+      "pass_fail": true,
+      "deny_count": 0,
+      "oracle_mismatch_count": 0,
+      "escalation_count": 0
+    }
+  },
+  "gate_result": {
+    "passed": true,
+    "severity": "ok",
+    "alerts": []
+  },
+  "verdict": "pass",
+  "verdict_reason": null,
+  "xp_awarded": 19,
+  "training_pair": null,
+  "gate_policy": null,
+  "created_at": "2026-03-12T04:16:06.320512+00:00",
+  "updated_at": "2026-03-12T04:16:06.425893+00:00",
+  "completed_at": "2026-03-12T04:16:06.425891+00:00",
+  "metadata": {}
+}

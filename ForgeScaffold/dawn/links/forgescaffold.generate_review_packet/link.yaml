@@ -1,0 +1,47 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.generate_review_packet
+spec:
+  description: "Generate human-readable review packet for patchset"
+  requires:
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.system_catalog.json"
+      path: "system_catalog.json"
+      optional: true
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.dataflow_map.json"
+      path: "dataflow_map.json"
+      optional: true
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.apply_report.json"
+      path: "apply_report.json"
+      optional: true
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.review_packet.md"
+      path: "review_packet.md"
+      schema:
+        type: "text"
+    - artifactId: "forgescaffold.review_packet.json"
+      path: "review_packet.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 120
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

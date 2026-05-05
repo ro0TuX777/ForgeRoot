@@ -1,0 +1,3 @@
+- Repeat run produced different ledger and approval hashes; determinism not proven.
+- Expected-vs-actual matrix not generated for ops batch.
+- Penalty summary not generated for ops batch.

@@ -1,0 +1,43 @@
+{
+  "actions": [
+    {
+      "action": "retain",
+      "effective_at": "2026-04-30T00:00:00+00:00",
+      "event_id": "cc7d1280-7e93-4353-a68a-5554eee7003f",
+      "reason": "audit_7y retention period has not expired"
+    },
+    {
+      "action": "retain",
+      "effective_at": "2026-04-30T00:00:00+00:00",
+      "event_id": "1f38a2f5-eef8-42d5-804c-acb8903cbb20",
+      "reason": "audit_7y retention period has not expired"
+    },
+    {
+      "action": "retain",
+      "effective_at": "2026-04-30T00:00:00+00:00",
+      "event_id": "b1549996-6b93-4e1e-a5a3-26cf4e77e9cb",
+      "reason": "audit_7y retention period has not expired"
+    },
+    {
+      "action": "retain",
+      "effective_at": "2026-04-30T00:00:00+00:00",
+      "event_id": "b8aa0421-44ec-4976-8b90-c57d0b97519b",
+      "reason": "audit_7y retention period has not expired"
+    },
+    {
+      "action": "retain",
+      "effective_at": "2026-04-30T00:00:00+00:00",
+      "event_id": "2c18a2a1-cd5a-43e2-ae04-51c319e63761",
+      "reason": "support_1y retention period has not expired"
+    },
+    {
+      "action": "retain",
+      "effective_at": "2026-04-30T00:00:00+00:00",
+      "event_id": "566827d5-3a24-41d7-885f-6691761bc26a",
+      "reason": "audit_7y retention period has not expired"
+    }
+  ],
+  "blocked_by_legal_hold": [],
+  "errors": [],
+  "scanned_count": 6
+}

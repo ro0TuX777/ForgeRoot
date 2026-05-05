@@ -1,0 +1,5 @@
+{"action_id":"phase.scout","approval_outcome":"APPROVED","approval_required":true,"decision_id":"5d61e90a5a39962f637b8e6e71658e07756ac4750f1f586e0465099c99b6cc04","mode":"supervised","reason":"policy_allows","schema_version":"0.1","ticket_id":"OPS-001"}
+{"action_id":"phase.legislator","approval_outcome":"APPROVED","approval_required":true,"decision_id":"22e1c445e0b1aed9f4986a1e12abdecd44707f9c650d231655de29442ab15050","mode":"supervised","reason":"policy_allows","schema_version":"0.1","ticket_id":"OPS-001"}
+{"action_id":"phase.builder","approval_outcome":"APPROVED","approval_required":true,"decision_id":"376e2a86f6566b794ea0d8e75897c03e01f6efb5b83f0e3df6d5d4fd839a8ae8","mode":"supervised","reason":"policy_allows","schema_version":"0.1","ticket_id":"OPS-001"}
+{"action_id":"execute_sandbox_test","approval_outcome":"APPROVED","approval_required":true,"decision_id":"","mode":"supervised","reason":"policy_allows","schema_version":"0.1","ticket_id":"OPS-001"}
+{"action_id":"deploy_verified_artifact","approval_outcome":"APPROVED","approval_required":true,"decision_id":"","mode":"supervised","reason":"policy_allows","schema_version":"0.1","ticket_id":"OPS-001"}

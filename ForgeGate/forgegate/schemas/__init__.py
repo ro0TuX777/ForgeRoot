@@ -1,0 +1,1 @@
+﻿"""ForgeGate schema package placeholder."""

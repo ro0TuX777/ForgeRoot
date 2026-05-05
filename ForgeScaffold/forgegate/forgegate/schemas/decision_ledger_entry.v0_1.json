@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/decision_ledger_entry.v0_1.json",
+  "title": "ForgeGate Decision Ledger Entry v0.1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "timestamp",
+    "intent_id",
+    "intent_version",
+    "decision",
+    "decision_id",
+    "input_hash",
+    "action_id",
+    "actor_id",
+    "decision_record"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "intent_id": {"type": "string"},
+    "intent_version": {"type": "string"},
+    "decision": {"type": "string", "enum": ["ALLOW", "ALLOW_WITH_MODS", "ESCALATE", "DENY"]},
+    "decision_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "action_id": {"type": "string"},
+    "actor_id": {"type": "string"},
+    "actor_profile": {"type": "string"},
+    "decision_record": {"type": "object"}
+  }
+}

@@ -1,0 +1,7 @@
+allowed_imports:
+- os
+- json
+architecture_rules: Stub rules.
+prohibited_actions:
+- No network access
+verification_plan: Run test_script.py and require exit code 0.

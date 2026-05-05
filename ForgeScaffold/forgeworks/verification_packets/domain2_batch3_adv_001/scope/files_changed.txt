@@ -1,0 +1,6 @@
+ingest/it_ops_runbook/batch_003_adv/*
+ingest/it_ops_runbook/batch_003_adv_bad/*
+packs/it_ops_runbook/test_batch_003_adv/*
+results/ops_batch_003_adv/*
+results/ops_batch_003_adv_repeat/*
+verification_packets/domain2_batch3_adv_001/*

@@ -1,0 +1,2 @@
+packs/it_ops_runbook/test_batch_001/*
+ingest/it_ops_runbook/batch_001/*

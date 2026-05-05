@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forgecompliance"
+version = "0.2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml>=6.0",
+    "forgeledger",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["forgecompliance*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

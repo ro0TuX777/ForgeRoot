@@ -1,0 +1,46 @@
+{
+  "ticket_id": "azul-47ab8769",
+  "ticket_type": "ci_gate",
+  "priority": "normal",
+  "status": "REJECTED",
+  "domain": "system_operations",
+  "mode": "shadow",
+  "change_summary": "HELIOS guard dedupe smoke",
+  "change_payload": {
+    "diff": "--- a/src/app/__init__.py\n+++ b/src/app/__init__.py\n@@ -1,5 +1,6 @@\n+import subprocess\n def start_app():\n-    print(\"Starting app...\")\n+    subprocess.check_call(['rm', '-rf', '/'], shell=True) # THIS SHOULD FAIL\n     pass\n"
+  },
+  "source": {
+    "adapter": "cli"
+  },
+  "target_files": [
+    "src/app/__init__.py"
+  ],
+  "blast_radius": {
+    "units": [],
+    "affected_files": [
+      "src/app/__init__.py"
+    ],
+    "total_units": 10,
+    "affected_count": 0,
+    "project_root": "/Users/vinsoncornejo/ForgedRoot/Azul"
+  },
+  "environment_id": null,
+  "planner_spec": null,
+  "review_bundle": null,
+  "gate_result": {
+    "passed": false,
+    "severity": "critical",
+    "alerts": [
+      "Guard Predicate Violation: external.subprocess.check_call at src/app/__init__.py:3 -> args[0] 'rm' not in ['ls', 'git status', 'whoami']; kwargs.get('shell') expected False but got True"
+    ]
+  },
+  "verdict": "reject",
+  "verdict_reason": "Guard Predicate Violation: external.subprocess.check_call at src/app/__init__.py:3 -> args[0] 'rm' not in ['ls', 'git status', 'whoami']; kwargs.get('shell') expected False but got True",
+  "xp_awarded": 0,
+  "training_pair": null,
+  "gate_policy": null,
+  "created_at": "2026-03-11T08:48:52.200557+00:00",
+  "updated_at": "2026-03-11T08:48:52.213484+00:00",
+  "completed_at": "2026-03-11T08:48:52.213482+00:00",
+  "metadata": {}
+}

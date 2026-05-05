@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "actor": {
+        "actor_id": "test.agent",
+        "actor_type": "agent",
+        "role": "test"
+      },
+      "control_tags": [],
+      "decision": {
+        "decision_type": "allow",
+        "reason": "test",
+        "risk_level": "low"
+      },
+      "event_id": "e3",
+      "event_time": "2026-04-28T10:00:00Z",
+      "event_type": "human.approval_decision",
+      "evidence": {
+        "assertion_classes": [
+          "FACT"
+        ],
+        "evidence_gaps": [],
+        "evidence_refs": []
+      },
+      "integrity": {
+        "event_hash": "142468074fc965853a79af76d38a7ff3bcdf76c0f301c4d42758073673444f06",
+        "previous_hash": "5ade4b8b9fb3487c3c4cfca427cb1ff686b62850e336a82a0d444fab9a457358",
+        "signature": null,
+        "signing_key_id": null
+      },
+      "ledger_version": "0.1",
+      "payload": null,
+      "policy": {
+        "legal_hold": false,
+        "policy_hash": "abc",
+        "policy_id": "p-001",
+        "retention_class": "audit_7y"
+      },
+      "redaction_receipts": [],
+      "system_context": {
+        "deployment_id": "test",
+        "environment": "local",
+        "source_module": "CONCORD"
+      },
+      "tenant": {
+        "customer_boundary": "b",
+        "data_residency": "NZ",
+        "tenant_id": "t-001"
+      }
+    }
+  ],
+  "generated_at": "2026-04-28T10:00:00Z",
+  "total_human_review_events": 1
+}

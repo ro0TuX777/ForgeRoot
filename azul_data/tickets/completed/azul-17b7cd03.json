@@ -1,0 +1,91 @@
+{
+  "ticket_id": "azul-17b7cd03",
+  "ticket_type": "ci_gate",
+  "priority": "normal",
+  "status": "COMPLETED",
+  "domain": "system_operations",
+  "mode": "shadow",
+  "change_summary": "Warden auto verify: 1 changed file(s) in HELIOS BACKUP BETA",
+  "change_payload": {
+    "diff": "--- /dev/null\n+++ b/Helios/apt-test/start-dev.sh\n@@ -0,0 +1,50 @@\n+#!/bin/sh\n+\n+# Function to cleanup processes on exit\n+cleanup() {\n+    echo \"Cleaning up...\"\n+    kill -TERM $VITE_PID 2>/dev/null\n+    nginx -s quit\n+    exit 0\n+}\n+\n+# Function to wait for service to be ready\n+wait_for_service() {\n+    local host=$1\n+    local port=$2\n+    local service=$3\n+    shell=true\n+    \n+    echo \"Waiting for $service to be ready...\"\n+    while ! nc -z $host $port; do\n+        sleep 1\n+    done\n+    echo \"$service is ready!\"\n+}\n+\n+# Trap SIGTERM and SIGINT\n+trap cleanup TERM INT\n+\n+# Create required nginx directories\n+mkdir -p /run/nginx\n+\n+# Start Vite dev server in background\n+echo \"Starting Vite dev server...\"\n+npm run dev -- --host 0.0.0.0 --port 3001 &\n+VITE_PID=$!\n+\n+# Wait for Vite to be ready\n+wait_for_service localhost 3001 \"Vite dev server\"\n+\n+# Start nginx after Vite is ready\n+echo \"Starting nginx...\"\n+nginx\n+\n+# Keep the script running\n+while true; do\n+    if ! kill -0 $VITE_PID 2>/dev/null; then\n+        echo \"Vite dev server exited. Shutting down...\"\n+        cleanup\n+    fi\n+    sleep 1\n+done"
+  },
+  "source": {
+    "adapter": "cli"
+  },
+  "target_files": [
+    "Helios/apt-test/start-dev.sh"
+  ],
+  "blast_radius": {
+    "units": [],
+    "affected_files": [
+      "Helios/apt-test/start-dev.sh"
+    ],
+    "total_units": 10,
+    "affected_count": 0,
+    "project_root": "/Users/vinsoncornejo/ForgedRoot/Azul"
+  },
+  "environment_id": "b6cccc06-1e6c-4a28-81aa-5a2d31ef4993",
+  "planner_spec": {
+    "schema_version": "0.1",
+    "spec_id": "azul-azul-17b7cd03-7e1dcae7",
+    "request_id": "azul-17b7cd03",
+    "goal": "Warden auto verify: 1 changed file(s) in HELIOS BACKUP BETA",
+    "domain": "system_operations",
+    "mode": "shadow",
+    "notes": "Azul verification \u2014 ci_gate | priority=normal",
+    "source": {
+      "generator": {
+        "script_id": "generate_ci_batch",
+        "args": {}
+      }
+    },
+    "workcell": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-17b7cd03/workcell"
+    },
+    "run": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-17b7cd03/workcell/results"
+    },
+    "score": {
+      "oracle_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/oracle.yaml",
+      "scoring_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/scoring.yaml"
+    },
+    "report": {
+      "out_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/results/azul-17b7cd03/workcell/results/report.md"
+    },
+    "loop_policy": {
+      "max_iterations": 1,
+      "target_score": 80.0,
+      "replan_on_fail": false
+    }
+  },
+  "review_bundle": {
+    "bundle_id": "rb-degraded-daa96aaa8666",
+    "summary": {
+      "domain": "system_operations",
+      "request_id": "azul-17b7cd03",
+      "degraded_mode": true,
+      "degraded_reason": "ForgeWorks degraded fallback: No module named 'huggingface_hub'"
+    },
+    "metrics": {
+      "total_score": 95.0,
+      "pass_fail": true,
+      "deny_count": 0,
+      "oracle_mismatch_count": 0,
+      "escalation_count": 0
+    }
+  },
+  "gate_result": {
+    "passed": true,
+    "severity": "ok",
+    "alerts": []
+  },
+  "verdict": "pass",
+  "verdict_reason": null,
+  "xp_awarded": 19,
+  "training_pair": null,
+  "gate_policy": null,
+  "created_at": "2026-03-12T04:17:49.802489+00:00",
+  "updated_at": "2026-03-12T04:17:49.909435+00:00",
+  "completed_at": "2026-03-12T04:17:49.909432+00:00",
+  "metadata": {}
+}

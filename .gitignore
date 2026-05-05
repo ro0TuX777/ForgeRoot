@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Tests & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Graphify — machine-local or regenerable (keep graphify-out/*.md, graph.json, graph.html if committed)
+.graphify_python
+.graphify_uncached.txt
+.graphify_cached.json
+.graphify_semantic_new.json
+.graphify_chunk_*_files.txt
+**/graphify-out/cache/
+**/graphify-out/pdf_extracts/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+
+# Large snapshot / diff archives (regenerate or store elsewhere)
+forge_output/

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/budget_snapshot.v0_1.json",
+  "title": "ForgeGate BudgetSnapshot v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "budgets"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1"},
+    "as_of": {"type": "string", "format": "date-time"},
+    "budgets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "used": {"type": "number"},
+          "current": {"type": "number"},
+          "window": {"type": "string"}
+        }
+      }
+    }
+  }
+}

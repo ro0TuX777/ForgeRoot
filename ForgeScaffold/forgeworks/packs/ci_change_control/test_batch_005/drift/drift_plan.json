@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "domain": "ci_change_control",
+  "events": [
+    {
+      "at_step": 2,
+      "type": "queue_pressure_spike",
+      "payload": {
+        "pressure": 0.88,
+        "fidelity": "D2"
+      }
+    },
+    {
+      "at_step": 4,
+      "type": "policy_change",
+      "payload": {
+        "forbidden_paths": [
+          ".github/workflows/",
+          "src/auth.py"
+        ]
+      }
+    }
+  ]
+}

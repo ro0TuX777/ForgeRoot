@@ -1,0 +1,24 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Python cache/build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local env/secrets (never commit)
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
+# Local virtual environments
+.venv/
+venv/

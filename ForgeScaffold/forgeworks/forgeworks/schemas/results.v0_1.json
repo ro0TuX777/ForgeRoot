@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/results.v0_1.json",
+  "title": "ForgeWorks Results",
+  "type": "object",
+  "required": ["schema_version"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]}
+  },
+  "additionalProperties": true
+}

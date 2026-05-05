@@ -1,0 +1,1178 @@
+{
+  "nodes": [
+    {
+      "id": "init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_main_py",
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "cli\\main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_main_app",
+      "label": "app()",
+      "file_type": "code",
+      "source_file": "cli\\main.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "cli_main_rationale_1",
+      "label": "Minimal ForgeGate CLI compatibility entry point.",
+      "file_type": "rationale",
+      "source_file": "cli\\main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "cli\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "cli_init_rationale_1",
+      "label": "ForgeGate CLI package.",
+      "file_type": "rationale",
+      "source_file": "cli\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_evaluate_py",
+      "label": "evaluate.py",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_evaluate_forgegateevaluationerror",
+      "label": "ForgeGateEvaluationError",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "exception",
+      "label": "Exception",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "core_evaluate_evaluate",
+      "label": "evaluate()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "core_evaluate_normalize_signals",
+      "label": "_normalize_signals()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "core_evaluate_eval_expr",
+      "label": "_eval_expr()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L73"
+    },
+    {
+      "id": "core_evaluate_resolve_var",
+      "label": "_resolve_var()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L104"
+    },
+    {
+      "id": "core_evaluate_truthy",
+      "label": "_truthy()",
+      "file_type": "code",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L115"
+    },
+    {
+      "id": "core_evaluate_rationale_1",
+      "label": "Minimal deterministic ForgeGate evaluator compatibility layer.  This restores th",
+      "file_type": "rationale",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_evaluate_rationale_13",
+      "label": "Raised when an intent spec cannot be evaluated deterministically.",
+      "file_type": "rationale",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "core_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "core\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "core_init_rationale_1",
+      "label": "Core ForgeGate exports.",
+      "file_type": "rationale",
+      "source_file": "core\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "schemas\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "schemas_init_rationale_1",
+      "label": "ForgeGate schema package placeholder.",
+      "file_type": "rationale",
+      "source_file": "schemas\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "evaluate_evaluate",
+      "label": "evaluate",
+      "file_type": "code",
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "evaluate_forgegateevaluationerror",
+      "label": "ForgeGateEvaluationError",
+      "file_type": "code",
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "evaluate_normalize_signals",
+      "label": "_normalize_signals",
+      "file_type": "code",
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "evaluate_eval_expr",
+      "label": "_eval_expr",
+      "file_type": "code",
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "evaluate_resolve_var",
+      "label": "_resolve_var",
+      "file_type": "code",
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "evaluate_truthy",
+      "label": "_truthy",
+      "file_type": "code",
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "main_app",
+      "label": "CLI app",
+      "file_type": "code",
+      "source_file": "forgegate/cli/main.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "main_evaluate_command",
+      "label": "forgegate evaluate CLI Command",
+      "file_type": "code",
+      "source_file": "forgegate/cli/main.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "init_package_export",
+      "label": "Package evaluate Export",
+      "file_type": "code",
+      "source_file": "forgegate/__init__.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_forgegate",
+      "label": "ForgeGate",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_deterministic_action_governance_gate",
+      "label": "Deterministic Action-Governance Gate",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_proposed_action",
+      "label": "ProposedAction",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_signals",
+      "label": "Signals",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_budget_snapshot",
+      "label": "BudgetSnapshot",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_decision_record",
+      "label": "DecisionRecord",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_reference_gate",
+      "label": "Reference Gate",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_canonical_hashing",
+      "label": "Canonical Hashing",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_dawn_optional_substrate",
+      "label": "DAWN Optional Execution Substrate",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_scenario_test_harness",
+      "label": "Scenario Test Harness",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "context_phase_1_gate_interface",
+      "label": "Phase 1 Gate Interface v0.1",
+      "file_type": "document",
+      "source_file": "context.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_policy_enforcement_plane",
+      "label": "Policy Enforcement Plane",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_llm_policy_decider_risk",
+      "label": "LLM Policy Decider Risk",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_evaluation_pipeline",
+      "label": "Evaluation Pipeline",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_constraints",
+      "label": "Constraints",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_boundaries",
+      "label": "Boundaries",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_budgets",
+      "label": "Budgets",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_tradeoffs",
+      "label": "Tradeoffs",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_shaping",
+      "label": "Shaping",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_replay_safety",
+      "label": "Replay Safety",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "forgegatewhitepaper_policy_as_code",
+      "label": "Policy as Code",
+      "file_type": "document",
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "init_py",
+      "target": "core_evaluate_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "__init__.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "argparse",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "forgegate_core_evaluate",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_py",
+      "target": "cli_main_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_rationale_1",
+      "target": "cli_main_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\main.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_init_rationale_1",
+      "target": "cli_init_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "cli\\__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_forgegateevaluationerror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_forgegateevaluationerror",
+      "target": "exception",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_evaluate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_normalize_signals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_eval_expr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_resolve_var",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_py",
+      "target": "core_evaluate_truthy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_evaluate",
+      "target": "core_evaluate_normalize_signals",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_evaluate",
+      "target": "core_evaluate_truthy",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_evaluate",
+      "target": "core_evaluate_eval_expr",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_eval_expr",
+      "target": "core_evaluate_resolve_var",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_eval_expr",
+      "target": "core_evaluate_truthy",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_eval_expr",
+      "target": "core_evaluate_forgegateevaluationerror",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_rationale_1",
+      "target": "core_evaluate_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_evaluate_rationale_13",
+      "target": "core_evaluate_forgegateevaluationerror",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\evaluate.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "core_init_py",
+      "target": "core_evaluate_py",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\__init__.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "core_init_rationale_1",
+      "target": "core_init_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "schemas_init_rationale_1",
+      "target": "schemas_init_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "schemas\\__init__.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "cli_main_app",
+      "target": "core_evaluate_evaluate",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "cli\\main.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "main_app",
+      "target": "main_evaluate_command",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/cli/main.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "main_app",
+      "target": "evaluate_evaluate",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/cli/main.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "main_evaluate_command",
+      "target": "context_proposed_action",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/cli/main.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "main_evaluate_command",
+      "target": "context_signals",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/cli/main.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "main_evaluate_command",
+      "target": "context_decision_record",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.82,
+      "source_file": "forgegate/cli/main.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "init_package_export",
+      "target": "evaluate_evaluate",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/__init__.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "evaluate_normalize_signals",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "evaluate_eval_expr",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "evaluate_truthy",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_eval_expr",
+      "target": "evaluate_resolve_var",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_eval_expr",
+      "target": "evaluate_eval_expr",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_eval_expr",
+      "target": "evaluate_truthy",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_eval_expr",
+      "target": "evaluate_forgegateevaluationerror",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "context_reference_gate",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.78,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "context_decision_record",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.74,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "context_proposed_action",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "context_signals",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "evaluate_evaluate",
+      "target": "context_budget_snapshot",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "forgegate/core/evaluate.py",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_forgegate",
+      "target": "context_deterministic_action_governance_gate",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_deterministic_action_governance_gate",
+      "target": "context_proposed_action",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_deterministic_action_governance_gate",
+      "target": "context_signals",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_deterministic_action_governance_gate",
+      "target": "context_decision_record",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_canonical_hashing",
+      "target": "context_decision_record",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_dawn_optional_substrate",
+      "target": "context_decision_record",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_scenario_test_harness",
+      "target": "context_phase_1_gate_interface",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_phase_1_gate_interface",
+      "target": "context_reference_gate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_phase_1_gate_interface",
+      "target": "main_evaluate_command",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_policy_enforcement_plane",
+      "target": "context_forgegate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_llm_policy_decider_risk",
+      "target": "context_deterministic_action_governance_gate",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_evaluation_pipeline",
+      "target": "forgegatewhitepaper_constraints",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_evaluation_pipeline",
+      "target": "forgegatewhitepaper_boundaries",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_evaluation_pipeline",
+      "target": "forgegatewhitepaper_budgets",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_evaluation_pipeline",
+      "target": "forgegatewhitepaper_tradeoffs",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_evaluation_pipeline",
+      "target": "forgegatewhitepaper_shaping",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_evaluation_pipeline",
+      "target": "context_reference_gate",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.91,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_replay_safety",
+      "target": "context_canonical_hashing",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_replay_safety",
+      "target": "context_decision_record",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "forgegatewhitepaper_policy_as_code",
+      "target": "context_deterministic_action_governance_gate",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_forgegate",
+      "target": "forgegatewhitepaper_policy_enforcement_plane",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.88,
+      "source_file": "ForgeGatewhitepaper.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "context_reference_gate",
+      "target": "evaluate_evaluate",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.79,
+      "source_file": "context.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "deterministic_gate_contract",
+      "label": "Deterministic Gate Contract",
+      "nodes": [
+        "context_proposed_action",
+        "context_signals",
+        "context_budget_snapshot",
+        "context_decision_record",
+        "evaluate_evaluate"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "context.md"
+    },
+    {
+      "id": "evaluation_pipeline_steps",
+      "label": "Evaluation Pipeline Steps",
+      "nodes": [
+        "forgegatewhitepaper_constraints",
+        "forgegatewhitepaper_boundaries",
+        "forgegatewhitepaper_budgets",
+        "forgegatewhitepaper_tradeoffs",
+        "forgegatewhitepaper_shaping",
+        "context_decision_record"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ForgeGatewhitepaper.md"
+    },
+    {
+      "id": "cli_reference_evaluation_flow",
+      "label": "CLI Reference Evaluation Flow",
+      "nodes": [
+        "main_app",
+        "main_evaluate_command",
+        "evaluate_evaluate",
+        "context_decision_record"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.84,
+      "source_file": "forgegate/cli/main.py"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

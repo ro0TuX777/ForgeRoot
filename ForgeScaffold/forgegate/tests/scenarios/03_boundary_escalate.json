@@ -1,0 +1,23 @@
+{
+  "name": "boundary escalate",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1",
+    "boundaries": [
+      {"id": "b1", "action": "deploy", "autonomy": 1}
+    ],
+    "escalation": {"channels": ["ops"], "required_payload_fields": ["approver"]}
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "deploy",
+    "actor_id": "agent-1",
+    "autonomy": 3,
+    "params": {}
+  },
+  "signals": {"schema_version": "0.1", "values": {"latency": 10}},
+  "expected": {
+    "decision": "ESCALATE",
+    "must_include": ["reasons.boundary_result", "escalation.channels"]
+  }
+}

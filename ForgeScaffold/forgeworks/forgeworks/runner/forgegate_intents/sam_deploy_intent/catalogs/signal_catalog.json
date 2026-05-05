@@ -1,0 +1,15 @@
+{
+    "schema_version": "0.1",
+    "signals": [
+        {
+            "signal_id": "target_directory",
+            "type": "string",
+            "description": "The destination directory path for the deployment."
+        },
+        {
+            "signal_id": "is_verified",
+            "type": "boolean",
+            "description": "Whether the artifact passed the Phase 4 sandbox GEPA execution loop with a zero exit code."
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "chain_valid": true,
+  "claim_boundary": "This package provides control-aligned evidence support and is not a certification of compliance.",
+  "created_at": "2026-04-29T22:53:44.230343+00:00",
+  "encrypted": true,
+  "encryption_algorithm": "AES-256-GCM",
+  "event_count": 3,
+  "files": [
+    "README_AUDITOR.md.enc",
+    "chain_validation_report.json.enc",
+    "control_coverage_report.json.enc",
+    "event_type_summary.csv.enc",
+    "evidence_gap_report.json.enc",
+    "human_review_decisions.json.enc",
+    "ledger_slice.jsonl.enc",
+    "legal_hold_report.json.enc",
+    "model_provider_boundary_report.json.enc",
+    "package_hash.txt.enc",
+    "retention_policy_report.json.enc"
+  ],
+  "framework_profiles": [
+    "NZISM",
+    "SOC2"
+  ],
+  "open_gaps": 6,
+  "package_id": "340cdb8d-6fe3-4d6d-b98b-0934b5af4366",
+  "retention_policy_valid": true,
+  "time_range": {
+    "from": "2026-04-28T10:00:00Z",
+    "to": "2026-04-28T10:00:00Z"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/approval_record.v0_1.json",
+  "title": "ForgeWorks Approval Record",
+  "type": "object",
+  "required": ["schema_version", "ticket_id", "action_id", "decision_id", "approval_required", "approval_outcome", "reason", "mode"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["0.1"]},
+    "ticket_id": {"type": "string"},
+    "action_id": {"type": "string"},
+    "decision_id": {"type": "string"},
+    "approval_required": {"type": "boolean"},
+    "approval_outcome": {"type": "string", "enum": ["APPROVED", "REJECTED", "NOT_REQUIRED"]},
+    "reason": {"type": "string"},
+    "mode": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,23 @@
+{
+  "name": "budget exceeded",
+  "intent": {
+    "intent_id": "demo",
+    "intent_version": "1",
+    "budgets": [
+      {"id": "cost", "kind": "usd", "limit": 100, "window": "day"}
+    ],
+    "escalation": {"channels": ["finance"], "required_payload_fields": ["owner"]}
+  },
+  "proposed_action": {
+    "schema_version": "0.1",
+    "action_id": "analysis",
+    "actor_id": "agent-3",
+    "params": {}
+  },
+  "signals": {"schema_version": "0.1", "values": {}},
+  "budget_snapshot": {"budgets": {"cost": {"used": 150}}},
+  "expected": {
+    "decision": "ESCALATE",
+    "must_include": ["reasons.budget_state", "reasons.triggered_rules"]
+  }
+}

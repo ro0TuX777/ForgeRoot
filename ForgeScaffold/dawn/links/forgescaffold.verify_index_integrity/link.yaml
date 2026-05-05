@@ -1,0 +1,20 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.verify_index_integrity
+spec:
+  description: "Verify evidence index hash chain and optional signed checkpoint"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.index_integrity_report.json"
+      path: "index_integrity_report.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

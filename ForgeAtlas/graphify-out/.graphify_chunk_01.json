@@ -1,0 +1,1075 @@
+{
+  "nodes": [
+    {
+      "id": "action_discovery_service_config_module",
+      "label": "ActionDiscovery Config Module",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "purpose": "Environment variable configuration with in-code defaults for local development and tests."
+      }
+    },
+    {
+      "id": "catalog_path_config",
+      "label": "Catalog Path Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_CATALOG_PATH",
+        "default": "<FORGE_ROOT>/action_catalogs"
+      }
+    },
+    {
+      "id": "default_session_id_config",
+      "label": "Default Session ID Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_DEFAULT_SESSION_ID",
+        "default": "forge-atlas-anonymous"
+      }
+    },
+    {
+      "id": "default_max_results_config",
+      "label": "Default Max Results Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_DEFAULT_MAX_RESULTS",
+        "default": 10
+      }
+    },
+    {
+      "id": "similarity_threshold_config",
+      "label": "Similarity Threshold Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "ACTION_DISCOVERY_SIMILARITY_THRESHOLD",
+        "default": 0.3
+      }
+    },
+    {
+      "id": "embedding_model_config",
+      "label": "Embedding Model Config",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\config.py",
+      "attrs": {
+        "env_var": "FORGE_ATLAS_EMBEDDING_MODEL",
+        "default": "all-MiniLM-L6-v2"
+      }
+    },
+    {
+      "id": "action_discovery_service_run_module",
+      "label": "ActionDiscovery Service Run Module",
+      "type": "module",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "purpose": "Importlib-callable service entry point exposing run() and health().",
+        "security_invariant": "Every code path that returns actions passes through is_action_permitted."
+      }
+    },
+    {
+      "id": "catalog_loader_startup",
+      "label": "Catalog Loader Startup",
+      "type": "service",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "failure_mode": "FileNotFoundError leaves registry None and health reports unhealthy."
+      }
+    },
+    {
+      "id": "semantic_startup_embedding",
+      "label": "Semantic Startup Embedding",
+      "type": "service",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "failure_mode": "Embedding failures disable semantic search without crashing startup."
+      }
+    },
+    {
+      "id": "ok_envelope_function",
+      "label": "_ok Envelope Helper",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "returns": "status ok envelope"
+      }
+    },
+    {
+      "id": "error_envelope_function",
+      "label": "_error Envelope Helper",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "returns": "status error envelope with code, message, stage, details"
+      }
+    },
+    {
+      "id": "resolve_capability_set_function",
+      "label": "_resolve_capability_set",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "Accept caller capability_set directly or reject unresolved agent_class_id/session context."
+      }
+    },
+    {
+      "id": "deserialise_capability_set_function",
+      "label": "_deserialise_capability_set",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "produces": "CapabilitySet"
+      }
+    },
+    {
+      "id": "deserialise_query_function",
+      "label": "_deserialise_query",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "produces": "ActionDiscoveryQuery",
+        "error_path": "Unknown action_family raises ValueError."
+      }
+    },
+    {
+      "id": "summary_to_dict_function",
+      "label": "_summary_to_dict",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "Serializes lightweight action summary fields."
+      }
+    },
+    {
+      "id": "collect_candidates_function",
+      "label": "_collect_candidates",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "purpose": "Collect ActionContracts from registry, optionally scoped by resource_type.",
+        "error_path": "Missing actions during lookup are skipped."
+      }
+    },
+    {
+      "id": "run_semantic_function",
+      "label": "_run_semantic",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "ordering": "candidate collection, semantic rank, capability filter, action_family filter, truncate, response"
+      }
+    },
+    {
+      "id": "run_function",
+      "label": "run",
+      "type": "api",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "run(query, capability_set, session_context) returns _ok/_error dict and never raises."
+      }
+    },
+    {
+      "id": "health_function",
+      "label": "health",
+      "type": "api",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\run.py",
+      "attrs": {
+        "contract": "Reports healthy, degraded, or unhealthy catalog state plus semantic flag and uptime."
+      }
+    },
+    {
+      "id": "semantic_search_module",
+      "label": "Semantic Search Module",
+      "type": "module",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "purpose": "Embedding model loader, in-memory vector store, and similarity ranking for ActionContract descriptions."
+      }
+    },
+    {
+      "id": "semantic_search_class",
+      "label": "SemanticSearch",
+      "type": "class",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "state": "model_name, enabled, _model, _embeddings",
+        "graceful_degradation": "Disabled search returns candidates unchanged."
+      }
+    },
+    {
+      "id": "semantic_load_model_function",
+      "label": "SemanticSearch.load_model",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "failure_mode": "Catches any exception, clears model, sets enabled false, logs warning."
+      }
+    },
+    {
+      "id": "semantic_embed_catalog_function",
+      "label": "SemanticSearch.embed_catalog",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "purpose": "Precompute unit-normalized embeddings keyed by resource_type/action_name."
+      }
+    },
+    {
+      "id": "semantic_rank_by_similarity_function",
+      "label": "SemanticSearch.rank_by_similarity",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "contract": "Sort candidates by descending cosine similarity and exclude candidates below threshold."
+      }
+    },
+    {
+      "id": "semantic_similarity_score_function",
+      "label": "SemanticSearch.similarity_score",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "purpose": "Return cosine similarity for task_context/action, or None if disabled or encoding fails."
+      }
+    },
+    {
+      "id": "normalise_function",
+      "label": "_normalise",
+      "type": "function",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\semantic_search.py",
+      "attrs": {
+        "contract": "Return unit-length vector, or unchanged vector when norm is zero."
+      }
+    },
+    {
+      "id": "main_module_entrypoint",
+      "label": "__main__ Docker Entrypoint",
+      "type": "module",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\__main__.py",
+      "attrs": {
+        "purpose": "Validate service health at startup, log summary, exit 1 when unhealthy."
+      }
+    },
+    {
+      "id": "action_discovery_core_spec_doc",
+      "label": "ActionDiscovery Core Specification",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "status": "Draft v0.1",
+        "framework": "CONCORD v0.4",
+        "rationale": "Prevents token explosion from loading full action catalogs while preserving governed, advisory discovery."
+      }
+    },
+    {
+      "id": "catalog_persistence_layer_concept",
+      "label": "Catalog Persistence Layer",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "rationale": "ContractRegistry is in-memory only; manifests on disk let catalogs survive restarts and be edited by humans."
+      }
+    },
+    {
+      "id": "semantic_search_layer_concept",
+      "label": "Semantic Search Layer",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "rationale": "Structured filters cannot answer natural-language task descriptions; embedding descriptions enables semantic matching."
+      }
+    },
+    {
+      "id": "service_wrapper_layer_concept",
+      "label": "Service Wrapper Layer",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "transport": "Python importlib Pattern 1",
+        "rationale": "Expose discovery without HTTP, gRPC, or subprocess piping."
+      }
+    },
+    {
+      "id": "governed_discovery_invariant",
+      "label": "Governed Discovery Invariant",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlaswhitepaper.md",
+      "attrs": {
+        "rule": "An agent MUST NOT discover actions it cannot admit.",
+        "rationale": "Prevents implicit privilege leakage and supports zero-trust multi-tenant capability masking."
+      }
+    },
+    {
+      "id": "advisory_discovery_contract",
+      "label": "Advisory Discovery Contract",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "rule": "Discovery of an action does not guarantee admission and response carries no authoritative_for_mutation field."
+      }
+    },
+    {
+      "id": "implementation_plan_doc",
+      "label": "ActionDiscovery Implementation Plan",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Implementation_Plan.md",
+      "attrs": {
+        "phases": 4,
+        "target": "Greenfield service build"
+      }
+    },
+    {
+      "id": "punch_list_doc",
+      "label": "ActionDiscovery Punch List",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Punch_List.md",
+      "attrs": {
+        "priority_scheme": "P0 blocks all downstream work, P1 blocks release, P2 should ship, P3 nice to have."
+      }
+    },
+    {
+      "id": "forgeatlas_whitepaper_doc",
+      "label": "ForgeAtlas Whitepaper",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlaswhitepaper.md",
+      "attrs": {
+        "rationale": "Transforms agent tooling from a hardcoded list into a dynamic, zero-trust App Store governed by cryptographic rules."
+      }
+    },
+    {
+      "id": "ai_developer_briefing_doc",
+      "label": "ForgeAtlas AI Developer Briefing",
+      "type": "doc",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlas_AI_Dev_Briefing.md",
+      "attrs": {
+        "audience": "New AI Developer assigned to build ForgeAtlas"
+      }
+    },
+    {
+      "id": "forge_family_architecture",
+      "label": "Forge Family Architecture",
+      "type": "concept",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlas_AI_Dev_Briefing.md",
+      "attrs": {
+        "frameworks": [
+          "CONCORD",
+          "ForgeGate",
+          "ForgeWorks",
+          "ForgeScaffold",
+          "DAWN",
+          "ForgeAtlas"
+        ]
+      }
+    },
+    {
+      "id": "requirements_file",
+      "label": "ForgeAtlas Requirements",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\requirements.txt",
+      "attrs": {
+        "purpose": "Pinned Python dependencies for reproducible Docker builds."
+      }
+    },
+    {
+      "id": "semantic_dependencies",
+      "label": "Semantic Search Dependencies",
+      "type": "config",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\requirements.txt",
+      "attrs": {
+        "packages": [
+          "sentence-transformers==4.1.0",
+          "transformers==4.57.3",
+          "tokenizers==0.22.2",
+          "huggingface-hub==0.34.4",
+          "numpy==1.26.4",
+          "torch==2.7.1"
+        ]
+      }
+    },
+    {
+      "id": "test_service_wrapper_suite",
+      "label": "Service Wrapper Tests",
+      "type": "test",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_service_wrapper.py",
+      "attrs": {
+        "covers": "Happy path, capability filtering, trust tier filtering, missing capability context, invalid query, health, importlib callability."
+      }
+    },
+    {
+      "id": "test_semantic_search_suite",
+      "label": "Semantic Search Tests",
+      "type": "test",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_semantic_search.py",
+      "attrs": {
+        "covers": "Model loading, embed_catalog, similarity ranking, run() semantic integration, graceful degradation, security invariant."
+      }
+    },
+    {
+      "id": "test_integration_suite",
+      "label": "Integration Tests",
+      "type": "test",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\action_discovery_service\\tests\\test_integration.py",
+      "attrs": {
+        "covers": "ForgeWorks importlib pattern, CONCORD v0.4 response shape, action family reachability."
+      }
+    },
+    {
+      "id": "action_discovery_response_contract",
+      "label": "ActionDiscoveryResponse Contract",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ActionDiscovery_Core_Specification.md",
+      "attrs": {
+        "fields": [
+          "available_actions",
+          "filtered_by",
+          "total_available",
+          "recommendation",
+          "catalog_version"
+        ]
+      }
+    },
+    {
+      "id": "forgeworks_importlib_pattern",
+      "label": "ForgeWorks Importlib Pattern",
+      "type": "contract",
+      "file": "F:\\ForgedRoot\\ForgeAtlas\\ForgeAtlas_AI_Dev_Briefing.md",
+      "attrs": {
+        "pattern": "spec_from_file_location, module_from_spec, exec_module, direct run()/health() calls"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "catalog_path_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines CATALOG_PATH from FORGE_ATLAS_CATALOG_PATH with action_catalogs default."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "default_session_id_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines DEFAULT_SESSION_ID from FORGE_ATLAS_DEFAULT_SESSION_ID."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "default_max_results_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines DEFAULT_MAX_RESULTS from FORGE_ATLAS_DEFAULT_MAX_RESULTS."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "similarity_threshold_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines SIMILARITY_THRESHOLD from ACTION_DISCOVERY_SIMILARITY_THRESHOLD."
+    },
+    {
+      "source": "action_discovery_service_config_module",
+      "target": "embedding_model_config",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "config.py defines EMBEDDING_MODEL from FORGE_ATLAS_EMBEDDING_MODEL."
+    },
+    {
+      "source": "catalog_loader_startup",
+      "target": "catalog_path_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py startup constructs CatalogLoader(config.CATALOG_PATH)."
+    },
+    {
+      "source": "semantic_startup_embedding",
+      "target": "embedding_model_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py creates SemanticSearch(config.EMBEDDING_MODEL)."
+    },
+    {
+      "source": "semantic_startup_embedding",
+      "target": "semantic_load_model_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py calls _semantic.load_model() at module startup."
+    },
+    {
+      "source": "semantic_startup_embedding",
+      "target": "semantic_embed_catalog_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run.py calls _semantic.embed_catalog(_registry) when semantic search is enabled and registry loaded."
+    },
+    {
+      "source": "resolve_capability_set_function",
+      "target": "deserialise_capability_set_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_resolve_capability_set calls _deserialise_capability_set when capability_set is supplied."
+    },
+    {
+      "source": "resolve_capability_set_function",
+      "target": "error_envelope_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_resolve_capability_set returns _error for invalid capability_set, agent_class_id, or missing context."
+    },
+    {
+      "source": "deserialise_query_function",
+      "target": "default_session_id_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_deserialise_query uses config.DEFAULT_SESSION_ID when session_id is absent."
+    },
+    {
+      "source": "deserialise_query_function",
+      "target": "default_max_results_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_deserialise_query uses config.DEFAULT_MAX_RESULTS when max_results is absent."
+    },
+    {
+      "source": "collect_candidates_function",
+      "target": "catalog_loader_startup",
+      "relation": "depends_on",
+      "confidence": 0.88,
+      "kind": "INFERRED",
+      "evidence": "_collect_candidates reads the module-level _registry populated by CatalogLoader at startup."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "collect_candidates_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic starts by calling _collect_candidates(discovery_query.resource_type)."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "semantic_rank_by_similarity_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic calls _semantic.rank_by_similarity(task_context, candidates, threshold=...)."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "similarity_threshold_config",
+      "relation": "consumes",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic passes config.SIMILARITY_THRESHOLD into rank_by_similarity and filtered_by."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "governed_discovery_invariant",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic filters ranked actions with is_action_permitted before returning summaries."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "summary_to_dict_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic serializes summaries via [_summary_to_dict(s) for s in summaries]."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "semantic_similarity_score_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic computes top_score using _semantic.similarity_score for recommendations."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "ok_envelope_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic returns _ok(payload)."
+    },
+    {
+      "source": "run_function",
+      "target": "error_envelope_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() returns _error for catalog empty, invalid query, and discovery exceptions."
+    },
+    {
+      "source": "run_function",
+      "target": "deserialise_query_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() calls _deserialise_query(query) inside query parsing."
+    },
+    {
+      "source": "run_function",
+      "target": "resolve_capability_set_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() calls _resolve_capability_set(capability_set, session_context)."
+    },
+    {
+      "source": "run_function",
+      "target": "run_semantic_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() routes to _run_semantic when discovery_query.task_context and _semantic.enabled."
+    },
+    {
+      "source": "run_function",
+      "target": "summary_to_dict_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() serializes structured response.available_actions with _summary_to_dict."
+    },
+    {
+      "source": "run_function",
+      "target": "governed_discovery_invariant",
+      "relation": "implements",
+      "confidence": 0.95,
+      "kind": "EXTRACTED",
+      "evidence": "run.py docstring and structured route call execute_discovery with capability_set and agent_trust_tier."
+    },
+    {
+      "source": "run_function",
+      "target": "advisory_discovery_contract",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() payload omits authoritative_for_mutation and returns recommendations as advisory metadata."
+    },
+    {
+      "source": "health_function",
+      "target": "semantic_startup_embedding",
+      "relation": "depends_on",
+      "confidence": 0.86,
+      "kind": "INFERRED",
+      "evidence": "health() reports _semantic.enabled, which is established by startup embedding/model load."
+    },
+    {
+      "source": "health_function",
+      "target": "catalog_loader_startup",
+      "relation": "depends_on",
+      "confidence": 0.9,
+      "kind": "INFERRED",
+      "evidence": "health() derives catalog_loaded, contracts_registered, failures, and catalog_version from startup loader/registry state."
+    },
+    {
+      "source": "semantic_load_model_function",
+      "target": "semantic_search_class",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "load_model sets self._model and self.enabled based on SentenceTransformer initialization."
+    },
+    {
+      "source": "semantic_embed_catalog_function",
+      "target": "normalise_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "embed_catalog stores _normalise(emb) for each action description."
+    },
+    {
+      "source": "semantic_rank_by_similarity_function",
+      "target": "normalise_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "rank_by_similarity normalizes query and on-demand action embeddings."
+    },
+    {
+      "source": "semantic_similarity_score_function",
+      "target": "normalise_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "similarity_score normalizes query and action embeddings before dot product."
+    },
+    {
+      "source": "semantic_search_class",
+      "target": "semantic_dependencies",
+      "relation": "depends_on",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "semantic_search.py uses sentence_transformers and numpy; requirements.txt pins sentence-transformers, numpy, torch, and transformer stack."
+    },
+    {
+      "source": "main_module_entrypoint",
+      "target": "health_function",
+      "relation": "calls",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "__main__.py imports health and calls h = health()."
+    },
+    {
+      "source": "main_module_entrypoint",
+      "target": "catalog_loader_startup",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "__main__.py exits 1 when health status is unhealthy due to no contracts or failures."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "catalog_persistence_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec §3 defines the Catalog Persistence Layer."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec §4 defines the Semantic Search Layer."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "service_wrapper_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec §5 defines the Service Wrapper Layer and transport pattern."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "governed_discovery_invariant",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec §7 says ActionDiscovery MUST filter results by session AgentClass and CapabilitySet."
+    },
+    {
+      "source": "action_discovery_core_spec_doc",
+      "target": "advisory_discovery_contract",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec §7 says responses are advisory and must carry no authoritative_for_mutation field."
+    },
+    {
+      "source": "semantic_search_layer_concept",
+      "target": "semantic_search_class",
+      "relation": "implements",
+      "confidence": 0.95,
+      "kind": "INFERRED",
+      "evidence": "semantic_search.py class lifecycle matches Core Spec semantic layer design: load model, embed catalog, rank task_context."
+    },
+    {
+      "source": "service_wrapper_layer_concept",
+      "target": "run_function",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec §5.1 specifies run(query, capability_set, session_context); run.py exposes that function."
+    },
+    {
+      "source": "service_wrapper_layer_concept",
+      "target": "health_function",
+      "relation": "implements",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec §6.4 specifies health() with catalog and semantic status; run.py implements health()."
+    },
+    {
+      "source": "implementation_plan_doc",
+      "target": "catalog_persistence_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Implementation Plan Phase 1 is Catalog Persistence Layer."
+    },
+    {
+      "source": "implementation_plan_doc",
+      "target": "service_wrapper_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Implementation Plan Phase 2 is Service Wrapper."
+    },
+    {
+      "source": "implementation_plan_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Implementation Plan Phase 3 is Semantic Search Layer."
+    },
+    {
+      "source": "punch_list_doc",
+      "target": "implementation_plan_doc",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Punch List is explicitly companion to Core Specification and Implementation Plan."
+    },
+    {
+      "source": "forgeatlas_whitepaper_doc",
+      "target": "governed_discovery_invariant",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Whitepaper states ForgeAtlas will never discover actions lacking trust tier or capability scope."
+    },
+    {
+      "source": "ai_developer_briefing_doc",
+      "target": "forgeworks_importlib_pattern",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Briefing names the established importlib pattern and gives code using spec_from_file_location."
+    },
+    {
+      "source": "ai_developer_briefing_doc",
+      "target": "forge_family_architecture",
+      "relation": "documents",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Briefing lists CONCORD, ForgeGate, ForgeWorks, ForgeScaffold, DAWN, and ForgeAtlas roles."
+    },
+    {
+      "source": "forge_family_architecture",
+      "target": "governed_discovery_invariant",
+      "relation": "depends_on",
+      "confidence": 0.85,
+      "kind": "INFERRED",
+      "evidence": "Briefing places ForgeAtlas under CONCORD governance and states CapabilitySet/trust-tier filtering is the key invariant."
+    },
+    {
+      "source": "requirements_file",
+      "target": "semantic_dependencies",
+      "relation": "configures",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "requirements.txt groups sentence-transformers, transformers, tokenizers, huggingface-hub, numpy, and torch under Semantic search."
+    },
+    {
+      "source": "test_service_wrapper_suite",
+      "target": "run_function",
+      "relation": "tests",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "test_service_wrapper.py imports run and calls run() across happy path, capability, error, and importlib tests."
+    },
+    {
+      "source": "test_service_wrapper_suite",
+      "target": "health_function",
+      "relation": "tests",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestHealth class asserts health() shape, status, catalog state, semantic flag, and non-raising behavior."
+    },
+    {
+      "source": "test_service_wrapper_suite",
+      "target": "governed_discovery_invariant",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "CapabilityFiltering tests assert T2 agents cannot see approve/deploy and exclusions/restricted resource types hide actions."
+    },
+    {
+      "source": "test_semantic_search_suite",
+      "target": "semantic_search_class",
+      "relation": "tests",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestSemanticSearchModelLoading and TestRankBySimilarity instantiate SemanticSearch and exercise load, embed, rank, score."
+    },
+    {
+      "source": "test_semantic_search_suite",
+      "target": "run_semantic_function",
+      "relation": "tests",
+      "confidence": 0.96,
+      "kind": "EXTRACTED",
+      "evidence": "TestSemanticIntegrationInRun asserts task_context triggers semantic path and filtered_by.semantic_search is true."
+    },
+    {
+      "source": "test_semantic_search_suite",
+      "target": "governed_discovery_invariant",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestSecurityInvariant asserts T2 agents never see deploy/approve via semantic search and restrictions/exclusions are respected."
+    },
+    {
+      "source": "test_integration_suite",
+      "target": "forgeworks_importlib_pattern",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestImportlibPattern mirrors spec_from_file_location, module_from_spec, exec_module and calls run()/health()."
+    },
+    {
+      "source": "test_integration_suite",
+      "target": "action_discovery_response_contract",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "TestResponseShape asserts available_actions, filtered_by, total_available, recommendation, catalog_version and no authoritative_for_mutation."
+    },
+    {
+      "source": "test_integration_suite",
+      "target": "advisory_discovery_contract",
+      "relation": "validates",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Integration response-shape tests assert authoritative_for_mutation is absent from payload and actions."
+    },
+    {
+      "source": "run_function",
+      "target": "action_discovery_response_contract",
+      "relation": "produces",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "run() payload includes available_actions, filtered_by, total_available, catalog_version, recommendation."
+    },
+    {
+      "source": "run_semantic_function",
+      "target": "action_discovery_response_contract",
+      "relation": "produces",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic builds the same payload fields for semantic responses."
+    },
+    {
+      "source": "forgeatlas_whitepaper_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "conceptually_related_to",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Whitepaper describes natural-language query scoring via localized sentence-transformer embeddings and cosine similarity ranking."
+    },
+    {
+      "source": "ai_developer_briefing_doc",
+      "target": "semantic_search_layer_concept",
+      "relation": "conceptually_related_to",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Briefing lists the semantic search requirement: all-MiniLM-L6-v2, description embeddings, cosine ranking, threshold."
+    },
+    {
+      "source": "semantic_search_layer_concept",
+      "target": "run_semantic_function",
+      "relation": "semantically_similar_to",
+      "confidence": 0.91,
+      "kind": "INFERRED",
+      "evidence": "The concept's documented flow maps directly to _run_semantic's implemented candidate ranking and capability filtering sequence."
+    },
+    {
+      "source": "catalog_persistence_layer_concept",
+      "target": "catalog_loader_startup",
+      "relation": "semantically_similar_to",
+      "confidence": 0.88,
+      "kind": "INFERRED",
+      "evidence": "The concept describes YAML catalog hydration; run.py startup creates CatalogLoader and loads registry from configured catalog path."
+    },
+    {
+      "source": "service_wrapper_layer_concept",
+      "target": "forgeworks_importlib_pattern",
+      "relation": "depends_on",
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec and Briefing both state the service wrapper follows ForgeWorks Pattern 1 importlib convention."
+    },
+    {
+      "source": "deserialise_query_function",
+      "target": "action_discovery_response_contract",
+      "relation": "depends_on",
+      "confidence": 0.65,
+      "kind": "AMBIGUOUS",
+      "evidence": "Query deserialization feeds response construction, but the response contract is not directly referenced in _deserialise_query."
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "three_layer_action_discovery_architecture",
+      "label": "Three-Layer ActionDiscovery Architecture",
+      "nodes": [
+        "catalog_persistence_layer_concept",
+        "semantic_search_layer_concept",
+        "service_wrapper_layer_concept",
+        "action_discovery_core_spec_doc",
+        "forgeatlas_whitepaper_doc"
+      ],
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "Core Spec and Whitepaper both define ForgeAtlas/ActionDiscovery as catalog persistence, semantic search, and service wrapper layers."
+    },
+    {
+      "id": "semantic_query_security_flow",
+      "label": "Semantic Query Security Flow",
+      "nodes": [
+        "run_semantic_function",
+        "semantic_rank_by_similarity_function",
+        "similarity_threshold_config",
+        "governed_discovery_invariant",
+        "action_discovery_response_contract"
+      ],
+      "confidence": 1.0,
+      "kind": "EXTRACTED",
+      "evidence": "_run_semantic explicitly ranks by similarity, applies threshold, filters with is_action_permitted, and returns the response payload."
+    },
+    {
+      "id": "qa_contract_surface",
+      "label": "QA Coverage for Service Contracts",
+      "nodes": [
+        "test_service_wrapper_suite",
+        "test_semantic_search_suite",
+        "test_integration_suite",
+        "run_function",
+        "health_function",
+        "governed_discovery_invariant",
+        "action_discovery_response_contract"
+      ],
+      "confidence": 0.96,
+      "kind": "EXTRACTED",
+      "evidence": "The three test files collectively cover run/health behavior, semantic integration, security invariant, importlib usage, and response shape."
+    },
+    {
+      "id": "runtime_configuration_surface",
+      "label": "Runtime Configuration Surface",
+      "nodes": [
+        "action_discovery_service_config_module",
+        "catalog_path_config",
+        "default_session_id_config",
+        "default_max_results_config",
+        "similarity_threshold_config",
+        "embedding_model_config",
+        "requirements_file"
+      ],
+      "confidence": 0.94,
+      "kind": "EXTRACTED",
+      "evidence": "config.py centralizes runtime environment values while requirements.txt pins the dependency/runtime package surface."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+allowed_imports:
+- os
+- json
+- pandas
+architecture_rules: No global state.
+prohibited_actions:
+- No open internet access
+verification_plan: Generate test_script.py, mock external APIs, assert exit code 0.

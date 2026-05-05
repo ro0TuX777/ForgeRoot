@@ -1,0 +1,1 @@
+{"domain":"ci_change_control","expected_outcome_ref":"oracle://CI-001","inputs":{"artifact_refs":["ART-CI-LOG","ART-REPO-SNAPSHOT","ART-FAILING-TESTS","ART-POLICY"],"failing_test":"tests/test_safe_fix.py::test_safe_fix"},"priority":"MEDIUM","schema_version":"0.1","ticket_id":"CI-001","ticket_intent":"Fix CI failure: tests/test_safe_fix.py::test_safe_fix","type":"fix_ci_failure"}

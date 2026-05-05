@@ -1,0 +1,20 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.build_all_caches
+spec:
+  description: "Build caches for all projects in the global catalog"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.cache_batch_report.json"
+      path: "evidence/global/cache_batch_report.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 300
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

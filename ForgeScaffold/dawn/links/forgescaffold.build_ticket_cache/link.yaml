@@ -1,0 +1,20 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.build_ticket_cache
+spec:
+  description: "Build deterministic ticket ledger cache"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.ticket_cache_build_report.json"
+      path: "ticket_cache_build_report.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

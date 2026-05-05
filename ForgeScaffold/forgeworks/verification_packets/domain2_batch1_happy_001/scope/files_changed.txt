@@ -1,0 +1,3 @@
+ingest/it_ops_runbook/batch_001/*
+packs/it_ops_runbook/test_batch_001/*
+results/ops_batch_001_happy/*

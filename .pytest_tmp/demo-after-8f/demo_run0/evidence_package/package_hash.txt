@@ -1,0 +1,16 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "README_AUDITOR.md": "1d25453ee05f3dc379bae2badd40d35f67933f11e3512f1f67f07211a32a37a7",
+    "chain_validation_report.json": "46f704214a0a7c0d643bb654fe3ff4b53bf238962215c5cbfe8cb13463ca8487",
+    "control_coverage_report.json": "a3a862827e791573715b7e5379e3ba9ceaae5f5895fd8237268798bc64b1a95d",
+    "event_type_summary.csv": "d31ef426e6fcd0a003d177ee5ba1c79a446774f98ce01cb4c7f111ae883eb644",
+    "evidence_gap_report.json": "526e07f6dc4cb78fd66750f7c5f9bed948854154c6cfc0e5d02ee757cc52dc35",
+    "human_review_decisions.json": "c458befa8c6130356d5f24882e7c98ff8761d260697abb1704b9501b27bf554b",
+    "ledger_slice.jsonl": "b6f6327bebd4c53564c68c635e0f869a34036c47e1a82c809259f9ff281f0a5b",
+    "legal_hold_report.json": "39de783bd17e8ab7a24711d56a5e6260c8bdea8de64eb2871765da18fc445043",
+    "manifest.json": "c45f4cd2cfe24e0a1626514aea6b0e4e2b45e340d2223cd50ef6a20957865d3b",
+    "model_provider_boundary_report.json": "d3e2717744e7140d3daa42d62743e03174d7cca88134926b923c597bbe88e070",
+    "retention_policy_report.json": "17bad4481e8242d0bf72f28db4c41ef8cfa32a1cf90bb96a8e0b7db242754c8a"
+  }
+}

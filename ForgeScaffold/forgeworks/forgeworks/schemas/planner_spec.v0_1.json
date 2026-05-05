@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgeworks/schemas/planner_spec.v0_1.json",
+  "title": "ForgePlanner Specification",
+  "description": "Strict specification for an autonomous planner execution request.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "spec_id",
+    "request_id",
+    "goal",
+    "domain",
+    "mode",
+    "source",
+    "workcell",
+    "run",
+    "score",
+    "report",
+    "loop_policy"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "spec_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 5
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["ci_change_control", "it_ops_runbook"]
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["shadow", "supervised", "ramped"]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "oneOf": [
+        {
+          "required": ["source_path"],
+          "additionalProperties": false,
+          "properties": {
+            "source_path": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "required": ["generator"],
+          "additionalProperties": false,
+          "properties": {
+            "generator": {
+              "type": "object",
+              "required": ["script_id", "args"],
+              "additionalProperties": false,
+              "properties": {
+                "script_id": {
+                  "type": "string",
+                  "enum": ["generate_ci_batch", "generate_it_ops_batch"]
+                },
+                "args": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "workcell": {
+      "type": "object",
+      "required": ["out_path"],
+      "additionalProperties": false,
+      "properties": {
+        "out_path": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "run": {
+      "type": "object",
+      "required": ["out_path"],
+      "additionalProperties": false,
+      "properties": {
+        "out_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "drift_plan_path": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "score": {
+      "type": "object",
+      "required": ["oracle_path", "scoring_path"],
+      "additionalProperties": false,
+      "properties": {
+        "oracle_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scoring_path": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "report": {
+      "type": "object",
+      "required": ["out_path"],
+      "additionalProperties": false,
+      "properties": {
+        "out_path": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "loop_policy": {
+      "type": "object",
+      "required": ["max_iterations", "target_score", "max_no_progress_iters"],
+      "additionalProperties": false,
+      "properties": {
+        "max_iterations": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "target_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "require_zero_oracle_mismatch": {
+          "type": "boolean",
+          "default": true
+        },
+        "require_zero_deny": {
+          "type": "boolean",
+          "default": true
+        },
+        "max_no_progress_iters": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}

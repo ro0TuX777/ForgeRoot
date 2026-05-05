@@ -1,0 +1,46 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.update_evidence_index
+spec:
+  description: "Append evidence index entry for verified runs"
+  requires:
+    - artifactId: "forgescaffold.evidence_manifest.json"
+      path: "evidence_manifest.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.evidence_signature.json"
+      path: "evidence_signature.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.evidence_verification_report.json"
+      path: "evidence_verification_report.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.approval_receipt.json"
+      path: "approval_receipt.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.rollback_report.json"
+      path: "rollback_report.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.review_packet.json"
+      path: "review_packet.json"
+      schema:
+        type: "json"
+  produces: []
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

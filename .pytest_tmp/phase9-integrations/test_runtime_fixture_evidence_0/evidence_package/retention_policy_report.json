@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-04-29T22:53:41.840783+00:00",
+  "legal_hold_count": 0,
+  "legal_hold_event_ids": [],
+  "retention_class_counts": {
+    "audit_7y": 5,
+    "support_1y": 1
+  },
+  "total_events": 6
+}

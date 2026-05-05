@@ -1,0 +1,36 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.verify_post_apply
+spec:
+  description: "Run harness tests and core checks after patchset apply"
+  requires:
+    - artifactId: "forgescaffold.test_matrix.yaml"
+      path: "test_matrix.yaml"
+      schema:
+        type: "yaml"
+    - artifactId: "forgescaffold.test_harness.manifest.json"
+      path: "test_harness/manifest.json"
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.verification_report.json"
+      path: "verification_report.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.test_results.manifest.json"
+      path: "test_results/manifest.json"
+      schema:
+        type: "json"
+  runtime:
+    timeoutSeconds: 900
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

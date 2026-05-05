@@ -1,0 +1,1 @@
+{"artifacts":[{"artifact_id":"ART-CI-LOG","kind":"text","path":"artifacts/ci_log_01.txt"},{"artifact_id":"ART-REPO-SNAPSHOT","kind":"text","path":"artifacts/repo_snapshot_manifest.json"},{"artifact_id":"ART-FAILING-TESTS","kind":"text","path":"artifacts/failing_tests.json"},{"artifact_id":"ART-POLICY","kind":"text","path":"artifacts/policy.json"}],"schema_version":"0.1"}

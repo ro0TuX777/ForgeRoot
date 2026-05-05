@@ -1,0 +1,31 @@
+### validate
+Validation: OK
+Workcell: packs/it_ops_runbook/test_batch_001_happy
+Schemas checked: ticket, artifact_index, signals, run_config
+workcell_hash: 9a9eef893d7cc3584a89962b0063381ca97d9c07fc30ed6af68f1327214aad89
+### run
+Run: OK
+Workcell: packs/it_ops_runbook/test_batch_001_happy
+Mode: supervised
+Tickets processed: 1
+Decisions written: 5
+Ledger: results/ops_batch_001_happy2/decision_ledger.jsonl
+Approval records written: 5
+Approvals: results/ops_batch_001_happy2/approval_records.jsonl
+workcell_hash: 9a9eef893d7cc3584a89962b0063381ca97d9c07fc30ed6af68f1327214aad89
+### score
+Score: OK
+Results: results/ops_batch_001_happy2
+Oracle: packs/it_ops_runbook/test_batch_001_happy/oracle/expectations.jsonl
+Scoring config: packs/it_ops_runbook/test_batch_001_happy/scoring/scoring.json
+Total score: 99.5
+Pass: true
+score.json: results/ops_batch_001_happy2/score.json
+### report
+Report: OK
+Results: results/ops_batch_001_happy2
+Markdown report: results/ops_batch_001_happy2/report.md
+### negative_normalize
+Normalization: FAILED
+Domain: it_ops_runbook
+Error: missing required raw file: runbook_service_down.md

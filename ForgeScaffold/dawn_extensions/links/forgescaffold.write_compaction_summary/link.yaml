@@ -1,0 +1,26 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.write_compaction_summary
+spec:
+  description: "Write a signed summary for evidence index cache provenance"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.compaction_summary.json"
+      path: "evidence/compaction/summary.json"
+      schema:
+        type: "json"
+      optional: true
+    - artifactId: "forgescaffold.compaction_summary.signature.json"
+      path: "evidence/compaction/summary.signature.json"
+      schema:
+        type: "json"
+      optional: true
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

@@ -1,0 +1,16 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "README_AUDITOR.md": "f216900bfbc2ce6afe3715c5bb710293f45c89ec047ec6ef246cb9835e00e693",
+    "chain_validation_report.json": "ee4285ba9f966254733560fd063ce4d0daa1d60d68a89924da7387c16f2dd9c2",
+    "control_coverage_report.json": "25a154f83e504a8e19efaf6c4d4b4e7d432fed87f997ea74405aa6fd6d9a75a1",
+    "event_type_summary.csv": "19f2827ca2ed87047db4332ab4eb161f9209670bcabba3a4d01edc27d797ca3e",
+    "evidence_gap_report.json": "4629ab043bfca5055aef63a62154f2ab3bfcddb6fcc0b548006ef5bdda9fc3ce",
+    "human_review_decisions.json": "37a4e692d003d0097af33f046716e163db18681afc380c42f37d26ce5f3f51a0",
+    "ledger_slice.jsonl": "348095edcd307bb87151175cb9fc9c20fbf37ec9fc6e1f95438618f733dcb3ec",
+    "legal_hold_report.json": "ae218d2635d8f7b2aa842bb9e6a512fb7789656e57a1bafcddccc8feaf84483c",
+    "manifest.json": "87fc679f816021c3206ebdd83df6ec4fc043ea597fddc561900e999b63face94",
+    "model_provider_boundary_report.json": "80e90b6096af55c4c7543c6f44085b8177a66dba3fd1a236fd761b3f2a4dc956",
+    "retention_policy_report.json": "046793e0ad295def73f2963ccc66c2ec77ec2f8a110e48a78a9b4c9471d112eb"
+  }
+}

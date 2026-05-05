@@ -1,0 +1,43 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.obs_instrument_patchset
+spec:
+  description: "Generate a deterministic observability instrumentation patchset"
+  requires:
+    - artifactId: "dawn.project.bundle"
+      path: "dawn.project.bundle.json"
+      schema:
+        type: "json"
+    - artifactId: "forgescaffold.system_catalog.json"
+      path: "system_catalog.json"
+      schema:
+        type: "json"
+        ref: "forgescaffold.system_catalog"
+    - artifactId: "forgescaffold.dataflow_map.json"
+      path: "dataflow_map.json"
+      schema:
+        type: "json"
+        ref: "forgescaffold.dataflow_map"
+    - artifactId: "forgescaffold.log_envelope.schema.json"
+      path: "log_envelope.schema.json"
+      schema:
+        type: "json"
+  produces:
+    - artifactId: "forgescaffold.instrumentation.patchset.json"
+      path: "instrumentation.patchset.json"
+      schema:
+        type: "json"
+        ref: "forgescaffold.instrumentation.patchset"
+  runtime:
+    timeoutSeconds: 600
+    retries: 0
+  steps:
+    - id: validate_inputs
+      type: validator
+    - id: run
+      type: executor
+    - id: validate_outputs
+      type: validator
+    - id: emit_ledger
+      type: ledger

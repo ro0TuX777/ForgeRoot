@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "completed_since_analysis": 25,
+  "last_ticket_id": "azul-0d8ed51d",
+  "last_report_path": "/Users/vinsoncornejo/ForgedRoot/Azul/azul_data/improvement_reports/report_20260311T233749Z.json",
+  "last_report_at": "2026-03-11T23:37:49.155840+00:00",
+  "last_drift_path": "/Users/vinsoncornejo/ForgedRoot/Azul/azul_data/drift_reports/drift_20260311T233749Z.json",
+  "last_drift_at": "2026-03-11T23:37:49.155842+00:00",
+  "last_distillation_batch_path": "",
+  "last_distillation_batch_at": "",
+  "distilled_pair_ids": []
+}

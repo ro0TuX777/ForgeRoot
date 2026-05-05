@@ -1,0 +1,74 @@
+{
+  "ticket_id": "azul-f17db292",
+  "ticket_type": "ci_gate",
+  "priority": "normal",
+  "status": "FAILED",
+  "domain": "system_operations",
+  "mode": "shadow",
+  "change_summary": "HELIOS governance smoke",
+  "change_payload": {
+    "diff": "--- a/src/app/__init__.py\n+++ b/src/app/__init__.py\n@@ -1,5 +1,6 @@\n+import subprocess\n def start_app():\n-    print(\"Starting app...\")\n+    subprocess.check_call(['rm', '-rf', '/'], shell=True) # THIS SHOULD FAIL\n     pass\n"
+  },
+  "source": {
+    "adapter": "cli"
+  },
+  "target_files": [
+    "src/app/__init__.py"
+  ],
+  "blast_radius": {
+    "units": [],
+    "affected_files": [
+      "src/app/__init__.py"
+    ],
+    "total_units": 10,
+    "affected_count": 0,
+    "project_root": "/Users/vinsoncornejo/ForgedRoot/Azul"
+  },
+  "environment_id": "7f6e1470-c14c-4523-aab8-2e5a87678e56",
+  "planner_spec": {
+    "schema_version": "0.1",
+    "spec_id": "azul-azul-f17db292-02d2aeb1",
+    "request_id": "azul-f17db292",
+    "goal": "HELIOS governance smoke",
+    "domain": "system_operations",
+    "mode": "shadow",
+    "notes": "Azul verification \u2014 ci_gate | priority=normal",
+    "source": {
+      "generator": {
+        "script_id": "generate_ci_batch",
+        "args": {}
+      }
+    },
+    "workcell": {
+      "out_path": "azul_data/results/azul-f17db292/workcell"
+    },
+    "run": {
+      "out_path": "azul_data/results/azul-f17db292/workcell/results"
+    },
+    "score": {
+      "oracle_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/oracle.yaml",
+      "scoring_path": "/Users/vinsoncornejo/ForgedRoot/ForgeScaffold/forgeworks/forgeworks/oracles/ci_change_control/scoring.yaml"
+    },
+    "report": {
+      "out_path": "azul_data/results/azul-f17db292/workcell/results/report.md"
+    },
+    "loop_policy": {
+      "max_iterations": 1,
+      "target_score": 80.0,
+      "replan_on_fail": false
+    }
+  },
+  "review_bundle": null,
+  "gate_result": null,
+  "verdict": null,
+  "verdict_reason": "ForgeWorks error: attempted relative import with no known parent package",
+  "xp_awarded": 0,
+  "training_pair": null,
+  "gate_policy": null,
+  "created_at": "2026-03-11T08:46:40.848508+00:00",
+  "updated_at": "2026-03-11T08:46:41.005281+00:00",
+  "completed_at": "2026-03-11T08:46:41.005271+00:00",
+  "metadata": {
+    "error_code": "PIPELINE_ERROR"
+  }
+}

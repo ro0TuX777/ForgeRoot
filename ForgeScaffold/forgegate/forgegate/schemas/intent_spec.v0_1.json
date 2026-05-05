@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forgegate.local/schemas/intent_spec.v0_1.json",
+  "title": "ForgeGate IntentSpec v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["intent_id", "intent_version"],
+  "properties": {
+    "intent_id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "intent_version": {"type": "string", "minLength": 1, "maxLength": 128},
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "effect"],
+        "properties": {
+          "id": {"type": "string"},
+          "when": {"type": "object"},
+          "effect": {"type": "string", "enum": ["deny", "escalate", "require_approval"]},
+          "on_missing_signals": {"type": "string", "enum": ["escalate", "deny", "skip"]},
+          "applies_to_actions": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "boundaries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "action", "autonomy"],
+        "properties": {
+          "id": {"type": "string"},
+          "action": {"type": "string"},
+          "autonomy": {"type": "number"},
+          "when": {"type": "object"},
+          "agent_profile": {"type": "string"},
+          "on_missing_signals": {"type": "string", "enum": ["escalate", "deny", "skip"]}
+        }
+      }
+    },
+    "budgets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "limit", "window"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"type": "string"},
+          "limit": {"type": "number"},
+          "window": {"type": "string"},
+          "when": {"type": "object"},
+          "effect": {"type": "string", "enum": ["deny", "escalate"]},
+          "warning_threshold": {"type": "number"},
+          "on_missing_signals": {"type": "string", "enum": ["escalate", "deny", "skip"]}
+        }
+      }
+    },
+    "tradeoffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id"],
+        "properties": {
+          "id": {"type": "string"},
+          "when": {"type": "object"},
+          "on_missing_signals": {"type": "string", "enum": ["skip", "escalate", "deny"]},
+          "objective_overrides": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "escalation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["channels", "required_payload_fields"],
+      "properties": {
+        "kind": {"type": "string"},
+        "channels": {"type": "array", "items": {"type": "string"}},
+        "required_payload_fields": {"type": "array", "items": {"type": "string"}},
+        "sla_minutes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "tradeoff_objective": {"type": "object", "additionalProperties": true},
+    "shaping": {"type": "array", "items": {"type": "object"}},
+    "actions": {"type": "array", "items": {"type": "string"}},
+    "redactions": {"type": "array", "items": {"type": "string"}}
+    ,
+    "allow_missing_signals": {"type": "array", "items": {"type": "string"}},
+    "payload_limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_params_bytes": {"type": "integer", "minimum": 1},
+        "max_signals_bytes": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

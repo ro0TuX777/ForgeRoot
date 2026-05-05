@@ -1,0 +1,20 @@
+{
+  "fixture_provenance": "representative_hand_authored",
+  "subsystem": "CONCORD",
+  "agent_id": "agent.research.assistant",
+  "admitted": true,
+  "reason": "agent satisfies trust tier and capability policy",
+  "risk_level": "low",
+  "tenant_id": "tenant-001",
+  "customer_boundary": "customer-a",
+  "data_residency": "NZ",
+  "policy_id": "concord-admission-v1",
+  "policy_hash": "sha256:concord-allow-policy",
+  "frameworks": ["NZISM", "SOC2"],
+  "evidence_refs": ["concord://admission/allow-001"],
+  "agent_class": "research_agent",
+  "trust_tier": "tier_2",
+  "capabilities_checked": ["read_docs", "call_llm"],
+  "environment": "local",
+  "deployment_id": "runtime-fixture"
+}

@@ -1,0 +1,26 @@
+apiVersion: dawn.links/v1
+kind: Link
+metadata:
+  name: forgescaffold.write_index_checkpoint
+spec:
+  description: "Write a signed checkpoint for the evidence index"
+  requires: []
+  produces:
+    - artifactId: "forgescaffold.index_checkpoint.json"
+      path: "evidence/checkpoints/checkpoint.json"
+      schema:
+        type: "json"
+      optional: true
+    - artifactId: "forgescaffold.index_checkpoint.signature.json"
+      path: "evidence/checkpoints/checkpoint.signature.json"
+      schema:
+        type: "json"
+      optional: true
+  runtime:
+    timeoutSeconds: 60
+    retries: 0
+  steps:
+    - id: run
+      type: executor
+    - id: emit_ledger
+      type: ledger

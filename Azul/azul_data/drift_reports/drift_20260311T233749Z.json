@@ -1,0 +1,50 @@
+{
+  "scan_date": "2026-03-11T23:37:49.154634+00:00",
+  "contracts_compared": 0,
+  "contracts_drifted": 0,
+  "policies_compared": 0,
+  "policies_drifted": 0,
+  "drift_direction": "stable",
+  "gold_labels_since": 0,
+  "agreement_rate_trend": {
+    "name": "agreement_rate",
+    "current": 1.0,
+    "previous": 1.0,
+    "delta": 0.0,
+    "direction": "flat"
+  },
+  "recommendations": [],
+  "items": [
+    {
+      "artifact_type": "policy",
+      "artifact_id": "ci_change_control",
+      "path": "/Users/vinsoncornejo/ForgedRoot/Azul/azul_data/config/gate_policies/ci_change_control.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    },
+    {
+      "artifact_type": "policy",
+      "artifact_id": "default",
+      "path": "/Users/vinsoncornejo/ForgedRoot/Azul/azul_data/config/gate_policies/default.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    },
+    {
+      "artifact_type": "policy",
+      "artifact_id": "it_ops_runbook",
+      "path": "/Users/vinsoncornejo/ForgedRoot/Azul/azul_data/config/gate_policies/it_ops_runbook.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    }
+  ],
+  "baseline_new_count": 3
+}

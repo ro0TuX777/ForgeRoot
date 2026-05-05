@@ -1,0 +1,11 @@
+{
+    "schema_version": "0.1",
+    "actions": [
+        {
+            "action_id": "execute_sandbox_test",
+            "description": "Executes an LLM-generated Python test script inside a subprocess.",
+            "side_effect": "external_write",
+            "risk_tier": "critical"
+        }
+    ]
+}

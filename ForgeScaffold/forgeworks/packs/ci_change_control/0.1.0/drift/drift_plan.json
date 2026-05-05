@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "domain": "ci_change_control",
+  "events": [
+    {
+      "at_step": 1,
+      "type": "queue_pressure_spike",
+      "payload": {"pressure": 0.92, "fidelity": "D2"}
+    },
+    {
+      "at_step": 3,
+      "type": "policy_change",
+      "payload": {"version": "v2"}
+    }
+  ]
+}

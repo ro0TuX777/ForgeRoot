@@ -1,0 +1,12 @@
+{
+  "bf9a522e-525e-45c9-afd1-6a5e3004abf9": {
+    "hold_id": "bf9a522e-525e-45c9-afd1-6a5e3004abf9",
+    "tenant_id": "t-001",
+    "reason": "test",
+    "event_ids": [
+      "evt-000"
+    ],
+    "applied_at": "2026-04-29T22:53:41.780224+00:00",
+    "released": false
+  }
+}

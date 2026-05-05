@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bluecloakforged.github.io/forgescaffold/schemas/log_envelope.schema.json",
+  "title": "ForgeScaffold Log Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "timestamp", "severity", "run_id", "unit_id", "operation", "result"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Version of this log envelope schema.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "RFC3339/ISO8601 timestamp of the event. Prefer UTC with 'Z'.",
+      "format": "date-time"
+    },
+    "severity": {
+      "type": "string",
+      "description": "Log severity level.",
+      "enum": ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"]
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Correlation ID for the end-to-end execution (DAWN pipeline run, request, job, etc.).",
+      "minLength": 8,
+      "maxLength": 128
+    },
+    "trace_id": {
+      "type": "string",
+      "description": "Distributed tracing trace identifier (OpenTelemetry compatible).",
+      "pattern": "^[0-9a-f]{16}|[0-9a-f]{32}$"
+    },
+    "span_id": {
+      "type": "string",
+      "description": "Distributed tracing span identifier (OpenTelemetry compatible).",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "parent_span_id": {
+      "type": "string",
+      "description": "Parent span identifier if available.",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "unit_id": {
+      "type": "string",
+      "description": "Stable identifier of the unit emitting this log (module/service/agent_step). Use system_catalog unit id.",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "unit_type": {
+      "type": "string",
+      "description": "Type of emitting unit.",
+      "enum": ["module", "service", "agent_step", "datastore", "external_dependency"]
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation name (function, endpoint, tool name, job phase, etc.).",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "event": {
+      "type": "string",
+      "description": "Optional finer-grained event label within an operation lifecycle.",
+      "enum": ["start", "progress", "end", "decision", "retry", "timeout", "cache_hit", "cache_miss", "heartbeat", "custom"]
+    },
+    "result": {
+      "type": "string",
+      "description": "Outcome classification for the operation/event.",
+      "enum": ["ok", "error", "cancelled", "skipped", "timeout"]
+    },
+    "duration_ms": {
+      "type": "integer",
+      "description": "Duration in milliseconds when applicable.",
+      "minimum": 0
+    },
+    "message": {
+      "type": "string",
+      "description": "Human-readable log message. Keep short; avoid sensitive data.",
+      "maxLength": 4096
+    },
+    "input_fingerprint": {
+      "type": "string",
+      "description": "Hash/fingerprint of inputs (e.g., sha256:<hex>). Avoid raw payloads.",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "output_fingerprint": {
+      "type": "string",
+      "description": "Hash/fingerprint of outputs (e.g., sha256:<hex>).",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "counts": {
+      "type": "object",
+      "description": "Optional quantitative counters for the event.",
+      "additionalProperties": false,
+      "properties": {
+        "items_in": { "type": "integer", "minimum": 0 },
+        "items_out": { "type": "integer", "minimum": 0 },
+        "bytes_in": { "type": "integer", "minimum": 0 },
+        "bytes_out": { "type": "integer", "minimum": 0 },
+        "retries": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "io": {
+      "type": "object",
+      "description": "Optional structured I/O boundary metadata (no payloads).",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["none", "filesystem", "database", "network", "subprocess", "retrieval", "cache"]
+        },
+        "target": {
+          "type": "string",
+          "description": "Target identifier like path, DSN alias, host/service name, tool name. Avoid secrets.",
+          "maxLength": 512
+        },
+        "method": {
+          "type": "string",
+          "description": "HTTP method, DB operation, tool action, etc.",
+          "maxLength": 64
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 599
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "description": "Structured error details. Present when result=error/timeout.",
+      "additionalProperties": false,
+      "required": ["class"],
+      "properties": {
+        "class": {
+          "type": "string",
+          "description": "Error class/type name.",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "message": {
+          "type": "string",
+          "description": "Short error message. Avoid dumping secrets.",
+          "maxLength": 4096
+        },
+        "stacktrace": {
+          "type": "string",
+          "description": "Optional stacktrace; may be omitted in prod.",
+          "maxLength": 65535
+        },
+        "cause_chain": {
+          "type": "array",
+          "description": "Optional causal chain of error classes/messages.",
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["class"],
+            "properties": {
+              "class": { "type": "string", "minLength": 1, "maxLength": 256 },
+              "message": { "type": "string", "maxLength": 4096 }
+            }
+          }
+        }
+      }
+    },
+    "agent": {
+      "type": "object",
+      "description": "Agent-specific metadata (hashes/ids only).",
+      "additionalProperties": false,
+      "properties": {
+        "session_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "step_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "tool_call_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "tool_name": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "model_id": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "prompt_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+        "retrieval_ids": {
+          "type": "array",
+          "maxItems": 256,
+          "items": { "type": "string", "minLength": 1, "maxLength": 256 }
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "description": "Optional security controls metadata.",
+      "additionalProperties": false,
+      "properties": {
+        "policy_profile": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "decision": { "type": "string", "enum": ["allow", "deny", "defer"] },
+        "reason_code": { "type": "string", "minLength": 1, "maxLength": 128 }
+      }
+    },
+    "ext": {
+      "type": "object",
+      "description": "Extension bag for forward compatibility. Use for new fields before schema bumps.",
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "result": { "enum": ["error", "timeout"] } },
+        "required": ["result"]
+      },
+      "then": {
+        "required": ["error"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "21c4e118-6c29-45ae-9502-51828cec1a80": {
+    "hold_id": "21c4e118-6c29-45ae-9502-51828cec1a80",
+    "tenant_id": "t-001",
+    "reason": "regulatory_investigation",
+    "event_ids": [
+      "evt-000",
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:19:04.184768+00:00",
+    "released": false
+  }
+}

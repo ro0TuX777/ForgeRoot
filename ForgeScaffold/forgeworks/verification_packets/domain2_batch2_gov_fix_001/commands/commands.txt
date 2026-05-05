@@ -1,0 +1,13 @@
+# Fix applied
+(edit intent spec) packs/it_ops_runbook/test_batch_002_gov/intent_bundle/intent/intent_spec.json
+
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_002_gov --mode supervised --out results/ops_batch_002_gov_fix --drift-plan packs/it_ops_runbook/test_batch_002_gov/drift/drift_plan.json
+python3 -m forgeworks.cli score --results results/ops_batch_002_gov_fix --oracle packs/it_ops_runbook/test_batch_002_gov/oracle/expectations.jsonl --scoring packs/it_ops_runbook/test_batch_002_gov/scoring/scoring.json
+python3 -m forgeworks.cli report --results results/ops_batch_002_gov_fix --score results/ops_batch_002_gov_fix/score.json --out results/ops_batch_002_gov_fix/report.md
+python3 (generate expected_vs_actual + penalty summary)
+FORGEWORKS_AUTO_APPROVE=1 FORGEWORKS_PHASE_STUBS=1 python3 -m forgeworks.cli run --workcell packs/it_ops_runbook/test_batch_002_gov --mode supervised --out results/ops_batch_002_gov_fix_repeat --drift-plan packs/it_ops_runbook/test_batch_002_gov/drift/drift_plan.json
+shasum -a 256 results/ops_batch_002_gov_fix/decision_ledger.jsonl results/ops_batch_002_gov_fix/approval_records.jsonl results/ops_batch_002_gov_fix/score.json results/ops_batch_002_gov_fix_repeat/decision_ledger.jsonl results/ops_batch_002_gov_fix_repeat/approval_records.jsonl
+
+# Regression check + Domain2 batch1 check
+python3 -m forgeworks.cli regression-check --manifest regression/manifest.json
+python3 -m forgeworks.cli score --results results/ops_batch_001_happy2 --oracle packs/it_ops_runbook/test_batch_001_happy/oracle/expectations.jsonl --scoring packs/it_ops_runbook/test_batch_001_happy/scoring/scoring.json

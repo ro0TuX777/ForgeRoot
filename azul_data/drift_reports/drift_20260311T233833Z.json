@@ -1,0 +1,80 @@
+{
+  "scan_date": "2026-03-11T23:38:33.135742+00:00",
+  "contracts_compared": 0,
+  "contracts_drifted": 0,
+  "policies_compared": 0,
+  "policies_drifted": 0,
+  "drift_direction": "stable",
+  "gold_labels_since": 0,
+  "agreement_rate_trend": {
+    "name": "agreement_rate",
+    "current": 1.0,
+    "previous": 1.0,
+    "delta": 0.0,
+    "direction": "flat"
+  },
+  "recommendations": [],
+  "items": [
+    {
+      "artifact_type": "contract",
+      "artifact_id": "external_grpc",
+      "path": "/Users/vinsoncornejo/ForgedRoot/action_catalogs/active/external_grpc.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    },
+    {
+      "artifact_type": "contract",
+      "artifact_id": "external_httpx",
+      "path": "/Users/vinsoncornejo/ForgedRoot/action_catalogs/active/external_httpx.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    },
+    {
+      "artifact_type": "contract",
+      "artifact_id": "external_pinecone",
+      "path": "/Users/vinsoncornejo/ForgedRoot/action_catalogs/active/external_pinecone.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    },
+    {
+      "artifact_type": "contract",
+      "artifact_id": "external_requests",
+      "path": "/Users/vinsoncornejo/ForgedRoot/action_catalogs/active/external_requests.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    },
+    {
+      "artifact_type": "contract",
+      "artifact_id": "external_subprocess",
+      "path": "/Users/vinsoncornejo/ForgedRoot/action_catalogs/active/external_subprocess.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    },
+    {
+      "artifact_type": "contract",
+      "artifact_id": "external_vectorstore",
+      "path": "/Users/vinsoncornejo/ForgedRoot/action_catalogs/active/external_vectorstore.yaml",
+      "status": "new_baseline",
+      "change_count": 0,
+      "direction": "stable",
+      "field_changes": {},
+      "recommendation": "Baseline created on first scan."
+    }
+  ],
+  "baseline_new_count": 6
+}

@@ -1,0 +1,6 @@
+{
+  "repo": "demo-repo",
+  "touches_ci_config": true,
+  "touches_core_paths": false,
+  "commit": "abc123"
+}

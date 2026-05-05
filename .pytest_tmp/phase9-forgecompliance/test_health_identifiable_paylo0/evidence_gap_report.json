@@ -1,0 +1,59 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "frameworks": {
+    "NZISM": {
+      "coverage_percent": 0.0,
+      "covered": 0,
+      "gaps": 5,
+      "open_controls": [
+        {
+          "control_id": "NZISM.LOGGING.EVENT_CAPTURE",
+          "missing_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record",
+            "warden.llm_call_metadata"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        },
+        {
+          "control_id": "NZISM.LOGGING.TAMPER_PROTECTION",
+          "missing_event_types": [
+            "forgegate.decision_record"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        },
+        {
+          "control_id": "NZISM.LOGGING.RETENTION",
+          "missing_event_types": [
+            "concord.admission_decision",
+            "forgegate.decision_record"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        },
+        {
+          "control_id": "NZISM.ACCESS.AUTHORISATION",
+          "missing_event_types": [
+            "concord.admission_decision"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        },
+        {
+          "control_id": "NZISM.CHANGE.HUMAN_APPROVAL",
+          "missing_event_types": [
+            "agent.human_review_required",
+            "human.approval_decision"
+          ],
+          "missing_required_fields": [],
+          "status": "gap"
+        }
+      ],
+      "partial": 0
+    }
+  },
+  "generated_at": "2026-04-28T10:00:00Z",
+  "total_open_gaps": 5
+}

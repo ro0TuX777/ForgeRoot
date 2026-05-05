@@ -1,0 +1,11 @@
+# Azul — CI Change Control Gate Policy
+# ======================================
+# More permissive escalation allowance for CI workflows
+# where escalation events are common during complex refactors.
+
+min_score: 70.0
+warn_score: 80.0
+max_deny_count: 0
+max_oracle_mismatch: 0
+max_escalation_count: 3 # slightly more permissive for CI pipelines
+require_pass_fail: true

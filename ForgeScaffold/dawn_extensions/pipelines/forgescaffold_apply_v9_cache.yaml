@@ -1,0 +1,23 @@
+pipelineId: "forgescaffold_apply_v9_cache"
+links:
+  - id: ingest.project_bundle
+  - id: forgescaffold.system_catalog
+  - id: forgescaffold.map_dataflow
+  - id: forgescaffold.obs_define_schema
+  - id: forgescaffold.obs_instrument_patchset
+  - id: forgescaffold.test_matrix
+  - id: forgescaffold.generate_review_packet
+  - id: forgescaffold.generate_approval_template
+  - id: forgescaffold.gate_patchset_approval
+  - id: forgescaffold.apply_patchset
+  - id: forgescaffold.verify_post_apply
+  - id: forgescaffold.verify_rollback
+  - id: forgescaffold.package_evidence
+  - id: forgescaffold.sign_evidence
+  - id: forgescaffold.verify_evidence
+  - id: forgescaffold.update_evidence_index
+  - id: forgescaffold.build_index_cache
+  - id: forgescaffold.verify_cache_integrity
+  - id: forgescaffold.write_index_checkpoint
+  - id: forgescaffold.verify_index_integrity
+  - id: forgescaffold.status

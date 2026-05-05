@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.1",
+  "actions": [
+    {"action_id": "read", "description": "Read file"},
+    {"action_id": "write", "description": "Write file"},
+    {"action_id": "deploy", "description": "Deploy service"}
+  ]
+}

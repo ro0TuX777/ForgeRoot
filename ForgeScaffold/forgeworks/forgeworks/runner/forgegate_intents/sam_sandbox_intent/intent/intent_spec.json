@@ -1,0 +1,40 @@
+{
+    "intent_id": "sam_sandbox_intent",
+    "intent_version": "1",
+    "constraints": [
+        {
+            "id": "require_workspace_jail",
+            "applies_to_actions": [
+                "execute_sandbox_test"
+            ],
+            "when": {
+                "op": "not",
+                "arg": {
+                    "op": "contains",
+                    "left": {
+                        "var": "signals.sandbox_directory"
+                    },
+                    "right": "workspace"
+                }
+            },
+            "effect": "DENY"
+        },
+        {
+            "id": "require_python_extension",
+            "applies_to_actions": [
+                "execute_sandbox_test"
+            ],
+            "when": {
+                "op": "not",
+                "arg": {
+                    "op": "contains",
+                    "left": {
+                        "var": "signals.entrypoint_script"
+                    },
+                    "right": ".py"
+                }
+            },
+            "effect": "DENY"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "1105dfe5-ce7a-42f4-8805-5cd1f7481fec": {
+    "hold_id": "1105dfe5-ce7a-42f4-8805-5cd1f7481fec",
+    "tenant_id": "tenant-001",
+    "reason": "hold",
+    "event_ids": [
+      "evt-001"
+    ],
+    "applied_at": "2026-04-29T22:35:10.165525+00:00",
+    "released": true,
+    "release_reason": "closed",
+    "released_at": "2026-04-29T22:35:10.170811+00:00"
+  }
+}

@@ -1,0 +1,1 @@
+{"error":{"error":{"code":"SCORE_FAILED","details":{"results_path":"results/wrapper_batch_002_live"},"message":"oracle not found: packs/ci_change_control/wrapper_batch_002/oracle/missing.jsonl","stage":"score"},"status":"error"},"status":"error_case_included"}

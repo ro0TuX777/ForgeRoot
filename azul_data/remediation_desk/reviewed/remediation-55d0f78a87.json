@@ -1,0 +1,28 @@
+{
+  "id": "remediation-55d0f78a87",
+  "status": "reviewed",
+  "created_at": "2026-03-12T04:37:33.455647+00:00",
+  "project_id": "HELIOS",
+  "project_root": "/Volumes/FA/HELIOS BACKUP BETA",
+  "cycle_id": "0cf96b4559",
+  "cycle_reason": "file_change",
+  "domain": "system_operations",
+  "changed_files": [
+    "Helios/apt-test/warden_trigger.py"
+  ],
+  "initial_ticket_id": "azul-c199ee34",
+  "initial_verdict_reason": "Guard Predicate Violation: external.subprocess.check_call at Helios/apt-test/warden_trigger.py:3 -> kwargs.get('shell') expected False but got True",
+  "final_ticket_id": "azul-ef947816",
+  "final_ticket_status": "COMPLETED",
+  "final_verdict": "pass",
+  "attempt_count": 2,
+  "requires_human_final_review": true,
+  "auto_apply_performed": false,
+  "patch_path": "/Users/vinsoncornejo/ForgedRoot/azul_data/remediation_desk/patches/remediation-55d0f78a87.patch",
+  "metadata": {
+    "source": "warden.auto_remediation",
+    "note": "Remediation patch passed Azul gate and is queued for human final review. The daemon never auto-applies fixes to PROJECT_ROOT."
+  },
+  "reviewed_at": "2026-03-12T07:10:24.858649+00:00",
+  "reviewer": "vinsoncornejo"
+}

@@ -1,0 +1,35 @@
+{
+  "claim_boundary": "Evidence support only. Not a compliance certification.",
+  "frameworks": {
+    "HIPC_2020": {
+      "coverage_percent": 100.0,
+      "covered": 4,
+      "gaps": 0,
+      "open_controls": [],
+      "partial": 0
+    },
+    "NIST_CSF_2_0": {
+      "coverage_percent": 100.0,
+      "covered": 5,
+      "gaps": 0,
+      "open_controls": [],
+      "partial": 0
+    },
+    "NZISM": {
+      "coverage_percent": 100.0,
+      "covered": 5,
+      "gaps": 0,
+      "open_controls": [],
+      "partial": 0
+    },
+    "SOC2": {
+      "coverage_percent": 100.0,
+      "covered": 5,
+      "gaps": 0,
+      "open_controls": [],
+      "partial": 0
+    }
+  },
+  "generated_at": "2026-04-29T22:25:00.330816+00:00",
+  "total_open_gaps": 0
+}

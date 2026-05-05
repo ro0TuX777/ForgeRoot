@@ -1,0 +1,9 @@
+event_type,count
+agent.human_review_required,1
+agent.tool_call,1
+azul.verdict_summary,1
+concord.admission_decision,1
+forgegate.decision_record,2
+forgegate.policy_evaluation,1
+human.approval_decision,1
+warden.llm_call_metadata,1

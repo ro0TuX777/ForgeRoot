@@ -1,0 +1,1 @@
+{"approval_policy":{"auto_reject_actions":[],"ramped_auto_allow_risk_tiers":["low"],"ramped_auto_allow_side_effects":["none","read"],"require_for_allow":true,"require_for_allow_with_mods":true},"domain":"ci_change_control","intent_bundle_path":"./intent_bundle","mode":"shadow","schema_version":"0.1","seed":123}

@@ -1,0 +1,27 @@
+--- /tmp/intent_spec_old.json	2026-02-28 13:00:21
++++ packs/it_ops_runbook/test_batch_002_gov/intent_bundle/intent/intent_spec.json	2026-02-28 12:59:01
+@@ -1 +1,23 @@
+-{"intent_id":"it_ops_runbook","intent_version":"1"}
++{
++  "intent_id": "it_ops_runbook",
++  "intent_version": "1",
++  "constraints": [
++    {
++      "id": "escalate_destructive_or_prod",
++      "effect": "escalate",
++      "when": {
++        "op": "or",
++        "args": [
++          {"op": "eq", "left": {"var": "signals.action.is_destructive"}, "right": true},
++          {"op": "eq", "left": {"var": "signals.env"}, "right": "prod"},
++          {"op": "eq", "left": {"var": "signals.blast_radius"}, "right": "high"}
++        ]
++      }
++    }
++  ],
++  "escalation": {
++    "kind": "policy_conflict",
++    "channels": ["human_review"],
++    "required_payload_fields": ["ticket_id", "action_id"]
++  }
++}

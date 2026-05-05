@@ -1,0 +1,23 @@
+{
+  "penalty_count": 0,
+  "penalties": [],
+  "oracle_mismatch_count": 1,
+  "oracle_mismatch_tickets": [
+    {
+      "mismatches": [
+        "missing_escalation"
+      ],
+      "ticket_id": "OPS-001"
+    }
+  ],
+  "drift_events_applied": [
+    {
+      "at_step": 2,
+      "payload": {
+        "fidelity": "D2",
+        "pressure": 0.95
+      },
+      "type": "queue_pressure_spike"
+    }
+  ]
+}
