@@ -22,7 +22,7 @@ As AI systems evolve from advisory copilots into **autonomous engineering partic
 
 Rather than trusting a single model prompt, monolithic orchestrator, or informal approval process, ForgeRoot decomposes the problem into **hardened control layers**:
 
-> *Intent Admission → Governed Discovery → Deterministic Policy → Sterile Execution → Structural Governance → Behavioral Verification*
+> *Intent Admission → Governed Discovery → Deterministic Policy → Sterile Execution → Structural Governance → Behavioral Verification → Cognitive Observability*
 
 The result is a framework for building AI-driven harnesses that are not merely powerful, but **operationally credible** — suitable for enterprise, defense, regulated, and mission-critical environments.
 
@@ -30,7 +30,7 @@ The result is a framework for building AI-driven harnesses that are not merely p
 
 ## The Problem
 
-Organizations adopting AI-assisted development face six coupled failure modes:
+Organizations adopting AI-assisted development face seven coupled failure modes:
 
 | # | Risk Category | Description |
 |---|---|---|
@@ -40,6 +40,7 @@ Organizations adopting AI-assisted development face six coupled failure modes:
 | 4 | **Execution Integrity** | Shared sandboxes creating contamination; cold-start overhead collapsing useful parallelism |
 | 5 | **Structural Change** | AI-generated changes creating hidden regressions, ownership ambiguity, or broken dataflow |
 | 6 | **Behavioral Verification** | Code that compiles and passes tests but violates performance budgets or security invariants |
+| 7 | **Cognitive Observability** | Governance captures *what* was decided but not *why* — no visibility into reasoning chains, rejected alternatives, or cross-agent information flow |
 
 Solving only one layer does not produce a trustworthy agentic system. What is required is a **full-stack assurance architecture**.
 
@@ -47,7 +48,7 @@ Solving only one layer does not produce a trustworthy agentic system. What is re
 
 ## Core Control Layers
 
-ForgeRoot coordinates six specialized subsystems, each responsible for enforcing one control boundary in the autonomous action lifecycle.
+ForgeRoot coordinates seven specialized subsystems, each responsible for enforcing one control boundary in the autonomous action lifecycle.
 
 ### 1. CONCORD — Admission Pipeline
 
@@ -183,6 +184,33 @@ Top-level verification layer. Forces agents to output a **structured explanation
 
 > *Did this proposed change actually preserve safe behavior under controlled evaluation?*
 
+### 7. ForgeTranscript — Agent Reasoning Observability
+
+```
+  ┌─────────────────────────────────────────────────────────┐
+  │                    Agent Runtime                        │
+  │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐   │
+  │  │ Reasoning│  │ Tool Call│  │ Intermediate Output│   │
+  │  │ Chains   │  │ Results  │  │ & Proposals        │   │
+  │  └────┬─────┘  └────┬─────┘  └─────────┬──────────┘   │
+  └───────┼──────────────┼──────────────────┼───────────────┘
+          ▼              ▼                  ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │               ForgeTranscript Capture Layer             │
+  │   TranscriptEmitter → SegmentClassifier → SessionLog   │
+  └──────────────────────────┬──────────────────────────────┘
+              ┌──────────────┼──────────────┐
+              ▼              ▼              ▼
+       ┌────────────┐ ┌───────────┐ ┌─────────────┐
+       │ Transcript │ │ ForgeLedger│ │ SIEM / OCSF │
+       │ Reader UI  │ │ Evidence  │ │ Forwarding   │
+       └────────────┘ └───────────┘ └─────────────┘
+```
+
+Cognitive observability plane. Captures every unit of agent output — reasoning, tool calls, proposals, rejections — as typed, **HMAC-SHA256 chained transcript segments** bound to the CONCORD session. Supports forensic reconstruction, compliance audit, quality tuning, live monitoring, and cross-agent tracing.
+
+> *What did the agent reason, propose, consume, and discard on the path to this outcome?*
+
 ---
 
 ## Operational Lifecycle
@@ -205,6 +233,7 @@ No autonomous action passes directly from model output to production consequence
 | 4. Sterile Runtime | ForgeHarbor | Bind task to pre-warmed isolated environment for immediate execution |
 | 5. Structural Governance | ForgeScaffold | Analyze blast radius, enforce success contracts, record evidence trail |
 | 6. Behavioral Verdict | Azul | Execute change in isolation, evaluate against policy, return formal verdict |
+| 7. Cognitive Observability | ForgeTranscript | Capture agent reasoning, tool interactions, and cross-agent flow as tamper-evident transcripts |
 
 ---
 
@@ -218,6 +247,7 @@ No autonomous action passes directly from model output to production consequence
 | **Mutation Requires Evidence** | Structural changes must be attached to deterministic analysis, review context, and post-apply verification. |
 | **Safety Must Be Proven** | Compilation or test passage is insufficient. Safe change requires evaluation against behavioral expectations and operational invariants. |
 | **Decisions Must Be Replayable** | Admission receipts, decision records, and evidence indexes make every critical decision auditable and traceable. |
+| **Cognition Must Be Observable** | Governance events tell you *what* was decided; cognitive transcripts tell you *why* it was proposed. Agent reasoning is a first-class auditable record. |
 
 ---
 
@@ -232,6 +262,7 @@ ForgeRoot/
 ├── ForgeScaffold/        # Codebase mapping & governed refactoring
 ├── ForgeCompliance/      # Compliance verification tooling
 ├── ForgeLedger/          # Governance-native evidence infrastructure
+├── ForgeTranscript/      # Agent reasoning observability subsystem
 ├── Azul/                 # Agentic change verification system
 ├── DAWN/                 # Execution container runtime
 ├── LoopLogic/            # Feedback loop & training pair generation
@@ -279,6 +310,7 @@ See the [full whitepaper](forge_root_whitepaper_draft.md) for detailed test scen
 |----------|-------------|
 | [Whitepaper](forge_root_whitepaper_draft.md) | Full architectural specification with addendums |
 | [Frameworks Overview](Forge_Frameworks_Overview.md) | High-level summary of all ForgeRoot frameworks |
+| [ForgeTranscript Proposal](docs/ForgeTranscript_Proposal.md) | Detailed proposal with five use cases |
 | [Master Integration](forge_root_master_integration.md) | Integration guide for deploying ForgeRoot |
 | [Control Plane Hardening](Control_Plane_Security_Hardening.md) | Security hardening plan for the orchestration layer |
 | [Phase 2 Roadmap](Phase_2_Prototyping_Roadmap.md) | Controlled prototyping milestones and SLAs |

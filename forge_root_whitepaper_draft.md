@@ -4,7 +4,7 @@
 
 As Artificial Intelligence systems evolve from advisory copilots into autonomous engineering participants, the central challenge is no longer capability alone. The challenge is control. Modern agentic systems can discover tools, propose actions, generate patches, execute workflows, and adapt dynamically—but without rigorous governance, deterministic enforcement, sterile execution boundaries, and verifiable evidence, those same systems introduce unacceptable operational risk.
 
-**ForgeRoot** is the umbrella governance and assurance architecture for agentic harnesses. It unifies a set of specialized frameworks into one coordinated lifecycle that governs autonomous engineering action from entry to verdict. Rather than trusting a single model prompt, monolithic orchestrator, or informal approval process, ForgeRoot decomposes the problem into hardened control layers: intent admission, governed capability discovery, deterministic policy enforcement, sterile runtime execution, structural change governance, and behavioral verification.
+**ForgeRoot** is the umbrella governance and assurance architecture for agentic harnesses. It unifies a set of specialized frameworks into one coordinated lifecycle that governs autonomous engineering action from entry to verdict. Rather than trusting a single model prompt, monolithic orchestrator, or informal approval process, ForgeRoot decomposes the problem into hardened control layers: intent admission, governed capability discovery, deterministic policy enforcement, sterile runtime execution, structural change governance, behavioral verification, and cognitive observability.
 
 The result is a framework for building AI-driven harnesses that are not merely powerful, but operationally credible. ForgeRoot transforms agentic automation into deterministic, auditable, and production-safe execution systems suitable for enterprise, defense, regulated, and mission-critical environments.
 
@@ -16,7 +16,7 @@ Organizations adopting AI-assisted development and autonomous workflows face a s
 
 Traditional software systems were designed around human-paced change. A developer proposes a modification, peers review it, testing runs in bounded environments, and operational accountability is distributed through familiar manual checkpoints. Agentic systems break that pacing model. They can generate complex multi-file modifications, chain tools dynamically, dispatch parallel execution paths, and adapt their behavior in ways that exceed the visibility and review speed of conventional engineering processes.
 
-This creates six major risk categories:
+This creates seven major risk categories:
 
 1. **Unbounded Admission Risk**  
    Without a strict admission boundary, agents may request actions beyond their authorized trust tier, budget, or capability scope.
@@ -36,6 +36,9 @@ This creates six major risk categories:
 6. **Behavioral Verification Risk**  
    Even if code compiles and tests pass, the resulting system may still violate performance budgets, security invariants, or downstream operational expectations.
 
+7. **Cognitive Observability Risk**  
+   Existing governance captures *what* was decided but not *why* the agent proposed it. Without visibility into reasoning chains, tool-call interactions, rejected alternatives, and cross-agent information flow, organizations cannot perform forensic reconstruction, compliance audits of reasoning quality, or proactive intervention during live agent execution.
+
 These are not isolated issues. They are coupled failure modes in the same lifecycle. Solving only one layer—tool discovery, or sandboxing, or refactor review—does not produce a trustworthy agentic system. What is required is a full-stack assurance architecture.
 
 ---
@@ -48,7 +51,7 @@ ForgeRoot is built on a core principle:
 
 > **Autonomous capability must be decomposed into independently governable layers.**
 
-In ForgeRoot, language models may propose, rank, or explain—but they do not implicitly govern themselves. The architecture integrates the **Dark Code Framework** directly into its operational DNA. By enforcing Layer 1 (Spec-Driven contracts), Layer 2 (Self-Describing systems), and Layer 3 (Human Comprehension Gates) at key infrastructure transitions, ForgeRoot systematically prevents "Dark Code" (AI-generated logic that lacks human explainability or architectural transparency). Governance is implemented as deterministic software. Discovery is filtered by trust and capability. Execution occurs in sterile, isolated environments. Structural change is evidence-bound. Behavioral safety is verified through controlled evaluation. Every stage leaves an auditable, human-comprehensible record.
+In ForgeRoot, language models may propose, rank, or explain—but they do not implicitly govern themselves. The architecture integrates the **Dark Code Framework** directly into its operational DNA. By enforcing Layer 1 (Spec-Driven contracts), Layer 2 (Self-Describing systems), and Layer 3 (Human Comprehension Gates) at key infrastructure transitions, ForgeRoot systematically prevents "Dark Code" (AI-generated logic that lacks human explainability or architectural transparency). Governance is implemented as deterministic software. Discovery is filtered by trust and capability. Execution occurs in sterile, isolated environments. Structural change is evidence-bound. Behavioral safety is verified through controlled evaluation. Agent reasoning is captured as tamper-evident, queryable transcript records. Every stage leaves an auditable, human-comprehensible record.
 
 This architecture allows organizations to scale AI-driven harnesses without collapsing into prompt-based trust, hidden coupling, undocumented state, or unverifiable automation.
 
@@ -220,6 +223,52 @@ Azul answers the sixth critical question:
 
 **Did this proposed change actually preserve safe behavior under controlled evaluation?**
 
+### 7. ForgeTranscript — Agent Reasoning Observability
+
+```text
+  ┌─────────────────────────────────────────────────────────┐
+  │                    Agent Runtime                        │
+  │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐   │
+  │  │ Reasoning│  │ Tool Call│  │ Intermediate Output│   │
+  │  │ Chains   │  │ Results  │  │ & Proposals        │   │
+  │  └────┬─────┘  └────┬─────┘  └─────────┬──────────┘   │
+  │       │              │                  │               │
+  └───────┼──────────────┼──────────────────┼───────────────┘
+          │              │                  │
+          ▼              ▼                  ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │               ForgeTranscript Capture Layer             │
+  │   TranscriptEmitter → SegmentClassifier → SessionLog   │
+  └──────────────────────────┬──────────────────────────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              ▼              ▼              ▼
+       ┌────────────┐ ┌───────────┐ ┌─────────────┐
+       │ Transcript │ │ ForgeLedger│ │ SIEM / OCSF │
+       │ Reader UI  │ │ Evidence  │ │ Forwarding   │
+       └────────────┘ └───────────┘ └─────────────┘
+```
+
+ForgeTranscript is the cognitive observability plane for ForgeRoot. While CONCORD, ForgeGate, and ForgeLedger capture governance *events*—what was admitted, what was decided, what was verified—ForgeTranscript captures the agent's *cognitive output*: reasoning chains, tool-call interactions, intermediate proposals, rejected alternatives, user exchanges, and cross-agent information flow.
+
+Every governed agent session produces a `TranscriptSession` bound 1:1 to its CONCORD admission. Within that session, each discrete unit of agent output is captured as a typed `TranscriptSegment` classified into one of ten segment types: `REASONING`, `PROPOSAL`, `TOOL_CALL`, `TOOL_RESULT`, `USER_EXCHANGE`, `DECISION_REF`, `COMPREHENSION`, `SYSTEM_EVENT`, `REJECTION`, and `ERROR`. Each segment is HMAC-SHA256 chained to its predecessor, extending ForgeLedger's evidence model to provide tamper-evident cognitive traceability.
+
+Ingest-time redaction, inherited from ForgeLedger's `IngestRedactor` pattern, ensures that sensitive content (credentials, PII, memory vectors) is redacted before hash chain attachment. Redaction is trust-tier-aware: low-trust agents have content redacted by default, while governance-significant segments (`DECISION_REF`, `SYSTEM_EVENT`) are never redacted.
+
+The `TranscriptReader` provides the operator-facing interface for browsing, filtering, searching, and exporting transcript data. It supports five core operational workflows:
+
+1. **Post-Incident Forensic Reconstruction** — Reconstruct the full cognitive narrative of a revoked session, proving causal chains and verifying no segments were altered post-capture.
+2. **Governance Compliance Audit** — Trace the reasoning-to-governance pipeline (`REASONING` → `PROPOSAL` → `DECISION_REF` → `COMPREHENSION`) to demonstrate that agent reasoning was sound and documented.
+3. **Agent Quality Evaluation** — Analyze reasoning patterns, dead ends, and tool-use inefficiencies across sessions to generate actionable training signals.
+4. **Real-Time Situational Awareness** — Monitor live agent reasoning and intervene proactively before risky proposals reach ForgeGate.
+5. **Cross-Agent Collaboration Tracing** — Trace information flow across multi-agent workflows via shared `workflow_id` bindings, surfacing context loss at agent handoff boundaries.
+
+ForgeTranscript integrates bidirectionally with ForgeLedger through a `LedgerBridge` that emits session lifecycle events and governance-significant segments into the unified evidence chain, ensuring transcript activity is visible alongside CONCORD admissions, ForgeGate decisions, and Azul verdicts.
+
+ForgeTranscript answers the seventh critical question:
+
+**What did the agent reason, propose, consume, and discard on the path to this outcome?**
+
 ---
 
 ## Operational Lifecycle
@@ -244,7 +293,10 @@ Where code or workflow mutation is involved, ForgeScaffold analyzes the target s
 ### Phase 6: Behavioral Verification & Verdict
 Azul orchestrates the final behavioral test-and-gate sequence. It executes the proposed change inside the isolated environment, evaluates the resulting `ReviewBundle` against policy, and returns a formal verdict: completed, warned, or rejected.
 
-The overall effect is that no autonomous action passes directly from model output to production consequence. Every meaningful transition is filtered through an explicit control plane.
+### Phase 7: Cognitive Observability & Transcript Capture
+Throughout Phases 1–6, ForgeTranscript captures every unit of agent cognitive output—reasoning chains, tool interactions, proposals, rejections, and governance decision references—as tamper-evident, HMAC-chained transcript segments. Upon session completion or revocation, the transcript is sealed and available for forensic reconstruction, compliance audit, quality analysis, and cross-agent collaboration tracing.
+
+The overall effect is that no autonomous action passes directly from model output to production consequence. Every meaningful transition is filtered through an explicit control plane, and every cognitive step that produced those transitions is captured in a queryable, tamper-evident record.
 
 ---
 
@@ -270,6 +322,9 @@ Compilation success or static test passage is not sufficient. Safe change requir
 ### Every Critical Decision Must Be Replayable and Auditable
 From admission receipts to decision records to evidence indexes, ForgeRoot treats traceability as a first-class output of the system. (For specifics on evidence standardization and SIEM interoperability, see **Addendum B: Control Plane Security & Hardening Plan**).
 
+### Agent Cognition Must Be Observable, Not Opaque
+Governance events tell you *what* was decided; cognitive transcripts tell you *why* it was proposed. ForgeRoot captures the full reasoning trail—chain-of-thought, tool interactions, rejected alternatives, and cross-agent handoffs—as tamper-evident records that are queryable, exportable, and verifiable.
+
 ---
 
 ## Business Value
@@ -293,6 +348,9 @@ Warm-pool orchestration allows organizations to scale parallel agent workflows w
 
 ### 6. Self-Improving Training Loops
 By harvesting verified successful runs into distillation-ready training pairs, ForgeRoot-based applications such as Azul create a local feedback loop for improving future agent quality.
+
+### 7. Full Cognitive Traceability
+ForgeTranscript provides end-to-end visibility into agent reasoning, enabling post-incident forensic reconstruction in minutes instead of hours, compliance audits that demonstrate reasoning quality (not just control existence), proactive operator intervention during live execution, and cross-agent collaboration analysis that surfaces information loss at handoff boundaries.
 
 ---
 
@@ -321,7 +379,7 @@ ForgeRoot is applicable anywhere organizations need to convert high-capability a
 
 ForgeRoot is not a single daemon, policy file, or orchestration tool. It is a governance and assurance architecture for agentic harnesses.
 
-Where general AI orchestration frameworks depend purely on "prompting" to manage other prompts, ForgeRoot bridges the gap by building hardened software systems. Components like the rigid, fail-fast CONCORD Admission Pipeline, abstracted ForgeHarbor environment isolation, and strict JSON Schema mappings between layers prove that the system guarantees its policies deterministically. While cognitive logic happens dynamically inside the LLM space, verification, mutation boundaries, and authorization checks remain strictly constrained by conventional, auditable software execution paths. (For details on deterministic benchmarking and upcoming Red-Team validations, refer to **Addendum A: Phase 2 Controlled Prototyping Roadmap**).
+Where general AI orchestration frameworks depend purely on "prompting" to manage other prompts, ForgeRoot bridges the gap by building hardened software systems. Components like the rigid, fail-fast CONCORD Admission Pipeline, abstracted ForgeHarbor environment isolation, ForgeTranscript's tamper-evident cognitive capture, and strict JSON Schema mappings between layers prove that the system guarantees its policies deterministically. While cognitive logic happens dynamically inside the LLM space, verification, mutation boundaries, authorization checks, and reasoning traceability remain strictly constrained by conventional, auditable software execution paths. (For details on deterministic benchmarking and upcoming Red-Team validations, refer to **Addendum A: Phase 2 Controlled Prototyping Roadmap**).
 
 As organizations move from experimentation toward operational adoption of agentic systems, the differentiator will not be who can generate the most actions. The differentiator will be who can govern those actions with determinism, evidence, and confidence.
 
